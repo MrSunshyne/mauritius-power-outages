@@ -1,0 +1,130 @@
+body {
+     /* These values can be overriden by specifying different custom properties on the body using JavaScript. */
+    --brand-hue: 328;
+    --brand-saturation: 78%;
+    --brand-lightness: 50%;
+
+    /* Light Theme */
+    --brand-light: hsl(var(--brand-hue), 78%, 50%);
+    --light-layer-100: hsl(var(--brand-hue), 15%, 7%);
+    --light-layer-200: hsl(var(--brand-hue), 14%, 90%);
+    --light-layer-300: hsl(var(--brand-hue), 5%, 97%);
+    --light-layer-400: hsl(var(--brand-hue), 14%, 100%);
+    --light-text-100: var(--color-gray-900);
+    --light-text-200: var(--color-gray-700);
+    --light-text-300: var(--color-gray-500);
+    --light-text-400: var(--color-gray-400);
+    --light-border-100: hsl(var(--brand-hue), 10%, 90%);
+    --light-border-200: hsl(var(--brand-hue), 10%, 85%);
+    --light-border-300: hsl(var(--brand-hue), 10%, 50%);
+
+    /* Dark Theme */
+    --dark-threshhold: 80%;
+    --brand-dark: hsl(var(--brand-hue), 78%, 50%);
+    --dark-layer-100: hsl(var(--brand-hue), 20%, calc(100% - var(--dark-threshhold)));
+    --dark-layer-200: hsl(var(--brand-hue), 20%, calc(95% - var(--dark-threshhold)));
+    --dark-layer-300: hsl(var(--brand-hue), 20%, calc(90% - var(--dark-threshhold)));
+    --dark-layer-400: hsl(var(--brand-hue), 20%, calc(85% - var(--dark-threshhold)));
+    --dark-text-100: var(--color-gray-100);
+    --dark-text-200: var(--color-gray-200);
+    --dark-text-300: var(--color-gray-300);
+    --dark-text-400: var(--color-gray-700);
+    --dark-border-100: var(--color-gray-700);
+    --dark-border-200: var(--color-gray-700);
+    --dark-border-300: var(--color-gray-700);
+    
+    /* Dim Theme */
+    --dim-threshhold: 70%;
+    --brand-dim: hsl(var(--brand-hue), 78%, 50%);
+    --dim-layer-100: hsl(var(--brand-hue), 35%, calc(100% - var(--dim-threshhold)));
+    --dim-layer-200: hsl(var(--brand-hue), 35%, calc(95% - var(--dim-threshhold)));
+    --dim-layer-300: hsl(var(--brand-hue), 35%, calc(90% - var(--dim-threshhold)));
+    --dim-layer-400: hsl(var(--brand-hue), 35%, calc(85% - var(--dim-threshhold)));
+    --dim-text-100: var(--color-gray-100);
+    --dim-text-200: var(--color-gray-200);
+    --dim-text-300: var(--color-gray-300);
+    --dim-text-400: var(--color-gray-700);
+    --dim-border-100: var(--color-gray-700);
+    --dim-border-200: var(--color-gray-700);
+    --dim-border-300: var(--color-gray-700);
+}
+
+
+/* Light Theme */
+body,
+body[color-scheme='light'] {
+    color-scheme: light;
+
+    --brand: var(--brand-light);
+    --layer-100: var(--light-layer-100);
+    --layer-200: var(--light-layer-200);
+    --layer-300: var(--light-layer-300);
+    --layer-400: var(--light-layer-400);
+    --text-100: var(--light-text-100);
+    --text-200: var(--light-text-200);
+    --text-300: var(--light-text-300);
+    --text-400: var(--light-text-400);
+    --border-100: var(--light-border-100);
+    --border-200: var(--light-border-200);
+    --border-300: var(--light-border-300);
+}
+
+/* Dark Theme */
+body[color-scheme='dark'] {
+    color-scheme: dark;
+
+    --brand: var(--brand-dark);
+    --layer-100: var(--dark-layer-100);
+    --layer-200: var(--dark-layer-200);
+    --layer-300: var(--dark-layer-300);
+    --layer-400: var(--dark-layer-400);
+    --text-100: var(--dark-text-100);
+    --text-200: var(--dark-text-200);
+    --text-300: var(--dark-text-300);
+    --text-400: var(--dark-text-400);
+    --border-100: var(--dark-border-100);
+    --border-200: var(--dark-border-200);
+    --border-300: var(--dark-border-300);
+}
+
+/* Dim Theme */
+body[color-scheme='dim'] {
+    color-scheme: dim;
+
+    --brand: var(--brand-dim);
+    --layer-100: var(--dim-layer-100);
+    --layer-200: var(--dim-layer-200);
+    --layer-300: var(--dim-layer-300);
+    --layer-400: var(--dim-layer-400);
+    --text-100: var(--dim-text-100);
+    --text-200: var(--dim-text-200);
+    --text-300: var(--dim-text-300);
+    --text-400: var(--dim-text-400);
+    --border-100: var(--dim-border-100);
+    --border-200: var(--dim-border-200);
+    --border-300: var(--dim-border-300);
+}
+
+
+[type='checkbox'],
+[type='radio'] {
+    color: var(--brand);
+}
+
+*,
+::before,
+::after {
+    border-color: var(--text-400);
+}
+
+.prose h1 {
+    color: var(--tex-text-100);
+}
+
+.prose h2 {
+    color: var(--tex-text-100);
+}
+
+.prose h3 {
+    color: var(--tex-text-100);
+} 
