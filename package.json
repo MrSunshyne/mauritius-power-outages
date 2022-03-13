@@ -17,6 +17,7 @@
     "@tailwindcss/line-clamp": "^0.2.2",
     "@tailwindcss/typography": "^0.4.1",
     "@vueuse/core": "^6.7.4",
+    "@vueuse/head": "^0.7.5",
     "apexcharts": "^3.29.0",
     "eslint-plugin-import": "^2.25.2",
     "nprogress": "^0.2.0",

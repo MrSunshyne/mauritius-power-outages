@@ -1,54 +1,51 @@
 <script setup lang="ts">
-import { useUserStore } from '@/stores/user'
+import { Head } from '@vueuse/head'
 
-const user = useUserStore()
-const name = ref(user.savedName)
+const API_ENDPOINT = 'https://raw.githubusercontent.com/MrSunshyne/mauritius-dataset-electricity/main/data/power-outages.json'
 
-const router = useRouter()
-const go = () => {
-  if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
+const allData = ref(null);
+
+const getData = () => {
+  fetch(API_ENDPOINT)
+    .then(res => res.json())
+    .then(res => {
+      allData.value = res;
+    })
+    .catch((error) => {
+      console.log('Looks like there was a problem: \n', error);
+    });
 }
+
+
+
+
+onMounted(() => {
+  // getPowerOutages()
+  getData();
+
+})
+
 </script>
 
 <template>
-  <div class="grid place-items-center">
-    <Branding>
-      <p>
-        <a
-          rel="noreferrer"
-          href="https://github.com/MrSunshyne/ti-vitesse"
-          target="_blank"
-        >Ti-Vitesse</a>
-      </p>
-    </Branding>
-    <p>
-      <em class="text-sm opacity-75">Opinionated vite starter</em>
-    </p>
-
-    <div class="py-4" />
-
-    <input
-      id="input"
-      v-model="name"
-      placeholder="Whats your name"
-      aria-label="intro.whats-your-name"
-      type="text"
-      autocomplete="false"
-      class="outline-none active:outline-none px-5 py-4 w-[250px] text-center bg-transparent rounded border-gray-200 dark:border-gray-700"
-      @keydown.enter="go"
-    />
-    <label class="hidden" for="input">What's your name</label>
-
-    <div>
-      <button class="m-3 text-sm btn" :disabled="!name" @click="go">
-        go
-      </button>
+  <div class="grid grid-cols-2 text-left gap-10 max-w-7xl mx-auto shadow p-8">
+    <Head>
+      <title>Power Outages - Mauritius</title>
+    </Head>
+    <div v-for="(district, name) in allData">
+      <div class="text-2xl font-medium">{{ name }}</div>
+      <div>
+        <div v-for="(outage, index) in (district as any)" :key="index">
+          {{ outage.locality }}
+          {{ outage.date }}
+          {{ outage.streets }}
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <route lang="yaml">
 meta:
-  layout: home
+  layout: default
 </route>
