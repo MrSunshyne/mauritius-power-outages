@@ -28,20 +28,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="grid grid-cols-2 text-left gap-10 max-w-7xl mx-auto shadow p-8">
+  <div class="grid grid-cols-1 text-left gap-10 max-w-7xl mx-auto shadow">
     <Head>
       <title>Power Outages - Mauritius</title>
     </Head>
-    <div v-for="(district, name) in allData">
-      <div class="text-2xl font-medium">{{ name }}</div>
-      <div>
-        <div v-for="(outage, index) in (district as any)" :key="index">
-          {{ outage.locality }}
-          {{ outage.date }}
-          {{ outage.streets }}
-        </div>
-      </div>
-    </div>
+
+    <List :data="allData"></List>
   </div>
 </template>
 
