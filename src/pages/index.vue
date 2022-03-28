@@ -33,6 +33,8 @@ onMounted(() => {
       <title>Power Outages - Mauritius</title>
     </Head>
 
+    <Location />
+
     <List :data="allData"></List>
   </div>
 </template>

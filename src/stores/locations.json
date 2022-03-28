@@ -1,0 +1,8427 @@
+[
+  {
+    "Locality": "ALBION",
+    "Sublocality": "Albion",
+    "PostCode": 91001
+  },
+  {
+    "Locality": "ALBION",
+    "Sublocality": "Camp Creoles",
+    "PostCode": 91002
+  },
+  {
+    "Locality": "ALBION",
+    "Sublocality": "La Croisette",
+    "PostCode": 91003
+  },
+  {
+    "Locality": "ALBION",
+    "Sublocality": "Morc Beerjeeraz",
+    "PostCode": 91004
+  },
+  {
+    "Locality": "ALBION",
+    "Sublocality": "Morc de Chazal",
+    "PostCode": 91005
+  },
+  {
+    "Locality": "ALBION",
+    "Sublocality": "Morc Raffray",
+    "PostCode": 91006
+  },
+  {
+    "Locality": "ALBION",
+    "Sublocality": "Morc Terre Albion",
+    "PostCode": 91007
+  },
+  {
+    "Locality": "ALBION",
+    "Sublocality": "Splendid View",
+    "PostCode": 91008
+  },
+  {
+    "Locality": "ALBION",
+    "Sublocality": "Splendid Village",
+    "PostCode": 91009
+  },
+  {
+    "Locality": "AMITIE GOKOOLA",
+    "Sublocality": "Amitie",
+    "PostCode": 31501
+  },
+  {
+    "Locality": "AMITIE GOKOOLA",
+    "Sublocality": "Cite EDC",
+    "PostCode": 31502
+  },
+  {
+    "Locality": "AMITIE GOKOOLA",
+    "Sublocality": "Gokhoola",
+    "PostCode": 31503
+  },
+  {
+    "Locality": "AMITIE GOKOOLA",
+    "Sublocality": "Morc VRS",
+    "PostCode": 31504
+  },
+  {
+    "Locality": "AMAURY",
+    "Sublocality": "Amaury",
+    "PostCode": 31401
+  },
+  {
+    "Locality": "AMAURY",
+    "Sublocality": "Bois Jacquot",
+    "PostCode": 31402
+  },
+  {
+    "Locality": "AMAURY",
+    "Sublocality": "Bois Mourand",
+    "PostCode": 31403
+  },
+  {
+    "Locality": "AMAURY",
+    "Sublocality": "Morc Beauclimat",
+    "PostCode": 31404
+  },
+  {
+    "Locality": "ARSENAL",
+    "Sublocality": "Arsenal",
+    "PostCode": 20101
+  },
+  {
+    "Locality": "ARSENAL",
+    "Sublocality": "Domaine Les Cascades",
+    "PostCode": 20102
+  },
+  {
+    "Locality": "ARSENAL",
+    "Sublocality": "Morc Poonith",
+    "PostCode": 20103
+  },
+  {
+    "Locality": "ARSENAL",
+    "Sublocality": "Morc Promo Holiday",
+    "PostCode": 20104
+  },
+  {
+    "Locality": "ARSENAL",
+    "Sublocality": "Morc Ramjan",
+    "PostCode": 20105
+  },
+  {
+    "Locality": "ARSENAL",
+    "Sublocality": "Morc. Royal Park",
+    "PostCode": 20106
+  },
+  {
+    "Locality": "ARSENAL",
+    "Sublocality": "Morc Sobrun",
+    "PostCode": 20107
+  },
+  {
+    "Locality": "ARSENAL",
+    "Sublocality": "Paul & Virginie",
+    "PostCode": 20108
+  },
+  {
+    "Locality": "ARSENAL",
+    "Sublocality": "Petit Gamin",
+    "PostCode": 20109
+  },
+  {
+    "Locality": "ARSENAL",
+    "Sublocality": "Riviere Citron",
+    "PostCode": 20110
+  },
+  {
+    "Locality": "ARSENAL",
+    "Sublocality": "St Joseph",
+    "PostCode": 20111
+  },
+  {
+    "Locality": "BAMBOUS",
+    "Sublocality": "Allee Tamarin",
+    "PostCode": 90101
+  },
+  {
+    "Locality": "BAMBOUS",
+    "Sublocality": "Bambous",
+    "PostCode": 90102
+  },
+  {
+    "Locality": "BAMBOUS",
+    "Sublocality": "Eaux Bonnes",
+    "PostCode": 90103
+  },
+  {
+    "Locality": "BAMBOUS",
+    "Sublocality": "Geoffroy",
+    "PostCode": 90104
+  },
+  {
+    "Locality": "BAMBOUS",
+    "Sublocality": "La Ferme",
+    "PostCode": 90105
+  },
+  {
+    "Locality": "BAMBOUS",
+    "Sublocality": "Mangues Vert Doux",
+    "PostCode": 90106
+  },
+  {
+    "Locality": "BAMBOUS",
+    "Sublocality": "Mon Repos",
+    "PostCode": 90107
+  },
+  {
+    "Locality": "BAMBOUS",
+    "Sublocality": "Morc Eaux Bonnes",
+    "PostCode": 90108
+  },
+  {
+    "Locality": "BAMBOUS",
+    "Sublocality": "Vaudagne",
+    "PostCode": 90109
+  },
+  {
+    "Locality": "BAMBOUS VIRIEUX",
+    "Sublocality": "Bambous Virieux",
+    "PostCode": 50101
+  },
+  {
+    "Locality": "BAMBOUS VIRIEUX",
+    "Sublocality": "Debarcadere",
+    "PostCode": 50102
+  },
+  {
+    "Locality": "BAMBOUS VIRIEUX",
+    "Sublocality": "Les Mares",
+    "PostCode": 50103
+  },
+  {
+    "Locality": "BAMBOUS VIRIEUX",
+    "Sublocality": "Pointe Bambous",
+    "PostCode": 50104
+  },
+  {
+    "Locality": "BANANES",
+    "Sublocality": "Bananes",
+    "PostCode": 50201
+  },
+  {
+    "Locality": "BANANES",
+    "Sublocality": "Eau Bleue Reservoir",
+    "PostCode": 50202
+  },
+  {
+    "Locality": "BAIE DU CAP",
+    "Sublocality": "Baie Du Cap",
+    "PostCode": 60101
+  },
+  {
+    "Locality": "BAIE DU CAP",
+    "Sublocality": "Choisy",
+    "PostCode": 60102
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Brown Sequard Hospital",
+    "PostCode": 71401
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Central Prison",
+    "PostCode": 71402
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Cite Barkly",
+    "PostCode": 71403
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "GOVT  BLOCK",
+    "PostCode": 71404
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Mont Roches",
+    "PostCode": 71405
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Morc La Comete",
+    "PostCode": 71406
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Morc Newtown",
+    "PostCode": 71407
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Residence St Daniel",
+    "PostCode": 71408
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Roches Brunes",
+    "PostCode": 71409
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Verger Bissambar",
+    "PostCode": 71410
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Beau Bassin Center 1",
+    "PostCode": 71501
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Beau Bassin Center 2",
+    "PostCode": 71502
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Beau Bassin Center 3",
+    "PostCode": 71503
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Beau Bassin Center 4",
+    "PostCode": 71504
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Beau Bassin Center 5",
+    "PostCode": 71505
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Beau Bassin Center 6",
+    "PostCode": 71506
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Beau Bassin Center 7",
+    "PostCode": 71507
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Cascadella",
+    "PostCode": 71508
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Cascadelle",
+    "PostCode": 71509
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Cite De Rosnay",
+    "PostCode": 71510
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Cite Vuillemin",
+    "PostCode": 71511
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Harewood Park",
+    "PostCode": 71512
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Jules Koenig H.E",
+    "PostCode": 71513
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Mare Gravier",
+    "PostCode": 71514
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Meldrum Towers",
+    "PostCode": 71515
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Morc Avrillon",
+    "PostCode": 71516
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "N.H.D.C Vuillemin",
+    "PostCode": 71517
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Palm Plaza",
+    "PostCode": 71518
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Vuillemin",
+    "PostCode": 71519
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Belle Etoile",
+    "PostCode": 71601
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Belvedere",
+    "PostCode": 71602
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Camp Berthelot",
+    "PostCode": 71603
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Chebel",
+    "PostCode": 71604
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Cite Chebel 1",
+    "PostCode": 71605
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Cite Chebel 2",
+    "PostCode": 71606
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Cite CHEBEC",
+    "PostCode": 71607
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Coromandel",
+    "PostCode": 71608
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Maingard",
+    "PostCode": 71609
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Mare Gravier",
+    "PostCode": 71610
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Morc Clairmont",
+    "PostCode": 71611
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Morc Hart De Keating",
+    "PostCode": 71612
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Morc Hermitage",
+    "PostCode": 71613
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Morc  La Confiance 1",
+    "PostCode": 71614
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Morc La Confiance 2",
+    "PostCode": 71615
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Morc Lim Fat",
+    "PostCode": 71616
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Morc Montreal 1",
+    "PostCode": 71617
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Morc Montreal 2",
+    "PostCode": 71618
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Morc Montreal 3",
+    "PostCode": 71619
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Morc Montreal 4(Chapman Views)",
+    "PostCode": 71620
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Morc VRS Chebel",
+    "PostCode": 71621
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Panorama",
+    "PostCode": 71622
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Police Flats 1",
+    "PostCode": 71623
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Police Flats 2",
+    "PostCode": 71624
+  },
+  {
+    "Locality": "BEAU BASSIN",
+    "Sublocality": "Industrial zone Coromandel",
+    "PostCode": 71625
+  },
+  {
+    "Locality": "BENARES",
+    "Sublocality": "BATIMARAIS",
+    "PostCode": 61101
+  },
+  {
+    "Locality": "BENARES",
+    "Sublocality": "COLMAR",
+    "PostCode": 61102
+  },
+  {
+    "Locality": "BENARES",
+    "Sublocality": "BENARES",
+    "PostCode": 61103
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Beau Champ",
+    "PostCode": 61001
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Bel Ombre",
+    "PostCode": 61002
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Cite EDC Bel Ombre",
+    "PostCode": 61003
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Cite Longtill Bel Ombre",
+    "PostCode": 61004
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Sainte Marie",
+    "PostCode": 61005
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Morc Beau Champs",
+    "PostCode": 61007
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Sofitel",
+    "PostCode": 61008
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Belle Riviere",
+    "PostCode": 61009
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Movenpick",
+    "PostCode": 61010
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Tamassa",
+    "PostCode": 61011
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Heritage Awali",
+    "PostCode": 61012
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Heritage Le Telfair",
+    "PostCode": 61013
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Villa Valriche",
+    "PostCode": 61014
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Villa Valriche Resort",
+    "PostCode": 61015
+  },
+  {
+    "Locality": "BEL OMBRE",
+    "Sublocality": "Heritage Golf and Spa Club",
+    "PostCode": 61016
+  },
+  {
+    "Locality": "BEAU VALLON",
+    "Sublocality": "Beau Vallon",
+    "PostCode": 52201
+  },
+  {
+    "Locality": "BEAU VALLON",
+    "Sublocality": "Cite CHA",
+    "PostCode": 52202
+  },
+  {
+    "Locality": "BEAU VALLON",
+    "Sublocality": "Cite NHDC",
+    "PostCode": 52203
+  },
+  {
+    "Locality": "BEAU VALLON",
+    "Sublocality": "New Residential Area [Morc]",
+    "PostCode": 52204
+  },
+  {
+    "Locality": "BEAU VALLON",
+    "Sublocality": "Verger",
+    "PostCode": 52205
+  },
+  {
+    "Locality": "BEL AIR",
+    "Sublocality": "Bel Air",
+    "PostCode": 40101
+  },
+  {
+    "Locality": "BEL AIR",
+    "Sublocality": "Caroline",
+    "PostCode": 40102
+  },
+  {
+    "Locality": "BEL AIR",
+    "Sublocality": "Ernest Florent",
+    "PostCode": 40103
+  },
+  {
+    "Locality": "BEL AIR",
+    "Sublocality": "La Laura",
+    "PostCode": 40104
+  },
+  {
+    "Locality": "BEL AIR",
+    "Sublocality": "La Lucie Roy",
+    "PostCode": 40105
+  },
+  {
+    "Locality": "BEL AIR",
+    "Sublocality": "La Lucie  Building",
+    "PostCode": 40106
+  },
+  {
+    "Locality": "BEL AIR",
+    "Sublocality": "Morcellement  Central",
+    "PostCode": 40107
+  },
+  {
+    "Locality": "BEL AIR",
+    "Sublocality": "Morcellement  La Cheminee",
+    "PostCode": 40108
+  },
+  {
+    "Locality": "BEL AIR",
+    "Sublocality": "Morcellement Pont Lardier",
+    "PostCode": 40109
+  },
+  {
+    "Locality": "BEL AIR",
+    "Sublocality": "Petit Bois",
+    "PostCode": 40110
+  },
+  {
+    "Locality": "BEL AIR",
+    "Sublocality": "Pont Lardier",
+    "PostCode": 40111
+  },
+  {
+    "Locality": "BEL AIR",
+    "Sublocality": "Saint Michel",
+    "PostCode": 40112
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Black River",
+    "PostCode": 90601
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Cite Carre D'As",
+    "PostCode": 90602
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Cite EDC",
+    "PostCode": 90603
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Cite Tamarinier",
+    "PostCode": 90604
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "La Balise",
+    "PostCode": 90605
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "La Balise Marina",
+    "PostCode": 90606
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "La Mivoie",
+    "PostCode": 90607
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "La Preneuse",
+    "PostCode": 90608
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "La Tourelle View",
+    "PostCode": 90609
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Les Salines/Morc. Plateau",
+    "PostCode": 90610
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "London Complex",
+    "PostCode": 90611
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Martello Complex",
+    "PostCode": 90612
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Matala Villa",
+    "PostCode": 90613
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Morc Carlos",
+    "PostCode": 90614
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Morc Filature",
+    "PostCode": 90615
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Morc Majo",
+    "PostCode": 90616
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Morc Mont Calme",
+    "PostCode": 90617
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Morc Paul Hein",
+    "PostCode": 90618
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Morc Ramdenee",
+    "PostCode": 90619
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Morc. Diocese",
+    "PostCode": 90620
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Morc. Villaze",
+    "PostCode": 90621
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Nautica Complex",
+    "PostCode": 90622
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Plantation Marguery",
+    "PostCode": 90623
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "River view Com Centre",
+    "PostCode": 90624
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "Ruisseau Creole Complex",
+    "PostCode": 90625
+  },
+  {
+    "Locality": "BLACK RIVER",
+    "Sublocality": "West Island Villa",
+    "PostCode": 90626
+  },
+  {
+    "Locality": "BOIS CHERI",
+    "Sublocality": "Ahchin",
+    "PostCode": 60201
+  },
+  {
+    "Locality": "BOIS CHERI",
+    "Sublocality": "Akla Road",
+    "PostCode": 60202
+  },
+  {
+    "Locality": "BOIS CHERI",
+    "Sublocality": "Bois Cheri",
+    "PostCode": 60203
+  },
+  {
+    "Locality": "BOIS CHERI",
+    "Sublocality": "Building",
+    "PostCode": 60204
+  },
+  {
+    "Locality": "BOIS CHERI",
+    "Sublocality": "Cader Road",
+    "PostCode": 60205
+  },
+  {
+    "Locality": "BOIS CHERI",
+    "Sublocality": "Cite EDC Bois Cheri",
+    "PostCode": 60206
+  },
+  {
+    "Locality": "BOIS CHERI",
+    "Sublocality": "Cooperative",
+    "PostCode": 60207
+  },
+  {
+    "Locality": "BOIS CHERI",
+    "Sublocality": "Heerallal Rd",
+    "PostCode": 60208
+  },
+  {
+    "Locality": "BOIS CHERI",
+    "Sublocality": "Mambahal",
+    "PostCode": 60209
+  },
+  {
+    "Locality": "BOIS CHERI",
+    "Sublocality": "Morc VRS",
+    "PostCode": 60210
+  },
+  {
+    "Locality": "BOIS CHERI",
+    "Sublocality": "Porida",
+    "PostCode": 60211
+  },
+  {
+    "Locality": "BOIS CHERI",
+    "Sublocality": "Residence Bois Cheri",
+    "PostCode": 60212
+  },
+  {
+    "Locality": "BOIS CHERI",
+    "Sublocality": "Seeruttun Rd",
+    "PostCode": 60213
+  },
+  {
+    "Locality": "BOIS CHERI",
+    "Sublocality": "Tivoli",
+    "PostCode": 60214
+  },
+  {
+    "Locality": "BOIS DES AMOURETTES",
+    "Sublocality": "Anse Jonchée",
+    "PostCode": 50401
+  },
+  {
+    "Locality": "BOIS DES AMOURETTES",
+    "Sublocality": "Bois Des Amourettes",
+    "PostCode": 50402
+  },
+  {
+    "Locality": "BOIS DES AMOURETTES",
+    "Sublocality": "Domaine des Chasseur",
+    "PostCode": 50403
+  },
+  {
+    "Locality": "BOIS DES AMOURETTES",
+    "Sublocality": "Providence",
+    "PostCode": 50404
+  },
+  {
+    "Locality": "BON ACCUEIL",
+    "Sublocality": "Mission Cross",
+    "PostCode": 40202
+  },
+  {
+    "Locality": "BON ACCUEIL",
+    "Sublocality": "Belvedere",
+    "PostCode": 40203
+  },
+  {
+    "Locality": "BON ACCUEIL",
+    "Sublocality": "Grand Bas Fond(northern part)",
+    "PostCode": 40204
+  },
+  {
+    "Locality": "BON ACCUEIL",
+    "Sublocality": "Bon Accueil",
+    "PostCode": 40205
+  },
+  {
+    "Locality": "BON ACCUEIL",
+    "Sublocality": "Beau Bois",
+    "PostCode": 40206
+  },
+  {
+    "Locality": "BON ACCUEIL",
+    "Sublocality": "Quatre Bords",
+    "PostCode": 40208
+  },
+  {
+    "Locality": "BON ACCUEIL",
+    "Sublocality": "Latapie (eastern side)",
+    "PostCode": 40209
+  },
+  {
+    "Locality": "BON ACCUEIL",
+    "Sublocality": "Off Beau Bois/Vrindavan",
+    "PostCode": 43302
+  },
+  {
+    "Locality": "BON ACCUEIL",
+    "Sublocality": "Grande Retraite",
+    "PostCode": 43301
+  },
+  {
+    "Locality": "BRITANNIA",
+    "Sublocality": "BRITANNIA",
+    "PostCode": 61201
+  },
+  {
+    "Locality": "BRITANNIA",
+    "Sublocality": "CITE RAMPUR",
+    "PostCode": 61202
+  },
+  {
+    "Locality": "BRITANNIA",
+    "Sublocality": "VRS BRITANNIA (land only)",
+    "PostCode": 61203
+  },
+  {
+    "Locality": "BRITANNIA",
+    "Sublocality": "RIVIERE DRAGON",
+    "PostCode": 61204
+  },
+  {
+    "Locality": "BRITANNIA",
+    "Sublocality": "MORC VRS R.DRAGON",
+    "PostCode": 61205
+  },
+  {
+    "Locality": "BRITANNIA",
+    "Sublocality": "CAMP BERTHAUD",
+    "PostCode": 61206
+  },
+  {
+    "Locality": "BRAMSTHAN",
+    "Sublocality": "Bramsthan",
+    "PostCode": 43201
+  },
+  {
+    "Locality": "BRISEE VERDIERE",
+    "Sublocality": "Latapie(western side)",
+    "PostCode": 42409
+  },
+  {
+    "Locality": "BRISEE VERDIERE",
+    "Sublocality": "Brisee Verdiere",
+    "PostCode": 42410
+  },
+  {
+    "Locality": "BRISEE VERDIERE",
+    "Sublocality": "Mare D'Australia",
+    "PostCode": 42411
+  },
+  {
+    "Locality": "BRISEE VERDIERE",
+    "Sublocality": "Belvedere",
+    "PostCode": 42403
+  },
+  {
+    "Locality": "BRISEE VERDIERE",
+    "Sublocality": "Pont Praslin",
+    "PostCode": 21612
+  },
+  {
+    "Locality": "CAMP DE MASQUE",
+    "Sublocality": "Balance John",
+    "PostCode": 40301
+  },
+  {
+    "Locality": "CAMP DE MASQUE",
+    "Sublocality": "Camp De Masque",
+    "PostCode": 40302
+  },
+  {
+    "Locality": "CAMP DE MASQUE",
+    "Sublocality": "Camp Sonar",
+    "PostCode": 40303
+  },
+  {
+    "Locality": "CAMP DE MASQUE",
+    "Sublocality": "L' Unite",
+    "PostCode": 40304
+  },
+  {
+    "Locality": "CAMP DE MASQUE PAVE",
+    "Sublocality": "Camp De Masque Pave",
+    "PostCode": 40401
+  },
+  {
+    "Locality": "CAMP DE MASQUE PAVE",
+    "Sublocality": "Mare Goyaves",
+    "PostCode": 40402
+  },
+  {
+    "Locality": "CAMP DE MASQUE PAVE",
+    "Sublocality": "Petite Cabane",
+    "PostCode": 40403
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Anse La Raie",
+    "PostCode": 31701
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Bain Boeuf",
+    "PostCode": 31702
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Calodyne",
+    "PostCode": 31703
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Camp Gervaise",
+    "PostCode": 31704
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Cape Garden",
+    "PostCode": 31705
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Cap Malheureux",
+    "PostCode": 31706
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Cayeux",
+    "PostCode": 31707
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "C.H.A",
+    "PostCode": 31708
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Cite EDC",
+    "PostCode": 31709
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Jardin du Cap",
+    "PostCode": 31710
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "La Roue Charette",
+    "PostCode": 31711
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Mariamen Temple",
+    "PostCode": 31712
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Morc Agnis Ph 2",
+    "PostCode": 31713
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Morc Chetty 1",
+    "PostCode": 31714
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Morc Chetty 2",
+    "PostCode": 31715
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Morc Chetty 3",
+    "PostCode": 31716
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Morc Garrib",
+    "PostCode": 31717
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Morc Merven",
+    "PostCode": 31718
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Morc Rouillard",
+    "PostCode": 31719
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Mosque Square",
+    "PostCode": 31720
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "NHDC",
+    "PostCode": 31721
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Pavillon",
+    "PostCode": 31722
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Pazani Mallaye",
+    "PostCode": 31723
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Quartier La Ligne",
+    "PostCode": 31724
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Residence du Nord",
+    "PostCode": 31725
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "St Francois",
+    "PostCode": 31726
+  },
+  {
+    "Locality": "CAP MALHEUREUX",
+    "Sublocality": "Villa Maria Sq",
+    "PostCode": 31727
+  },
+  {
+    "Locality": "CASE NOYALE",
+    "Sublocality": "Carreau Eucalyptus",
+    "PostCode": 90301
+  },
+  {
+    "Locality": "CASE NOYALE",
+    "Sublocality": "Case Noyale",
+    "PostCode": 90302
+  },
+  {
+    "Locality": "CASE NOYALE",
+    "Sublocality": "Cite CHA",
+    "PostCode": 90303
+  },
+  {
+    "Locality": "CASE NOYALE",
+    "Sublocality": "Ilot Fortier",
+    "PostCode": 90304
+  },
+  {
+    "Locality": "CASE NOYALE",
+    "Sublocality": "Morc Multipliants",
+    "PostCode": 90305
+  },
+  {
+    "Locality": "CASE NOYALE",
+    "Sublocality": "Petite Riviere Noire",
+    "PostCode": 90306
+  },
+  {
+    "Locality": "CAMP DIABLE",
+    "Sublocality": "EDC CAMP DIABLE",
+    "PostCode": 60301
+  },
+  {
+    "Locality": "CAMP DIABLE",
+    "Sublocality": "MORC SAVANNAH",
+    "PostCode": 60302
+  },
+  {
+    "Locality": "CAMP DIABLE",
+    "Sublocality": "ILOT",
+    "PostCode": 60303
+  },
+  {
+    "Locality": "CAMP DIABLE",
+    "Sublocality": "CAMP DIABLE",
+    "PostCode": 60304
+  },
+  {
+    "Locality": "CAMP DIABLE",
+    "Sublocality": "NHDC CAMP DIABLE",
+    "PostCode": 60305
+  },
+  {
+    "Locality": "CAMP DIABLE",
+    "Sublocality": "RICHE BOIS",
+    "PostCode": 60306
+  },
+  {
+    "Locality": "CAMP CAROL",
+    "Sublocality": "Camp Carol",
+    "PostCode": 52401
+  },
+  {
+    "Locality": "CAMP CAROL",
+    "Sublocality": "Carreau Acacia",
+    "PostCode": 52402
+  },
+  {
+    "Locality": "CAMP CAROL",
+    "Sublocality": "La Cambuse",
+    "PostCode": 52403
+  },
+  {
+    "Locality": "CAMP CAROL",
+    "Sublocality": "Le Bouchon",
+    "PostCode": 52404
+  },
+  {
+    "Locality": "CAMP CAROL",
+    "Sublocality": "Mon Desert Mon Tresor",
+    "PostCode": 52405
+  },
+  {
+    "Locality": "CAMP CAROL",
+    "Sublocality": "Morc. V.R.S M. Desert",
+    "PostCode": 52406
+  },
+  {
+    "Locality": "CALEBASSES",
+    "Sublocality": "Calebasses",
+    "PostCode": 20201
+  },
+  {
+    "Locality": "CALEBASSES",
+    "Sublocality": "Koyratty",
+    "PostCode": 20202
+  },
+  {
+    "Locality": "CALEBASSES",
+    "Sublocality": "L'Espoir",
+    "PostCode": 20203
+  },
+  {
+    "Locality": "CALEBASSES",
+    "Sublocality": "Old Flacq",
+    "PostCode": 20204
+  },
+  {
+    "Locality": "CASCAVELLE",
+    "Sublocality": "Beau Songes",
+    "PostCode": 90201
+  },
+  {
+    "Locality": "CASCAVELLE",
+    "Sublocality": "Camp Creoles",
+    "PostCode": 90202
+  },
+  {
+    "Locality": "CASCAVELLE",
+    "Sublocality": "Cascavelle",
+    "PostCode": 90203
+  },
+  {
+    "Locality": "CASCAVELLE",
+    "Sublocality": "Xavier",
+    "PostCode": 90204
+  },
+  {
+    "Locality": "CAMP ITHIER",
+    "Sublocality": "Camp Ithier",
+    "PostCode": 40501
+  },
+  {
+    "Locality": "CAMP ITHIER",
+    "Sublocality": "Isidore Rose",
+    "PostCode": 40502
+  },
+  {
+    "Locality": "CAMP ITHIER",
+    "Sublocality": "Isidore Rose Pave",
+    "PostCode": 40503
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Belle Vue Allendy",
+    "PostCode": 40601
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Boulet Blanc",
+    "PostCode": 40602
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Boulet Rouge",
+    "PostCode": 40603
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Boutique Coco",
+    "PostCode": 40604
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Camp Garreau",
+    "PostCode": 40605
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Central Flacq",
+    "PostCode": 40606
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Cite Argy",
+    "PostCode": 40607
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Cite Hibiscus",
+    "PostCode": 40608
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Constance S.E",
+    "PostCode": 40609
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Domaine La Colombe",
+    "PostCode": 40610
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Hermitage",
+    "PostCode": 40611
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "La Source",
+    "PostCode": 40612
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Morc Argy",
+    "PostCode": 40613
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Morc Hospital",
+    "PostCode": 40614
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Morc Robillard",
+    "PostCode": 40615
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Nehru Nagar",
+    "PostCode": 40616
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Plaine De Gersigny",
+    "PostCode": 40617
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Riche Mare",
+    "PostCode": 40618
+  },
+  {
+    "Locality": "CENTRAL FLACQ",
+    "Sublocality": "Saint Remy",
+    "PostCode": 40619
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Adventist RD",
+    "PostCode": 60401
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Camp Barbe",
+    "PostCode": 60402
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Camp Charlot",
+    "PostCode": 60403
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Camp Fanny",
+    "PostCode": 60404
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Camp Fanny Lorquet",
+    "PostCode": 60405
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Camp Galets",
+    "PostCode": 60406
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Camp Goolbar",
+    "PostCode": 60407
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Camp Jeannette",
+    "PostCode": 60408
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Camp Lilas",
+    "PostCode": 60409
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Florentina",
+    "PostCode": 60410
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Jooloom",
+    "PostCode": 60411
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Jumbo",
+    "PostCode": 60412
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Lotus",
+    "PostCode": 60413
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Mont Carmel",
+    "PostCode": 60414
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Morc Dunputh",
+    "PostCode": 60415
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Mosque Rd",
+    "PostCode": 60416
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "New Mosque",
+    "PostCode": 60417
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Plaine des Galets",
+    "PostCode": 60418
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "PlayGround",
+    "PostCode": 60419
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Railway",
+    "PostCode": 60420
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Riviere des Galets",
+    "PostCode": 60421
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Saint Felix",
+    "PostCode": 60422
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Satanah",
+    "PostCode": 60423
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Social Welfare Centre Rd",
+    "PostCode": 60424
+  },
+  {
+    "Locality": "CHEMIN GRENIER",
+    "Sublocality": "Chemin Grenier",
+    "PostCode": 60425
+  },
+  {
+    "Locality": "CHAMAREL",
+    "Sublocality": "Camp Madras",
+    "PostCode": 90401
+  },
+  {
+    "Locality": "CHAMAREL",
+    "Sublocality": "Chamarel",
+    "PostCode": 90402
+  },
+  {
+    "Locality": "CHAMAREL",
+    "Sublocality": "La Vielle Cheminee",
+    "PostCode": 90403
+  },
+  {
+    "Locality": "CHAMAREL",
+    "Sublocality": "La Ville Leon",
+    "PostCode": 90404
+  },
+  {
+    "Locality": "CHAMAREL",
+    "Sublocality": "Les Rouleaux",
+    "PostCode": 90405
+  },
+  {
+    "Locality": "CHAMAREL",
+    "Sublocality": "Piton",
+    "PostCode": 90406
+  },
+  {
+    "Locality": "CHAMAREL",
+    "Sublocality": "Societe St Denis",
+    "PostCode": 90407
+  },
+  {
+    "Locality": "CHAMAREL",
+    "Sublocality": "Ste Anne",
+    "PostCode": 90408
+  },
+  {
+    "Locality": "CHAMAREL",
+    "Sublocality": "Terre 7 Couleurs",
+    "PostCode": 90409
+  },
+  {
+    "Locality": "CHAMOUNY",
+    "Sublocality": "Chamouny",
+    "PostCode": 61301
+  },
+  {
+    "Locality": "CHAMOUNY",
+    "Sublocality": "Mare Anguilles",
+    "PostCode": 61302
+  },
+  {
+    "Locality": "CHAMOUNY",
+    "Sublocality": "Mont Blanc",
+    "PostCode": 61303
+  },
+  {
+    "Locality": "CLUNY",
+    "Sublocality": "Bemanique",
+    "PostCode": 50501
+  },
+  {
+    "Locality": "CLUNY",
+    "Sublocality": "Camp Bengali",
+    "PostCode": 50502
+  },
+  {
+    "Locality": "CLUNY",
+    "Sublocality": "Camp Ramdin",
+    "PostCode": 50503
+  },
+  {
+    "Locality": "CLUNY",
+    "Sublocality": "Cluny",
+    "PostCode": 50504
+  },
+  {
+    "Locality": "CLUNY",
+    "Sublocality": "Eau Bleue Tostee",
+    "PostCode": 50505
+  },
+  {
+    "Locality": "CLUNY",
+    "Sublocality": "Railway",
+    "PostCode": 50506
+  },
+  {
+    "Locality": "CLEMENCIA",
+    "Sublocality": "Belle Rose",
+    "PostCode": 40701
+  },
+  {
+    "Locality": "CLEMENCIA",
+    "Sublocality": "Clemencia",
+    "PostCode": 40702
+  },
+  {
+    "Locality": "COTTAGE",
+    "Sublocality": "Cite C.H.A",
+    "PostCode": 30201
+  },
+  {
+    "Locality": "COTTAGE",
+    "Sublocality": "Cottage North",
+    "PostCode": 30202
+  },
+  {
+    "Locality": "COTTAGE",
+    "Sublocality": "Cottage South",
+    "PostCode": 30203
+  },
+  {
+    "Locality": "COTTAGE",
+    "Sublocality": "Morc Beau Plateau",
+    "PostCode": 30204
+  },
+  {
+    "Locality": "COTTAGE",
+    "Sublocality": "Morc Kestrel",
+    "PostCode": 30205
+  },
+  {
+    "Locality": "COTTAGE",
+    "Sublocality": "Morc VRS",
+    "PostCode": 30206
+  },
+  {
+    "Locality": "COTTAGE",
+    "Sublocality": "NHDC",
+    "PostCode": 30207
+  },
+  {
+    "Locality": "CONGOMAH",
+    "Sublocality": "Congomah",
+    "PostCode": 20301
+  },
+  {
+    "Locality": "CONGOMAH",
+    "Sublocality": "Cite E.D.C",
+    "PostCode": 20302
+  },
+  {
+    "Locality": "CONGOMAH",
+    "Sublocality": "Royal Rd",
+    "PostCode": 20303
+  },
+  {
+    "Locality": "CREVE COEUR",
+    "Sublocality": "Creve Coeur",
+    "PostCode": 20401
+  },
+  {
+    "Locality": "CREVE COEUR",
+    "Sublocality": "Morc.Creve",
+    "PostCode": 20402
+  },
+  {
+    "Locality": "CREVE COEUR",
+    "Sublocality": "Ripaille        1/2/3",
+    "PostCode": 20403
+  },
+  {
+    "Locality": "CREVE COEUR",
+    "Sublocality": "Robinson (Right side)",
+    "PostCode": 20404
+  },
+  {
+    "Locality": "CREVE COEUR",
+    "Sublocality": "Thomassin",
+    "PostCode": 20405
+  },
+  {
+    "Locality": "CREVE COEUR",
+    "Sublocality": "Upper C. Coeur",
+    "PostCode": 20406
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Arcades Currimjee",
+    "PostCode": 74501
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "B. Sequard",
+    "PostCode": 74503
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Barracks",
+    "PostCode": 74502
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Charles Lees",
+    "PostCode": 74404
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Clos  de la tour",
+    "PostCode": 74433
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Commerford",
+    "PostCode": 74506
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Commerson",
+    "PostCode": 74407
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "E. Laurent",
+    "PostCode": 74208
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Flat Lotus",
+    "PostCode": 74309
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Flat Mesnil",
+    "PostCode": 74439
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Flat St. Antoine",
+    "PostCode": 74320
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Galeries Y. Palach",
+    "PostCode": 74412
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Garden",
+    "PostCode": 74213
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Higginson",
+    "PostCode": 74414
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Ian Palach",
+    "PostCode": 74415
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "L.Geoffroy",
+    "PostCode": 74517
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Les Casernes",
+    "PostCode": 74216
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Malartic",
+    "PostCode": 74418
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Malherbes",
+    "PostCode": 74319
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Morc Faucon",
+    "PostCode": 74220
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Morc Souchon",
+    "PostCode": 74453
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Morc.Senneville",
+    "PostCode": 74221
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Municipality",
+    "PostCode": 74442
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Noelville",
+    "PostCode": 74224
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Queen Elizabeth",
+    "PostCode": 74452
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "R.Gujadhur",
+    "PostCode": 74426
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Robinson 1",
+    "PostCode": 74527
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Robinson 2",
+    "PostCode": 74528
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Robinson 3",
+    "PostCode": 74529
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Royal College",
+    "PostCode": 74443
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Salaffa Region",
+    "PostCode": 74431
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Ste Therese",
+    "PostCode": 74432
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Stevenson",
+    "PostCode": 74533
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Talipots",
+    "PostCode": 74234
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "Thomy D'Arifat",
+    "PostCode": 74335
+  },
+  {
+    "Locality": "CUREPIPE",
+    "Sublocality": "W. Churchill",
+    "PostCode": 74536
+  },
+  {
+    "Locality": "DAGOTIERE",
+    "Sublocality": "L'Assurance",
+    "PostCode": 80201
+  },
+  {
+    "Locality": "DAGOTIERE",
+    "Sublocality": "Lower Dagotiere",
+    "PostCode": 80202
+  },
+  {
+    "Locality": "DAGOTIERE",
+    "Sublocality": "NHDC Dagotiere",
+    "PostCode": 80203
+  },
+  {
+    "Locality": "DAGOTIERE",
+    "Sublocality": "Upper Dagotiere",
+    "PostCode": 80204
+  },
+  {
+    "Locality": "DAGOTIERE",
+    "Sublocality": "Valetta",
+    "PostCode": 80205
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Camp Creole",
+    "PostCode": 20501
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Cite C.H.A",
+    "PostCode": 20502
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Depinay Village",
+    "PostCode": 20503
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Domaine de Rosalie",
+    "PostCode": 20504
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Grande Rosalie",
+    "PostCode": 20505
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Ilot",
+    "PostCode": 20506
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Jouvence",
+    "PostCode": 20507
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Le Plessis Mount",
+    "PostCode": 20508
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Mon Plaisir Mount",
+    "PostCode": 20509
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Monc. Le Plessis",
+    "PostCode": 20510
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Monc. Mount",
+    "PostCode": 20511
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Monc. Juwaheer",
+    "PostCode": 20512
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Monc V.R.S",
+    "PostCode": 20513
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Mon Gout",
+    "PostCode": 20514
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "Mme Cayeux",
+    "PostCode": 20515
+  },
+  {
+    "Locality": "D'EPINAY",
+    "Sublocality": "The Mount",
+    "PostCode": 20516
+  },
+  {
+    "Locality": "DUBREUIL",
+    "Sublocality": "DUBREUIL",
+    "PostCode": 81501
+  },
+  {
+    "Locality": "DUBREUIL",
+    "Sublocality": "NHDC DUBREUIL",
+    "PostCode": 81502
+  },
+  {
+    "Locality": "DUBREUIL",
+    "Sublocality": "RISHI DAYANAND",
+    "PostCode": 81503
+  },
+  {
+    "Locality": "DUBREUIL",
+    "Sublocality": "SAMLO",
+    "PostCode": 81504
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Abbe de la caille",
+    "PostCode": 74301
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Abbe Laval",
+    "PostCode": 74202
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Bougainville",
+    "PostCode": 74203
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Camp Caval",
+    "PostCode": 74504
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Camp Dhoby",
+    "PostCode": 74305
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Camp Levieux",
+    "PostCode": 74306
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Camp Pierrot",
+    "PostCode": 74207
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Camp Rouillard",
+    "PostCode": 74253
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Castel",
+    "PostCode": 74109
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Cite du Pavillon",
+    "PostCode": 74310
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Cite Malherbes B",
+    "PostCode": 74311
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Cite MalherbesA",
+    "PostCode": 74312
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Cite Rivet",
+    "PostCode": 74313
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Cite Souchon",
+    "PostCode": 74314
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Clement Charoux",
+    "PostCode": 74315
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Couvent De Lorette Road",
+    "PostCode": 74316
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Cpe Rd (Dove st-De  sornay st)",
+    "PostCode": 74217
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Daruty De Grand Pre 1",
+    "PostCode": 74218
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Daruty DE Grand Pre 2",
+    "PostCode": 74519
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "E.Coulee Royal Rd 1",
+    "PostCode": 74254
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "E.Coulee Royal Rd 2",
+    "PostCode": 74321
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "E.Coulee(Hissandee-C.Cheron",
+    "PostCode": 74222
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Engrais Cathan",
+    "PostCode": 74323
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Engrais Martial 1",
+    "PostCode": 74124
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Engrais Martial 2",
+    "PostCode": 74225
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Flat Bahemia",
+    "PostCode": 74226
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Flat Baissac",
+    "PostCode": 74327
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Flat Bonomally",
+    "PostCode": 74328
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Flat Henessy",
+    "PostCode": 74229
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Flat Joomun",
+    "PostCode": 74330
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Hissandee",
+    "PostCode": 74231
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "La Mairee",
+    "PostCode": 74232
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Lapeyrouse",
+    "PostCode": 74233
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Morc Burtun 111",
+    "PostCode": 74334
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Morc Piat",
+    "PostCode": 74235
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Morc Nasapen",
+    "PostCode": 74336
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Morc. Adam",
+    "PostCode": 74337
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Morc. Baptiste",
+    "PostCode": 74338
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Morc. Camphriers",
+    "PostCode": 74339
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Morc. Cantin",
+    "PostCode": 74340
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Morc. Hossenbux",
+    "PostCode": 74341
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Municipal House",
+    "PostCode": 74342
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "NHDC Complex",
+    "PostCode": 74343
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "NHDC Prevert",
+    "PostCode": 74344
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Pope Henessy 1",
+    "PostCode": 74245
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Pope Henessy 2",
+    "PostCode": 74446
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Quatre Carreaux",
+    "PostCode": 74347
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Remono",
+    "PostCode": 74248
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Remono",
+    "PostCode": 74449
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Robinson",
+    "PostCode": 74550
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Royal Rd Shell- Pope Henessy",
+    "PostCode": 74451
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Sir William Newton",
+    "PostCode": 74252
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Terre Coupe",
+    "PostCode": 74553
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Tout Court",
+    "PostCode": 74354
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Trou Aux Cerfs",
+    "PostCode": 74555
+  },
+  {
+    "Locality": "EAU COULEE",
+    "Sublocality": "Villa Chambly",
+    "PostCode": 74356
+  },
+  {
+    "Locality": "EBENE",
+    "Sublocality": "Ebene Cybercity",
+    "PostCode": 72201
+  },
+  {
+    "Locality": "EBENE",
+    "Sublocality": "Ebene S.E (Ebene Housing Estate)",
+    "PostCode": 72202
+  },
+  {
+    "Locality": "EBENE",
+    "Sublocality": "Morc Ebene",
+    "PostCode": 72203
+  },
+  {
+    "Locality": "ECROIGNARD",
+    "Sublocality": "Ecroignard",
+    "PostCode": 40801
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Carriere",
+    "PostCode": 90501
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Flic en Flac",
+    "PostCode": 90502
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Hilton Hotel",
+    "PostCode": 90503
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "La Pirogue",
+    "PostCode": 90504
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Manguiers",
+    "PostCode": 90505
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Morc Anna 1",
+    "PostCode": 90506
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Morc Anna 2",
+    "PostCode": 90507
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Morc Bismic",
+    "PostCode": 90508
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Morc de Chazal",
+    "PostCode": 90509
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Mouettes",
+    "PostCode": 90510
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Morc Safeland 1",
+    "PostCode": 90511
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Morc Safeland 2",
+    "PostCode": 90512
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Morc Safeland 3",
+    "PostCode": 90513
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Morc Palmyre",
+    "PostCode": 90514
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Residence St Jacques",
+    "PostCode": 90515
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Sand Hotel",
+    "PostCode": 90516
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Sofitel Hotel",
+    "PostCode": 90517
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Souffleurs",
+    "PostCode": 90518
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Taj and Mahadhiva Hotel",
+    "PostCode": 90519
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Tourtereaux",
+    "PostCode": 90520
+  },
+  {
+    "Locality": "FLIC EN FLAC",
+    "Sublocality": "Wolmar",
+    "PostCode": 90521
+  },
+  {
+    "Locality": "FOND DU SAC",
+    "Sublocality": "Fond du Sac East",
+    "PostCode": 20601
+  },
+  {
+    "Locality": "FOND DU SAC",
+    "Sublocality": "Fond du Sac West",
+    "PostCode": 20602
+  },
+  {
+    "Locality": "FOND DU SAC",
+    "Sublocality": "Morc Dilchand",
+    "PostCode": 20603
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "CAMP BOMBAY",
+    "PostCode": 74401
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "CAMP LAGESSE",
+    "PostCode": 74402
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "CAMP LE JUGE",
+    "PostCode": 74403
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "CELICOURT ANTELME",
+    "PostCode": 74404
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "CITE ATLEE",
+    "PostCode": 74405
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "CITE CAMP LE JUGE",
+    "PostCode": 74406
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "CITE DES VERSAILLES",
+    "PostCode": 74507
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "CITE JOACHIM",
+    "PostCode": 74508
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "CITE LA BRASSERIE",
+    "PostCode": 74409
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "Cite ST LUC",
+    "PostCode": 74410
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "FLAT CEZANNE",
+    "PostCode": 74511
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "FLAT RAMDENEE",
+    "PostCode": 74512
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "FOREST SIDE 1",
+    "PostCode": 74513
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "FOREST SIDE 2",
+    "PostCode": 74514
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "HENRI ROBERT (WARD 2)",
+    "PostCode": 74215
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "ICERY",
+    "PostCode": 74416
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "LA BRASSERIE (north)",
+    "PostCode": 74517
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "LA BRASSERIE (soUth)",
+    "PostCode": 74418
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "LA CROIX",
+    "PostCode": 74419
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "les AUBINEAUX",
+    "PostCode": 74420
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "Local Govt Service Commission",
+    "PostCode": 74421
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "L'OKANA",
+    "PostCode": 74422
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "LOUIS PASTEUR",
+    "PostCode": 74423
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "MAGNOLIAS FLATS",
+    "PostCode": 74424
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "MAURICE MARTIN",
+    "PostCode": 74425
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "MORC Antelme",
+    "PostCode": 74426
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "MORC CARBONEL",
+    "PostCode": 74427
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "MORC Devoyenne",
+    "PostCode": 74428
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "MORC Leclezio",
+    "PostCode": 74429
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "MORC PIAT",
+    "PostCode": 74430
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "MORC Pilot",
+    "PostCode": 74431
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "MORCE DARUTY",
+    "PostCode": 74532
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "MORC RAMALINGUM",
+    "PostCode": 74533
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "PUBLIC SERVICE COMMISSION",
+    "PostCode": 74434
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "RESIDENCE LA COLOMBE",
+    "PostCode": 74435
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "RESIDENCE LES COLONIES",
+    "PostCode": 74436
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "RESIDENCE LES JASMINS",
+    "PostCode": 74437
+  },
+  {
+    "Locality": "FOREST SIDE",
+    "Sublocality": "ROCHECOUSTE",
+    "PostCode": 74438
+  },
+  {
+    "Locality": "16EME MILLE",
+    "Sublocality": "Cite Anoushka",
+    "PostCode": 52601
+  },
+  {
+    "Locality": "16EME MILLE",
+    "Sublocality": "Cite Mon Bois",
+    "PostCode": 52602
+  },
+  {
+    "Locality": "16EME MILLE",
+    "Sublocality": "Coriolis",
+    "PostCode": 52603
+  },
+  {
+    "Locality": "16EME MILLE",
+    "Sublocality": "Mon Bois(cnt+ubs+laiterie)",
+    "PostCode": 52604
+  },
+  {
+    "Locality": "16EME MILLE",
+    "Sublocality": "Morc Domah",
+    "PostCode": 52605
+  },
+  {
+    "Locality": "16EME MILLE",
+    "Sublocality": "Morc Soobhany",
+    "PostCode": 52606
+  },
+  {
+    "Locality": "16EME MILLE",
+    "Sublocality": "Morcellement RAMPHUL 1",
+    "PostCode": 52607
+  },
+  {
+    "Locality": "16EME MILLE",
+    "Sublocality": "Morcellement RAMPHUL 2",
+    "PostCode": 52608
+  },
+  {
+    "Locality": "16EME MILLE",
+    "Sublocality": "Seizieme mile",
+    "PostCode": 52609
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Arya Mandir",
+    "PostCode": 30401
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Astoria",
+    "PostCode": 30402
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Balkan",
+    "PostCode": 30403
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Bois Rouge",
+    "PostCode": 30404
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "CEB Sq",
+    "PostCode": 30405
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Cite Ste Claire",
+    "PostCode": 30406
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Domaine du Moulin",
+    "PostCode": 30407
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Madame Azor",
+    "PostCode": 30408
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Mamzelle Jeanne (Wlk II)",
+    "PostCode": 30409
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Mamzelle Jeanne (Wlk III)",
+    "PostCode": ""
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Mapon Leclezio",
+    "PostCode": 30410
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Morc Petit Village",
+    "PostCode": 30411
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Morc St Antoine",
+    "PostCode": 30412
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Mosque Sq",
+    "PostCode": 30413
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "New Morc Goodlands",
+    "PostCode": 30414
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Petit Village",
+    "PostCode": 30415
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Plateau",
+    "PostCode": 30416
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Railway Sq",
+    "PostCode": 30417
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Reservoir",
+    "PostCode": 30418
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Soobany Sq",
+    "PostCode": 30419
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "St Antoine Industrial Zone",
+    "PostCode": 30420
+  },
+  {
+    "Locality": "GOODLANDS",
+    "Sublocality": "Triangle",
+    "PostCode": 30421
+  },
+  {
+    "Locality": "GRANDE RETRAITE",
+    "Sublocality": "Bois d'Oiseaux",
+    "PostCode": 43302
+  },
+  {
+    "Locality": "GRANDE RETRAITE",
+    "Sublocality": "Petite retraite",
+    "PostCode": 43303
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Arya Mandir",
+    "PostCode": 30601
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Batie",
+    "PostCode": 30602
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Butte a LHerbe",
+    "PostCode": 30603
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Calodyne",
+    "PostCode": 30604
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Camp Corail",
+    "PostCode": 30605
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Camp Madras",
+    "PostCode": 30606
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Camp Petrol",
+    "PostCode": 30607
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Citerne",
+    "PostCode": 30608
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Cite EDC",
+    "PostCode": 30609
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Complex Paul et Virginie",
+    "PostCode": 30610
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Complex Melville No 1",
+    "PostCode": 30611
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Complex Melville No 2",
+    "PostCode": 30612
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Complex Melville No 3",
+    "PostCode": 30613
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Complex Melville No 4",
+    "PostCode": 30614
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Couacaud",
+    "PostCode": 30615
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Germain",
+    "PostCode": 30616
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Grand Gaube",
+    "PostCode": 30617
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "John Kennedy",
+    "PostCode": 30618
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "La Lucie Residence",
+    "PostCode": 30619
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Morc Agnis Phase 1",
+    "PostCode": 30620
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Nelson",
+    "PostCode": 30621
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Pere Glorieux",
+    "PostCode": 30622
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Quartier des Lauriers",
+    "PostCode": 30623
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "St Jean Bosco",
+    "PostCode": 30624
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "Sin Fat",
+    "PostCode": 30625
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "St Joseph Roc en Roc",
+    "PostCode": 30626
+  },
+  {
+    "Locality": "GRAND GAUBE",
+    "Sublocality": "St Michel",
+    "PostCode": 30627
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Aquamarine",
+    "PostCode": 30501
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Bazar",
+    "PostCode": 30502
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Bain Boeuf",
+    "PostCode": 30503
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Beau Manguier",
+    "PostCode": 30504
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Camp Harel",
+    "PostCode": 30505
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Cite EDC",
+    "PostCode": 30506
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Cite CHA",
+    "PostCode": 30507
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Cite Lumiere",
+    "PostCode": 30508
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Camp Huradon",
+    "PostCode": 30509
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Coastal Rd",
+    "PostCode": 30510
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Camp Lamour",
+    "PostCode": 30511
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Camp Carol",
+    "PostCode": 30512
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Chemin Vingt Pied",
+    "PostCode": 30513
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Dodo Square",
+    "PostCode": 30514
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Grand Baie",
+    "PostCode": 30515
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Les Bougainvilliers",
+    "PostCode": 30516
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "La Croisette",
+    "PostCode": 30517
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "La Mare Ronde",
+    "PostCode": 30518
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Les Flamants",
+    "PostCode": 30519
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Raffray (a)",
+    "PostCode": 30520
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Raffray (b)",
+    "PostCode": 30521
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Raffray (c)",
+    "PostCode": 30522
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Raffray (d)",
+    "PostCode": 30523
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Le Corsaire (a -f )",
+    "PostCode": 30524
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Mont Choisy (s.e)",
+    "PostCode": 30525
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Berth",
+    "PostCode": 30526
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Mont Choisy Shopping Mall",
+    "PostCode": 30527
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Martin",
+    "PostCode": 30528
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Boucan",
+    "PostCode": 30529
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Honore",
+    "PostCode": 30530
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Le Caleche",
+    "PostCode": 30531
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Swan",
+    "PostCode": 30532
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Foondun",
+    "PostCode": 30533
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Unicorn",
+    "PostCode": 30534
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Toorabally",
+    "PostCode": 30535
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Moulin Casse",
+    "PostCode": 30536
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Chetty",
+    "PostCode": 30537
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Villa Pereybere",
+    "PostCode": 30538
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Mont Oreb",
+    "PostCode": 30539
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Jaulim",
+    "PostCode": 30540
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Comty",
+    "PostCode": 30541
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Jitsing",
+    "PostCode": 30542
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Morc Ramdin",
+    "PostCode": 30543
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Macumba",
+    "PostCode": 30544
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Oasis 2 (res)",
+    "PostCode": 30545
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Pereybere",
+    "PostCode": 30546
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Pointe DAzur",
+    "PostCode": 30547
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Richmond Hill",
+    "PostCode": 30548
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Racket",
+    "PostCode": 30549
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Sottise",
+    "PostCode": 30550
+  },
+  {
+    "Locality": "GRAND BAY",
+    "Sublocality": "Super U",
+    "PostCode": 30551
+  },
+  {
+    "Locality": "GRAND SABLE",
+    "Sublocality": "Camp Balma",
+    "PostCode": 50601
+  },
+  {
+    "Locality": "GRAND SABLE",
+    "Sublocality": "Camp Pierre",
+    "PostCode": 50602
+  },
+  {
+    "Locality": "GRAND SABLE",
+    "Sublocality": "Grand Sable",
+    "PostCode": 50603
+  },
+  {
+    "Locality": "GRAND SABLE",
+    "Sublocality": "Petit Sable",
+    "PostCode": 50604
+  },
+  {
+    "Locality": "GRAND SABLE",
+    "Sublocality": "Plaine Des Roches",
+    "PostCode": 50605
+  },
+  {
+    "Locality": "GRAND SABLE",
+    "Sublocality": "Pointe Des Roches",
+    "PostCode": 50606
+  },
+  {
+    "Locality": "GRAND BEL AIR",
+    "Sublocality": "Grand Bel Air",
+    "PostCode": 50301
+  },
+  {
+    "Locality": "G.R.S.E",
+    "Sublocality": "ANAHITA IRS+HOTEL",
+    "PostCode": 40901
+  },
+  {
+    "Locality": "G.R.S.E",
+    "Sublocality": "Beau Champ",
+    "PostCode": 40902
+  },
+  {
+    "Locality": "G.R.S.E",
+    "Sublocality": "Beau Champ S.E (ALTEO)",
+    "PostCode": 40903
+  },
+  {
+    "Locality": "G.R.S.E",
+    "Sublocality": "Camp Pecheurs",
+    "PostCode": 40904
+  },
+  {
+    "Locality": "G.R.S.E",
+    "Sublocality": "FOUR SEASONS+HOTEL",
+    "PostCode": 40905
+  },
+  {
+    "Locality": "G.R.S.E",
+    "Sublocality": "Grande River South East",
+    "PostCode": 40906
+  },
+  {
+    "Locality": "G.R.S.E",
+    "Sublocality": "Morc  VRS",
+    "PostCode": 40907
+  },
+  {
+    "Locality": "G.R.S.E",
+    "Sublocality": "Quartier",
+    "PostCode": 40908
+  },
+  {
+    "Locality": "GRAND BOIS",
+    "Sublocality": "Morc SIT",
+    "PostCode": 60509
+  },
+  {
+    "Locality": "GRAND BOIS",
+    "Sublocality": "N.H.D.C Grand Bois",
+    "PostCode": 60510
+  },
+  {
+    "Locality": "GRAND BOIS",
+    "Sublocality": "N.H.D.C Legrand",
+    "PostCode": 60511
+  },
+  {
+    "Locality": "GRAND BOIS",
+    "Sublocality": "Old Savanne Rd",
+    "PostCode": 60512
+  },
+  {
+    "Locality": "GRAND BOIS",
+    "Sublocality": "Sewsagur Rd",
+    "PostCode": 60513
+  },
+  {
+    "Locality": "GRAND BOIS",
+    "Sublocality": "Young Tow",
+    "PostCode": 60514
+  },
+  {
+    "Locality": "GROS CAILLOUX",
+    "Sublocality": "Croisee Chebel",
+    "PostCode": 90701
+  },
+  {
+    "Locality": "GROS CAILLOUX",
+    "Sublocality": "Gros Cailloux",
+    "PostCode": 90702
+  },
+  {
+    "Locality": "GROS CAILLOUX",
+    "Sublocality": "Morc Domah",
+    "PostCode": 90703
+  },
+  {
+    "Locality": "GROS CAILLOUX",
+    "Sublocality": "Canot",
+    "PostCode": 90704
+  },
+  {
+    "Locality": "LA FLORA",
+    "Sublocality": "Bostom Rd",
+    "PostCode": 61701
+  },
+  {
+    "Locality": "LA FLORA",
+    "Sublocality": "Cooperative Rd",
+    "PostCode": 61702
+  },
+  {
+    "Locality": "LA FLORA",
+    "Sublocality": "Kanhye Rd",
+    "PostCode": 61703
+  },
+  {
+    "Locality": "LA FLORA",
+    "Sublocality": "La Flora",
+    "PostCode": 61704
+  },
+  {
+    "Locality": "LA FLORA",
+    "Sublocality": "Matoo Rd",
+    "PostCode": 61705
+  },
+  {
+    "Locality": "LA FLORA",
+    "Sublocality": "Pamplemousses Rd",
+    "PostCode": 61706
+  },
+  {
+    "Locality": "LA FLORA",
+    "Sublocality": "Rioux",
+    "PostCode": 61707
+  },
+  {
+    "Locality": "LA FLORA",
+    "Sublocality": "Seebaruth Rd",
+    "PostCode": 61708
+  },
+  {
+    "Locality": "LALMATIE",
+    "Sublocality": "Lalmatie",
+    "PostCode": 42601
+  },
+  {
+    "Locality": "LALMATIE",
+    "Sublocality": "Mission Cross",
+    "PostCode": 42602
+  },
+  {
+    "Locality": "LALMATIE",
+    "Sublocality": "Belvedere",
+    "PostCode": 42603
+  },
+  {
+    "Locality": "LALMATIE",
+    "Sublocality": "Grand Bas Fond(southern part)",
+    "PostCode": 42604
+  },
+  {
+    "Locality": "LA GAULETTE",
+    "Sublocality": "Coteau Raffin",
+    "PostCode": 91101
+  },
+  {
+    "Locality": "LA GAULETTE",
+    "Sublocality": "La Gaulette",
+    "PostCode": 91102
+  },
+  {
+    "Locality": "LA GAULETTE",
+    "Sublocality": "Morc Desveaux",
+    "PostCode": 91103
+  },
+  {
+    "Locality": "LA GAULETTE",
+    "Sublocality": "Morc La Fleche",
+    "PostCode": 91104
+  },
+  {
+    "Locality": "LAVENTURE",
+    "Sublocality": "Laventure",
+    "PostCode": 41001
+  },
+  {
+    "Locality": "L'AVENIR",
+    "Sublocality": "Beau Bois",
+    "PostCode": 80401
+  },
+  {
+    "Locality": "L'AVENIR",
+    "Sublocality": "L'Avenir",
+    "PostCode": 80402
+  },
+  {
+    "Locality": "LA LAURA/MALENGA",
+    "Sublocality": "La Laura",
+    "PostCode": 80501
+  },
+  {
+    "Locality": "LA LAURA/MALENGA",
+    "Sublocality": "LA LAURA/Riv Baptiste",
+    "PostCode": 80502
+  },
+  {
+    "Locality": "LA LAURA/MALENGA",
+    "Sublocality": "Malinga",
+    "PostCode": 80503
+  },
+  {
+    "Locality": "L'ESPERANCE",
+    "Sublocality": "L'Esperance",
+    "PostCode": 80301
+  },
+  {
+    "Locality": "L'ESPERANCE TREBUCHET",
+    "Sublocality": "LEsperance Trebuchet",
+    "PostCode": 30301
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "Cite C.H.A",
+    "PostCode": 21801
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "Cite Roma",
+    "PostCode": 21802
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "Jumbo",
+    "PostCode": 21803
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "La Fontaine 23",
+    "PostCode": 21804
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "Le Hochet",
+    "PostCode": 21805
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "Morc. Foondun",
+    "PostCode": 21806
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "Morc. Goolamally 1",
+    "PostCode": 21807
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "Morc. Goolamally 2",
+    "PostCode": 21808
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "Morc Manick",
+    "PostCode": 21809
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "Morc Motee",
+    "PostCode": 21810
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "Morc.Raffray 1",
+    "PostCode": 21811
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "Morc. Raffray 2",
+    "PostCode": 21812
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "Riche Terre",
+    "PostCode": 21813
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "Riche Terre Ind Zone",
+    "PostCode": 21814
+  },
+  {
+    "Locality": "LE HOCHET",
+    "Sublocality": "Terre Rouge (village)",
+    "PostCode": 21815
+  },
+  {
+    "Locality": "LE MORNE",
+    "Sublocality": "Dilo Pourie",
+    "PostCode": 91201
+  },
+  {
+    "Locality": "LE MORNE",
+    "Sublocality": "Le Morne Brabant",
+    "PostCode": 91202
+  },
+  {
+    "Locality": "LE MORNE",
+    "Sublocality": "Le Morne Village",
+    "PostCode": 91203
+  },
+  {
+    "Locality": "LE MORNE",
+    "Sublocality": "La Prairie",
+    "PostCode": 91204
+  },
+  {
+    "Locality": "LE MORNE",
+    "Sublocality": "Morc Gambier",
+    "PostCode": 91205
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "Allée Jacques",
+    "PostCode": 61401
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "Camp La Hache",
+    "PostCode": 61402
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "Camp Tagore",
+    "PostCode": 61403
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "Charles Rd",
+    "PostCode": 61404
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "Chattorgoon",
+    "PostCode": 61405
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "Cite EDC",
+    "PostCode": 61406
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "Cite Longtill",
+    "PostCode": 61407
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "Cite Paul & Virginie",
+    "PostCode": 61408
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "La Barraque S.E",
+    "PostCode": 61409
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "La Chapelle",
+    "PostCode": 61410
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "La Sourdine",
+    "PostCode": 61411
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "LEscalier",
+    "PostCode": 61412
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "Morc Barbe",
+    "PostCode": 61413
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "Morc La Sourdine",
+    "PostCode": 61414
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "Morc Tagore",
+    "PostCode": 61415
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "Savannah",
+    "PostCode": 61416
+  },
+  {
+    "Locality": "L'ESCALIER",
+    "Sublocality": "Savannah S.E",
+    "PostCode": 61417
+  },
+  {
+    "Locality": "LONG MOUNTAIN",
+    "Sublocality": "Baillache",
+    "PostCode": 20801
+  },
+  {
+    "Locality": "LONG MOUNTAIN",
+    "Sublocality": "Boulingrin",
+    "PostCode": 20802
+  },
+  {
+    "Locality": "LONG MOUNTAIN",
+    "Sublocality": "C.H.A",
+    "PostCode": 20803
+  },
+  {
+    "Locality": "LONG MOUNTAIN",
+    "Sublocality": "Camp la Boue/ Vallee du paradis",
+    "PostCode": 20804
+  },
+  {
+    "Locality": "LONG MOUNTAIN",
+    "Sublocality": "Cite Social Welfare",
+    "PostCode": 20805
+  },
+  {
+    "Locality": "LONG MOUNTAIN",
+    "Sublocality": "Descoins",
+    "PostCode": 20806
+  },
+  {
+    "Locality": "LONG MOUNTAIN",
+    "Sublocality": "E.D.C.  A",
+    "PostCode": 20807
+  },
+  {
+    "Locality": "LONG MOUNTAIN",
+    "Sublocality": "E.D.C.  B",
+    "PostCode": 20808
+  },
+  {
+    "Locality": "LONG MOUNTAIN",
+    "Sublocality": "Les Mariannes",
+    "PostCode": 20809
+  },
+  {
+    "Locality": "LONG MOUNTAIN",
+    "Sublocality": "L'Industrie",
+    "PostCode": 20810
+  },
+  {
+    "Locality": "LONG MOUNTAIN",
+    "Sublocality": "Morc. Baillache",
+    "PostCode": 20811
+  },
+  {
+    "Locality": "LONG MOUNTAIN",
+    "Sublocality": "Morc. Nouvelle",
+    "PostCode": 20812
+  },
+  {
+    "Locality": "LONG MOUNTAIN",
+    "Sublocality": "Robinson (Left Side)",
+    "PostCode": 20813
+  },
+  {
+    "Locality": "LONG MOUNTAIN",
+    "Sublocality": "Valton",
+    "PostCode": 20814
+  },
+  {
+    "Locality": "MARE D'ALBERT",
+    "Sublocality": "Allee Coco",
+    "PostCode": 51001
+  },
+  {
+    "Locality": "MARE D'ALBERT",
+    "Sublocality": "Cite EDC",
+    "PostCode": 51002
+  },
+  {
+    "Locality": "MARE D'ALBERT",
+    "Sublocality": "Cite Mare DAlbert",
+    "PostCode": 51003
+  },
+  {
+    "Locality": "MARE D'ALBERT",
+    "Sublocality": "Gros Bois S.E",
+    "PostCode": 51004
+  },
+  {
+    "Locality": "MARE D'ALBERT",
+    "Sublocality": "Les Vergers de Gros Bois",
+    "PostCode": 51005
+  },
+  {
+    "Locality": "MARE D'ALBERT",
+    "Sublocality": "Mare DAlbert",
+    "PostCode": 51006
+  },
+  {
+    "Locality": "MARE D'ALBERT",
+    "Sublocality": "Morc Gokool",
+    "PostCode": 51007
+  },
+  {
+    "Locality": "MARE D'ALBERT",
+    "Sublocality": "Morc Grove",
+    "PostCode": 51008
+  },
+  {
+    "Locality": "MARE D'ALBERT",
+    "Sublocality": "Morc Piscine",
+    "PostCode": 51009
+  },
+  {
+    "Locality": "MARE D'ALBERT",
+    "Sublocality": "Morc Samlaul",
+    "PostCode": 51010
+  },
+  {
+    "Locality": "MARE D'ALBERT",
+    "Sublocality": "Morc Toolsee",
+    "PostCode": 51011
+  },
+  {
+    "Locality": "MARE D'ALBERT",
+    "Sublocality": "Rampe Le Moirt",
+    "PostCode": 51012
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Allee Gheude",
+    "PostCode": 50801
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Blue Bay",
+    "PostCode": 50802
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Bois D'oiseaux",
+    "PostCode": 50803
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Carreau Manioc",
+    "PostCode": 50804
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Cent Gaulettes",
+    "PostCode": 50805
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Cite La Chaux",
+    "PostCode": 50806
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Debarcadere",
+    "PostCode": 50807
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Hospital",
+    "PostCode": 50808
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Ile aux deux cocos",
+    "PostCode": 50809
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Mahebourg",
+    "PostCode": 50810
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Maurice st",
+    "PostCode": 50811
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Morc. Lorette",
+    "PostCode": 50812
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Museum",
+    "PostCode": 50813
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Pointe Canon",
+    "PostCode": 50814
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Pointe D'Esny",
+    "PostCode": 50815
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Pte des Regates",
+    "PostCode": 50816
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Pte Jerome",
+    "PostCode": 50817
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Quartier",
+    "PostCode": 50818
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Remy Ollier",
+    "PostCode": 50819
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Tombeau",
+    "PostCode": 50820
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Ville Noire",
+    "PostCode": 50821
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Villeneuve",
+    "PostCode": 50822
+  },
+  {
+    "Locality": "MAHEBOURG",
+    "Sublocality": "Waterfront",
+    "PostCode": 50823
+  },
+  {
+    "Locality": "MAPOU",
+    "Sublocality": "Cite S.I.L.W.F",
+    "PostCode": 31801
+  },
+  {
+    "Locality": "MAPOU",
+    "Sublocality": "Ferret",
+    "PostCode": 31802
+  },
+  {
+    "Locality": "MAPOU",
+    "Sublocality": "Labourdonnais",
+    "PostCode": 31803
+  },
+  {
+    "Locality": "MAPOU",
+    "Sublocality": "Mapou",
+    "PostCode": 31804
+  },
+  {
+    "Locality": "MAPOU",
+    "Sublocality": "Morc B.Plateau",
+    "PostCode": 31805
+  },
+  {
+    "Locality": "MAPOU",
+    "Sublocality": "Morc BelleVue",
+    "PostCode": 31806
+  },
+  {
+    "Locality": "MAPOU",
+    "Sublocality": "Morc Hillside",
+    "PostCode": 31807
+  },
+  {
+    "Locality": "MAPOU",
+    "Sublocality": "NHDC (Phase 1 / Phase 2)",
+    "PostCode": 31808
+  },
+  {
+    "Locality": "MARE LA CHAUX",
+    "Sublocality": "Camp Creole",
+    "PostCode": 41101
+  },
+  {
+    "Locality": "MARE LA CHAUX",
+    "Sublocality": "Mare La Chaux",
+    "PostCode": 41102
+  },
+  {
+    "Locality": "MARE TABAC",
+    "Sublocality": "Aspral",
+    "PostCode": 51101
+  },
+  {
+    "Locality": "MARE TABAC",
+    "Sublocality": "Camp Francois",
+    "PostCode": 51102
+  },
+  {
+    "Locality": "MARE TABAC",
+    "Sublocality": "Cite CHA",
+    "PostCode": 51103
+  },
+  {
+    "Locality": "MARE TABAC",
+    "Sublocality": "Cite Greenwood",
+    "PostCode": 51104
+  },
+  {
+    "Locality": "MARE TABAC",
+    "Sublocality": "Gros Bois  Rd",
+    "PostCode": 51105
+  },
+  {
+    "Locality": "MARE TABAC",
+    "Sublocality": "Joli Bois",
+    "PostCode": 51106
+  },
+  {
+    "Locality": "MARE TABAC",
+    "Sublocality": "Jugoo Bhunjun",
+    "PostCode": 51107
+  },
+  {
+    "Locality": "MARE TABAC",
+    "Sublocality": "Mare Tabac",
+    "PostCode": 51108
+  },
+  {
+    "Locality": "MARE TABAC",
+    "Sublocality": "Morc SIT",
+    "PostCode": 51109
+  },
+  {
+    "Locality": "MARE TABAC",
+    "Sublocality": "NHDC Mare Tabac",
+    "PostCode": 51110
+  },
+  {
+    "Locality": "MELROSE",
+    "Sublocality": "Melrose",
+    "PostCode": 80701
+  },
+  {
+    "Locality": "MELROSE",
+    "Sublocality": "NHDC Melrose",
+    "PostCode": 80702
+  },
+  {
+    "Locality": "MEDINE CAMP DE MASQUE",
+    "Sublocality": "Bel Etang",
+    "PostCode": 41201
+  },
+  {
+    "Locality": "MEDINE CAMP DE MASQUE",
+    "Sublocality": "Medine",
+    "PostCode": 41202
+  },
+  {
+    "Locality": "MEDINE CAMP DE MASQUE",
+    "Sublocality": "Mont Ida",
+    "PostCode": 41203
+  },
+  {
+    "Locality": "MIDLANDS",
+    "Sublocality": "Midlands",
+    "PostCode": 52501
+  },
+  {
+    "Locality": "MIDLANDS",
+    "Sublocality": "Morc Ferret",
+    "PostCode": 52502
+  },
+  {
+    "Locality": "MIDLANDS",
+    "Sublocality": "Morc Ramdanee",
+    "PostCode": 52503
+  },
+  {
+    "Locality": "MIDLANDS",
+    "Sublocality": "Morc St Therese",
+    "PostCode": 52504
+  },
+  {
+    "Locality": "MORC ST ANDRE",
+    "Sublocality": "Cite Cremation",
+    "PostCode": 20901
+  },
+  {
+    "Locality": "MORC ST ANDRE",
+    "Sublocality": "Morc St Andre East",
+    "PostCode": 20902
+  },
+  {
+    "Locality": "MORC ST ANDRE",
+    "Sublocality": "Morc St Andre West",
+    "PostCode": 20903
+  },
+  {
+    "Locality": "MORC ST ANDRE",
+    "Sublocality": "Morc VRS",
+    "PostCode": 20904
+  },
+  {
+    "Locality": "MONTAGNE BLANCHE",
+    "Sublocality": "Cite St Joseph",
+    "PostCode": 80901
+  },
+  {
+    "Locality": "MONTAGNE BLANCHE",
+    "Sublocality": "Montagne Blanche",
+    "PostCode": 80902
+  },
+  {
+    "Locality": "MONTAGNE BLANCHE",
+    "Sublocality": "Morc Sans Souci",
+    "PostCode": 80903
+  },
+  {
+    "Locality": "MONTAGNE BLANCHE",
+    "Sublocality": "Petit Paquet",
+    "PostCode": 80905
+  },
+  {
+    "Locality": "MONTAGNE BLANCHE",
+    "Sublocality": "Sans Souci",
+    "PostCode": 80906
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Appartment Le Ravin",
+    "PostCode": 80801
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Baboolall RD",
+    "PostCode": 80802
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Bocage",
+    "PostCode": 80803
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Bois Cheri",
+    "PostCode": 80804
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Bon Air(+ villa road)",
+    "PostCode": 80805
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Camp Samy",
+    "PostCode": 80806
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Chantenay",
+    "PostCode": 80807
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Cite Mahatma Gandhi",
+    "PostCode": 80808
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Cite Telfair",
+    "PostCode": 80809
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Gentilly",
+    "PostCode": 80810
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Gentilly Estate (new morc MDA)",
+    "PostCode": 80811
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Mauritius Broadcasting Corporation( M B C )",
+    "PostCode": 80812
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Moka Business Centre",
+    "PostCode": 80813
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "MOKA EYE HOSPITAL",
+    "PostCode": 80814
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Moka Village",
+    "PostCode": 80815
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Morc Bagatelle",
+    "PostCode": 80816
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Morc Bega-Ebene",
+    "PostCode": 80817
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Morc Bout Du Monde-Ebene",
+    "PostCode": 80818
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Morc Eureka",
+    "PostCode": 80819
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Morc Hein",
+    "PostCode": 80820
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Morc Mon Desert",
+    "PostCode": 80821
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Morc Mon Plaisir",
+    "PostCode": 80822
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Morc Noel",
+    "PostCode": 80823
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Morc Paratian",
+    "PostCode": 80824
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Mount ORY",
+    "PostCode": 80825
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Pont Souillac",
+    "PostCode": 80826
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Railway Square",
+    "PostCode": 80827
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Residence Cybervillage",
+    "PostCode": 80828
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Telfair",
+    "PostCode": 80829
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Valory",
+    "PostCode": 80830
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Vinson",
+    "PostCode": 80831
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Bagatelle Mall",
+    "PostCode": 80832
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Martindale",
+    "PostCode": 80833
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Mauritius Examination Syndicate ( M. E. S )",
+    "PostCode": 80834
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Reduit",
+    "PostCode": 80835
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "STATE HOUSE",
+    "PostCode": 80836
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "University Of Mauritius",
+    "PostCode": 80837
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Les Allees d'Helvetia 1",
+    "PostCode": 80840
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Les Allees d'Helvetia 2",
+    "PostCode": 80838
+  },
+  {
+    "Locality": "MOKA",
+    "Sublocality": "Les Allees d'Helvetia 3",
+    "PostCode": 80839
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Astroea Rochecouste",
+    "PostCode": 51201
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Bamboo",
+    "PostCode": 51202
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Bois Doiseaux",
+    "PostCode": 51203
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Business Park",
+    "PostCode": 51204
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Cite La Rosa",
+    "PostCode": 51205
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Cite Mont Fertile",
+    "PostCode": 51206
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Cite NHDC",
+    "PostCode": 51207
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Deux Bras",
+    "PostCode": 51208
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Deux Bras S.E",
+    "PostCode": 51209
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Gros Billot",
+    "PostCode": 51210
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Gros Billot Branch",
+    "PostCode": 51211
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Kalimaye",
+    "PostCode": 51212
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "La Rosa",
+    "PostCode": 51213
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Mare Chicose",
+    "PostCode": 51214
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Mont Fertille",
+    "PostCode": 51215
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Morc Balance",
+    "PostCode": 51216
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Morc Dreepaul",
+    "PostCode": 51217
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Morc Ganga",
+    "PostCode": 51218
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Morc Gaytree",
+    "PostCode": 51219
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Morc Mauripark",
+    "PostCode": 51220
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Morc VRS",
+    "PostCode": 51221
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "New Grove",
+    "PostCode": 51222
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Parasol",
+    "PostCode": 51223
+  },
+  {
+    "Locality": "NEW GROVE",
+    "Sublocality": "Siding",
+    "PostCode": 51224
+  },
+  {
+    "Locality": "NOUVELLE FRANCE",
+    "Sublocality": "Bemanique",
+    "PostCode": 51301
+  },
+  {
+    "Locality": "NOUVELLE FRANCE",
+    "Sublocality": "Bissoondoyalrd",
+    "PostCode": 51302
+  },
+  {
+    "Locality": "NOUVELLE FRANCE",
+    "Sublocality": "Commelonne",
+    "PostCode": 51303
+  },
+  {
+    "Locality": "NOUVELLE FRANCE",
+    "Sublocality": "Grand Port Rd",
+    "PostCode": 51304
+  },
+  {
+    "Locality": "NOUVELLE FRANCE",
+    "Sublocality": "Kanpur",
+    "PostCode": 51305
+  },
+  {
+    "Locality": "NOUVELLE FRANCE",
+    "Sublocality": "La Peyre",
+    "PostCode": 51306
+  },
+  {
+    "Locality": "NOUVELLE FRANCE",
+    "Sublocality": "Morc B.Climat",
+    "PostCode": 51307
+  },
+  {
+    "Locality": "NOUVELLE FRANCE",
+    "Sublocality": "N.H.D.C N.France",
+    "PostCode": 51308
+  },
+  {
+    "Locality": "NOUVELLE FRANCE",
+    "Sublocality": "N.France",
+    "PostCode": 51309
+  },
+  {
+    "Locality": "NOUVELLE FRANCE",
+    "Sublocality": "Pont Colville",
+    "PostCode": 51310
+  },
+  {
+    "Locality": "NOUVELLE FRANCE",
+    "Sublocality": "Residence U.Park",
+    "PostCode": 51311
+  },
+  {
+    "Locality": "NOUVELLE FRANCE",
+    "Sublocality": "Savanne Rd",
+    "PostCode": 51312
+  },
+  {
+    "Locality": "NOUVELLE FRANCE",
+    "Sublocality": "Seegoolam Rd",
+    "PostCode": 51313
+  },
+  {
+    "Locality": "NOTRE DAME",
+    "Sublocality": "Church Square",
+    "PostCode": 22001
+  },
+  {
+    "Locality": "NOTRE DAME",
+    "Sublocality": "Montee Jolie",
+    "PostCode": 22002
+  },
+  {
+    "Locality": "NOTRE DAME",
+    "Sublocality": "Morc L'Amitie",
+    "PostCode": 22003
+  },
+  {
+    "Locality": "NOTRE DAME",
+    "Sublocality": "Morc VRS",
+    "PostCode": 22004
+  },
+  {
+    "Locality": "NOTRE DAME",
+    "Sublocality": "Morc Teeluck",
+    "PostCode": 22005
+  },
+  {
+    "Locality": "NOTRE DAME",
+    "Sublocality": "Morc Kitchine",
+    "PostCode": 22006
+  },
+  {
+    "Locality": "NOTRE DAME",
+    "Sublocality": "Morc La Rochelle",
+    "PostCode": 22007
+  },
+  {
+    "Locality": "NOTRE DAME",
+    "Sublocality": "Notre Dame",
+    "PostCode": 22008
+  },
+  {
+    "Locality": "NOTRE DAME",
+    "Sublocality": "N.H.D.C Baillache",
+    "PostCode": 22009
+  },
+  {
+    "Locality": "NOTRE DAME",
+    "Sublocality": "N.H.D.C.Church",
+    "PostCode": 22010
+  },
+  {
+    "Locality": "NOTRE DAME",
+    "Sublocality": "N.H.D.C.Valton",
+    "PostCode": 22011
+  },
+  {
+    "Locality": "NOTRE DAME",
+    "Sublocality": "Platform",
+    "PostCode": 22012
+  },
+  {
+    "Locality": "NOUVELLE DECOUVERTE",
+    "Sublocality": "Nouvelle Decouverte",
+    "PostCode": 81201
+  },
+  {
+    "Locality": "OLD GRAND PORT",
+    "Sublocality": "Belle Vue /Kenya",
+    "PostCode": 51401
+  },
+  {
+    "Locality": "OLD GRAND PORT",
+    "Sublocality": "Cite NHDC",
+    "PostCode": 51402
+  },
+  {
+    "Locality": "OLD GRAND PORT",
+    "Sublocality": "Debarcadere",
+    "PostCode": 51403
+  },
+  {
+    "Locality": "OLD GRAND PORT",
+    "Sublocality": "Ferney",
+    "PostCode": 51404
+  },
+  {
+    "Locality": "OLD GRAND PORT",
+    "Sublocality": "Le Vallon",
+    "PostCode": 51405
+  },
+  {
+    "Locality": "OLD GRAND PORT",
+    "Sublocality": "Old Grand Port",
+    "PostCode": 51406
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "Camp Beau Bois",
+    "PostCode": 41401
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "Camp Jakeeree",
+    "PostCode": 41402
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "CHA+ (state land)",
+    "PostCode": 41403
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "Deep River S.E",
+    "PostCode": 41404
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "EDC",
+    "PostCode": 41405
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "Kewal Nagar (Belle Rive)",
+    "PostCode": 41406
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "la Nourrice",
+    "PostCode": 41407
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "Louis Renaud",
+    "PostCode": 41408
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "Morc Deep River",
+    "PostCode": 41409
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "Morc Hamid",
+    "PostCode": 41410
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "Morc Louis Renaud",
+    "PostCode": 41411
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "Morc Trois Ilots****",
+    "PostCode": 41412
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "morc VRS Kewal Nagar",
+    "PostCode": 41413
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "Olivia",
+    "PostCode": 41414
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "Plaines Bananes",
+    "PostCode": 41415
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "Rousset Rd (olivia)",
+    "PostCode": 41416
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "SILWF---Olivia",
+    "PostCode": 41417
+  },
+  {
+    "Locality": "OLIVIA",
+    "Sublocality": "Trois Ilots",
+    "PostCode": 41418
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Beau Plan",
+    "PostCode": 21001
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Bois Rouge",
+    "PostCode": 21002
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Botanical Garden",
+    "PostCode": 21003
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Canton Nancy",
+    "PostCode": 21004
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Canton Belle Eau",
+    "PostCode": 21005
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Camp Badamiers",
+    "PostCode": 21006
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Camp d Embrevades",
+    "PostCode": 21007
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Cite E.D.C",
+    "PostCode": 21008
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "La Louisa",
+    "PostCode": 21009
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Mon Plaisir",
+    "PostCode": 21010
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Monc. Ripaille",
+    "PostCode": 21011
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Mon Rocher",
+    "PostCode": 21012
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Monc.Maison Blanche",
+    "PostCode": 21013
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Pamplemousses",
+    "PostCode": 21014
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Riviere Citron",
+    "PostCode": 21015
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "Sixth Mile",
+    "PostCode": 21016
+  },
+  {
+    "Locality": "PAMPLEMOUSSES",
+    "Sublocality": "S.S.R.N.Hospital",
+    "PostCode": 21017
+  },
+  {
+    "Locality": "PETITE RIVIERE",
+    "Sublocality": "Camp des Embrevades",
+    "PostCode": 90801
+  },
+  {
+    "Locality": "PETITE RIVIERE",
+    "Sublocality": "Camp Racket (Benoit)",
+    "PostCode": 90802
+  },
+  {
+    "Locality": "PETITE RIVIERE",
+    "Sublocality": "Canon Casse",
+    "PostCode": 90803
+  },
+  {
+    "Locality": "PETITE RIVIERE",
+    "Sublocality": "Cite Betel",
+    "PostCode": 90804
+  },
+  {
+    "Locality": "PETITE RIVIERE",
+    "Sublocality": "Cite Flamboyant (NHDC)",
+    "PostCode": 90805
+  },
+  {
+    "Locality": "PETITE RIVIERE",
+    "Sublocality": "Morc Goldsmith",
+    "PostCode": 90806
+  },
+  {
+    "Locality": "PETITE RIVIERE",
+    "Sublocality": "Morc Gros Cailloux",
+    "PostCode": 90807
+  },
+  {
+    "Locality": "PETITE RIVIERE",
+    "Sublocality": "Petite Riviere",
+    "PostCode": 90808
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Camp Mayeux",
+    "PostCode": 30701
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Les Charmose",
+    "PostCode": 30702
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Mare Seche",
+    "PostCode": 30703
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Mont Mascal",
+    "PostCode": 30704
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Morc Bholah",
+    "PostCode": 30705
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Morc Gowreesunkur 1",
+    "PostCode": 30706
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Morc Gowreesunkur 2",
+    "PostCode": 30707
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Morc Harrangee",
+    "PostCode": 30708
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Morc Loderchand",
+    "PostCode": 30709
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Moulin au vent",
+    "PostCode": 30710
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Petit Raffray Village 1",
+    "PostCode": 30711
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Petit Raffray Village 2",
+    "PostCode": 30712
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Reunion Maurel",
+    "PostCode": 30713
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "St Francois",
+    "PostCode": 30714
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Union Daruty",
+    "PostCode": 30715
+  },
+  {
+    "Locality": "PETIT RAFFRAY",
+    "Sublocality": "Union Delcourt",
+    "PostCode": 30716
+  },
+  {
+    "Locality": "PETIT BEL AIR",
+    "Sublocality": "Camp Vinson",
+    "PostCode": 52301
+  },
+  {
+    "Locality": "PETIT BEL AIR",
+    "Sublocality": "Cemetery",
+    "PostCode": 52302
+  },
+  {
+    "Locality": "PETIT BEL AIR",
+    "Sublocality": "Petit Bel Air",
+    "PostCode": 52303
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Allee Brillant",
+    "PostCode": 73501
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Allee Jacques",
+    "PostCode": 73502
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Bassin",
+    "PostCode": 73603
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Belle Terre",
+    "PostCode": 73604
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Boundary",
+    "PostCode": 73605
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Camp Fouquereaux 1",
+    "PostCode": 73606
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Camp Fouquereaux 2",
+    "PostCode": 73607
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Camp Fouquereaux 3",
+    "PostCode": 73608
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Camp Fouquereaux Bch Rd",
+    "PostCode": 73609
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Camp Hosany",
+    "PostCode": 73610
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Castel",
+    "PostCode": 73611
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Cinq Arpents",
+    "PostCode": 73612
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Cite 50",
+    "PostCode": 73613
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Clairfonds 1",
+    "PostCode": 73514
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Clairfonds 3",
+    "PostCode": 73515
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Clairfonds 2",
+    "PostCode": 73516
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Closel",
+    "PostCode": 73417
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Flat River Islands",
+    "PostCode": 73518
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Hassen Raffa",
+    "PostCode": 73619
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Hermitage",
+    "PostCode": 73620
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Highlands",
+    "PostCode": 73621
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Highlands Branch Rd",
+    "PostCode": 73622
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Independence",
+    "PostCode": 73423
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Jumbo",
+    "PostCode": 73524
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "LE Meritt",
+    "PostCode": 73525
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Les Halles",
+    "PostCode": 73526
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Mesnil",
+    "PostCode": 73627
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Morc Blue Print",
+    "PostCode": 73628
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Morc Boucan",
+    "PostCode": 73529
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Morc Koenig",
+    "PostCode": 73630
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Morc Lonrho",
+    "PostCode": 73631
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Morc Lenoir",
+    "PostCode": 73532
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Morc MTMD",
+    "PostCode": 73633
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Morc Nazroo",
+    "PostCode": 73634
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Morc Noel",
+    "PostCode": 73535
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Morc Trianon",
+    "PostCode": 73536
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Mosque Rd",
+    "PostCode": 73637
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Nalletamby",
+    "PostCode": 73538
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Nehru",
+    "PostCode": 73539
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Ollier",
+    "PostCode": 73440
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Palmerstone",
+    "PostCode": 73541
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Petit Camp",
+    "PostCode": 73542
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Pine wood Garden",
+    "PostCode": 73643
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Pont Fer",
+    "PostCode": 73544
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Riverside",
+    "PostCode": 73645
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Robinson 1",
+    "PostCode": 73546
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Robinson 3",
+    "PostCode": 73547
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Robinson2",
+    "PostCode": 73548
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Sawmill",
+    "PostCode": 73549
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Sayed Hossen Highlands Bch",
+    "PostCode": 73650
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "St. Paul",
+    "PostCode": 73551
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Tout Court",
+    "PostCode": 73652
+  },
+  {
+    "Locality": "PHOENIX",
+    "Sublocality": "Valentina",
+    "PostCode": 73553
+  },
+  {
+    "Locality": "PITON",
+    "Sublocality": "Beau Sejour",
+    "PostCode": 30801
+  },
+  {
+    "Locality": "PITON",
+    "Sublocality": "Beau Sejour SE",
+    "PostCode": 30802
+  },
+  {
+    "Locality": "PITON",
+    "Sublocality": "Bon Espoir",
+    "PostCode": 30803
+  },
+  {
+    "Locality": "PITON",
+    "Sublocality": "Cite EDC",
+    "PostCode": 30804
+  },
+  {
+    "Locality": "PITON",
+    "Sublocality": "Espe Piton",
+    "PostCode": 30805
+  },
+  {
+    "Locality": "PITON",
+    "Sublocality": "La Paix",
+    "PostCode": 30806
+  },
+  {
+    "Locality": "PITON",
+    "Sublocality": "Mon Piton",
+    "PostCode": 30807
+  },
+  {
+    "Locality": "PITON",
+    "Sublocality": "Morc Le Haut Champs",
+    "PostCode": 30808
+  },
+  {
+    "Locality": "PITON",
+    "Sublocality": "NHDC",
+    "PostCode": 30809
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "Bois Mangue",
+    "PostCode": 21201
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "Camp Maraz",
+    "PostCode": 21202
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "Cite EDC",
+    "PostCode": 21203
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "Cite NHDC",
+    "PostCode": 21204
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "Morc Beau Plan",
+    "PostCode": 21205
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "Morc Blue Nile",
+    "PostCode": 21206
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "Morc Chummun",
+    "PostCode": 21207
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "Morc Dauhoo",
+    "PostCode": 21208
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "Morc Koonjoo",
+    "PostCode": 21209
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "Morc Ramphul",
+    "PostCode": 21210
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "Morc Seebundhun",
+    "PostCode": 21211
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "Morc VRS",
+    "PostCode": 21212
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "P.Papayes East",
+    "PostCode": 21213
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "P.Papayes West",
+    "PostCode": 21214
+  },
+  {
+    "Locality": "PLAINE DES PAPAYES",
+    "Sublocality": "Theo Maigrot Sq",
+    "PostCode": 21215
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Agricultural Extension Office",
+    "PostCode": 51501
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Balance",
+    "PostCode": 51502
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Bois DOiseau",
+    "PostCode": 51503
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Cemetry Rd",
+    "PostCode": 51504
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Chatgaon (ex Airport)",
+    "PostCode": 51505
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Cite Burrenchobay",
+    "PostCode": 51506
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Cite EDC Balance",
+    "PostCode": 51507
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "La Cambuse",
+    "PostCode": 51508
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "La Grotte",
+    "PostCode": 51509
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Le Chaland",
+    "PostCode": 51510
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Madame Dayla",
+    "PostCode": 51511
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Mon desert Rd",
+    "PostCode": 51512
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Morc Gobin",
+    "PostCode": 51513
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Morc Ithier",
+    "PostCode": 51514
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "NHDC les Palmiers",
+    "PostCode": 51515
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Plaine Magnien",
+    "PostCode": 51516
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Rishi dayanand Rd",
+    "PostCode": 51517
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Ruisseau Copeaux",
+    "PostCode": 51518
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "Solitude",
+    "PostCode": 51519
+  },
+  {
+    "Locality": "PLAINE MAGNIEN",
+    "Sublocality": "SSR International Airport",
+    "PostCode": 51520
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Bras d'Eau",
+    "PostCode": 41501
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Camp Accacia",
+    "PostCode": 41502
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Camp Poorun",
+    "PostCode": 41503
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Camp Raffia",
+    "PostCode": 41504
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Cite Perdu",
+    "PostCode": 41505
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Choisy",
+    "PostCode": 41506
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Cremation",
+    "PostCode": 41507
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Debarcadere",
+    "PostCode": 41508
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Jardin",
+    "PostCode": 41509
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Kashinath",
+    "PostCode": 41510
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "La Pointe",
+    "PostCode": 41511
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "La Porte",
+    "PostCode": 41512
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Long Beach Hotel(ex Coco)",
+    "PostCode": 41601
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Morc Constance",
+    "PostCode": 41513
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Morc Janoo",
+    "PostCode": 41514
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Morc Monet",
+    "PostCode": 41515
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Morc Providence",
+    "PostCode": 41516
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Pont Blanc",
+    "PostCode": 41517
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Poste de Flacq",
+    "PostCode": 41518
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Poste Lafayette",
+    "PostCode": 41519
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "Railway",
+    "PostCode": 41520
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "The Resort(Belle Mare Plage)",
+    "PostCode": 41602
+  },
+  {
+    "Locality": "POSTE DE FLACQ",
+    "Sublocality": "One and only (st Geran Hotel)",
+    "PostCode": 41521
+  },
+  {
+    "Locality": "POINTE AUX PIMENTS",
+    "Sublocality": "Camp Lilas",
+    "PostCode": 21301
+  },
+  {
+    "Locality": "POINTE AUX PIMENTS",
+    "Sublocality": "Camp Sada",
+    "PostCode": 21302
+  },
+  {
+    "Locality": "POINTE AUX PIMENTS",
+    "Sublocality": "Camp Scipion",
+    "PostCode": 21303
+  },
+  {
+    "Locality": "POINTE AUX PIMENTS",
+    "Sublocality": "Grande Pointe aux Piments",
+    "PostCode": 21304
+  },
+  {
+    "Locality": "POINTE AUX PIMENTS",
+    "Sublocality": "Morc Brizmohun",
+    "PostCode": 21305
+  },
+  {
+    "Locality": "POINTE AUX PIMENTS",
+    "Sublocality": "Petite Pointe aux Piments",
+    "PostCode": 21306
+  },
+  {
+    "Locality": "POINTE AUX PIMENTS",
+    "Sublocality": "Morc Baie du Tortues",
+    "PostCode": 21307
+  },
+  {
+    "Locality": "POINTE AUX PIMENTS",
+    "Sublocality": "Morc Le Vieux Banian",
+    "PostCode": 21308
+  },
+  {
+    "Locality": "POUDRE D'OR HAMLET",
+    "Sublocality": "Forbach Branch",
+    "PostCode": 31001
+  },
+  {
+    "Locality": "POUDRE D'OR HAMLET",
+    "Sublocality": "Morc VRS A",
+    "PostCode": 31002
+  },
+  {
+    "Locality": "POUDRE D'OR HAMLET",
+    "Sublocality": "Morc VRS B",
+    "PostCode": 31003
+  },
+  {
+    "Locality": "POUDRE D'OR HAMLET",
+    "Sublocality": "Morc VRS C",
+    "PostCode": 31004
+  },
+  {
+    "Locality": "POUDRE D'OR HAMLET",
+    "Sublocality": "Morc VRS D",
+    "PostCode": 31005
+  },
+  {
+    "Locality": "POUDRE D'OR HAMLET",
+    "Sublocality": "Poudre DOr Hamlet",
+    "PostCode": 31006
+  },
+  {
+    "Locality": "POUDRE D'OR VILLAGE",
+    "Sublocality": "Bois Doiseau",
+    "PostCode": 30901
+  },
+  {
+    "Locality": "POUDRE D'OR VILLAGE",
+    "Sublocality": "Cite EDC",
+    "PostCode": 30902
+  },
+  {
+    "Locality": "POUDRE D'OR VILLAGE",
+    "Sublocality": "Debarcadere",
+    "PostCode": 30903
+  },
+  {
+    "Locality": "POUDRE D'OR VILLAGE",
+    "Sublocality": "Ile Dambre",
+    "PostCode": 30904
+  },
+  {
+    "Locality": "POUDRE D'OR VILLAGE",
+    "Sublocality": "Poudre DOr Village",
+    "PostCode": 30905
+  },
+  {
+    "Locality": "PROVIDENCE",
+    "Sublocality": "Cite Providence",
+    "PostCode": 81601
+  },
+  {
+    "Locality": "PROVIDENCE",
+    "Sublocality": "Providence",
+    "PostCode": 81602
+  },
+  {
+    "Locality": "PROVIDENCE",
+    "Sublocality": "Providencia  1",
+    "PostCode": 81603
+  },
+  {
+    "Locality": "PROVIDENCE",
+    "Sublocality": "Providencia  2",
+    "PostCode": 81604
+  },
+  {
+    "Locality": "PROVIDENCE",
+    "Sublocality": "Providencia  3",
+    "PostCode": 81605
+  },
+  {
+    "Locality": "QUARTIER MILITAIRE",
+    "Sublocality": "Betuel",
+    "PostCode": 81101
+  },
+  {
+    "Locality": "QUARTIER MILITAIRE",
+    "Sublocality": "Bonne Veine",
+    "PostCode": 81102
+  },
+  {
+    "Locality": "QUARTIER MILITAIRE",
+    "Sublocality": "Cite Bonne Veine",
+    "PostCode": 81103
+  },
+  {
+    "Locality": "QUARTIER MILITAIRE",
+    "Sublocality": "Cite Padco(A.Ravaton)",
+    "PostCode": 81104
+  },
+  {
+    "Locality": "QUARTIER MILITAIRE",
+    "Sublocality": "New Road***",
+    "PostCode": 81105
+  },
+  {
+    "Locality": "QUARTIER MILITAIRE",
+    "Sublocality": "Quartier Militaire",
+    "PostCode": 81106
+  },
+  {
+    "Locality": "QUARTIER MILITAIRE",
+    "Sublocality": "Vuillemin",
+    "PostCode": 81107
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Bassin",
+    "PostCode": 72501
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Bassin S.E",
+    "PostCode": 72502
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Beau Sejour 1",
+    "PostCode": 72103
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Beau Sejour 2",
+    "PostCode": 72104
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Belle Rose 1",
+    "PostCode": 72105
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Belle Rose 2",
+    "PostCode": 72206
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Belle Rose 3",
+    "PostCode": 72207
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Belle Rose 4",
+    "PostCode": 72208
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Belle Rose 5",
+    "PostCode": 72109
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Boundary",
+    "PostCode": 72310
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Candos",
+    "PostCode": 72211
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Cite Bassin",
+    "PostCode": 72512
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Cite Beau Sejour",
+    "PostCode": 72313
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Cite Candos",
+    "PostCode": 72314
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Cite Kennedy",
+    "PostCode": 72515
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Cite NHDC",
+    "PostCode": 72416
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Cite Pere Laval",
+    "PostCode": 72317
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Cite St Jean",
+    "PostCode": 72218
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Dreamton Park",
+    "PostCode": 72219
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Ebene Cybercity",
+    "PostCode": 72220
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Ebene H.E",
+    "PostCode": 72221
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Emerald Park",
+    "PostCode": 72222
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Jackson",
+    "PostCode": 72523
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "La Colline",
+    "PostCode": 72224
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "La Ferme Rd",
+    "PostCode": 72425
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "La Louise",
+    "PostCode": 72326
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "La Source",
+    "PostCode": 72427
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Le Meritt",
+    "PostCode": 72228
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Morc Cerisier",
+    "PostCode": 72529
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Morc Dookun",
+    "PostCode": 72230
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Morc Ebene",
+    "PostCode": 72231
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Morc Gaya",
+    "PostCode": 72432
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Morc Medine",
+    "PostCode": 72533
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Morc Nuckcheddy",
+    "PostCode": 72534
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Morc Pierrefonds",
+    "PostCode": 72435
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Morc Poonith",
+    "PostCode": 72436
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Morc Riverside",
+    "PostCode": 72437
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Morc St Jean",
+    "PostCode": 72238
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Nehru Rd",
+    "PostCode": 72539
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "NHDC Palm",
+    "PostCode": 72440
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "NHDC Villeneuve",
+    "PostCode": 72241
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Orchard Centre",
+    "PostCode": 72242
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Orchard Tower",
+    "PostCode": 72243
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Palma 1",
+    "PostCode": 72444
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Palma 2",
+    "PostCode": 72445
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Palma Junction",
+    "PostCode": 72446
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Pellegrin",
+    "PostCode": 72247
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Pierrefonds",
+    "PostCode": 72448
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Q Bornes 1",
+    "PostCode": 72249
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Q Bornes 2",
+    "PostCode": 72350
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Q Bornes 3",
+    "PostCode": 72351
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Q Bornes 4",
+    "PostCode": 72352
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Q Bornes 5",
+    "PostCode": 72253
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Residence D'Epinay",
+    "PostCode": 72254
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Seeneevassen",
+    "PostCode": 72455
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Sodnac",
+    "PostCode": 72256
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Trianon",
+    "PostCode": 72257
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Trianon Shopping Centre",
+    "PostCode": 72258
+  },
+  {
+    "Locality": "QUATRE BORNES",
+    "Sublocality": "Victoria Hospital",
+    "PostCode": 72259
+  },
+  {
+    "Locality": "QUATRE COCOS",
+    "Sublocality": "Belle Mare",
+    "PostCode": 41601
+  },
+  {
+    "Locality": "QUATRE COCOS",
+    "Sublocality": "Camp Marcelin",
+    "PostCode": 41602
+  },
+  {
+    "Locality": "QUATRE COCOS",
+    "Sublocality": "Camp Rannoo",
+    "PostCode": 41603
+  },
+  {
+    "Locality": "QUATRE COCOS",
+    "Sublocality": "Palmar",
+    "PostCode": 41604
+  },
+  {
+    "Locality": "QUATRE COCOS",
+    "Sublocality": "Quatre Cocos",
+    "PostCode": 41605
+  },
+  {
+    "Locality": "QUEEN VICTORIA",
+    "Sublocality": "Bonne Mere",
+    "PostCode": 42701
+  },
+  {
+    "Locality": "QUEEN VICTORIA",
+    "Sublocality": "Camp Bonne Mere",
+    "PostCode": 42702
+  },
+  {
+    "Locality": "QUEEN VICTORIA",
+    "Sublocality": "NHDC B Mere",
+    "PostCode": 42703
+  },
+  {
+    "Locality": "QUEEN VICTORIA",
+    "Sublocality": "Queen Victoria",
+    "PostCode": 42704
+  },
+  {
+    "Locality": "QUATRE SOEURS",
+    "Sublocality": "Deux Freres Mountain side",
+    "PostCode": 52701
+  },
+  {
+    "Locality": "QUATRE SOEURS",
+    "Sublocality": "Deux Freres Seaside",
+    "PostCode": 52702
+  },
+  {
+    "Locality": "QUATRE SOEURS",
+    "Sublocality": "Marie Jeanne",
+    "PostCode": 52703
+  },
+  {
+    "Locality": "QUATRE SOEURS",
+    "Sublocality": "Mr Joly",
+    "PostCode": 52704
+  },
+  {
+    "Locality": "QUATRE SOEURS",
+    "Sublocality": "Pointe aux Feuilles",
+    "PostCode": 52705
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Cite C.H.A",
+    "PostCode": 31101
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Cite EDC",
+    "PostCode": 31102
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Coquinbourg",
+    "PostCode": 31103
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Haute Rive",
+    "PostCode": 31104
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "La Clemence",
+    "PostCode": 31105
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Maurel",
+    "PostCode": 31106
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Mosque Lane",
+    "PostCode": 31107
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Panchvati",
+    "PostCode": 31108
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Pave",
+    "PostCode": 31109
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Pte des Lascars",
+    "PostCode": 31110
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Railway Lane",
+    "PostCode": 31111
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Railway Line",
+    "PostCode": 31112
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Riverside",
+    "PostCode": 31113
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Riviere du Rempart",
+    "PostCode": 31114
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Schoenfield",
+    "PostCode": 31115
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Temple",
+    "PostCode": 31116
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "B.V.Maurel (Amitie) part of",
+    "PostCode": 30101
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Antoinette",
+    "PostCode": 30102
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Barlow",
+    "PostCode": 30103
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Belle Vue Maurel",
+    "PostCode": 30104
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Desjardins",
+    "PostCode": 30105
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Mon. Allybocus",
+    "PostCode": 30106
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Mon Loisir",
+    "PostCode": 30107
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Phoolia Nagar",
+    "PostCode": 30108
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Plaines des Roches Aubin",
+    "PostCode": 31901
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Plaines des Roches (Lower)",
+    "PostCode": 31902
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Plaines des Roches (Upper)",
+    "PostCode": 31903
+  },
+  {
+    "Locality": "RIV DU REMPART",
+    "Sublocality": "Plaines des Roches Seneck",
+    "PostCode": 31904
+  },
+  {
+    "Locality": "RICHE LIEU",
+    "Sublocality": "Allee Tamarin",
+    "PostCode": 91301
+  },
+  {
+    "Locality": "RICHE LIEU",
+    "Sublocality": "Cite Richelieu",
+    "PostCode": 91302
+  },
+  {
+    "Locality": "RICHE LIEU",
+    "Sublocality": "Platform",
+    "PostCode": 91303
+  },
+  {
+    "Locality": "RICHE LIEU",
+    "Sublocality": "Richelieu",
+    "PostCode": 91304
+  },
+  {
+    "Locality": "RIVIERE DU POSTE",
+    "Sublocality": "Camp Rabaud",
+    "PostCode": 60701
+  },
+  {
+    "Locality": "RIVIERE DU POSTE",
+    "Sublocality": "Camp Siajee",
+    "PostCode": 60702
+  },
+  {
+    "Locality": "RIVIERE DU POSTE",
+    "Sublocality": "Riv du Poste",
+    "PostCode": 60703
+  },
+  {
+    "Locality": "RIVIERE DU POSTE",
+    "Sublocality": "Terrain Maurice",
+    "PostCode": 60704
+  },
+  {
+    "Locality": "RIVIERE DES ANGUILLES",
+    "Sublocality": "SENNEVILLE",
+    "PostCode": 60601
+  },
+  {
+    "Locality": "RIVIERE DES ANGUILLES",
+    "Sublocality": "MORC ROUNTREE(land)",
+    "PostCode": 60602
+  },
+  {
+    "Locality": "RIVIERE DES ANGUILLES",
+    "Sublocality": "PRUDHOMME",
+    "PostCode": 60603
+  },
+  {
+    "Locality": "RIVIERE DES ANGUILLES",
+    "Sublocality": "MORC PRUD'HOMME",
+    "PostCode": 60604
+  },
+  {
+    "Locality": "RIVIERE DES ANGUILLES",
+    "Sublocality": "MAISONNETTE",
+    "PostCode": 60605
+  },
+  {
+    "Locality": "RIVIERE DES ANGUILLES",
+    "Sublocality": "RAILWAY",
+    "PostCode": 60606
+  },
+  {
+    "Locality": "RIVIERE DES ANGUILLES",
+    "Sublocality": "RAILWAY SQUARE",
+    "PostCode": 61802
+  },
+  {
+    "Locality": "RIVIERE DES ANGUILLES",
+    "Sublocality": "BARRACKS",
+    "PostCode": 60608
+  },
+  {
+    "Locality": "RIVIERE DES ANGUILLES",
+    "Sublocality": "CAMP MARTIN",
+    "PostCode": 60609
+  },
+  {
+    "Locality": "RIVIERE DES ANGUILLES",
+    "Sublocality": "LA VANILLE NHDC",
+    "PostCode": 60610
+  },
+  {
+    "Locality": "RIVIERE DES ANGUILLES",
+    "Sublocality": "BEL AIR SAINT FELIX",
+    "PostCode": 60611
+  },
+  {
+    "Locality": "RIVIERE DES CREOLES",
+    "Sublocality": "Camp Carol",
+    "PostCode": 51601
+  },
+  {
+    "Locality": "RIVIERE DES CREOLES",
+    "Sublocality": "Cite CHA",
+    "PostCode": 51602
+  },
+  {
+    "Locality": "RIVIERE DES CREOLES",
+    "Sublocality": "Cite Longtill",
+    "PostCode": 51603
+  },
+  {
+    "Locality": "RIVIERE DES CREOLES",
+    "Sublocality": "Morc. Ferney, VRS",
+    "PostCode": 51604
+  },
+  {
+    "Locality": "RIVIERE DES CREOLES",
+    "Sublocality": "Pte Brocus",
+    "PostCode": 51605
+  },
+  {
+    "Locality": "RIVIERE DES CREOLES",
+    "Sublocality": "Riviere des Creoles",
+    "PostCode": 51606
+  },
+  {
+    "Locality": "RIPAILLES",
+    "Sublocality": "Ripailles",
+    "PostCode": 82001
+  },
+  {
+    "Locality": "ROCHES NOIRES",
+    "Sublocality": "Azuri Complex",
+    "PostCode": 31201
+  },
+  {
+    "Locality": "ROCHES NOIRES",
+    "Sublocality": "Coastal Side",
+    "PostCode": 31202
+  },
+  {
+    "Locality": "ROCHES NOIRES",
+    "Sublocality": "Domaine du levant",
+    "PostCode": 31203
+  },
+  {
+    "Locality": "ROCHES NOIRES",
+    "Sublocality": "Haute Rive",
+    "PostCode": 31204
+  },
+  {
+    "Locality": "ROCHES NOIRES",
+    "Sublocality": "Lambic",
+    "PostCode": 31205
+  },
+  {
+    "Locality": "ROCHES NOIRES",
+    "Sublocality": "Roches Noires Village",
+    "PostCode": 31206
+  },
+  {
+    "Locality": "ROCHES NOIRES",
+    "Sublocality": "Branch Rd",
+    "PostCode": 31207
+  },
+  {
+    "Locality": "ROCHES NOIRES",
+    "Sublocality": "Sidine",
+    "PostCode": 31208
+  },
+  {
+    "Locality": "ROCHE TERRE",
+    "Sublocality": "Calasse",
+    "PostCode": 32001
+  },
+  {
+    "Locality": "ROCHE TERRE",
+    "Sublocality": "Roche Terre",
+    "PostCode": 32002
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Balisson",
+    "PostCode": 52101
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Baramia",
+    "PostCode": 51802
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Camp Bouvet",
+    "PostCode": 51803
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Capitol",
+    "PostCode": 51804
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Chakla",
+    "PostCode": 51805
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Chapel",
+    "PostCode": 51806
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Cite Balisson (SILWF)",
+    "PostCode": 52107
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Cite EDC",
+    "PostCode": 51808
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Cite Padco",
+    "PostCode": 52109
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Gebert",
+    "PostCode": 51810
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Letord",
+    "PostCode": 51811
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Le Vieux Moulin",
+    "PostCode": 51812
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Madame Lolo",
+    "PostCode": 51813
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Marie Jeannie",
+    "PostCode": 51814
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Mongelard",
+    "PostCode": 51815
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Mon Rose 1",
+    "PostCode": 51816
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Mon Rose 2",
+    "PostCode": 51817
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Morc Bakory",
+    "PostCode": 51818
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Morc Boolaky",
+    "PostCode": 51819
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Morc Brito",
+    "PostCode": 51820
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Morc Domaine",
+    "PostCode": 51821
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Morc Jac",
+    "PostCode": 51822
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Morc Orchidee",
+    "PostCode": 51823
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Morc Rosiere",
+    "PostCode": 51824
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Morc S.I.T",
+    "PostCode": 51825
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Mosque Rd",
+    "PostCode": 51826
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Railway",
+    "PostCode": 51827
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Res Marc Chicose",
+    "PostCode": 51828
+  },
+  {
+    "Locality": "ROSE BELLE",
+    "Sublocality": "Rose Belle",
+    "PostCode": 51829
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "ARAB TOWN",
+    "PostCode": 71301
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "ARCADES REETOO",
+    "PostCode": 71302
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "BEAU SEJOUR  3",
+    "PostCode": 72101
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "BEAU SEJOUR  4",
+    "PostCode": 72102
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "BEAU SEJOUR  5",
+    "PostCode": 72301
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Belle Rose 6 ( Coriolis)",
+    "PostCode": 72106
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Belle Rose 8",
+    "PostCode": 72107
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Belle Rose 9",
+    "PostCode": 72204
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Belle Rose7",
+    "PostCode": 72108
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Camp Levieux",
+    "PostCode": 71203
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Camp Levieux 2",
+    "PostCode": 71204
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "CHINESE EMBASSY",
+    "PostCode": 72205
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Cite  Corp D Garde",
+    "PostCode": 71205
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Domaine de l'Intendance",
+    "PostCode": 71306
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Espace Concorde (C.Levieux)",
+    "PostCode": 71207
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "FLAT ABDOOLAH",
+    "PostCode": 71308
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "FLAT BADAMIERS",
+    "PostCode": 71309
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "FLAT BHUNJUN(village de la montagne)",
+    "PostCode": 71210
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "FLAT HOLLYWOOD",
+    "PostCode": 71311
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "FLAT MONMARTRE",
+    "PostCode": 71312
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "FLAT PEM",
+    "PostCode": 71313
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Flat Poupinel de Valence",
+    "PostCode": 71314
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "FLAT ROBINSON",
+    "PostCode": 71315
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "FLAT ROCHES BRUNES",
+    "PostCode": 71216
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "GALERIE ATCHIA",
+    "PostCode": 71317
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "GALERIE EVERSHINE",
+    "PostCode": 71318
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "GALERIE ROYALE",
+    "PostCode": 71319
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "GOVINDEN COURT",
+    "PostCode": 71320
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "HEAVEN HEIGHTS",
+    "PostCode": 71321
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "MANDARIN COURT",
+    "PostCode": 71322
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "MARKET ROSE HILL",
+    "PostCode": 71323
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "MONT ROYAL",
+    "PostCode": 71324
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Morc  Gaya",
+    "PostCode": 71225
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Morc AH FOUYE",
+    "PostCode": 71126
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Morc Balgobin",
+    "PostCode": 71327
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Morc Berthaud",
+    "PostCode": 71128
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Morc Bholah",
+    "PostCode": 71129
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Morc Chady",
+    "PostCode": 71230
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "MORC GOPAL",
+    "PostCode": 71231
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Morc NARAIN(terrain)",
+    "PostCode": 71132
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "MORC Nouvelle Ville",
+    "PostCode": 71233
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "MORC SEEBURN",
+    "PostCode": 71234
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Morc SOOKIA",
+    "PostCode": 71135
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Morc St Andrews",
+    "PostCode": 71336
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "MORCELLEMENT LARCHER",
+    "PostCode": 71337
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "MORCELLEMENT NARAIN",
+    "PostCode": 71238
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "MORCELLEMENT ROGERS",
+    "PostCode": 71339
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "N.P.F BUILDING",
+    "PostCode": 71340
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "NHDC C LEVIEUX -Geranium)",
+    "PostCode": 71241
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "NHDC C LEVIEUX-Begonia )",
+    "PostCode": 71242
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "NHDC C LEVIEUX-Chrysanteme )",
+    "PostCode": 71243
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "NHDC C LEVIEUX-Dalhia )",
+    "PostCode": 71244
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "NHDC C LEVIEUX-Eglantine )",
+    "PostCode": 71245
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "NHDC C LEVIEUX-Flamboyant )",
+    "PostCode": 71246
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "PLACE MARGEOT",
+    "PostCode": 71347
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "PLAISANCE 1",
+    "PostCode": 71348
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "PLAISANCE 2",
+    "PostCode": 71349
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Plaisance H.E",
+    "PostCode": 71350
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "QUEEN ELIZABETH COLLEGE",
+    "PostCode": 71351
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "QUEEN.COURTS",
+    "PostCode": 71352
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "RENOWN BUILDING",
+    "PostCode": 71353
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Residence Clos Verger",
+    "PostCode": 71354
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Residence La Concorde (NHDC)",
+    "PostCode": 71255
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "RESIDENCE MALARTIC",
+    "PostCode": 71356
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "ROCHES BRUNES/PLAISANCE",
+    "PostCode": 71257
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "ROCHES BRUNES/PLAISANCE 1",
+    "PostCode": 71258
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "ROCHES BRUNES/PLAISANCE 2",
+    "PostCode": 71259
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Rose Hill Centre1",
+    "PostCode": 71360
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Rose Hill Centre 2",
+    "PostCode": 71361
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Rose Hill Centre 3",
+    "PostCode": 71362
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Rose Hill Centre 4",
+    "PostCode": 71363
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Rose Hill Centre 5",
+    "PostCode": 71364
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Rose Hill Centre 6",
+    "PostCode": 71365
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Rose Hill Centre 7",
+    "PostCode": 71366
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Rose Hill Centre 8",
+    "PostCode": 71367
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Rose Hill Centre 9",
+    "PostCode": 71368
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Sites and Services",
+    "PostCode": 71269
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Stanley 1",
+    "PostCode": 71170
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "STANLEY 2",
+    "PostCode": 71171
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "State Land",
+    "PostCode": 71272
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "TREFLES 1",
+    "PostCode": 71173
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "TREFLES 2",
+    "PostCode": 71174
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "TREFLES 3 CANDA  (Q.Bornes)",
+    "PostCode": 71175
+  },
+  {
+    "Locality": "ROSE HILL",
+    "Sublocality": "Trefles H.E",
+    "PostCode": 71176
+  },
+  {
+    "Locality": "SAINT JULIEN D'HOTMAN",
+    "Sublocality": "Camp Thorel",
+    "PostCode": 80101
+  },
+  {
+    "Locality": "SAINT JULIEN D'HOTMAN",
+    "Sublocality": "Saint Julien d'Hotman",
+    "PostCode": 80102
+  },
+  {
+    "Locality": "SAINT JULIEN VILLAGE",
+    "Sublocality": "Saint Julien Village",
+    "PostCode": 41901
+  },
+  {
+    "Locality": "SAINT JULIEN VILLAGE",
+    "Sublocality": "Rich Fund",
+    "PostCode": 41902
+  },
+  {
+    "Locality": "SAINT JULIEN VILLAGE",
+    "Sublocality": "Union Flacq",
+    "PostCode": 41903
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Camp Auguste",
+    "PostCode": 81401
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Circonstance",
+    "PostCode": 81402
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Cite Cote D'Or",
+    "PostCode": 81403
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Cote d'Or VRS 1",
+    "PostCode": 81404
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Helvetia",
+    "PostCode": 81405
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Industrial Zone-Old Post Office",
+    "PostCode": 81406
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Kendra",
+    "PostCode": 81407
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "L'Agrement",
+    "PostCode": 81408
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Mont Fleuri",
+    "PostCode": 81409
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Morc Frangipanne Phase 2",
+    "PostCode": 81410
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Morc Frangipanne Phase 3",
+    "PostCode": 81411
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Morc MDA circonstance",
+    "PostCode": 81412
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Morc Merrytown",
+    "PostCode": 81413
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Morc Raffray",
+    "PostCode": 81414
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Morc Traffic Centre",
+    "PostCode": 81415
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Morc VRS 1",
+    "PostCode": 81416
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Petit Verger",
+    "PostCode": 81417
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Roselyn Cottage",
+    "PostCode": 81418
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Rte Bois Cheri",
+    "PostCode": 81419
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "SAINT PIERRE 114+162",
+    "PostCode": 81420
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Sites and Services",
+    "PostCode": 81421
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Traffic Commercial centre",
+    "PostCode": 81422
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Morc Mont Desser Alma L'Agrement",
+    "PostCode": 81424
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Cite SILWF L'Agrement",
+    "PostCode": 81425
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Cite St Catherine L'Agrement",
+    "PostCode": 81426
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Cite EDC Cirsconstance",
+    "PostCode": 81427
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Tamil Temple L'Agrement",
+    "PostCode": 81428
+  },
+  {
+    "Locality": "SAINT PIERRE",
+    "Sublocality": "Chantenay",
+    "PostCode": 81429
+  },
+  {
+    "Locality": "SEBASTOPOL",
+    "Sublocality": "Cent Gaulettes",
+    "PostCode": 42101
+  },
+  {
+    "Locality": "SEBASTOPOL",
+    "Sublocality": "Cite Sebastopol",
+    "PostCode": 42102
+  },
+  {
+    "Locality": "SEBASTOPOL",
+    "Sublocality": "Clavet",
+    "PostCode": 42103
+  },
+  {
+    "Locality": "SEBASTOPOL",
+    "Sublocality": "Etoile",
+    "PostCode": 42104
+  },
+  {
+    "Locality": "SEBASTOPOL",
+    "Sublocality": "Lesur",
+    "PostCode": 42105
+  },
+  {
+    "Locality": "SEBASTOPOL",
+    "Sublocality": "Pellegrin",
+    "PostCode": 42106
+  },
+  {
+    "Locality": "SEBASTOPOL",
+    "Sublocality": "Sebastopol",
+    "PostCode": 42107
+  },
+  {
+    "Locality": "SOUILLAC",
+    "Sublocality": "Cite Boodhoo",
+    "PostCode": 60801
+  },
+  {
+    "Locality": "SOUILLAC",
+    "Sublocality": "Cite E.D.C Chaline",
+    "PostCode": 60802
+  },
+  {
+    "Locality": "SOUILLAC",
+    "Sublocality": "Cite E.D.C Pitot",
+    "PostCode": 60803
+  },
+  {
+    "Locality": "SOUILLAC",
+    "Sublocality": "Cite Gris Gris",
+    "PostCode": 60804
+  },
+  {
+    "Locality": "SOUILLAC",
+    "Sublocality": "Cite Texamon",
+    "PostCode": 60805
+  },
+  {
+    "Locality": "SOUILLAC",
+    "Sublocality": "Lady Barkly",
+    "PostCode": 60806
+  },
+  {
+    "Locality": "SOUILLAC",
+    "Sublocality": "Morc Brise de Mer",
+    "PostCode": 60807
+  },
+  {
+    "Locality": "SOUILLAC",
+    "Sublocality": "Morc GRIS GRIS",
+    "PostCode": 60808
+  },
+  {
+    "Locality": "SOUILLAC",
+    "Sublocality": "NHDC Brise De Mer",
+    "PostCode": 60809
+  },
+  {
+    "Locality": "SOUILLAC",
+    "Sublocality": "Souillac",
+    "PostCode": 60810
+  },
+  {
+    "Locality": "SOUILLAC",
+    "Sublocality": "Terracine",
+    "PostCode": 60811
+  },
+  {
+    "Locality": "SOUILLAC",
+    "Sublocality": "VRS 1 souillac",
+    "PostCode": 60812
+  },
+  {
+    "Locality": "SOUILLAC",
+    "Sublocality": "VRS 2 souillac",
+    "PostCode": 60813
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Beau Site",
+    "PostCode": 51901
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Camp Filbert",
+    "PostCode": 51902
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Camp Florine",
+    "PostCode": 51903
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Camp Jardin",
+    "PostCode": 51904
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Camp Ramphul",
+    "PostCode": 51905
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Cent Gaulettes",
+    "PostCode": 51906
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Cite CHA",
+    "PostCode": 51907
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Cite St Hilaire",
+    "PostCode": 51908
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Hydro Power Station",
+    "PostCode": 51909
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Le Val Nature Park",
+    "PostCode": 51910
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Morc Dussoye",
+    "PostCode": 51911
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Morc Henry",
+    "PostCode": 51912
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Riche en Eau",
+    "PostCode": 51913
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "St Hilaire",
+    "PostCode": 51914
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "St Hubert",
+    "PostCode": 51915
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Ste Madeleine",
+    "PostCode": 51916
+  },
+  {
+    "Locality": "ST HUBERT",
+    "Sublocality": "Ste Philomene",
+    "PostCode": 51917
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "African Town squatters",
+    "PostCode": 60901
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Balance",
+    "PostCode": 60902
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "CEMETARY Squatters",
+    "PostCode": 60903
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Cite de Dieu Squatters",
+    "PostCode": 60904
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Cite EDC 1 Surinam",
+    "PostCode": 60905
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Cite EDC 2 Surinam",
+    "PostCode": 60906
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Coastal/mandir",
+    "PostCode": 60907
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Katamaraz",
+    "PostCode": 60908
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Martiniere",
+    "PostCode": 60909
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Morc Dhunputh",
+    "PostCode": 60910
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Morc DIDI",
+    "PostCode": 60911
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Morc Gobin",
+    "PostCode": 60912
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "NHDC Filao",
+    "PostCode": 60913
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Pomponette",
+    "PostCode": 60914
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Riambel",
+    "PostCode": 60915
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Rochester/Mosque",
+    "PostCode": 60916
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Saint Louis",
+    "PostCode": 60917
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Sept Croisees",
+    "PostCode": 60918
+  },
+  {
+    "Locality": "SURINAM",
+    "Sublocality": "Trois Bras",
+    "PostCode": 60919
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Barachois",
+    "PostCode": 90901
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Cap Dal",
+    "PostCode": 90902
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Cite EDC",
+    "PostCode": 90903
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Cite Padco",
+    "PostCode": 90904
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Domaine Mont Calme",
+    "PostCode": 90905
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "La Mivoie",
+    "PostCode": 90906
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "La Tourelle",
+    "PostCode": 90907
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Morc Black Rock",
+    "PostCode": 90908
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Morc. Mont Calme",
+    "PostCode": 90909
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Morc Carlos",
+    "PostCode": 90910
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Morc Corail",
+    "PostCode": 90911
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Morc Investors",
+    "PostCode": 90912
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Morc Le Domain",
+    "PostCode": 90913
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Morc Les Alizees",
+    "PostCode": 90914
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Morc Les Salines",
+    "PostCode": 90915
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Morc Salt Pan",
+    "PostCode": 90916
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Morc. La Falaise",
+    "PostCode": 90917
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Morc. St. Benoit",
+    "PostCode": 90918
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Morc. Verojan",
+    "PostCode": 90919
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "NHDC",
+    "PostCode": 90920
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Tamarin",
+    "PostCode": 90921
+  },
+  {
+    "Locality": "TAMARIN",
+    "Sublocality": "Tamarin Golf",
+    "PostCode": 90922
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "Bois Marchand",
+    "PostCode": 21401
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "Bois Pignolet",
+    "PostCode": 21402
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "Camp La Boue",
+    "PostCode": 21403
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "C.E.B Sq.",
+    "PostCode": 21404
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "Cite Bois Marchand",
+    "PostCode": 21405
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "Mamzelle Laure",
+    "PostCode": 21406
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "Morc Bussawon",
+    "PostCode": 21407
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "Morc. Cathan",
+    "PostCode": 21408
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "Morc. Green Park",
+    "PostCode": 21409
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "Morc Peerun",
+    "PostCode": 21410
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "Morc.Poonith",
+    "PostCode": 21411
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "Morc. Ragoobar",
+    "PostCode": 21412
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "Morc Soobratty",
+    "PostCode": 21413
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "Morc. Tara",
+    "PostCode": 21414
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "St Joseph",
+    "PostCode": 21415
+  },
+  {
+    "Locality": "TERRE ROUGE",
+    "Sublocality": "Terre Rouge",
+    "PostCode": 21416
+  },
+  {
+    "Locality": "THE VALE",
+    "Sublocality": "Lower Vale",
+    "PostCode": 31301
+  },
+  {
+    "Locality": "THE VALE",
+    "Sublocality": "Upper Vale",
+    "PostCode": 31302
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Auberge",
+    "PostCode": 21701
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Bay Village",
+    "PostCode": 21702
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Cite Florida",
+    "PostCode": 21703
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Cite Illois",
+    "PostCode": 21704
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Cite La Chaux/State Land",
+    "PostCode": 21705
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Docker's Village",
+    "PostCode": 21706
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Elizabethville",
+    "PostCode": 21707
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Industrial Zone",
+    "PostCode": 21708
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Le Goulet (Royal Rd)",
+    "PostCode": 21709
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Beau Rivage",
+    "PostCode": 21710
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Boucan",
+    "PostCode": 21711
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Concorde",
+    "PostCode": 21712
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Coprim",
+    "PostCode": 21713
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Dassagne",
+    "PostCode": 21714
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Filature",
+    "PostCode": 21715
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Fong Sing",
+    "PostCode": 21716
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Illois",
+    "PostCode": 21717
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc La Cocheyle",
+    "PostCode": 21718
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Le Verger",
+    "PostCode": 21719
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Madhoo",
+    "PostCode": 21720
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Mignot",
+    "PostCode": 21721
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Rouillard",
+    "PostCode": 21722
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Ruhomatally",
+    "PostCode": 21723
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Senestra",
+    "PostCode": 21724
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Swan",
+    "PostCode": 21725
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Morc Zenith",
+    "PostCode": 21726
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "N.H.D.C",
+    "PostCode": 21727
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Paille en Queue",
+    "PostCode": 21728
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Pont Bruniquel",
+    "PostCode": 21729
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Residence St Malo",
+    "PostCode": 21730
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Riche Terre",
+    "PostCode": 21731
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "St Malo",
+    "PostCode": 21732
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Tombeau Bay (Royal Rd)",
+    "PostCode": 21733
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Tresor",
+    "PostCode": 21734
+  },
+  {
+    "Locality": "TOMBEAU BAY",
+    "Sublocality": "Village les cocotiers",
+    "PostCode": 21735
+  },
+  {
+    "Locality": "TRIOLET",
+    "Sublocality": "Cinema Casse",
+    "PostCode": 21501
+  },
+  {
+    "Locality": "TRIOLET",
+    "Sublocality": "Cite EDC",
+    "PostCode": 21502
+  },
+  {
+    "Locality": "TRIOLET",
+    "Sublocality": "Huitieme Mile",
+    "PostCode": 21503
+  },
+  {
+    "Locality": "TRIOLET",
+    "Sublocality": "Neuvieme Mile",
+    "PostCode": 21504
+  },
+  {
+    "Locality": "TRIOLET",
+    "Sublocality": "NHDC (Solitude)",
+    "PostCode": 21505
+  },
+  {
+    "Locality": "TRIOLET",
+    "Sublocality": "Septieme Mile",
+    "PostCode": 21506
+  },
+  {
+    "Locality": "TRIOLET",
+    "Sublocality": "Solitude",
+    "PostCode": 21507
+  },
+  {
+    "Locality": "TRIOLET",
+    "Sublocality": "Terminus",
+    "PostCode": 21508
+  },
+  {
+    "Locality": "TRIOLET",
+    "Sublocality": "Trois Boutiques",
+    "PostCode": 21509
+  },
+  {
+    "Locality": "TROU D'EAU DOUCE",
+    "Sublocality": "Beau Rivage",
+    "PostCode": 42201
+  },
+  {
+    "Locality": "TROU D'EAU DOUCE",
+    "Sublocality": "Camp Nadal",
+    "PostCode": 42202
+  },
+  {
+    "Locality": "TROU D'EAU DOUCE",
+    "Sublocality": "Camp Nowbuth",
+    "PostCode": 42203
+  },
+  {
+    "Locality": "TROU D'EAU DOUCE",
+    "Sublocality": "Camp Toorab",
+    "PostCode": 42204
+  },
+  {
+    "Locality": "TROU D'EAU DOUCE",
+    "Sublocality": "Debarcadere",
+    "PostCode": 42205
+  },
+  {
+    "Locality": "TROU D'EAU DOUCE",
+    "Sublocality": "Desperoux",
+    "PostCode": 42206
+  },
+  {
+    "Locality": "TROU D'EAU DOUCE",
+    "Sublocality": "La Pelouse",
+    "PostCode": 42207
+  },
+  {
+    "Locality": "TROU D'EAU DOUCE",
+    "Sublocality": "Le Maho",
+    "PostCode": 42208
+  },
+  {
+    "Locality": "TROU D'EAU DOUCE",
+    "Sublocality": "Montee Bastille",
+    "PostCode": 42209
+  },
+  {
+    "Locality": "TROU D'EAU DOUCE",
+    "Sublocality": "Palmar Beach",
+    "PostCode": 42210
+  },
+  {
+    "Locality": "TROU D'EAU DOUCE",
+    "Sublocality": "Sept Croisees(inc Montaigu)",
+    "PostCode": 42211
+  },
+  {
+    "Locality": "TROU D'EAU DOUCE",
+    "Sublocality": "Touessrock/Casuarina",
+    "PostCode": 42212
+  },
+  {
+    "Locality": "TROU D'EAU DOUCE",
+    "Sublocality": "Victoria",
+    "PostCode": 42213
+  },
+  {
+    "Locality": "TROU D'EAU DOUCE",
+    "Sublocality": "Trou D'Eau Douce",
+    "PostCode": 42214
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Cite EDC Pere Laval",
+    "PostCode": 22301
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Asviva",
+    "PostCode": 22302
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Bassa",
+    "PostCode": 22303
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Choisy",
+    "PostCode": 22304
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Elaya",
+    "PostCode": 22305
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Future",
+    "PostCode": 22306
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Hossen",
+    "PostCode": 22307
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Jhuboo",
+    "PostCode": 22308
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Mascareign",
+    "PostCode": 22309
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Moosary",
+    "PostCode": 22310
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Papin",
+    "PostCode": 22311
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Ramdewar",
+    "PostCode": 22312
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Ramdhany",
+    "PostCode": 22313
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Residence",
+    "PostCode": 22314
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Sagitaire",
+    "PostCode": 22315
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Souvenir",
+    "PostCode": 22316
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Tobago",
+    "PostCode": 22317
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc Trio",
+    "PostCode": 22318
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Morc VRS Choisy",
+    "PostCode": 22319
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Residence Flebistier",
+    "PostCode": 22320
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Trou aux Biches I",
+    "PostCode": 22321
+  },
+  {
+    "Locality": "TROU AUX BICHES",
+    "Sublocality": "Trou aux Biches II",
+    "PostCode": 22322
+  },
+  {
+    "Locality": "TROIS BOUTIQUES",
+    "Sublocality": "Beau Fonds",
+    "PostCode": 52001
+  },
+  {
+    "Locality": "TROIS BOUTIQUES",
+    "Sublocality": "Carreau Esnouf",
+    "PostCode": 52002
+  },
+  {
+    "Locality": "TROIS BOUTIQUES",
+    "Sublocality": "Carreau La Paille",
+    "PostCode": 52003
+  },
+  {
+    "Locality": "TROIS BOUTIQUES",
+    "Sublocality": "Cite Ouvrière",
+    "PostCode": 52004
+  },
+  {
+    "Locality": "TROIS BOUTIQUES",
+    "Sublocality": "Cite Trois Boutiques",
+    "PostCode": 52005
+  },
+  {
+    "Locality": "TROIS BOUTIQUES",
+    "Sublocality": "Malakoff",
+    "PostCode": 52006
+  },
+  {
+    "Locality": "TROIS BOUTIQUES",
+    "Sublocality": "Morc. Aspirale",
+    "PostCode": 52007
+  },
+  {
+    "Locality": "TROIS BOUTIQUES",
+    "Sublocality": "Morc. Les Palmiers",
+    "PostCode": 52008
+  },
+  {
+    "Locality": "TROIS BOUTIQUES",
+    "Sublocality": "Morc Pitchen",
+    "PostCode": 52009
+  },
+  {
+    "Locality": "TROIS BOUTIQUES",
+    "Sublocality": "Plein Bois",
+    "PostCode": 52010
+  },
+  {
+    "Locality": "TROIS BOUTIQUES",
+    "Sublocality": "Trois Boutiques",
+    "PostCode": 52011
+  },
+  {
+    "Locality": "TROIS BOUTIQUES",
+    "Sublocality": "Union Vale",
+    "PostCode": 52012
+  },
+  {
+    "Locality": "TROIS BOUTIQUES",
+    "Sublocality": "Virginia",
+    "PostCode": 52013
+  },
+  {
+    "Locality": "TYACK",
+    "Sublocality": "LOWERTYACK",
+    "PostCode": 61802
+  },
+  {
+    "Locality": "TYACK",
+    "Sublocality": "UPPER TYACK",
+    "PostCode": 61805
+  },
+  {
+    "Locality": "TYACK",
+    "Sublocality": "CITE TYACK",
+    "PostCode": 61801
+  },
+  {
+    "Locality": "TYACK",
+    "Sublocality": "MORC BLUE PRINT",
+    "PostCode": 61803
+  },
+  {
+    "Locality": "TYACK",
+    "Sublocality": "NHDC TYACK",
+    "PostCode": 61804
+  },
+  {
+    "Locality": "UNION DUCRAY/ST AUBIN",
+    "Sublocality": "UNION DUCRAY S.E/Union St Aubin",
+    "PostCode": 61501
+  },
+  {
+    "Locality": "UNION DUCRAY/ST AUBIN",
+    "Sublocality": "CITE SAINT AUBIN",
+    "PostCode": 61502
+  },
+  {
+    "Locality": "UNION DUCRAY/ST AUBIN",
+    "Sublocality": "MORC St Aubin",
+    "PostCode": 61503
+  },
+  {
+    "Locality": "UNION DUCRAY/ST AUBIN",
+    "Sublocality": "New morc St Aubin (land only)",
+    "PostCode": 61504
+  },
+  {
+    "Locality": "UNION PARK",
+    "Sublocality": "Cluny rd",
+    "PostCode": 52104
+  },
+  {
+    "Locality": "UNION PARK",
+    "Sublocality": "Morc Cheminee",
+    "PostCode": 52105
+  },
+  {
+    "Locality": "UNION PARK",
+    "Sublocality": "Morc VRS",
+    "PostCode": 52106
+  },
+  {
+    "Locality": "UNION PARK",
+    "Sublocality": "School Rd",
+    "PostCode": 52107
+  },
+  {
+    "Locality": "UNION PARK",
+    "Sublocality": "U.Park",
+    "PostCode": 52108
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Allee Brillant",
+    "PostCode": 74101
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Berthaud",
+    "PostCode": 74102
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Cite EDC",
+    "PostCode": 74103
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Cite Loiseau",
+    "PostCode": 74104
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Cite Mangalkhan",
+    "PostCode": 74105
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "De Burg Edwards",
+    "PostCode": 74106
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "John Kennedy",
+    "PostCode": 74107
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "King George V",
+    "PostCode": 74108
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Morc GIDC",
+    "PostCode": 74109
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Queen Mary",
+    "PostCode": 74110
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Riviere Seche",
+    "PostCode": 74111
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Simonet",
+    "PostCode": 74112
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Allee Brillant",
+    "PostCode": 73401
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Angus",
+    "PostCode": 73402
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Beard",
+    "PostCode": 73103
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Bonne Terre",
+    "PostCode": 73304
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Camp Belin",
+    "PostCode": 73105
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Camp Mapou",
+    "PostCode": 73106
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Camp Roches",
+    "PostCode": 73107
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Carreau Lalianne",
+    "PostCode": 73108
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Cite Henriette",
+    "PostCode": 73109
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Cite La Caverne",
+    "PostCode": 73310
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Clairfonds No.1",
+    "PostCode": 73411
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Clairfonds No.2",
+    "PostCode": 73412
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Clairfonds No.3",
+    "PostCode": 73413
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Diolle",
+    "PostCode": 73114
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "E.Anquetil",
+    "PostCode": 73215
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Glen Park",
+    "PostCode": 73116
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Glen Park NHDC",
+    "PostCode": 73117
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Grannum",
+    "PostCode": 73418
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Gymkhana",
+    "PostCode": 73419
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Henrietta",
+    "PostCode": 73120
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Hollyrood No.1",
+    "PostCode": 73221
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Hollyrood No.2",
+    "PostCode": 73222
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Jackson",
+    "PostCode": 73423
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "La Caverne No.1",
+    "PostCode": 73324
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "La Caverne No.2",
+    "PostCode": 73325
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "La Marie",
+    "PostCode": 73126
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "La Vanille",
+    "PostCode": 73227
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Ligne Berthaud",
+    "PostCode": 73328
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Modern",
+    "PostCode": 73329
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Mon Desir",
+    "PostCode": 73330
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Morc Fleuriot",
+    "PostCode": 73431
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Morc Medine",
+    "PostCode": 73132
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Morc Munbodh",
+    "PostCode": 73233
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Morc Peerun",
+    "PostCode": 73234
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Morc Pousson",
+    "PostCode": 73135
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Morc Sauba",
+    "PostCode": 73436
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Morc Seetaram",
+    "PostCode": 73137
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Quinze Cantons No.1",
+    "PostCode": 73238
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Quinze Cantons No.2",
+    "PostCode": 73239
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Reunion",
+    "PostCode": 73240
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Riverwalk",
+    "PostCode": 73441
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Sadally",
+    "PostCode": 73242
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "SMF QTRS",
+    "PostCode": 73443
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Solferino No. 1",
+    "PostCode": 73344
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Solferino No. 2",
+    "PostCode": 73345
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Solferino No. 3",
+    "PostCode": 73346
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Solferino No. 4",
+    "PostCode": 73347
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Solferino No. 5",
+    "PostCode": 73348
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "St Paul",
+    "PostCode": 73449
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Thompson",
+    "PostCode": 73250
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Trair DUnion",
+    "PostCode": 73451
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Tres Bon No. 1",
+    "PostCode": 73252
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Tres Bon No. 2",
+    "PostCode": 73253
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Tres Bon No. 3",
+    "PostCode": 73254
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Tres Bon No. 4",
+    "PostCode": 73255
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Vingta No. 1",
+    "PostCode": 73356
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Vingta No. 2",
+    "PostCode": 73357
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Vingta No. 3",
+    "PostCode": 73358
+  },
+  {
+    "Locality": "VACOAS",
+    "Sublocality": "Visitation",
+    "PostCode": 73359
+  },
+  {
+    "Locality": "VERDUN",
+    "Sublocality": "Alma",
+    "PostCode": 81801
+  },
+  {
+    "Locality": "VERDUN",
+    "Sublocality": "Cite EDC Verdun",
+    "PostCode": 81802
+  },
+  {
+    "Locality": "VERDUN",
+    "Sublocality": "Verdun",
+    "PostCode": 81803
+  },
+  {
+    "Locality": "VILLEBAGUE",
+    "Sublocality": "Camp Sipaye",
+    "PostCode": 21601
+  },
+  {
+    "Locality": "VILLEBAGUE",
+    "Sublocality": "Mon Songe",
+    "PostCode": 21602
+  },
+  {
+    "Locality": "VILLEBAGUE",
+    "Sublocality": "Monc V.R.S",
+    "PostCode": 21603
+  },
+  {
+    "Locality": "VILLEBAGUE",
+    "Sublocality": "Nicoliere",
+    "PostCode": 21604
+  },
+  {
+    "Locality": "VILLEBAGUE",
+    "Sublocality": "Petite Julie",
+    "PostCode": 21605
+  },
+  {
+    "Locality": "VILLEBAGUE",
+    "Sublocality": "Ville Bague upper",
+    "PostCode": 21606
+  },
+  {
+    "Locality": "VILLEBAGUE",
+    "Sublocality": "Ville Bague lower",
+    "PostCode": 21607
+  }
+]

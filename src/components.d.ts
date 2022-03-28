@@ -10,6 +10,7 @@ declare module 'vue' {
     DashboardSidebar: typeof import('./components/DashboardSidebar.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
     List: typeof import('./components/List.vue')['default']
+    Location: typeof import('./components/location.vue')['default']
     Logo: typeof import('./components/Logo.vue')['default']
     ReactiveCovidChart: typeof import('./components/ReactiveCovidChart.vue')['default']
     README: typeof import('./components/README.md')['default']

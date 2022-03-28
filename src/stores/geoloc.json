@@ -1,0 +1,7103 @@
+[
+  {
+    "Bambou": "Beau Sejour",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.09",
+    "long": "57.63",
+    "elevation": "410",
+    "population": "65675"
+  },
+  {
+    "Bambou": "Blanche Mont",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.28",
+    "long": "57.65",
+    "elevation": "885",
+    "population": "31338"
+  },
+  {
+    "Bambou": "Bois Jacot",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.14",
+    "long": "57.66",
+    "elevation": "298",
+    "population": "61339"
+  },
+  {
+    "Bambou": "Bois Mangue",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "65675"
+  },
+  {
+    "Bambou": "Camp Benoit",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.18",
+    "long": "57.46",
+    "elevation": "830",
+    "population": "174873"
+  },
+  {
+    "Bambou": "Ferrette",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.33",
+    "long": "57.57",
+    "elevation": "990",
+    "population": "44030"
+  },
+  {
+    "Bambou": "L'Union",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.47",
+    "elevation": "830",
+    "population": "30882"
+  },
+  {
+    "Bambou": "La Chaumiere",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.44",
+    "elevation": "830",
+    "population": "212300"
+  },
+  {
+    "Bambou": "La Rotraite",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.47",
+    "elevation": "830",
+    "population": "219606"
+  },
+  {
+    "Bambou": "Lapeyre",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.36",
+    "long": "57.56",
+    "elevation": "1669",
+    "population": "63083"
+  },
+  {
+    "Bambou": "L’Union",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.47",
+    "elevation": "830",
+    "population": "30882"
+  },
+  {
+    "Bambou": "Magenta",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.26",
+    "long": "57.65",
+    "elevation": "990",
+    "population": "36057"
+  },
+  {
+    "Bambou": "Mont Blanche",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.28",
+    "long": "57.65",
+    "elevation": "885",
+    "population": "31338"
+  },
+  {
+    "Bambou": "Mont Ida",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.63",
+    "elevation": "994",
+    "population": "43988"
+  },
+  {
+    "Bambou": "Montagne Blanche",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.28",
+    "long": "57.65",
+    "elevation": "885",
+    "population": "31338"
+  },
+  {
+    "Bambou": "Palma",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.28",
+    "long": "57.44",
+    "elevation": "994",
+    "population": "221215"
+  },
+  {
+    "Bambou": "Paves",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-19.68",
+    "long": "63.45",
+    "elevation": "830",
+    "population": "14397"
+  },
+  {
+    "Bambou": "Port Sainte Rita",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-10.48",
+    "long": "56.70",
+    "elevation": "0",
+    "population": "0"
+  },
+  {
+    "Bambou": "Porte Sainte Rita",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-10.48",
+    "long": "56.70",
+    "elevation": "0",
+    "population": "0"
+  },
+  {
+    "Bambou": "River du Poste Station",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.57",
+    "elevation": "875",
+    "population": "65231"
+  },
+  {
+    "Bambou": "Riviere du Poste Station",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.57",
+    "elevation": "875",
+    "population": "65231"
+  },
+  {
+    "Bambou": "Rivière du Post",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.57",
+    "elevation": "875",
+    "population": "65231"
+  },
+  {
+    "Bambou": "Rivière du Poste",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.57",
+    "elevation": "875",
+    "population": "65231"
+  },
+  {
+    "Bambou": "Sainte Rita",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-10.48",
+    "long": "56.70",
+    "elevation": "0",
+    "population": "0"
+  },
+  {
+    "Bambou": "Sans Souci",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.65",
+    "elevation": "856",
+    "population": "20909"
+  },
+  {
+    "Bambou": "Sottise",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.02",
+    "long": "57.57",
+    "elevation": "354",
+    "population": "45762"
+  },
+  {
+    "Bambou": "Trèfles",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-19.68",
+    "long": "63.47",
+    "elevation": "196",
+    "population": "14229"
+  },
+  {
+    "Bambou": "Union",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.47",
+    "elevation": "830",
+    "population": "30882"
+  },
+  {
+    "Bambou": "Vainqueur",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-19.67",
+    "long": "63.47",
+    "elevation": "19",
+    "population": "13379"
+  },
+  {
+    "Bambou": "Ривьер-дю-Пост",
+    "city": "",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.57",
+    "elevation": "875",
+    "population": "65231"
+  },
+  {
+    "Bambou": "Albion",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.40",
+    "elevation": "830",
+    "population": "62832"
+  },
+  {
+    "Bambou": "Anna",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.26",
+    "long": "57.38",
+    "elevation": "830",
+    "population": "19142"
+  },
+  {
+    "Bambou": "Anna",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.38",
+    "elevation": "830",
+    "population": "14545"
+  },
+  {
+    "Bambou": "Bambous",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.26",
+    "long": "57.41",
+    "elevation": "830",
+    "population": "78673"
+  },
+  {
+    "Bambou": "Barachois",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.32",
+    "long": "57.37",
+    "elevation": "830",
+    "population": "9004"
+  },
+  {
+    "Bambou": "Beaux Songes",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.28",
+    "long": "57.42",
+    "elevation": "830",
+    "population": "139717"
+  },
+  {
+    "Bambou": "Belle Isle",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.38",
+    "elevation": "830",
+    "population": "14604"
+  },
+  {
+    "Bambou": "Belle Vue",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.41",
+    "elevation": "830",
+    "population": "67642"
+  },
+  {
+    "Bambou": "Black River",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.36",
+    "long": "57.37",
+    "elevation": "830",
+    "population": "5848"
+  },
+  {
+    "Bambou": "Cachette",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.43",
+    "long": "57.38",
+    "elevation": "1131",
+    "population": "6971"
+  },
+  {
+    "Bambou": "Camp Créoles",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.41",
+    "elevation": "830",
+    "population": "79739"
+  },
+  {
+    "Bambou": "Camp Malgache",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.33",
+    "long": "57.40",
+    "elevation": "830",
+    "population": "35100"
+  },
+  {
+    "Bambou": "Canot",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.42",
+    "elevation": "830",
+    "population": "136335"
+  },
+  {
+    "Bambou": "Cascavelle",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.41",
+    "elevation": "830",
+    "population": "59561"
+  },
+  {
+    "Bambou": "Casela",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.39",
+    "elevation": "830",
+    "population": "29376"
+  },
+  {
+    "Bambou": "Cazela",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.39",
+    "elevation": "830",
+    "population": "29376"
+  },
+  {
+    "Bambou": "Chamarel",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.38",
+    "elevation": "1131",
+    "population": "6887"
+  },
+  {
+    "Bambou": "Clarence",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.39",
+    "elevation": "830",
+    "population": "29376"
+  },
+  {
+    "Bambou": "Clarens",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.39",
+    "elevation": "830",
+    "population": "29376"
+  },
+  {
+    "Bambou": "Coromandel",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.18",
+    "long": "57.46",
+    "elevation": "830",
+    "population": "147763"
+  },
+  {
+    "Bambou": "Coteau Raffin",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.43",
+    "long": "57.35",
+    "elevation": "0",
+    "population": "5802"
+  },
+  {
+    "Bambou": "Coteau Rafin",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.43",
+    "long": "57.35",
+    "elevation": "0",
+    "population": "5802"
+  },
+  {
+    "Bambou": "Eau Bonne",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.26",
+    "long": "57.41",
+    "elevation": "830",
+    "population": "119157"
+  },
+  {
+    "Bambou": "Flic en Flac",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.36",
+    "elevation": "830",
+    "population": "11371"
+  },
+  {
+    "Bambou": "Flic-en-Flacq",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.36",
+    "elevation": "830",
+    "population": "11371"
+  },
+  {
+    "Bambou": "Grand Rivière Noire",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.36",
+    "long": "57.37",
+    "elevation": "830",
+    "population": "5848"
+  },
+  {
+    "Bambou": "Grande Case Noyale",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.41",
+    "long": "57.36",
+    "elevation": "0",
+    "population": "6843"
+  },
+  {
+    "Bambou": "Grande Riviere Noire",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.36",
+    "long": "57.37",
+    "elevation": "830",
+    "population": "5848"
+  },
+  {
+    "Bambou": "Gros Cailloux",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.43",
+    "elevation": "830",
+    "population": "128101"
+  },
+  {
+    "Bambou": "Ka Hine",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.43",
+    "elevation": "830",
+    "population": "94564"
+  },
+  {
+    "Bambou": "L'Embrasure",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.46",
+    "long": "57.34",
+    "elevation": "0",
+    "population": "5099"
+  },
+  {
+    "Bambou": "La Crete",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.38",
+    "elevation": "1171",
+    "population": "7022"
+  },
+  {
+    "Bambou": "La Gaulette",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.35",
+    "elevation": "0",
+    "population": "6346"
+  },
+  {
+    "Bambou": "La Mecque",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.39",
+    "elevation": "830",
+    "population": "20785"
+  },
+  {
+    "Bambou": "La Mivoie",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.34",
+    "long": "57.36",
+    "elevation": "830",
+    "population": "5438"
+  },
+  {
+    "Bambou": "Labonte",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.43",
+    "long": "57.32",
+    "elevation": "0",
+    "population": "3128"
+  },
+  {
+    "Bambou": "Lavilleon",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.44",
+    "long": "57.36",
+    "elevation": "984",
+    "population": "6722"
+  },
+  {
+    "Bambou": "Le Morne",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.45",
+    "long": "57.32",
+    "elevation": "1820",
+    "population": "3150"
+  },
+  {
+    "Bambou": "Les Salines",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.37",
+    "long": "57.37",
+    "elevation": "830",
+    "population": "6274"
+  },
+  {
+    "Bambou": "L’Embrasure",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.46",
+    "long": "57.34",
+    "elevation": "0",
+    "population": "5099"
+  },
+  {
+    "Bambou": "Magenta",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.32",
+    "long": "57.42",
+    "elevation": "830",
+    "population": "78417"
+  },
+  {
+    "Bambou": "Mare Samson",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.17",
+    "long": "57.44",
+    "elevation": "830",
+    "population": "112879"
+  },
+  {
+    "Bambou": "Medine",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.26",
+    "long": "57.39",
+    "elevation": "830",
+    "population": "19142"
+  },
+  {
+    "Bambou": "Medine Anna",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.26",
+    "long": "57.38",
+    "elevation": "830",
+    "population": "19142"
+  },
+  {
+    "Bambou": "Moka",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.45",
+    "long": "57.35",
+    "elevation": "974",
+    "population": "6722"
+  },
+  {
+    "Bambou": "Mon Repos",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.40",
+    "elevation": "830",
+    "population": "74844"
+  },
+  {
+    "Bambou": "Mon Vallon",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.40",
+    "elevation": "830",
+    "population": "51949"
+  },
+  {
+    "Bambou": "Morne",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.45",
+    "long": "57.32",
+    "elevation": "1820",
+    "population": "3150"
+  },
+  {
+    "Bambou": "Palmyre",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.28",
+    "long": "57.38",
+    "elevation": "830",
+    "population": "19027"
+  },
+  {
+    "Bambou": "Petit Verger",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.18",
+    "long": "57.43",
+    "elevation": "830",
+    "population": "97727"
+  },
+  {
+    "Bambou": "Petite Case Noyale",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.39",
+    "long": "57.37",
+    "elevation": "0",
+    "population": "6448"
+  },
+  {
+    "Bambou": "Petite Riviere",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.45",
+    "elevation": "830",
+    "population": "131683"
+  },
+  {
+    "Bambou": "Petite Riviere Noire",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.39",
+    "long": "57.37",
+    "elevation": "830",
+    "population": "6537"
+  },
+  {
+    "Bambou": "Petite Verger",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.18",
+    "long": "57.43",
+    "elevation": "830",
+    "population": "97727"
+  },
+  {
+    "Bambou": "Pointe aux Sables",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.17",
+    "long": "57.45",
+    "elevation": "830",
+    "population": "131773"
+  },
+  {
+    "Bambou": "Rivière Noire",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.36",
+    "long": "57.37",
+    "elevation": "830",
+    "population": "5848"
+  },
+  {
+    "Bambou": "Saint Martin",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.42",
+    "elevation": "830",
+    "population": "144792"
+  },
+  {
+    "Bambou": "Suase",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.32",
+    "long": "57.42",
+    "elevation": "830",
+    "population": "78417"
+  },
+  {
+    "Bambou": "Tamarin",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.33",
+    "long": "57.37",
+    "elevation": "0",
+    "population": "7893"
+  },
+  {
+    "Bambou": "Trois Cavernes",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.28",
+    "long": "57.40",
+    "elevation": "830",
+    "population": "67585"
+  },
+  {
+    "Bambou": "Trou Chenille",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.45",
+    "long": "57.32",
+    "elevation": "1820",
+    "population": "3150"
+  },
+  {
+    "Bambou": "Trou Chenilles",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.45",
+    "long": "57.32",
+    "elevation": "1820",
+    "population": "3150"
+  },
+  {
+    "Bambou": "Truble",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.42",
+    "elevation": "830",
+    "population": "88545"
+  },
+  {
+    "Bambou": "Trublet",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.42",
+    "elevation": "830",
+    "population": "88545"
+  },
+  {
+    "Bambou": "Wahlalah",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.33",
+    "long": "57.42",
+    "elevation": "830",
+    "population": "66910"
+  },
+  {
+    "Bambou": "Walhala",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.33",
+    "long": "57.42",
+    "elevation": "830",
+    "population": "66910"
+  },
+  {
+    "Bambou": "Whalala",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.33",
+    "long": "57.42",
+    "elevation": "830",
+    "population": "66910"
+  },
+  {
+    "Bambou": "Wolmar",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.37",
+    "elevation": "830",
+    "population": "11881"
+  },
+  {
+    "Bambou": "Yemen",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.34",
+    "long": "57.40",
+    "elevation": "830",
+    "population": "29566"
+  },
+  {
+    "Bambou": "Птит-Ривьер",
+    "city": "Black River",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.45",
+    "elevation": "830",
+    "population": "131683"
+  },
+  {
+    "Bambou": "Argy",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.73",
+    "elevation": "101",
+    "population": "46692"
+  },
+  {
+    "Bambou": "Baie Manioc",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.73",
+    "elevation": "282",
+    "population": "35502"
+  },
+  {
+    "Bambou": "Baie Mannioc",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.73",
+    "elevation": "282",
+    "population": "35502"
+  },
+  {
+    "Bambou": "Beau Champ",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.77",
+    "elevation": "167",
+    "population": "40457"
+  },
+  {
+    "Bambou": "Bel Air",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.75",
+    "elevation": "216",
+    "population": "48726"
+  },
+  {
+    "Bambou": "Bel Étang",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "45375"
+  },
+  {
+    "Bambou": "Belle Mare",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.77",
+    "elevation": "42",
+    "population": "28797"
+  },
+  {
+    "Bambou": "Belle Rive",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.72",
+    "elevation": "380",
+    "population": "23332"
+  },
+  {
+    "Bambou": "Belle Rose",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.26",
+    "long": "57.73",
+    "elevation": "314",
+    "population": "45021"
+  },
+  {
+    "Bambou": "Belle Vue Allendy",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.70",
+    "elevation": "242",
+    "population": "57462"
+  },
+  {
+    "Bambou": "Belvedere",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "56013"
+  },
+  {
+    "Bambou": "Belvédère",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.18",
+    "long": "57.65",
+    "elevation": "830",
+    "population": "48675"
+  },
+  {
+    "Bambou": "Bois d'Oiseau",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.73",
+    "elevation": "298",
+    "population": "33370"
+  },
+  {
+    "Bambou": "Bois d'Oiseau",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.69",
+    "elevation": "246",
+    "population": "57166"
+  },
+  {
+    "Bambou": "Bois d'Oiseaux",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.69",
+    "elevation": "246",
+    "population": "57166"
+  },
+  {
+    "Bambou": "Bois d'Oiseaux",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.73",
+    "elevation": "298",
+    "population": "33370"
+  },
+  {
+    "Bambou": "Bois d'Oisseaux",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.69",
+    "elevation": "246",
+    "population": "57166"
+  },
+  {
+    "Bambou": "Bois d’Oiseau",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.69",
+    "elevation": "246",
+    "population": "57166"
+  },
+  {
+    "Bambou": "Bois d’Oiseau",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.73",
+    "elevation": "298",
+    "population": "33370"
+  },
+  {
+    "Bambou": "Bois d’Oiseaux",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.69",
+    "elevation": "246",
+    "population": "57166"
+  },
+  {
+    "Bambou": "Bois d’Oiseaux",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.73",
+    "elevation": "298",
+    "population": "33370"
+  },
+  {
+    "Bambou": "Bois d’Oisseaux",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.69",
+    "elevation": "246",
+    "population": "57166"
+  },
+  {
+    "Bambou": "Bon Accueil",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.17",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "49570"
+  },
+  {
+    "Bambou": "Bon Manioc",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.73",
+    "elevation": "282",
+    "population": "35502"
+  },
+  {
+    "Bambou": "Bonne Mere",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.71",
+    "elevation": "200",
+    "population": "59647"
+  },
+  {
+    "Bambou": "Bramsthan",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.73",
+    "elevation": "137",
+    "population": "58039"
+  },
+  {
+    "Bambou": "Bras d'Eau",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.14",
+    "long": "57.72",
+    "elevation": "98",
+    "population": "38182"
+  },
+  {
+    "Bambou": "Bras d’Eau",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.14",
+    "long": "57.72",
+    "elevation": "98",
+    "population": "38182"
+  },
+  {
+    "Bambou": "Brisee Verdiere",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.65",
+    "elevation": "830",
+    "population": "49357"
+  },
+  {
+    "Bambou": "Camp Bonnemère",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.70",
+    "elevation": "314",
+    "population": "61001"
+  },
+  {
+    "Bambou": "Camp Bouillon",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.73",
+    "elevation": "68",
+    "population": "44201"
+  },
+  {
+    "Bambou": "Camp Garreau",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.71",
+    "elevation": "200",
+    "population": "59647"
+  },
+  {
+    "Bambou": "Camp Ithier",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.75",
+    "elevation": "150",
+    "population": "53441"
+  },
+  {
+    "Bambou": "Camp Marcelin",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.73",
+    "elevation": "137",
+    "population": "58039"
+  },
+  {
+    "Bambou": "Camp Poorun",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.17",
+    "long": "57.73",
+    "elevation": "36",
+    "population": "43057"
+  },
+  {
+    "Bambou": "Camp Sonah",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "50353"
+  },
+  {
+    "Bambou": "Camp de Masque",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "45504"
+  },
+  {
+    "Bambou": "Camp de Masque Pave",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "46875"
+  },
+  {
+    "Bambou": "Camp de Masque Station",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "45504"
+  },
+  {
+    "Bambou": "Centre de Flacq",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.71",
+    "elevation": "114",
+    "population": "52902"
+  },
+  {
+    "Bambou": "Centre of Flacq",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.71",
+    "elevation": "114",
+    "population": "52902"
+  },
+  {
+    "Bambou": "Clavet",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.70",
+    "elevation": "830",
+    "population": "21646"
+  },
+  {
+    "Bambou": "Clémencia",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.26",
+    "long": "57.71",
+    "elevation": "830",
+    "population": "45106"
+  },
+  {
+    "Bambou": "Constance",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.18",
+    "long": "57.71",
+    "elevation": "104",
+    "population": "52365"
+  },
+  {
+    "Bambou": "Coquinbourg",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.64",
+    "elevation": "853",
+    "population": "45221"
+  },
+  {
+    "Bambou": "Deep River",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.28",
+    "long": "57.73",
+    "elevation": "265",
+    "population": "37875"
+  },
+  {
+    "Bambou": "Deux Frères",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.77",
+    "elevation": "183",
+    "population": "33279"
+  },
+  {
+    "Bambou": "Ecroignard",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.74",
+    "elevation": "213",
+    "population": "57258"
+  },
+  {
+    "Bambou": "Ernest Florent",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.26",
+    "long": "57.76",
+    "elevation": "183",
+    "population": "43618"
+  },
+  {
+    "Bambou": "Etoile",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.70",
+    "elevation": "830",
+    "population": "20916"
+  },
+  {
+    "Bambou": "Flacq",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.71",
+    "elevation": "114",
+    "population": "52902"
+  },
+  {
+    "Bambou": "Grand River",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.78",
+    "elevation": "183",
+    "population": "29353"
+  },
+  {
+    "Bambou": "Grand River South East",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.78",
+    "elevation": "183",
+    "population": "29353"
+  },
+  {
+    "Bambou": "Grand dans Fond",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.18",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "54721"
+  },
+  {
+    "Bambou": "Grande Retraite",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.17",
+    "long": "57.68",
+    "elevation": "328",
+    "population": "56282"
+  },
+  {
+    "Bambou": "Grande Retraits",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.17",
+    "long": "57.68",
+    "elevation": "328",
+    "population": "56282"
+  },
+  {
+    "Bambou": "Grande Reviere Sud Est",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.78",
+    "elevation": "183",
+    "population": "29353"
+  },
+  {
+    "Bambou": "Grande Rivière Sud Est",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.78",
+    "elevation": "183",
+    "population": "29353"
+  },
+  {
+    "Bambou": "Haut de Flacq",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "57569"
+  },
+  {
+    "Bambou": "Hermitage",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.26",
+    "long": "57.70",
+    "elevation": "830",
+    "population": "45106"
+  },
+  {
+    "Bambou": "Isidore Rose",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.75",
+    "elevation": "101",
+    "population": "50676"
+  },
+  {
+    "Bambou": "Julien",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.64",
+    "elevation": "961",
+    "population": "47878"
+  },
+  {
+    "Bambou": "L'Etoile",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.70",
+    "elevation": "830",
+    "population": "20916"
+  },
+  {
+    "Bambou": "L'Unite",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "50353"
+  },
+  {
+    "Bambou": "La Caroline",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.75",
+    "elevation": "180",
+    "population": "51496"
+  },
+  {
+    "Bambou": "La Commune",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.72",
+    "elevation": "380",
+    "population": "31092"
+  },
+  {
+    "Bambou": "La Coterie",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.77",
+    "elevation": "830",
+    "population": "28945"
+  },
+  {
+    "Bambou": "La Gaiété",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.72",
+    "elevation": "206",
+    "population": "63636"
+  },
+  {
+    "Bambou": "La Lucie",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.26",
+    "long": "57.74",
+    "elevation": "249",
+    "population": "45023"
+  },
+  {
+    "Bambou": "La Marre",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.64",
+    "elevation": "830",
+    "population": "50395"
+  },
+  {
+    "Bambou": "La Nourrice",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.74",
+    "elevation": "246",
+    "population": "35622"
+  },
+  {
+    "Bambou": "Lalmatie",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "54703"
+  },
+  {
+    "Bambou": "Laventure",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.68",
+    "elevation": "291",
+    "population": "60487"
+  },
+  {
+    "Bambou": "Lesur",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "25791"
+  },
+  {
+    "Bambou": "L’Unité",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "50353"
+  },
+  {
+    "Bambou": "L’Étoile",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.70",
+    "elevation": "830",
+    "population": "20916"
+  },
+  {
+    "Bambou": "Mare Carree",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.73",
+    "elevation": "249",
+    "population": "56203"
+  },
+  {
+    "Bambou": "Mare Jacot",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.68",
+    "elevation": "961",
+    "population": "42775"
+  },
+  {
+    "Bambou": "Mare Jocquot",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.68",
+    "elevation": "961",
+    "population": "42775"
+  },
+  {
+    "Bambou": "Mare La Chaux",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.75",
+    "elevation": "75",
+    "population": "44222"
+  },
+  {
+    "Bambou": "Mare Saint-Amand",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.72",
+    "elevation": "357",
+    "population": "55244"
+  },
+  {
+    "Bambou": "Mare d'Australia",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.64",
+    "elevation": "830",
+    "population": "48490"
+  },
+  {
+    "Bambou": "Mare d’Australia",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.64",
+    "elevation": "830",
+    "population": "48490"
+  },
+  {
+    "Bambou": "Marie Jeanne",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.76",
+    "elevation": "830",
+    "population": "28925"
+  },
+  {
+    "Bambou": "Medine",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.64",
+    "elevation": "853",
+    "population": "42081"
+  },
+  {
+    "Bambou": "Oliva",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.73",
+    "elevation": "324",
+    "population": "33453"
+  },
+  {
+    "Bambou": "Olivia",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.73",
+    "elevation": "324",
+    "population": "33453"
+  },
+  {
+    "Bambou": "Palmar",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.77",
+    "elevation": "95",
+    "population": "44323"
+  },
+  {
+    "Bambou": "Pellegrin",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.28",
+    "long": "57.68",
+    "elevation": "1062",
+    "population": "28872"
+  },
+  {
+    "Bambou": "Petit Bois",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.76",
+    "elevation": "154",
+    "population": "51819"
+  },
+  {
+    "Bambou": "Petite Cabane",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "35059"
+  },
+  {
+    "Bambou": "Pointe aux Feuilles",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.77",
+    "elevation": "0",
+    "population": "25162"
+  },
+  {
+    "Bambou": "Pont Blanc",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.17",
+    "long": "57.70",
+    "elevation": "104",
+    "population": "55571"
+  },
+  {
+    "Bambou": "Post of Flacq",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.73",
+    "elevation": "19",
+    "population": "42251"
+  },
+  {
+    "Bambou": "Poste de Flacq",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.73",
+    "elevation": "19",
+    "population": "42251"
+  },
+  {
+    "Bambou": "Profonde River",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.76",
+    "elevation": "196",
+    "population": "40457"
+  },
+  {
+    "Bambou": "Providence",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.18",
+    "long": "57.73",
+    "elevation": "45",
+    "population": "43141"
+  },
+  {
+    "Bambou": "Quatre Cocos",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.76",
+    "elevation": "78",
+    "population": "41208"
+  },
+  {
+    "Bambou": "Quatre Soeurs",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.77",
+    "elevation": "830",
+    "population": "28945"
+  },
+  {
+    "Bambou": "Quatre Soeurs Br.",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.77",
+    "elevation": "830",
+    "population": "28945"
+  },
+  {
+    "Bambou": "Queen Victoria",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.71",
+    "elevation": "301",
+    "population": "64892"
+  },
+  {
+    "Bambou": "Rich Fund",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "54201"
+  },
+  {
+    "Bambou": "River Profonde",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.76",
+    "elevation": "196",
+    "population": "40457"
+  },
+  {
+    "Bambou": "Riviere Seche",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.75",
+    "elevation": "216",
+    "population": "48726"
+  },
+  {
+    "Bambou": "Saint Julien",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.64",
+    "elevation": "961",
+    "population": "47878"
+  },
+  {
+    "Bambou": "Saint Julien Village",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.64",
+    "elevation": "961",
+    "population": "47878"
+  },
+  {
+    "Bambou": "Saint Remy",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.71",
+    "elevation": "127",
+    "population": "52902"
+  },
+  {
+    "Bambou": "Sebastopol",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.69",
+    "elevation": "830",
+    "population": "29127"
+  },
+  {
+    "Bambou": "St Remy",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.71",
+    "elevation": "127",
+    "population": "52902"
+  },
+  {
+    "Bambou": "Trois Îlots",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.74",
+    "elevation": "229",
+    "population": "41412"
+  },
+  {
+    "Bambou": "Trou d'Eau Douce",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.78",
+    "elevation": "108",
+    "population": "44448"
+  },
+  {
+    "Bambou": "Trou d’Eau Douce",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.78",
+    "elevation": "108",
+    "population": "44448"
+  },
+  {
+    "Bambou": "Union Flacq",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.69",
+    "elevation": "830",
+    "population": "58551"
+  },
+  {
+    "Bambou": "Unité",
+    "city": "Flacq",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "50353"
+  },
+  {
+    "Bambou": "Anse Jonchee",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.35",
+    "long": "57.75",
+    "elevation": "410",
+    "population": "10857"
+  },
+  {
+    "Bambou": "Astrea",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.39",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "43919"
+  },
+  {
+    "Bambou": "Astroea",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.39",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "43919"
+  },
+  {
+    "Bambou": "Astroea",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.40",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "47497"
+  },
+  {
+    "Bambou": "Balisson",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.39",
+    "long": "57.58",
+    "elevation": "977",
+    "population": "49848"
+  },
+  {
+    "Bambou": "Bambous Virieux",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.34",
+    "long": "57.76",
+    "elevation": "364",
+    "population": "9400"
+  },
+  {
+    "Bambou": "Bananes",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.35",
+    "long": "57.59",
+    "elevation": "1033",
+    "population": "21787"
+  },
+  {
+    "Bambou": "Beau Fond",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.45",
+    "long": "57.64",
+    "elevation": "830",
+    "population": "49056"
+  },
+  {
+    "Bambou": "Beau Site",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.37",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "28883"
+  },
+  {
+    "Bambou": "Beau Vallon",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.35",
+    "long": "57.68",
+    "elevation": "830",
+    "population": "12490"
+  },
+  {
+    "Bambou": "Beau Vallon",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.70",
+    "elevation": "830",
+    "population": "39511"
+  },
+  {
+    "Bambou": "Beau-Vallon",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.70",
+    "elevation": "830",
+    "population": "39511"
+  },
+  {
+    "Bambou": "Bel Air",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.41",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "48110"
+  },
+  {
+    "Bambou": "Belle Vue",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.37",
+    "long": "57.72",
+    "elevation": "830",
+    "population": "28578"
+  },
+  {
+    "Bambou": "Bestel",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.34",
+    "long": "57.68",
+    "elevation": "931",
+    "population": "12288"
+  },
+  {
+    "Bambou": "Bois d'Oiseaux",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.41",
+    "long": "57.60",
+    "elevation": "830",
+    "population": "58960"
+  },
+  {
+    "Bambou": "Bois des Amourettes",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.36",
+    "long": "57.73",
+    "elevation": "0",
+    "population": "17409"
+  },
+  {
+    "Bambou": "Bois d’Oiseaux",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.41",
+    "long": "57.60",
+    "elevation": "830",
+    "population": "58960"
+  },
+  {
+    "Bambou": "Bouchon",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.46",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "33229"
+  },
+  {
+    "Bambou": "Bémanique",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.37",
+    "long": "57.59",
+    "elevation": "1085",
+    "population": "35743"
+  },
+  {
+    "Bambou": "Camp Accacia",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.46",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "31200"
+  },
+  {
+    "Bambou": "Camp Carol",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.46",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "41920"
+  },
+  {
+    "Bambou": "Camp Cassia",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.46",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "31200"
+  },
+  {
+    "Bambou": "Camp Jardin",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.39",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "47169"
+  },
+  {
+    "Bambou": "Cent Gaulettes",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.37",
+    "long": "57.64",
+    "elevation": "830",
+    "population": "26095"
+  },
+  {
+    "Bambou": "Cluny",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.37",
+    "long": "57.60",
+    "elevation": "971",
+    "population": "34332"
+  },
+  {
+    "Bambou": "Dalais",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.40",
+    "long": "57.69",
+    "elevation": "830",
+    "population": "41124"
+  },
+  {
+    "Bambou": "Deux Bras",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.40",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "50929"
+  },
+  {
+    "Bambou": "Eau Bleue",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.37",
+    "long": "57.62",
+    "elevation": "830",
+    "population": "32886"
+  },
+  {
+    "Bambou": "Escalier",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.47",
+    "long": "57.61",
+    "elevation": "830",
+    "population": "39534"
+  },
+  {
+    "Bambou": "Ferney",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.36",
+    "long": "57.70",
+    "elevation": "830",
+    "population": "28758"
+  },
+  {
+    "Bambou": "Ferney Mill",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.36",
+    "long": "57.70",
+    "elevation": "830",
+    "population": "28758"
+  },
+  {
+    "Bambou": "Grand Bel Air",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.41",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "48110"
+  },
+  {
+    "Bambou": "Grand Sable",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.76",
+    "elevation": "830",
+    "population": "21985"
+  },
+  {
+    "Bambou": "Gros Billot",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.60",
+    "elevation": "830",
+    "population": "58960"
+  },
+  {
+    "Bambou": "Gros Bois",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.44",
+    "long": "57.61",
+    "elevation": "830",
+    "population": "58457"
+  },
+  {
+    "Bambou": "Joli Bois",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.44",
+    "long": "57.58",
+    "elevation": "830",
+    "population": "67832"
+  },
+  {
+    "Bambou": "Jolis Bois",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.44",
+    "long": "57.58",
+    "elevation": "830",
+    "population": "67832"
+  },
+  {
+    "Bambou": "L'Escalier",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.47",
+    "long": "57.61",
+    "elevation": "830",
+    "population": "39534"
+  },
+  {
+    "Bambou": "La Baraque",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.47",
+    "long": "57.62",
+    "elevation": "830",
+    "population": "37969"
+  },
+  {
+    "Bambou": "La Barraque",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.47",
+    "long": "57.62",
+    "elevation": "830",
+    "population": "37969"
+  },
+  {
+    "Bambou": "La Rampe",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.43",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "54641"
+  },
+  {
+    "Bambou": "La Rampe - Le Moirt",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.43",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "54641"
+  },
+  {
+    "Bambou": "La Rosa",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.41",
+    "long": "57.62",
+    "elevation": "830",
+    "population": "56823"
+  },
+  {
+    "Bambou": "La Sourdine",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.48",
+    "long": "57.61",
+    "elevation": "830",
+    "population": "34421"
+  },
+  {
+    "Bambou": "Le Bouchon",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.46",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "33229"
+  },
+  {
+    "Bambou": "Le Chaland",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.44",
+    "long": "57.70",
+    "elevation": "0",
+    "population": "32968"
+  },
+  {
+    "Bambou": "Le Val",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.35",
+    "long": "57.62",
+    "elevation": "830",
+    "population": "17877"
+  },
+  {
+    "Bambou": "Le Vallon",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.36",
+    "long": "57.68",
+    "elevation": "830",
+    "population": "29061"
+  },
+  {
+    "Bambou": "Les Marres",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.45",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "51048"
+  },
+  {
+    "Bambou": "Ligne Barrin",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.47",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "23252"
+  },
+  {
+    "Bambou": "L’Escalier",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.47",
+    "long": "57.61",
+    "elevation": "830",
+    "population": "39534"
+  },
+  {
+    "Bambou": "Mahebourg",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.41",
+    "long": "57.70",
+    "elevation": "830",
+    "population": "38380"
+  },
+  {
+    "Bambou": "Majeburas",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.41",
+    "long": "57.70",
+    "elevation": "830",
+    "population": "38380"
+  },
+  {
+    "Bambou": "Mare Chicose",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.38",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "35931"
+  },
+  {
+    "Bambou": "Mare Tabac",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.44",
+    "long": "57.59",
+    "elevation": "830",
+    "population": "63853"
+  },
+  {
+    "Bambou": "Mare d'Albert",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.62",
+    "elevation": "830",
+    "population": "57052"
+  },
+  {
+    "Bambou": "Mare d’Albert",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.62",
+    "elevation": "830",
+    "population": "57052"
+  },
+  {
+    "Bambou": "Marie Jeanie",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.40",
+    "long": "57.59",
+    "elevation": "830",
+    "population": "52274"
+  },
+  {
+    "Bambou": "Metheline",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.34",
+    "long": "57.64",
+    "elevation": "830",
+    "population": "12472"
+  },
+  {
+    "Bambou": "Mon Désert",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.45",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "46274"
+  },
+  {
+    "Bambou": "Mon Tresor",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.45",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "46274"
+  },
+  {
+    "Bambou": "Mon Trésor - Mon Désert",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.45",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "46274"
+  },
+  {
+    "Bambou": "New Grove",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.41",
+    "long": "57.61",
+    "elevation": "830",
+    "population": "57187"
+  },
+  {
+    "Bambou": "New Grove Station",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.41",
+    "long": "57.61",
+    "elevation": "830",
+    "population": "57187"
+  },
+  {
+    "Bambou": "Nouvelle France",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.37",
+    "long": "57.56",
+    "elevation": "1669",
+    "population": "47968"
+  },
+  {
+    "Bambou": "Old Grand Port",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.37",
+    "long": "57.71",
+    "elevation": "830",
+    "population": "31465"
+  },
+  {
+    "Bambou": "Pavillon du Grand Port",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.37",
+    "long": "57.72",
+    "elevation": "0",
+    "population": "28578"
+  },
+  {
+    "Bambou": "Petit Bel Air",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.40",
+    "long": "57.69",
+    "elevation": "830",
+    "population": "40043"
+  },
+  {
+    "Bambou": "Petit Sable",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.33",
+    "long": "57.76",
+    "elevation": "406",
+    "population": "13807"
+  },
+  {
+    "Bambou": "Plaine Magnien",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.43",
+    "long": "57.65",
+    "elevation": "830",
+    "population": "61826"
+  },
+  {
+    "Bambou": "Plaines Magnien",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.43",
+    "long": "57.65",
+    "elevation": "830",
+    "population": "61826"
+  },
+  {
+    "Bambou": "Plaisance",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.43",
+    "long": "57.68",
+    "elevation": "830",
+    "population": "43730"
+  },
+  {
+    "Bambou": "Plaisance",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.67",
+    "elevation": "830",
+    "population": "53628"
+  },
+  {
+    "Bambou": "Plein Bois",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.46",
+    "long": "57.62",
+    "elevation": "830",
+    "population": "49206"
+  },
+  {
+    "Bambou": "Pointe aux Roches",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.32",
+    "long": "57.76",
+    "elevation": "364",
+    "population": "15918"
+  },
+  {
+    "Bambou": "Pointe d'Esny",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.43",
+    "long": "57.72",
+    "elevation": "830",
+    "population": "29208"
+  },
+  {
+    "Bambou": "Pointe d’Esny",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.43",
+    "long": "57.72",
+    "elevation": "830",
+    "population": "29208"
+  },
+  {
+    "Bambou": "Pont Colville",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.38",
+    "long": "57.56",
+    "elevation": "1230",
+    "population": "47947"
+  },
+  {
+    "Bambou": "Providence",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.36",
+    "long": "57.74",
+    "elevation": "830",
+    "population": "10003"
+  },
+  {
+    "Bambou": "Rama",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.37",
+    "long": "57.62",
+    "elevation": "830",
+    "population": "32886"
+  },
+  {
+    "Bambou": "Riche en Eau",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.38",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "47169"
+  },
+  {
+    "Bambou": "Rivière Créoles",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.39",
+    "long": "57.69",
+    "elevation": "830",
+    "population": "39551"
+  },
+  {
+    "Bambou": "Rivière des Creoles",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.39",
+    "long": "57.69",
+    "elevation": "830",
+    "population": "39551"
+  },
+  {
+    "Bambou": "Rose Belle",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.40",
+    "long": "57.60",
+    "elevation": "830",
+    "population": "57353"
+  },
+  {
+    "Bambou": "Ruisseau Copeaux",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "59723"
+  },
+  {
+    "Bambou": "Saint Hilaire",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.37",
+    "long": "57.64",
+    "elevation": "830",
+    "population": "29048"
+  },
+  {
+    "Bambou": "Saint Hubert",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.36",
+    "long": "57.64",
+    "elevation": "830",
+    "population": "20178"
+  },
+  {
+    "Bambou": "Sainte Madeleine",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.36",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "20178"
+  },
+  {
+    "Bambou": "Sainte Philomène",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.36",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "15351"
+  },
+  {
+    "Bambou": "Savinia",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.47",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "35673"
+  },
+  {
+    "Bambou": "Souffleur",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.48",
+    "long": "57.64",
+    "elevation": "830",
+    "population": "28327"
+  },
+  {
+    "Bambou": "Trois Boutiques",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.45",
+    "long": "57.64",
+    "elevation": "830",
+    "population": "48274"
+  },
+  {
+    "Bambou": "Union Park",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.39",
+    "long": "57.57",
+    "elevation": "1043",
+    "population": "45156"
+  },
+  {
+    "Bambou": "Union Vale",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.44",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "51491"
+  },
+  {
+    "Bambou": "Vieux Grand Port",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.37",
+    "long": "57.71",
+    "elevation": "830",
+    "population": "31465"
+  },
+  {
+    "Bambou": "Ville Noire",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.40",
+    "long": "57.69",
+    "elevation": "830",
+    "population": "40264"
+  },
+  {
+    "Bambou": "Virginia",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.47",
+    "long": "57.66",
+    "elevation": "830",
+    "population": "26734"
+  },
+  {
+    "Bambou": "Роз-Бель",
+    "city": "Grand Port",
+    "country": "Mauritius",
+    "lat": "-20.40",
+    "long": "57.60",
+    "elevation": "830",
+    "population": "57353"
+  },
+  {
+    "Bambou": "Alma",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.57",
+    "elevation": "1059",
+    "population": "57086"
+  },
+  {
+    "Bambou": "Bagatelle",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.49",
+    "elevation": "931",
+    "population": "253057"
+  },
+  {
+    "Bambou": "Bar le Duc",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.57",
+    "elevation": "1085",
+    "population": "54648"
+  },
+  {
+    "Bambou": "Beau Bois",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.56",
+    "elevation": "1013",
+    "population": "79354"
+  },
+  {
+    "Bambou": "Belle Rose",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "156636"
+  },
+  {
+    "Bambou": "Belle Ross",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "156636"
+  },
+  {
+    "Bambou": "Bety",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.32",
+    "long": "57.61",
+    "elevation": "1003",
+    "population": "10764"
+  },
+  {
+    "Bambou": "Bois Pougnet",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.60",
+    "elevation": "1053",
+    "population": "33046"
+  },
+  {
+    "Bambou": "Bonne Veine",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.59",
+    "elevation": "1112",
+    "population": "37937"
+  },
+  {
+    "Bambou": "Camp Auguste",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.52",
+    "elevation": "987",
+    "population": "131711"
+  },
+  {
+    "Bambou": "Camp Thorel",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.62",
+    "elevation": "997",
+    "population": "41910"
+  },
+  {
+    "Bambou": "Camp Thoret",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.62",
+    "elevation": "997",
+    "population": "41910"
+  },
+  {
+    "Bambou": "Campbell",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.18",
+    "long": "57.62",
+    "elevation": "1112",
+    "population": "40645"
+  },
+  {
+    "Bambou": "Chantenay",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.51",
+    "elevation": "830",
+    "population": "190735"
+  },
+  {
+    "Bambou": "Chantenuy",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.51",
+    "elevation": "830",
+    "population": "190735"
+  },
+  {
+    "Bambou": "Circonstance",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.54",
+    "elevation": "964",
+    "population": "100567"
+  },
+  {
+    "Bambou": "Cote d'Or",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.53",
+    "elevation": "987",
+    "population": "108048"
+  },
+  {
+    "Bambou": "Côte d’Or",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.53",
+    "elevation": "987",
+    "population": "108048"
+  },
+  {
+    "Bambou": "Dagotière",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.55",
+    "elevation": "1020",
+    "population": "62684"
+  },
+  {
+    "Bambou": "Dubreuil",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.59",
+    "elevation": "1000",
+    "population": "20673"
+  },
+  {
+    "Bambou": "Espérance",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.59",
+    "elevation": "1122",
+    "population": "43093"
+  },
+  {
+    "Bambou": "Helvétia",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.52",
+    "elevation": "987",
+    "population": "141982"
+  },
+  {
+    "Bambou": "Hermitage",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.55",
+    "elevation": "987",
+    "population": "62684"
+  },
+  {
+    "Bambou": "Hermitage",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.53",
+    "elevation": "987",
+    "population": "146785"
+  },
+  {
+    "Bambou": "Hervé",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.60",
+    "elevation": "1053",
+    "population": "33046"
+  },
+  {
+    "Bambou": "L'Agrement",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.52",
+    "elevation": "862",
+    "population": "156636"
+  },
+  {
+    "Bambou": "L'Assurance",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.55",
+    "elevation": "987",
+    "population": "74397"
+  },
+  {
+    "Bambou": "L'Avenir",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.55",
+    "elevation": "964",
+    "population": "95948"
+  },
+  {
+    "Bambou": "L'Escalier",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.58",
+    "elevation": "1059",
+    "population": "58442"
+  },
+  {
+    "Bambou": "La Dagotiere",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.55",
+    "elevation": "1020",
+    "population": "62684"
+  },
+  {
+    "Bambou": "La Laura",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.55",
+    "elevation": "898",
+    "population": "114163"
+  },
+  {
+    "Bambou": "La Russie",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.60",
+    "elevation": "1105",
+    "population": "35247"
+  },
+  {
+    "Bambou": "Le Bocage",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.50",
+    "elevation": "830",
+    "population": "222402"
+  },
+  {
+    "Bambou": "Le Réduit",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.49",
+    "elevation": "931",
+    "population": "239356"
+  },
+  {
+    "Bambou": "Les Guibies",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.49",
+    "elevation": "830",
+    "population": "215185"
+  },
+  {
+    "Bambou": "L’Agrément",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.52",
+    "elevation": "862",
+    "population": "156636"
+  },
+  {
+    "Bambou": "L’Assurance",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.55",
+    "elevation": "987",
+    "population": "74397"
+  },
+  {
+    "Bambou": "L’Avenir",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.55",
+    "elevation": "964",
+    "population": "95948"
+  },
+  {
+    "Bambou": "L’Escalier",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.58",
+    "elevation": "1059",
+    "population": "58442"
+  },
+  {
+    "Bambou": "Melrose",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.63",
+    "elevation": "1003",
+    "population": "36061"
+  },
+  {
+    "Bambou": "Midlands",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.32",
+    "long": "57.60",
+    "elevation": "997",
+    "population": "10764"
+  },
+  {
+    "Bambou": "Minissy",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.51",
+    "elevation": "987",
+    "population": "209059"
+  },
+  {
+    "Bambou": "Moka",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.50",
+    "elevation": "830",
+    "population": "242758"
+  },
+  {
+    "Bambou": "Moka Village",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.50",
+    "elevation": "830",
+    "population": "242758"
+  },
+  {
+    "Bambou": "Mon Désert",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.53",
+    "elevation": "964",
+    "population": "117975"
+  },
+  {
+    "Bambou": "Mont Fleury",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.53",
+    "elevation": "908",
+    "population": "100567"
+  },
+  {
+    "Bambou": "Montagne Ory",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.48",
+    "elevation": "931",
+    "population": "247964"
+  },
+  {
+    "Bambou": "Montebello",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.48",
+    "elevation": "830",
+    "population": "229267"
+  },
+  {
+    "Bambou": "Mount Ory",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.48",
+    "elevation": "931",
+    "population": "247964"
+  },
+  {
+    "Bambou": "Nouvelle Découverte",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.58",
+    "elevation": "1040",
+    "population": "58442"
+  },
+  {
+    "Bambou": "Pailles",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.48",
+    "elevation": "830",
+    "population": "211322"
+  },
+  {
+    "Bambou": "Pailles Village",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.48",
+    "elevation": "830",
+    "population": "211322"
+  },
+  {
+    "Bambou": "Petit Paquet",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.66",
+    "elevation": "1128",
+    "population": "32623"
+  },
+  {
+    "Bambou": "Petit Verger",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.51",
+    "elevation": "830",
+    "population": "184254"
+  },
+  {
+    "Bambou": "Providence",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.61",
+    "elevation": "1085",
+    "population": "34433"
+  },
+  {
+    "Bambou": "Quartier Militaire",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.59",
+    "elevation": "1112",
+    "population": "36412"
+  },
+  {
+    "Bambou": "Reduit",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.49",
+    "elevation": "931",
+    "population": "239356"
+  },
+  {
+    "Bambou": "Ripailles",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.57",
+    "elevation": "1056",
+    "population": "70097"
+  },
+  {
+    "Bambou": "Riviere Baptiste",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.53",
+    "elevation": "830",
+    "population": "146654"
+  },
+  {
+    "Bambou": "Riviere du Bois",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.32",
+    "long": "57.63",
+    "elevation": "948",
+    "population": "12269"
+  },
+  {
+    "Bambou": "Roselyn Cottage",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "156636"
+  },
+  {
+    "Bambou": "Saint Pierre",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "141982"
+  },
+  {
+    "Bambou": "Saint Pierre Village",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "141982"
+  },
+  {
+    "Bambou": "Salazie",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.17",
+    "long": "57.61",
+    "elevation": "1043",
+    "population": "40720"
+  },
+  {
+    "Bambou": "Telfair",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.50",
+    "elevation": "892",
+    "population": "239356"
+  },
+  {
+    "Bambou": "Valetta",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.56",
+    "elevation": "990",
+    "population": "51838"
+  },
+  {
+    "Bambou": "Verdun",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.54",
+    "elevation": "994",
+    "population": "83020"
+  },
+  {
+    "Bambou": "Verdun Station",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.54",
+    "elevation": "994",
+    "population": "83020"
+  },
+  {
+    "Bambou": "Vuillemin",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.58",
+    "elevation": "1059",
+    "population": "33819"
+  },
+  {
+    "Bambou": "mauvilac",
+    "city": "Moka",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.48",
+    "elevation": "830",
+    "population": "211322"
+  },
+  {
+    "Bambou": "Amitié",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "84943"
+  },
+  {
+    "Bambou": "Arsenal",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.54",
+    "elevation": "830",
+    "population": "105788"
+  },
+  {
+    "Bambou": "Baie du Tombeau",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.12",
+    "long": "57.49",
+    "elevation": "830",
+    "population": "115142"
+  },
+  {
+    "Bambou": "Baillache",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.56",
+    "elevation": "830",
+    "population": "111515"
+  },
+  {
+    "Bambou": "Bassin Louloup",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.17",
+    "long": "57.56",
+    "elevation": "941",
+    "population": "114176"
+  },
+  {
+    "Bambou": "Beau Plan",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.09",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "79183"
+  },
+  {
+    "Bambou": "Belle Vue",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.05",
+    "long": "57.58",
+    "elevation": "830",
+    "population": "68406"
+  },
+  {
+    "Bambou": "Belle Vue Harel",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.07",
+    "long": "57.59",
+    "elevation": "830",
+    "population": "74733"
+  },
+  {
+    "Bambou": "Belle Vue Pilot",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.05",
+    "long": "57.58",
+    "elevation": "830",
+    "population": "68406"
+  },
+  {
+    "Bambou": "Belle-Vue",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.07",
+    "long": "57.59",
+    "elevation": "830",
+    "population": "74733"
+  },
+  {
+    "Bambou": "Belvédère",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.58",
+    "elevation": "830",
+    "population": "70091"
+  },
+  {
+    "Bambou": "Bois Mangue",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.06",
+    "long": "57.58",
+    "elevation": "830",
+    "population": "74485"
+  },
+  {
+    "Bambou": "Bois Marchand",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.12",
+    "long": "57.53",
+    "elevation": "830",
+    "population": "144923"
+  },
+  {
+    "Bambou": "Bois Marchand Station",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.12",
+    "long": "57.53",
+    "elevation": "830",
+    "population": "144923"
+  },
+  {
+    "Bambou": "Bois Pignolet",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.13",
+    "long": "57.54",
+    "elevation": "830",
+    "population": "152530"
+  },
+  {
+    "Bambou": "Bois Rouge",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.08",
+    "long": "57.58",
+    "elevation": "830",
+    "population": "73642"
+  },
+  {
+    "Bambou": "Bon Air",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.06",
+    "long": "57.56",
+    "elevation": "830",
+    "population": "65944"
+  },
+  {
+    "Bambou": "Calebasses",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.55",
+    "elevation": "830",
+    "population": "100960"
+  },
+  {
+    "Bambou": "Camp Bestel",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.05",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "40484"
+  },
+  {
+    "Bambou": "Camp Creoles",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.13",
+    "long": "57.59",
+    "elevation": "830",
+    "population": "51751"
+  },
+  {
+    "Bambou": "Camp Créole",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.13",
+    "long": "57.59",
+    "elevation": "830",
+    "population": "51751"
+  },
+  {
+    "Bambou": "Camp des Embrevades",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "83249"
+  },
+  {
+    "Bambou": "Caroline",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.18",
+    "long": "57.56",
+    "elevation": "987",
+    "population": "133140"
+  },
+  {
+    "Bambou": "Choisy",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.02",
+    "long": "57.56",
+    "elevation": "367",
+    "population": "39690"
+  },
+  {
+    "Bambou": "Congomah",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.59",
+    "elevation": "882",
+    "population": "58331"
+  },
+  {
+    "Bambou": "Crève Coeur",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.56",
+    "elevation": "990",
+    "population": "122318"
+  },
+  {
+    "Bambou": "D'Epinay",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.13",
+    "long": "57.59",
+    "elevation": "830",
+    "population": "59077"
+  },
+  {
+    "Bambou": "D’Epinay",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.13",
+    "long": "57.59",
+    "elevation": "830",
+    "population": "59077"
+  },
+  {
+    "Bambou": "Fond du Sac",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.04",
+    "long": "57.58",
+    "elevation": "830",
+    "population": "68406"
+  },
+  {
+    "Bambou": "Grande Pointe aux Piments",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.06",
+    "long": "57.51",
+    "elevation": "830",
+    "population": "39586"
+  },
+  {
+    "Bambou": "Grande Rosalie",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.13",
+    "long": "57.60",
+    "elevation": "830",
+    "population": "47207"
+  },
+  {
+    "Bambou": "Ilot",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.13",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "82997"
+  },
+  {
+    "Bambou": "Khoyratty",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.12",
+    "long": "57.55",
+    "elevation": "830",
+    "population": "124727"
+  },
+  {
+    "Bambou": "L'Espoir",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.55",
+    "elevation": "830",
+    "population": "109792"
+  },
+  {
+    "Bambou": "La Bergerie",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.53",
+    "elevation": "830",
+    "population": "127381"
+  },
+  {
+    "Bambou": "La Cocoterie",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.13",
+    "long": "57.49",
+    "elevation": "0",
+    "population": "132287"
+  },
+  {
+    "Bambou": "Le Goulet",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.51",
+    "elevation": "830",
+    "population": "105599"
+  },
+  {
+    "Bambou": "Le Hochet",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.14",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "168610"
+  },
+  {
+    "Bambou": "Le Plessis",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.60",
+    "elevation": "830",
+    "population": "56327"
+  },
+  {
+    "Bambou": "Leonbourg",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.50",
+    "elevation": "830",
+    "population": "102342"
+  },
+  {
+    "Bambou": "Les Mariannes",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.58",
+    "elevation": "951",
+    "population": "56691"
+  },
+  {
+    "Bambou": "Long Mountain",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.14",
+    "long": "57.56",
+    "elevation": "830",
+    "population": "111515"
+  },
+  {
+    "Bambou": "L’Espoir",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.55",
+    "elevation": "830",
+    "population": "109792"
+  },
+  {
+    "Bambou": "Madame Cayeux",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.59",
+    "elevation": "830",
+    "population": "63654"
+  },
+  {
+    "Bambou": "Maison Blanche",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "81926"
+  },
+  {
+    "Bambou": "Melotte",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.19",
+    "long": "57.56",
+    "elevation": "990",
+    "population": "95393"
+  },
+  {
+    "Bambou": "Mon Choisy",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.02",
+    "long": "57.56",
+    "elevation": "367",
+    "population": "39690"
+  },
+  {
+    "Bambou": "Mon Goût",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.12",
+    "long": "57.59",
+    "elevation": "830",
+    "population": "61596"
+  },
+  {
+    "Bambou": "Mon Rocher",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.09",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "75943"
+  },
+  {
+    "Bambou": "Mont Choisy",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.02",
+    "long": "57.56",
+    "elevation": "367",
+    "population": "39690"
+  },
+  {
+    "Bambou": "Mont Longue",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.14",
+    "long": "57.56",
+    "elevation": "830",
+    "population": "111515"
+  },
+  {
+    "Bambou": "Morcellemont Saint Andre",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.07",
+    "long": "57.56",
+    "elevation": "830",
+    "population": "66124"
+  },
+  {
+    "Bambou": "Mount",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.60",
+    "elevation": "830",
+    "population": "57948"
+  },
+  {
+    "Bambou": "Mount Choisy",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.02",
+    "long": "57.56",
+    "elevation": "367",
+    "population": "39690"
+  },
+  {
+    "Bambou": "Notre Dame",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.14",
+    "long": "57.55",
+    "elevation": "830",
+    "population": "129624"
+  },
+  {
+    "Bambou": "Notre Dame Station",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.14",
+    "long": "57.55",
+    "elevation": "830",
+    "population": "129624"
+  },
+  {
+    "Bambou": "Pamplemousses",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "81926"
+  },
+  {
+    "Bambou": "Pamplemousses Village",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "81926"
+  },
+  {
+    "Bambou": "Pelissis",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.60",
+    "elevation": "830",
+    "population": "56327"
+  },
+  {
+    "Bambou": "Petit Gamin",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "105924"
+  },
+  {
+    "Bambou": "Petite Julie",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.14",
+    "long": "57.62",
+    "elevation": "830",
+    "population": "48798"
+  },
+  {
+    "Bambou": "Petite Rosalie",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.12",
+    "long": "57.60",
+    "elevation": "830",
+    "population": "55404"
+  },
+  {
+    "Bambou": "Plaine des Papayes",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.07",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "70138"
+  },
+  {
+    "Bambou": "Plaines des Papayes",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.07",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "70138"
+  },
+  {
+    "Bambou": "Pointe aux Cannoniers",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.01",
+    "long": "57.56",
+    "elevation": "351",
+    "population": "28055"
+  },
+  {
+    "Bambou": "Pointe aux Canonniers",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.01",
+    "long": "57.56",
+    "elevation": "351",
+    "population": "28055"
+  },
+  {
+    "Bambou": "Pont Praslin",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "52642"
+  },
+  {
+    "Bambou": "Pont Prastin",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "52642"
+  },
+  {
+    "Bambou": "Richeterre",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.12",
+    "long": "57.50",
+    "elevation": "830",
+    "population": "135384"
+  },
+  {
+    "Bambou": "Robinson",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.17",
+    "long": "57.56",
+    "elevation": "941",
+    "population": "114176"
+  },
+  {
+    "Bambou": "Roche Bois",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.14",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "160738"
+  },
+  {
+    "Bambou": "Rouge Terre",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.04",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "65382"
+  },
+  {
+    "Bambou": "Ruisseau Rose",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "85749"
+  },
+  {
+    "Bambou": "Saint Cloud",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "53740"
+  },
+  {
+    "Bambou": "Saint-André",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.07",
+    "long": "57.56",
+    "elevation": "830",
+    "population": "66124"
+  },
+  {
+    "Bambou": "Saint-Joseph",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.53",
+    "elevation": "830",
+    "population": "94338"
+  },
+  {
+    "Bambou": "Solitude",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.08",
+    "long": "57.54",
+    "elevation": "830",
+    "population": "70742"
+  },
+  {
+    "Bambou": "Terre Rouge",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.04",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "65382"
+  },
+  {
+    "Bambou": "Terre Rouge",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.13",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "157483"
+  },
+  {
+    "Bambou": "The Mount",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.60",
+    "elevation": "830",
+    "population": "57948"
+  },
+  {
+    "Bambou": "Trio",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.05",
+    "long": "57.53",
+    "elevation": "830",
+    "population": "48915"
+  },
+  {
+    "Bambou": "Triolet",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.05",
+    "long": "57.55",
+    "elevation": "830",
+    "population": "56767"
+  },
+  {
+    "Bambou": "Trou aux Biches",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.05",
+    "long": "57.55",
+    "elevation": "830",
+    "population": "54262"
+  },
+  {
+    "Bambou": "Valton",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.56",
+    "elevation": "830",
+    "population": "112877"
+  },
+  {
+    "Bambou": "Ville Bague",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.14",
+    "long": "57.62",
+    "elevation": "830",
+    "population": "45181"
+  },
+  {
+    "Bambou": "Ville Valio",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.09",
+    "long": "57.50",
+    "elevation": "0",
+    "population": "75668"
+  },
+  {
+    "Bambou": "Триолет",
+    "city": "Pamplemousses",
+    "country": "Mauritius",
+    "lat": "-20.05",
+    "long": "57.55",
+    "elevation": "830",
+    "population": "56767"
+  },
+  {
+    "Bambou": "Bagatelle",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.51",
+    "elevation": "987",
+    "population": "189077"
+  },
+  {
+    "Bambou": "Barkly",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.45",
+    "elevation": "830",
+    "population": "188535"
+  },
+  {
+    "Bambou": "Beau Bassin",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.22",
+    "long": "57.46",
+    "elevation": "830",
+    "population": "205739"
+  },
+  {
+    "Bambou": "Beau Sejour",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.47",
+    "elevation": "994",
+    "population": "241166"
+  },
+  {
+    "Bambou": "Belle Etoile",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.46",
+    "elevation": "830",
+    "population": "202909"
+  },
+  {
+    "Bambou": "Belle Terre",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.26",
+    "long": "57.52",
+    "elevation": "987",
+    "population": "163374"
+  },
+  {
+    "Bambou": "Bonne Terre",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.48",
+    "elevation": "1210",
+    "population": "276414"
+  },
+  {
+    "Bambou": "Camp Caval",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.32",
+    "long": "57.50",
+    "elevation": "1669",
+    "population": "189014"
+  },
+  {
+    "Bambou": "Camp Fouquereaux",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.52",
+    "elevation": "1023",
+    "population": "182334"
+  },
+  {
+    "Bambou": "Camp La Savanne",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.32",
+    "long": "57.47",
+    "elevation": "1669",
+    "population": "199063"
+  },
+  {
+    "Bambou": "Camp Mapou",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.33",
+    "long": "57.47",
+    "elevation": "1669",
+    "population": "162152"
+  },
+  {
+    "Bambou": "Camp Roches",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.32",
+    "long": "57.47",
+    "elevation": "1669",
+    "population": "199063"
+  },
+  {
+    "Bambou": "Candos",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.28",
+    "long": "57.47",
+    "elevation": "1095",
+    "population": "267636"
+  },
+  {
+    "Bambou": "Carreau La Liane",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.28",
+    "long": "57.48",
+    "elevation": "1148",
+    "population": "274494"
+  },
+  {
+    "Bambou": "Chébel",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.20",
+    "long": "57.45",
+    "elevation": "830",
+    "population": "170883"
+  },
+  {
+    "Bambou": "Cinq Arpents",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.52",
+    "elevation": "987",
+    "population": "173787"
+  },
+  {
+    "Bambou": "Curepipe",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.52",
+    "elevation": "1669",
+    "population": "146637"
+  },
+  {
+    "Bambou": "Eaux Coulée",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.52",
+    "elevation": "1669",
+    "population": "163748"
+  },
+  {
+    "Bambou": "Ebene",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.48",
+    "elevation": "895",
+    "population": "245684"
+  },
+  {
+    "Bambou": "Ebene City",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.48",
+    "elevation": "895",
+    "population": "245684"
+  },
+  {
+    "Bambou": "Ebene CyberCity",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.48",
+    "elevation": "895",
+    "population": "245684"
+  },
+  {
+    "Bambou": "Eighteenth Mile Village",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.34",
+    "long": "57.54",
+    "elevation": "1751",
+    "population": "98270"
+  },
+  {
+    "Bambou": "Engrais Cathan",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.52",
+    "elevation": "1207",
+    "population": "176545"
+  },
+  {
+    "Bambou": "Engrais Martial",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.51",
+    "elevation": "1246",
+    "population": "185264"
+  },
+  {
+    "Bambou": "Floreal",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.50",
+    "elevation": "1669",
+    "population": "211147"
+  },
+  {
+    "Bambou": "Forest Side",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.32",
+    "long": "57.53",
+    "elevation": "1669",
+    "population": "120034"
+  },
+  {
+    "Bambou": "Glen Park",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.32",
+    "long": "57.48",
+    "elevation": "1669",
+    "population": "211129"
+  },
+  {
+    "Bambou": "Henrietta",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.34",
+    "long": "57.47",
+    "elevation": "1669",
+    "population": "136580"
+  },
+  {
+    "Bambou": "Highlands",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.51",
+    "elevation": "1040",
+    "population": "206709"
+  },
+  {
+    "Bambou": "Holyrood",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.47",
+    "elevation": "1253",
+    "population": "223251"
+  },
+  {
+    "Bambou": "Kiurpipas",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.52",
+    "elevation": "1669",
+    "population": "146637"
+  },
+  {
+    "Bambou": "La Caverne",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.47",
+    "elevation": "1210",
+    "population": "268127"
+  },
+  {
+    "Bambou": "La Croisee",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.32",
+    "long": "57.48",
+    "elevation": "1669",
+    "population": "211129"
+  },
+  {
+    "Bambou": "La Louise",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.47",
+    "elevation": "1056",
+    "population": "243899"
+  },
+  {
+    "Bambou": "La Marie",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.34",
+    "long": "57.48",
+    "elevation": "1669",
+    "population": "163543"
+  },
+  {
+    "Bambou": "La Source",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.46",
+    "elevation": "1036",
+    "population": "238483"
+  },
+  {
+    "Bambou": "Le Pétrin",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.41",
+    "long": "57.47",
+    "elevation": "1984",
+    "population": "7134"
+  },
+  {
+    "Bambou": "Les Casernes",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.33",
+    "long": "57.50",
+    "elevation": "1669",
+    "population": "181297"
+  },
+  {
+    "Bambou": "Malherbes",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.52",
+    "elevation": "1253",
+    "population": "146637"
+  },
+  {
+    "Bambou": "Mesnil",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.51",
+    "elevation": "1154",
+    "population": "208630"
+  },
+  {
+    "Bambou": "Midlands",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.33",
+    "long": "57.56",
+    "elevation": "1115",
+    "population": "80928"
+  },
+  {
+    "Bambou": "Pellegrin",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.26",
+    "long": "57.48",
+    "elevation": "994",
+    "population": "252683"
+  },
+  {
+    "Bambou": "Petit Camp",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.49",
+    "elevation": "1023",
+    "population": "261445"
+  },
+  {
+    "Bambou": "Phoenix",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.50",
+    "elevation": "1105",
+    "population": "239278"
+  },
+  {
+    "Bambou": "Plaine Noel",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.33",
+    "long": "57.54",
+    "elevation": "1702",
+    "population": "103942"
+  },
+  {
+    "Bambou": "Plaine Sophie",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.37",
+    "long": "57.48",
+    "elevation": "1824",
+    "population": "63992"
+  },
+  {
+    "Bambou": "Plaisance",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.45",
+    "elevation": "830",
+    "population": "219237"
+  },
+  {
+    "Bambou": "Quatre Bornes",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.26",
+    "long": "57.47",
+    "elevation": "1053",
+    "population": "252176"
+  },
+  {
+    "Bambou": "Quinze Cantons",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.47",
+    "elevation": "1669",
+    "population": "248674"
+  },
+  {
+    "Bambou": "River Side",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.28",
+    "long": "57.50",
+    "elevation": "1053",
+    "population": "262898"
+  },
+  {
+    "Bambou": "Roches Brunes",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.23",
+    "long": "57.45",
+    "elevation": "830",
+    "population": "218253"
+  },
+  {
+    "Bambou": "Rose Hill",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.24",
+    "long": "57.47",
+    "elevation": "869",
+    "population": "241166"
+  },
+  {
+    "Bambou": "Réunion",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.49",
+    "elevation": "1669",
+    "population": "234010"
+  },
+  {
+    "Bambou": "Saint Antoine",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.28",
+    "long": "57.52",
+    "elevation": "1023",
+    "population": "179142"
+  },
+  {
+    "Bambou": "Saint Jean",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.48",
+    "elevation": "994",
+    "population": "252683"
+  },
+  {
+    "Bambou": "Saint Paul",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.50",
+    "elevation": "1154",
+    "population": "239278"
+  },
+  {
+    "Bambou": "Seizième Mille",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.34",
+    "long": "57.54",
+    "elevation": "1751",
+    "population": "98270"
+  },
+  {
+    "Bambou": "Solférino",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.29",
+    "long": "57.47",
+    "elevation": "1181",
+    "population": "274879"
+  },
+  {
+    "Bambou": "Stanley",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.45",
+    "elevation": "980",
+    "population": "222966"
+  },
+  {
+    "Bambou": "Trianon",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.25",
+    "long": "57.49",
+    "elevation": "994",
+    "population": "244533"
+  },
+  {
+    "Bambou": "Vacoa",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.48",
+    "elevation": "1669",
+    "population": "275745"
+  },
+  {
+    "Bambou": "Vacoas",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.48",
+    "elevation": "1669",
+    "population": "275745"
+  },
+  {
+    "Bambou": "Vacoas-Phoenix",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.30",
+    "long": "57.48",
+    "elevation": "1669",
+    "population": "275745"
+  },
+  {
+    "Bambou": "Valentina",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.27",
+    "long": "57.50",
+    "elevation": "1059",
+    "population": "261445"
+  },
+  {
+    "Bambou": "Ville d'Apray",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.34",
+    "long": "57.56",
+    "elevation": "994",
+    "population": "58901"
+  },
+  {
+    "Bambou": "Ville d'Avray",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.34",
+    "long": "57.56",
+    "elevation": "994",
+    "population": "58901"
+  },
+  {
+    "Bambou": "Ville d’Apray",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.34",
+    "long": "57.56",
+    "elevation": "994",
+    "population": "58901"
+  },
+  {
+    "Bambou": "Ville d’Avray",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.34",
+    "long": "57.56",
+    "elevation": "994",
+    "population": "58901"
+  },
+  {
+    "Bambou": "Vuillemain",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.21",
+    "long": "57.47",
+    "elevation": "830",
+    "population": "210906"
+  },
+  {
+    "Bambou": "Wooten",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.53",
+    "elevation": "1253",
+    "population": "144256"
+  },
+  {
+    "Bambou": "Кьюрпайп",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.52",
+    "elevation": "1669",
+    "population": "146637"
+  },
+  {
+    "Bambou": "Кюрпип",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.52",
+    "elevation": "1669",
+    "population": "146637"
+  },
+  {
+    "Bambou": "Кјурпајп",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.52",
+    "elevation": "1669",
+    "population": "146637"
+  },
+  {
+    "Bambou": "كوريبيب",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.52",
+    "elevation": "1669",
+    "population": "146637"
+  },
+  {
+    "Bambou": "کیورپیپہ",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.52",
+    "elevation": "1669",
+    "population": "146637"
+  },
+  {
+    "Bambou": "กูร์ปีป",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.52",
+    "elevation": "1669",
+    "population": "146637"
+  },
+  {
+    "Bambou": "キュールピップ",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.52",
+    "elevation": "1669",
+    "population": "146637"
+  },
+  {
+    "Bambou": "居爾皮普",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.52",
+    "elevation": "1669",
+    "population": "146637"
+  },
+  {
+    "Bambou": "쿠레피페",
+    "city": "Plaines Wilhems",
+    "country": "Mauritius",
+    "lat": "-20.31",
+    "long": "57.52",
+    "elevation": "1669",
+    "population": "146637"
+  },
+  {
+    "Bambou": "Abercrombie",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "174588"
+  },
+  {
+    "Bambou": "Bain des Dames",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.48",
+    "elevation": "0",
+    "population": "180889"
+  },
+  {
+    "Bambou": "Bell Village",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.17",
+    "long": "57.48",
+    "elevation": "830",
+    "population": "189137"
+  },
+  {
+    "Bambou": "Bell Village Station",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.17",
+    "long": "57.48",
+    "elevation": "830",
+    "population": "189137"
+  },
+  {
+    "Bambou": "Bort Lois",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Camp Yoloff",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.50",
+    "elevation": "400",
+    "population": "182695"
+  },
+  {
+    "Bambou": "Carreau Lalo",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "179561"
+  },
+  {
+    "Bambou": "Cassis",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.48",
+    "elevation": "830",
+    "population": "180889"
+  },
+  {
+    "Bambou": "Champ de Mars",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.51",
+    "elevation": "830",
+    "population": "190575"
+  },
+  {
+    "Bambou": "Cite La Cure",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.53",
+    "elevation": "830",
+    "population": "177671"
+  },
+  {
+    "Bambou": "Cité Valijée",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.47",
+    "elevation": "830",
+    "population": "169682"
+  },
+  {
+    "Bambou": "Grand River North West",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.18",
+    "long": "57.47",
+    "elevation": "830",
+    "population": "190521"
+  },
+  {
+    "Bambou": "Lagesse",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.03",
+    "long": "57.62",
+    "elevation": "209",
+    "population": "66379"
+  },
+  {
+    "Bambou": "Mon Loisir",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.03",
+    "long": "57.62",
+    "elevation": "209",
+    "population": "66379"
+  },
+  {
+    "Bambou": "Plaine Verte",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.15",
+    "long": "57.51",
+    "elevation": "403",
+    "population": "182695"
+  },
+  {
+    "Bambou": "Port Lois",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Port Louis",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Port Louis Town",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Port Lui",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Port Luis",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Port Luisas",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Port Luiz",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Port-Luiso",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Port-lui",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Portluī",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Portus Ludovici",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Puerto Louis",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Pò-Loui",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Sainte Croix",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.14",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "175602"
+  },
+  {
+    "Bambou": "Tranquebar",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.17",
+    "long": "57.51",
+    "elevation": "830",
+    "population": "198069"
+  },
+  {
+    "Bambou": "Vallée Pitot",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.51",
+    "elevation": "830",
+    "population": "188344"
+  },
+  {
+    "Bambou": "Vallée des Prêtres",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.17",
+    "long": "57.53",
+    "elevation": "830",
+    "population": "184588"
+  },
+  {
+    "Bambou": "Πορ Λουί",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Πορ-Λουί",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Горад Порт-Луі",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Порт Луи",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Порт Луис",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Порт-Луи",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Порт-Луі",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Պորտ Լուի",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "פור לואי",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "بور لويس",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "پورت‌لوئیس",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "پورٹ لوئس",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "پورٹ لوئی",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "پۆرت لویس",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "पोर्ट लुई",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "पोर्ट लुईस",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "পোর্ট লুইস",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "ਪੋਰਟ ਲੂਈ",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "ପୋର୍ଟ ଲୁଇସ",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "போர்ட் லூயிஸ்",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "പോർട്ട് ലൂയിസ്",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "พอร์ตหลุยส์",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "ལོ་ཡི་སི་གྲུ་ཁ།",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "პორტ-ლუი",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "ፖርት ሉዊስ",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "ポートルイス",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "路易士港",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "路易港",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "포트루이스",
+    "city": "Port Louis",
+    "country": "Mauritius",
+    "lat": "-20.16",
+    "long": "57.50",
+    "elevation": "413",
+    "population": "191513"
+  },
+  {
+    "Bambou": "Amaury",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.13",
+    "long": "57.66",
+    "elevation": "351",
+    "population": "60418"
+  },
+  {
+    "Bambou": "Amitie",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.66",
+    "elevation": "226",
+    "population": "57949"
+  },
+  {
+    "Bambou": "Antoinette",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.12",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "59028"
+  },
+  {
+    "Bambou": "Barlow",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.12",
+    "long": "57.65",
+    "elevation": "400",
+    "population": "60712"
+  },
+  {
+    "Bambou": "Beau Mangue",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-19.98",
+    "long": "57.60",
+    "elevation": "0",
+    "population": "27258"
+  },
+  {
+    "Bambou": "Beau Manguier",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-19.98",
+    "long": "57.60",
+    "elevation": "0",
+    "population": "27258"
+  },
+  {
+    "Bambou": "Belle Vue",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.12",
+    "long": "57.66",
+    "elevation": "246",
+    "population": "58309"
+  },
+  {
+    "Bambou": "Belle Vue Maurel",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.12",
+    "long": "57.66",
+    "elevation": "246",
+    "population": "58309"
+  },
+  {
+    "Bambou": "Belmont",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.05",
+    "long": "57.66",
+    "elevation": "108",
+    "population": "62190"
+  },
+  {
+    "Bambou": "Bon Espoir",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.09",
+    "long": "57.62",
+    "elevation": "374",
+    "population": "70490"
+  },
+  {
+    "Bambou": "Cap Malheureux",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-19.98",
+    "long": "57.61",
+    "elevation": "0",
+    "population": "29639"
+  },
+  {
+    "Bambou": "Cottage",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.06",
+    "long": "57.63",
+    "elevation": "183",
+    "population": "78478"
+  },
+  {
+    "Bambou": "Esperance",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.07",
+    "long": "57.64",
+    "elevation": "183",
+    "population": "70431"
+  },
+  {
+    "Bambou": "Espérance Trébuchet",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.07",
+    "long": "57.64",
+    "elevation": "183",
+    "population": "70431"
+  },
+  {
+    "Bambou": "Forbach",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.06",
+    "long": "57.63",
+    "elevation": "246",
+    "population": "78478"
+  },
+  {
+    "Bambou": "Gaboola",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.65",
+    "elevation": "351",
+    "population": "60521"
+  },
+  {
+    "Bambou": "Germain",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.02",
+    "long": "57.67",
+    "elevation": "85",
+    "population": "38442"
+  },
+  {
+    "Bambou": "Gokoola",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.65",
+    "elevation": "351",
+    "population": "60521"
+  },
+  {
+    "Bambou": "Goodlands",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.04",
+    "long": "57.64",
+    "elevation": "131",
+    "population": "64487"
+  },
+  {
+    "Bambou": "Grand Baie",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.01",
+    "long": "57.57",
+    "elevation": "354",
+    "population": "37387"
+  },
+  {
+    "Bambou": "Grand Gaube",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.01",
+    "long": "57.66",
+    "elevation": "95",
+    "population": "34627"
+  },
+  {
+    "Bambou": "Grande Baie",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.01",
+    "long": "57.57",
+    "elevation": "354",
+    "population": "37387"
+  },
+  {
+    "Bambou": "Grande Gaube",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.01",
+    "long": "57.66",
+    "elevation": "95",
+    "population": "34627"
+  },
+  {
+    "Bambou": "Haut Rive",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.70",
+    "elevation": "118",
+    "population": "41810"
+  },
+  {
+    "Bambou": "Haute Rive",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.70",
+    "elevation": "118",
+    "population": "41810"
+  },
+  {
+    "Bambou": "Hermitage",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.08",
+    "long": "57.68",
+    "elevation": "124",
+    "population": "48747"
+  },
+  {
+    "Bambou": "Ile d'Ambre",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.07",
+    "long": "57.68",
+    "elevation": "111",
+    "population": "55777"
+  },
+  {
+    "Bambou": "L'Amitie",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.66",
+    "elevation": "226",
+    "population": "57949"
+  },
+  {
+    "Bambou": "L'Esperance",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.09",
+    "long": "57.64",
+    "elevation": "298",
+    "population": "66325"
+  },
+  {
+    "Bambou": "La Clémence",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.68",
+    "elevation": "180",
+    "population": "50148"
+  },
+  {
+    "Bambou": "La Lucia",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.12",
+    "long": "57.65",
+    "elevation": "400",
+    "population": "60712"
+  },
+  {
+    "Bambou": "La Morue",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.13",
+    "long": "57.65",
+    "elevation": "393",
+    "population": "60726"
+  },
+  {
+    "Bambou": "Labourdonnais",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.07",
+    "long": "57.61",
+    "elevation": "291",
+    "population": "76039"
+  },
+  {
+    "Bambou": "Le Ravin",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.68",
+    "elevation": "157",
+    "population": "52452"
+  },
+  {
+    "Bambou": "L’Amitie",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.66",
+    "elevation": "226",
+    "population": "57949"
+  },
+  {
+    "Bambou": "L’Espérance",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.09",
+    "long": "57.64",
+    "elevation": "298",
+    "population": "66325"
+  },
+  {
+    "Bambou": "Madame Azor",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.03",
+    "long": "57.66",
+    "elevation": "104",
+    "population": "54754"
+  },
+  {
+    "Bambou": "Mamzelle Jeanne",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.03",
+    "long": "57.65",
+    "elevation": "118",
+    "population": "58362"
+  },
+  {
+    "Bambou": "Mapou",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.08",
+    "long": "57.60",
+    "elevation": "393",
+    "population": "71536"
+  },
+  {
+    "Bambou": "Melville",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.02",
+    "long": "57.67",
+    "elevation": "75",
+    "population": "41382"
+  },
+  {
+    "Bambou": "Mon Piton",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.09",
+    "long": "57.62",
+    "elevation": "410",
+    "population": "70490"
+  },
+  {
+    "Bambou": "Mon Songe",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.14",
+    "long": "57.63",
+    "elevation": "830",
+    "population": "56610"
+  },
+  {
+    "Bambou": "Mont Piton",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.09",
+    "long": "57.63",
+    "elevation": "364",
+    "population": "68162"
+  },
+  {
+    "Bambou": "Pavillon",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-19.99",
+    "long": "57.61",
+    "elevation": "0",
+    "population": "29639"
+  },
+  {
+    "Bambou": "Pereybere",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-19.99",
+    "long": "57.59",
+    "elevation": "0",
+    "population": "22654"
+  },
+  {
+    "Bambou": "Petit Paquet",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.00",
+    "long": "57.63",
+    "elevation": "144",
+    "population": "47511"
+  },
+  {
+    "Bambou": "Petit Raffray",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.01",
+    "long": "57.61",
+    "elevation": "242",
+    "population": "50279"
+  },
+  {
+    "Bambou": "Piton",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.09",
+    "long": "57.63",
+    "elevation": "364",
+    "population": "68162"
+  },
+  {
+    "Bambou": "Piton village",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.09",
+    "long": "57.63",
+    "elevation": "364",
+    "population": "68162"
+  },
+  {
+    "Bambou": "Plaines des Roches",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.69",
+    "elevation": "150",
+    "population": "46799"
+  },
+  {
+    "Bambou": "Poudre D'Or Village",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.06",
+    "long": "57.68",
+    "elevation": "101",
+    "population": "55597"
+  },
+  {
+    "Bambou": "Poudre D’Or Village",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.06",
+    "long": "57.68",
+    "elevation": "101",
+    "population": "55597"
+  },
+  {
+    "Bambou": "Poudre d'Or",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.06",
+    "long": "57.68",
+    "elevation": "101",
+    "population": "55597"
+  },
+  {
+    "Bambou": "Poudre d'Or Hamlet",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.08",
+    "long": "57.65",
+    "elevation": "180",
+    "population": "67913"
+  },
+  {
+    "Bambou": "Poudre d’Or",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.06",
+    "long": "57.68",
+    "elevation": "101",
+    "population": "55597"
+  },
+  {
+    "Bambou": "Poudre d’Or Hamlet",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.08",
+    "long": "57.65",
+    "elevation": "180",
+    "population": "67913"
+  },
+  {
+    "Bambou": "Ravin",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.68",
+    "elevation": "157",
+    "population": "52452"
+  },
+  {
+    "Bambou": "Rivière du Rempart",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.68",
+    "elevation": "157",
+    "population": "45857"
+  },
+  {
+    "Bambou": "Roche Noire",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.71",
+    "elevation": "111",
+    "population": "32839"
+  },
+  {
+    "Bambou": "Roche Noires",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.71",
+    "elevation": "111",
+    "population": "32839"
+  },
+  {
+    "Bambou": "Roche Terre",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.02",
+    "long": "57.64",
+    "elevation": "127",
+    "population": "52070"
+  },
+  {
+    "Bambou": "Roches Noire",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.71",
+    "elevation": "111",
+    "population": "32839"
+  },
+  {
+    "Bambou": "Roches Noires",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.11",
+    "long": "57.71",
+    "elevation": "111",
+    "population": "32839"
+  },
+  {
+    "Bambou": "Réunion Maurel",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.02",
+    "long": "57.63",
+    "elevation": "147",
+    "population": "61085"
+  },
+  {
+    "Bambou": "Saint Antoine",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.04",
+    "long": "57.65",
+    "elevation": "121",
+    "population": "66933"
+  },
+  {
+    "Bambou": "Saint Francois",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.00",
+    "long": "57.63",
+    "elevation": "147",
+    "population": "46375"
+  },
+  {
+    "Bambou": "Schoenfeld",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.08",
+    "long": "57.67",
+    "elevation": "160",
+    "population": "64091"
+  },
+  {
+    "Bambou": "The Vale",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.03",
+    "long": "57.59",
+    "elevation": "347",
+    "population": "59133"
+  },
+  {
+    "Bambou": "Twelve Mile Post",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.10",
+    "long": "57.64",
+    "elevation": "377",
+    "population": "62678"
+  },
+  {
+    "Bambou": "Union Maurel",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.02",
+    "long": "57.63",
+    "elevation": "147",
+    "population": "61085"
+  },
+  {
+    "Bambou": "Île d’Ambre",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-20.07",
+    "long": "57.68",
+    "elevation": "111",
+    "population": "55777"
+  },
+  {
+    "Bambou": "红顶教堂",
+    "city": "Riviere du Rempart",
+    "country": "Mauritius",
+    "lat": "-19.98",
+    "long": "57.61",
+    "elevation": "0",
+    "population": "29639"
+  },
+  {
+    "Bambou": "Baie du Cap",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.49",
+    "long": "57.37",
+    "elevation": "0",
+    "population": "5677"
+  },
+  {
+    "Bambou": "Batimarais",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.48",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "35250"
+  },
+  {
+    "Bambou": "Baty Mare",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.48",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "35250"
+  },
+  {
+    "Bambou": "Beau Bois",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.46",
+    "long": "57.54",
+    "elevation": "830",
+    "population": "42889"
+  },
+  {
+    "Bambou": "Beau Champ",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.43",
+    "elevation": "830",
+    "population": "21424"
+  },
+  {
+    "Bambou": "Bel Air",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "25553"
+  },
+  {
+    "Bambou": "Bel Ombre",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.41",
+    "elevation": "413",
+    "population": "10620"
+  },
+  {
+    "Bambou": "Belle Ombre",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.41",
+    "elevation": "413",
+    "population": "10620"
+  },
+  {
+    "Bambou": "Bois Chéri",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.53",
+    "elevation": "1102",
+    "population": "29997"
+  },
+  {
+    "Bambou": "Bois Sec",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.44",
+    "long": "57.51",
+    "elevation": "1161",
+    "population": "33913"
+  },
+  {
+    "Bambou": "Bon Courage",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.48",
+    "long": "57.42",
+    "elevation": "830",
+    "population": "16055"
+  },
+  {
+    "Bambou": "Britannia",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.45",
+    "long": "57.56",
+    "elevation": "830",
+    "population": "43899"
+  },
+  {
+    "Bambou": "Bénarès",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.58",
+    "elevation": "830",
+    "population": "28603"
+  },
+  {
+    "Bambou": "Camp Berthaud",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.44",
+    "long": "57.55",
+    "elevation": "925",
+    "population": "47148"
+  },
+  {
+    "Bambou": "Camp Diable",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.46",
+    "long": "57.58",
+    "elevation": "830",
+    "population": "54548"
+  },
+  {
+    "Bambou": "Chamouny",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.48",
+    "long": "57.47",
+    "elevation": "830",
+    "population": "28928"
+  },
+  {
+    "Bambou": "Chemin Grenier",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.49",
+    "long": "57.47",
+    "elevation": "830",
+    "population": "29345"
+  },
+  {
+    "Bambou": "Choisy",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.48",
+    "long": "57.37",
+    "elevation": "830",
+    "population": "6294"
+  },
+  {
+    "Bambou": "Fontenelle",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.54",
+    "elevation": "830",
+    "population": "33087"
+  },
+  {
+    "Bambou": "Frederica",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.48",
+    "long": "57.42",
+    "elevation": "830",
+    "population": "20816"
+  },
+  {
+    "Bambou": "Grand Bois",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.54",
+    "elevation": "1066",
+    "population": "42434"
+  },
+  {
+    "Bambou": "L'Union",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.54",
+    "elevation": "830",
+    "population": "30979"
+  },
+  {
+    "Bambou": "La Flora",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.41",
+    "long": "57.55",
+    "elevation": "1056",
+    "population": "45117"
+  },
+  {
+    "Bambou": "Le Marres",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.43",
+    "long": "57.47",
+    "elevation": "1971",
+    "population": "7140"
+  },
+  {
+    "Bambou": "Luchon",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.47",
+    "long": "57.45",
+    "elevation": "830",
+    "population": "28358"
+  },
+  {
+    "Bambou": "Luçon",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.47",
+    "long": "57.45",
+    "elevation": "830",
+    "population": "28358"
+  },
+  {
+    "Bambou": "L’Union",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.54",
+    "elevation": "830",
+    "population": "30979"
+  },
+  {
+    "Bambou": "Mont Blanc",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.48",
+    "long": "57.47",
+    "elevation": "830",
+    "population": "30166"
+  },
+  {
+    "Bambou": "Pomponnette",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.51",
+    "long": "57.48",
+    "elevation": "830",
+    "population": "31407"
+  },
+  {
+    "Bambou": "Port Souillac",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.52",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "26466"
+  },
+  {
+    "Bambou": "Riambel",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.52",
+    "long": "57.50",
+    "elevation": "830",
+    "population": "33545"
+  },
+  {
+    "Bambou": "Riche Bois",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.46",
+    "long": "57.58",
+    "elevation": "830",
+    "population": "61285"
+  },
+  {
+    "Bambou": "River Dragon",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.45",
+    "long": "57.56",
+    "elevation": "830",
+    "population": "54705"
+  },
+  {
+    "Bambou": "River des Anguilles",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.49",
+    "long": "57.55",
+    "elevation": "830",
+    "population": "39115"
+  },
+  {
+    "Bambou": "Rivière Dragon",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.45",
+    "long": "57.56",
+    "elevation": "830",
+    "population": "54705"
+  },
+  {
+    "Bambou": "Rivière des Anguilles",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.49",
+    "long": "57.55",
+    "elevation": "830",
+    "population": "39115"
+  },
+  {
+    "Bambou": "Ruisseau Creole",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.48",
+    "long": "57.38",
+    "elevation": "830",
+    "population": "6293"
+  },
+  {
+    "Bambou": "Saint Aubin",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.49",
+    "long": "57.54",
+    "elevation": "830",
+    "population": "33087"
+  },
+  {
+    "Bambou": "Saint Avold",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.44",
+    "long": "57.55",
+    "elevation": "925",
+    "population": "50720"
+  },
+  {
+    "Bambou": "Saint Felix",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.46",
+    "elevation": "830",
+    "population": "29725"
+  },
+  {
+    "Bambou": "Saint Félix",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.49",
+    "long": "57.57",
+    "elevation": "830",
+    "population": "33028"
+  },
+  {
+    "Bambou": "Saint Martin",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.39",
+    "elevation": "0",
+    "population": "4673"
+  },
+  {
+    "Bambou": "Sainte-Marie",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.48",
+    "long": "57.42",
+    "elevation": "830",
+    "population": "20816"
+  },
+  {
+    "Bambou": "Savannah",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.48",
+    "long": "57.61",
+    "elevation": "830",
+    "population": "30863"
+  },
+  {
+    "Bambou": "Senneville",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.55",
+    "elevation": "830",
+    "population": "21797"
+  },
+  {
+    "Bambou": "Souillac",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.52",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "26466"
+  },
+  {
+    "Bambou": "Soullac",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.52",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "26466"
+  },
+  {
+    "Bambou": "Sujakas",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.52",
+    "long": "57.52",
+    "elevation": "830",
+    "population": "26466"
+  },
+  {
+    "Bambou": "Surinam",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.51",
+    "long": "57.51",
+    "elevation": "830",
+    "population": "33545"
+  },
+  {
+    "Bambou": "Terracine",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.51",
+    "long": "57.51",
+    "elevation": "830",
+    "population": "33247"
+  },
+  {
+    "Bambou": "Tyack",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.48",
+    "long": "57.55",
+    "elevation": "830",
+    "population": "36964"
+  },
+  {
+    "Bambou": "Union Saint Aubin",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.49",
+    "long": "57.54",
+    "elevation": "830",
+    "population": "33087"
+  },
+  {
+    "Bambou": "Valentina",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.49",
+    "long": "57.46",
+    "elevation": "830",
+    "population": "28740"
+  },
+  {
+    "Bambou": "Valruche",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.46",
+    "long": "57.44",
+    "elevation": "931",
+    "population": "10301"
+  },
+  {
+    "Bambou": "Бе-дю-Кап",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.49",
+    "long": "57.37",
+    "elevation": "0",
+    "population": "5677"
+  },
+  {
+    "Bambou": "Бель-Омбр",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.50",
+    "long": "57.41",
+    "elevation": "413",
+    "population": "10620"
+  },
+  {
+    "Bambou": "Гран-Буа",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.42",
+    "long": "57.54",
+    "elevation": "1066",
+    "population": "42434"
+  },
+  {
+    "Bambou": "Ла-Флора",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.41",
+    "long": "57.55",
+    "elevation": "1056",
+    "population": "45117"
+  },
+  {
+    "Bambou": "Ривер-дез-Ангий",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.49",
+    "long": "57.55",
+    "elevation": "830",
+    "population": "39115"
+  },
+  {
+    "Bambou": "Шмен-Гренье",
+    "city": "Savanne",
+    "country": "Mauritius",
+    "lat": "-20.49",
+    "long": "57.47",
+    "elevation": "830",
+    "population": "29345"
+  },
+  {
+    "Bambou": "Anse aux Anglais",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.68",
+    "long": "63.43",
+    "elevation": "830",
+    "population": "5702"
+  },
+  {
+    "Bambou": "Baie Topaze",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.73",
+    "long": "63.36",
+    "elevation": "13",
+    "population": "19483"
+  },
+  {
+    "Bambou": "Baie aux Huîtres",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.69",
+    "long": "63.41",
+    "elevation": "830",
+    "population": "8430"
+  },
+  {
+    "Bambou": "Bassin Cabri",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.74",
+    "long": "63.47",
+    "elevation": "0",
+    "population": "12675"
+  },
+  {
+    "Bambou": "Brule",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.70",
+    "long": "63.47",
+    "elevation": "272",
+    "population": "15643"
+  },
+  {
+    "Bambou": "Camp du Roi",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.69",
+    "long": "63.42",
+    "elevation": "948",
+    "population": "9413"
+  },
+  {
+    "Bambou": "Chameaux",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.70",
+    "long": "63.45",
+    "elevation": "830",
+    "population": "15931"
+  },
+  {
+    "Bambou": "Citron Donis",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.73",
+    "long": "63.42",
+    "elevation": "62",
+    "population": "12510"
+  },
+  {
+    "Bambou": "Citronelle",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.70",
+    "long": "63.44",
+    "elevation": "1082",
+    "population": "16298"
+  },
+  {
+    "Bambou": "Coromandel",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.71",
+    "long": "63.48",
+    "elevation": "16",
+    "population": "15468"
+  },
+  {
+    "Bambou": "Crève Coeur",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.68",
+    "long": "63.43",
+    "elevation": "830",
+    "population": "7570"
+  },
+  {
+    "Bambou": "Eau Vannée",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.73",
+    "long": "63.42",
+    "elevation": "0",
+    "population": "12510"
+  },
+  {
+    "Bambou": "Gabriel",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.70",
+    "long": "63.43",
+    "elevation": "1669",
+    "population": "11688"
+  },
+  {
+    "Bambou": "Gabrielle",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.70",
+    "long": "63.43",
+    "elevation": "1669",
+    "population": "11688"
+  },
+  {
+    "Bambou": "Grand Baie",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.68",
+    "long": "63.45",
+    "elevation": "337",
+    "population": "12980"
+  },
+  {
+    "Bambou": "Grande Montagne",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.71",
+    "long": "63.47",
+    "elevation": "108",
+    "population": "15640"
+  },
+  {
+    "Bambou": "La Ferme",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.70",
+    "long": "63.38",
+    "elevation": "45",
+    "population": "14281"
+  },
+  {
+    "Bambou": "La Fouche",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.74",
+    "long": "63.38",
+    "elevation": "3",
+    "population": "19745"
+  },
+  {
+    "Bambou": "Latanier",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.71",
+    "long": "63.45",
+    "elevation": "830",
+    "population": "15742"
+  },
+  {
+    "Bambou": "Lataniers",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.71",
+    "long": "63.45",
+    "elevation": "830",
+    "population": "15742"
+  },
+  {
+    "Bambou": "Mangue",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.72",
+    "long": "63.39",
+    "elevation": "91",
+    "population": "19100"
+  },
+  {
+    "Bambou": "Mangues",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.72",
+    "long": "63.39",
+    "elevation": "91",
+    "population": "19100"
+  },
+  {
+    "Bambou": "Marechal",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.73",
+    "long": "63.39",
+    "elevation": "3",
+    "population": "18968"
+  },
+  {
+    "Bambou": "Mont Lubin",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.71",
+    "long": "63.44",
+    "elevation": "912",
+    "population": "16016"
+  },
+  {
+    "Bambou": "Nouvelle Decouverte",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.71",
+    "long": "63.47",
+    "elevation": "209",
+    "population": "15640"
+  },
+  {
+    "Bambou": "Oyster Bay",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.69",
+    "long": "63.41",
+    "elevation": "830",
+    "population": "8430"
+  },
+  {
+    "Bambou": "Palissade Ternel",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.71",
+    "long": "63.45",
+    "elevation": "830",
+    "population": "15962"
+  },
+  {
+    "Bambou": "Patate Theophile",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.70",
+    "long": "63.48",
+    "elevation": "13",
+    "population": "15409"
+  },
+  {
+    "Bambou": "Petit Brule",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.71",
+    "long": "63.46",
+    "elevation": "209",
+    "population": "15812"
+  },
+  {
+    "Bambou": "Petit Gabriel",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.72",
+    "long": "63.42",
+    "elevation": "830",
+    "population": "11814"
+  },
+  {
+    "Bambou": "Petit Gravier",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.73",
+    "long": "63.48",
+    "elevation": "0",
+    "population": "14246"
+  },
+  {
+    "Bambou": "Petite Butte",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.75",
+    "long": "63.38",
+    "elevation": "3",
+    "population": "19339"
+  },
+  {
+    "Bambou": "Plaine Corail",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.76",
+    "long": "63.36",
+    "elevation": "3",
+    "population": "18308"
+  },
+  {
+    "Bambou": "Port Matherin",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.68",
+    "long": "63.42",
+    "elevation": "830",
+    "population": "5161"
+  },
+  {
+    "Bambou": "Port Mathurin",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.68",
+    "long": "63.42",
+    "elevation": "830",
+    "population": "5161"
+  },
+  {
+    "Bambou": "Port Maturinas",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.68",
+    "long": "63.42",
+    "elevation": "830",
+    "population": "5161"
+  },
+  {
+    "Bambou": "Port South East",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.75",
+    "long": "63.45",
+    "elevation": "0",
+    "population": "9267"
+  },
+  {
+    "Bambou": "Port Sud-Est",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.75",
+    "long": "63.45",
+    "elevation": "0",
+    "population": "9267"
+  },
+  {
+    "Bambou": "Port-Sud-Est",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.75",
+    "long": "63.45",
+    "elevation": "0",
+    "population": "9267"
+  },
+  {
+    "Bambou": "Quatre Vents",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.70",
+    "long": "63.40",
+    "elevation": "291",
+    "population": "8430"
+  },
+  {
+    "Bambou": "Rivière Cocos",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.74",
+    "long": "63.41",
+    "elevation": "0",
+    "population": "14717"
+  },
+  {
+    "Bambou": "Roche Bon Dieu",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.69",
+    "long": "63.47",
+    "elevation": "262",
+    "population": "15586"
+  },
+  {
+    "Bambou": "Saint Gabriel",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.70",
+    "long": "63.43",
+    "elevation": "1669",
+    "population": "11688"
+  },
+  {
+    "Bambou": "Saint Louis",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.72",
+    "long": "63.48",
+    "elevation": "16",
+    "population": "15224"
+  },
+  {
+    "Bambou": "Solitude",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.69",
+    "long": "63.44",
+    "elevation": "830",
+    "population": "13352"
+  },
+  {
+    "Bambou": "Songe",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.74",
+    "long": "63.44",
+    "elevation": "0",
+    "population": "10160"
+  },
+  {
+    "Bambou": "Soupir",
+    "city": "Rodrigues",
+    "country": "Mauritius",
+    "lat": "-19.71",
+    "long": "63.43",
+    "elevation": "1046",
+    "population": "12478"
+  }
+]
