@@ -3,16 +3,9 @@ const API_ENDPOINT = 'https://raw.githubusercontent.com/MrSunshyne/mauritius-dat
 export async function fetchJson(url = API_ENDPOINT) {
   try {
     const response = await fetch(url)
-    return await response.json()
+    return response.json()
   } catch (error) {
     console.log(error)
-    // const isJsonError =
-    //   error.message.includes('Unexpected token') &&
-    //   error.message.includes('in JSON at position')
-
-    // if (isJsonError) {
-    //   return null
-    // }
-
+    throw error
   }
 }

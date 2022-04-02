@@ -5,7 +5,6 @@ import { setupLayouts } from 'virtual:generated-layouts'
 import { createPinia } from 'pinia'
 import { createHead } from '@vueuse/head'
 import App from '@/App.vue'
-import vheme from '@/libs/vheme'
 import '@/styles/main.css'
 const routes = setupLayouts(generatedRoutes)
 
@@ -30,7 +29,6 @@ const head = createHead()
 
 const app = createApp(App)
 
-app.use(vheme)
 app.use(router)
 app.use(pinia)
 app.use(head);

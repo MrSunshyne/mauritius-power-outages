@@ -1,28 +1,26 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
+import { fetchJson } from '@/services/api';
+import { useQuery } from 'vue-query';
+import { filterByToday, filterByAfterToday, flat } from '@/logic'
+import { ComputedRef } from 'vue';
+import { Record } from '@/types'
 
-const API_ENDPOINT = 'https://raw.githubusercontent.com/MrSunshyne/mauritius-dataset-electricity/main/data/power-outages.json'
+const powerOutageQuery = reactive(useQuery(
+  'power-outage-data',
+  () => fetchJson(),
+))
 
-const allData = ref(null);
+const cFlat: ComputedRef<Record[]> = computed(() => {
+  return flat(powerOutageQuery.data)
+})
 
-const getData = () => {
-  fetch(API_ENDPOINT)
-    .then(res => res.json())
-    .then(res => {
-      allData.value = res;
-    })
-    .catch((error) => {
-      console.log('Looks like there was a problem: \n', error);
-    });
-}
+const cToday: ComputedRef<Record[]> = computed(() => {
+  return filterByToday(cFlat.value)
+})
 
-
-
-
-onMounted(() => {
-  // getPowerOutages()
-  getData();
-
+const cFuture: ComputedRef<Record[]> = computed(() => {
+  return filterByAfterToday(cFlat.value)
 })
 
 </script>
@@ -33,7 +31,17 @@ onMounted(() => {
       <title>Power Outages - Mauritius</title>
     </Head>
 
-    <List :data="allData"></List>
+    <div v-if="powerOutageQuery.isFetching">loading...</div>
+    <div v-else>
+      today
+      <pre>
+        {{ cToday }}
+      </pre>future
+      <pre>
+        {{ cFuture }}
+      </pre>
+      <List :data="powerOutageQuery.data"></List>
+    </div>
   </div>
 </template>
 
