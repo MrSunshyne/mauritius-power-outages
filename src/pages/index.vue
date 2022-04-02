@@ -16,7 +16,17 @@ const cFlat: ComputedRef<Record[]> = computed(() => {
 })
 
 const cToday: ComputedRef<Record[]> = computed(() => {
-  return filterByToday(cFlat.value)
+  let real = filterByToday(cFlat.value)
+  let fake = {
+    "date": "Le samedi 2 avril 2022 de  08:30:00 à  15:00:00",
+    "locality": "PUDINE CAMP DE MASKE",
+    "streets": "Boulingrin, Robinson Road, Thomasin Road, Rivalland et Crève-Cœur",
+    "district": "pamplemousses",
+    "from": "2022-04-02T04:30:00.000Z",
+    "to": "2022-04-02T15:00:00.000Z",
+    "id": "c33ebe9c075be561b0ea85cae0bbaabf"
+  }
+  return { fake, ...real }
 })
 
 const cFuture: ComputedRef<Record[]> = computed(() => {
@@ -26,24 +36,23 @@ const cFuture: ComputedRef<Record[]> = computed(() => {
 </script>
 
 <template>
-  <div class="grid grid-cols-1 text-left gap-10 max-w-7xl mx-auto shadow">
+  <div class="grid grid-cols-1 text-left gap-10 max-w-4xl mx-auto">
     <Head>
       <title>Power Outages - Mauritius</title>
     </Head>
 
     <div v-if="powerOutageQuery.isFetching">loading...</div>
     <div v-else>
-      today
-      <pre>
-        {{ cToday }}
-      </pre>future
-      <pre>
-        {{ cFuture }}
-      </pre>
-      <List :data="powerOutageQuery.data"></List>
+      <div class="grid gap-10">
+        <h2 class="text-4xl font-black">Today</h2>
+        <CellGroup :data="cToday"></CellGroup>
+        <h2 class="text-4xl font-black">Upcoming</h2>
+        <CellGroup :data="cFuture"></CellGroup>
+      </div>
+      <!-- <List :data="powerOutageQuery.data"></List> -->
     </div>
   </div>
-</template>
+</template> 
 
 <route lang="yaml">
 meta:

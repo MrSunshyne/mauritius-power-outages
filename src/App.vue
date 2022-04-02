@@ -1,8 +1,15 @@
 <script setup lang="ts">
 import { useQueryProvider } from 'vue-query'
 
-useQueryProvider()
+useQueryProvider({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+})
 </script>
+
 
 <template>
   <router-view v-slot="{ Component, route }">

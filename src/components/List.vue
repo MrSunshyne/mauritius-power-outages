@@ -2,7 +2,7 @@
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div class>
     <ul role="list" class="divide-y divide-gray-200">
-      <template v-for="(district, name) in data">
+      <template v-for="(district, name) in props.data">
         <li v-for="(outage, index) in (district as any)" :key="index">
           <div class="block hover:bg-gray-50">
             <div class="flex items-center px-4 py-4 sm:px-6">
@@ -39,7 +39,8 @@
   </div>
 </template>
 
-<script lang="ts" setup>import { PropType } from 'vue';
+<script lang="ts" setup>
+import { PropType } from 'vue';
 
 const props = defineProps({
   data: {

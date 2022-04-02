@@ -4,8 +4,11 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CarbonMap: typeof import('~icons/carbon/map')['default']
+    Candle: typeof import('./components/Candle.vue')['default']
+    Cell: typeof import('./components/Cell.vue')['default']
+    CellGroup: typeof import('./components/CellGroup.vue')['default']
     List: typeof import('./components/List.vue')['default']
+    RomanticCandle: typeof import('./components/RomanticCandle.vue')['default']
   }
 }
 
