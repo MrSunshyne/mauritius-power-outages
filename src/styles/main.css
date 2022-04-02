@@ -1,9 +1,12 @@
-/* @import './markdown.css'; */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  background: hsl(59, 100%, 98%);
+  background: -webkit-linear-gradient(to right, #021b79, #0575e6);
+  background: linear-gradient(to right, #021b79, #0575e6);
+
+  /* background: #e0eafc;
+  background: -webkit-linear-gradient(to right, #cfdef3, #e0eafc);
+  background: linear-gradient(to right, #cfdef3, #e0eafc); */
 }

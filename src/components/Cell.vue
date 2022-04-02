@@ -1,7 +1,7 @@
 <template>
   <div
-    class="p-4 rounded-xl border-4 border-gray-50 flex flex-col gap-4"
-    :class="{ 'bg-black text-white': ongoing }"
+    class="p-4 rounded-xl glass flex flex-col gap-4 text-white"
+    :class="{ 'bg-black dark': ongoing }"
   >
     <div class="md:flex justify-between">
       <div class="relative">
@@ -9,20 +9,20 @@
           <div class="font-bold">{{ props.data.locality }}</div>
           <div>{{ timeUntil }}</div>
         </div>
-        <div class="text-xs max-w-xl">{{ props.data.streets }}</div>
+        <div class="text-xs max-w-xl text-gray-400">{{ props.data.streets }}</div>
       </div>
       <!-- <div>Currently during powercut {{ ongoing }}</div> -->
       <div class="md:flex items-center justify-end">
         <div class="md:flex flex-col items-end">
-          <div>Power will {{ ongoing ? 'resume' : 'cut' }} in</div>
-          <div>
+          <div class="inline md:block">Power will {{ ongoing ? 'resume' : 'cut' }} in</div>
+          <div class="inline md:block">
             <vue-countdown
               :time="timeDifference"
               v-slot="{ days, hours, minutes, seconds }"
             >{{ days ? days + 'd,' : '' }} {{ hours ? hours + 'h,' : '' }} {{ minutes }}m, {{ seconds }}s.</vue-countdown>
           </div>
         </div>
-        <div class="relative w-16 h-16 grid place-items-center">
+        <div class="absolute top-0 right-0 md:relative w-16 h-16 grid place-items-center">
           <RomanticCandle class="absolute right-[-25px] top-[-60px] scale-[0.2]" v-if="ongoing" />
           <div
             v-else
@@ -89,6 +89,18 @@ const ongoing = computed(() => {
   box-shadow: 0 0 calc(calc(var(--size) * 4) * 2) var(--size) var(--color),
     inset 0 0 calc(var(--size) * 2) var(--size) var(--color);
   transition: all 0.3s linear;
+}
+
+.glass {
+  --theme-bg-color: rgba(16 18 27 / 40%);
+
+  background-color: var(--theme-bg-color);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.glass.dark {
+  --theme-bg-color: rgba(16 18 27 / 80%);
 }
 </style>
    

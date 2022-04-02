@@ -44,15 +44,21 @@ const cFuture: ComputedRef<Record[]> = computed(() => {
     <div v-if="powerOutageQuery.isFetching">loading...</div>
     <div v-else>
       <div class="grid gap-10">
-        <h2 class="text-4xl font-black">Today</h2>
+        <h2>Today</h2>
         <CellGroup :data="cToday"></CellGroup>
-        <h2 class="text-4xl font-black">Upcoming</h2>
+        <h2>Upcoming</h2>
         <CellGroup :data="cFuture"></CellGroup>
       </div>
       <!-- <List :data="powerOutageQuery.data"></List> -->
     </div>
   </div>
 </template> 
+
+<style scoped>
+h2 {
+  @apply text-4xl font-black text-white;
+}
+</style>
 
 <route lang="yaml">
 meta:
