@@ -53,6 +53,10 @@ const cFuture: ComputedRef<Record[]> = computed(() => {
       </div>
       <!-- <List :data="powerOutageQuery.data"></List> -->
     </div>
+    <div class="text-sm text-center text-white">
+      A project by
+      <a class="underline" href="https://sandeep.ramgolam.com">Sandeep Ramgolam</a>
+    </div>
   </div>
 </template> 
 
