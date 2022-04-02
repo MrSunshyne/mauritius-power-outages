@@ -1,7 +1,7 @@
 <template>
   <div
     class="p-4 rounded-xl glass flex flex-col gap-4 text-white"
-    :class="{ 'bg-black dark': ongoing }"
+    :class="{ 'bg-black dark': state === 'ongoing' }"
   >
     <div class="md:flex justify-between">
       <div class="relative">
@@ -11,19 +11,24 @@
         </div>
         <div class="text-xs max-w-xl text-gray-400">{{ props.data.streets }}</div>
       </div>
-      <!-- <div>Currently during powercut {{ ongoing }}</div> -->
+      <!-- <div>Currently during powercut {{ state }}</div> -->
       <div class="md:flex items-center justify-end">
         <div class="md:flex flex-col items-end">
-          <div class="inline md:block">Power will {{ ongoing ? 'resume' : 'cut' }} in</div>
+          <div
+            class="inline md:block"
+          >Power {{ state === 'ongoing' ? 'will resume in' : state === 'upcoming' ? 'will cut in' : 'has resumed since' }}</div>
           <div class="inline md:block">
             <vue-countdown
               :time="timeDifference"
               v-slot="{ days, hours, minutes, seconds }"
-            >{{ days ? days + 'd,' : '' }} {{ hours ? hours + 'h,' : '' }} {{ minutes }}m, {{ seconds }}s.</vue-countdown>
+            >{{ days ? days + 'd,' : '' }} {{ hours ? hours + 'h' : '' }} {{ minutes }}m {{ seconds }}s</vue-countdown>
           </div>
         </div>
         <div class="absolute top-0 right-0 md:relative w-16 h-16 grid place-items-center">
-          <RomanticCandle class="absolute right-[-25px] top-[-60px] scale-[0.2]" v-if="ongoing" />
+          <RomanticCandle
+            class="absolute right-[-25px] top-[-40px] md:top-[-60px] scale-[0.2]"
+            v-if="state === 'ongoing'"
+          />
           <div
             v-else
             class="w-2 h-2 relative left-[4px] top-[4px] shine rounded-full bg-green-500"
@@ -32,7 +37,7 @@
       </div>
     </div>
   </div>
-</template> 
+</template>  
 
 <script setup lang="ts">
 import { Record } from "@/types";
@@ -57,28 +62,39 @@ const props = defineProps({
 
 const timeUntil = useTimeAgo(new Date(props.data.from))
 
-const timeDifference = computed(() => {
-  const target = new Date(props.data.from)
-  const now = new Date()
-  return Math.abs(target.getTime() - now.getTime())
-})
 
-const ongoing = computed(() => {
-  let on = false
+const state = computed(() => {
+  let on = 'upcoming'
   const from = new Date(props.data.from)
   const to = new Date(props.data.to)
   const now = new Date()
 
   if (now.getTime() > from.getTime()) {
-    on = true
+    on = 'ongoing'
   }
 
   if (now.getTime() > to.getTime()) {
-    on = false
+    on = 'past'
   }
 
   return on
 })
+
+const timeDifference = computed(() => {
+  let target;
+
+  if (state.value === 'ongoing') {
+    target = new Date(props.data.to)
+  } else if (state.value === 'upcoming') {
+    target = new Date(props.data.from)
+  } else {
+    target = new Date(props.data.to)
+  }
+
+  const now = new Date()
+  return Math.abs(target.getTime() - now.getTime())
+})
+
 
 </script> 
 

@@ -19,9 +19,9 @@ const cToday: ComputedRef<Record[]> = computed(() => {
   let real = filterByToday(cFlat.value)
   let fake = {
     "date": "Le samedi 2 avril 2022 de  08:30:00 à  15:00:00",
-    "locality": "PUDINE CAMP DE MASKE",
-    "streets": "Boulingrin, Robinson Road, Thomasin Road, Rivalland et Crève-Cœur",
-    "district": "pamplemousses",
+    "locality": "Roche Bois (Sample)",
+    "streets": "Abbatoir Road",
+    "district": "portlouis",
     "from": "2022-04-02T04:30:00.000Z",
     "to": "2022-04-02T15:00:00.000Z",
     "id": "c33ebe9c075be561b0ea85cae0bbaabf"
@@ -41,12 +41,14 @@ const cFuture: ComputedRef<Record[]> = computed(() => {
       <title>Power Outages - Mauritius</title>
     </Head>
 
+    <h1>Power Outages in Mauritius</h1>
+
     <div v-if="powerOutageQuery.isFetching">loading...</div>
     <div v-else>
       <div class="grid gap-10">
         <h2>Today</h2>
         <CellGroup :data="cToday"></CellGroup>
-        <h2>Upcoming</h2>
+        <h2>Tomorrow</h2>
         <CellGroup :data="cFuture"></CellGroup>
       </div>
       <!-- <List :data="powerOutageQuery.data"></List> -->
@@ -55,8 +57,12 @@ const cFuture: ComputedRef<Record[]> = computed(() => {
 </template> 
 
 <style scoped>
-h2 {
+h1 {
   @apply text-4xl font-black text-white;
+}
+
+h2 {
+  @apply text-3xl font-black text-white;
 }
 </style>
 
