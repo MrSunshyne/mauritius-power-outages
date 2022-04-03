@@ -5,10 +5,14 @@
 declare module 'vue' {
   export interface GlobalComponents {
     Candle: typeof import('./components/Candle.vue')['default']
+    CarbonDataBase: typeof import('~icons/carbon/data-base')['default']
+    CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
+    CarbonPaintBrush: typeof import('~icons/carbon/paint-brush')['default']
     Cell: typeof import('./components/Cell.vue')['default']
     CellGroup: typeof import('./components/CellGroup.vue')['default']
     List: typeof import('./components/List.vue')['default']
     RomanticCandle: typeof import('./components/RomanticCandle.vue')['default']
+    SiteFooter: typeof import('./components/site-footer.vue')['default']
   }
 }
 

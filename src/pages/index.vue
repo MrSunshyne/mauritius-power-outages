@@ -17,16 +17,18 @@ const cFlat: ComputedRef<Record[]> = computed(() => {
 
 const cToday: ComputedRef<Record[]> = computed(() => {
   let real = filterByToday(cFlat.value)
-  let fake = {
-    "date": "Le samedi 2 avril 2022 de  08:30:00 à  15:00:00",
-    "locality": "Roche Bois (Sample)",
-    "streets": "Abbatoir Road",
-    "district": "portlouis",
-    "from": "2022-04-02T04:30:00.000Z",
-    "to": "2022-04-02T20:00:00.000Z",
-    "id": "c33ebe9c075be561b0ea85cae0bbaabf"
-  }
-  return { fake, ...real }
+  // One line of Data to test the Power Off Animations
+  // let fake = {
+  //   "date": "Le samedi 2 avril 2022 de  08:30:00 à  15:00:00",
+  //   "locality": "Roche Bois (Sample)",
+  //   "streets": "Abbatoir Road",
+  //   "district": "portlouis",
+  //   "from": "2022-04-02T04:30:00.000Z",
+  //   "to": "2022-04-02T20:00:00.000Z",
+  //   "id": "c33ebe9c075be561b0ea85cae0bbaabf"
+  // }
+  // return { fake, ...real }
+  return real
 })
 
 const cFuture: ComputedRef<Record[]> = computed(() => {
@@ -53,10 +55,7 @@ const cFuture: ComputedRef<Record[]> = computed(() => {
       </div>
       <!-- <List :data="powerOutageQuery.data"></List> -->
     </div>
-    <div class="text-sm text-center text-white">
-      A project by
-      <a class="underline" href="https://sandeep.ramgolam.com">Sandeep Ramgolam</a>
-    </div>
+    <site-footer />
   </div>
 </template> 
 
