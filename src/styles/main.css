@@ -3,11 +3,8 @@
 @tailwind utilities;
 
 html {
-  background: linear-gradient(to right, #cfdef3, #e0eafc);
-
-  background: linear-gradient(to right, #4b1248, #f0c27b);
-
-  background: linear-gradient(to right, #333333, #e9d362);
-
   background: linear-gradient(to right, #021b79, #0575e6);
+  background: linear-gradient(to right, #cfdef3, #e0eafc);
+  background: linear-gradient(to right, #333333, #e9d362);
+  background: linear-gradient(to right, #4b1248, #f0c27b);
 }

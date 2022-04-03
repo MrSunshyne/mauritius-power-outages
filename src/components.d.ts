@@ -6,8 +6,11 @@ declare module 'vue' {
   export interface GlobalComponents {
     Candle: typeof import('./components/Candle.vue')['default']
     CarbonDataBase: typeof import('~icons/carbon/data-base')['default']
+    CarbonFlash: typeof import('~icons/carbon/flash')['default']
+    CarbonFlashFilled: typeof import('~icons/carbon/flash-filled')['default']
     CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
     CarbonPaintBrush: typeof import('~icons/carbon/paint-brush')['default']
+    CarbonPower: typeof import('~icons/carbon/power')['default']
     Cell: typeof import('./components/Cell.vue')['default']
     CellGroup: typeof import('./components/CellGroup.vue')['default']
     List: typeof import('./components/List.vue')['default']
