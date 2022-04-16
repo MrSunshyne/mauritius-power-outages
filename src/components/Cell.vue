@@ -108,7 +108,7 @@ const timeDifference = computed(() => {
 }
 
 .glass {
-  --theme-bg-color: rgba(16 18 27 / 40%);
+  --theme-bg-color: rgba(16 18 27 / 60%);
 
   background-color: var(--theme-bg-color);
 
