@@ -11,6 +11,7 @@ declare module 'vue' {
     Cell: typeof import('./components/Cell.vue')['default']
     CellGroup: typeof import('./components/CellGroup.vue')['default']
     List: typeof import('./components/List.vue')['default']
+    RomanticBulb: typeof import('./components/RomanticBulb.vue')['default']
     RomanticCandle: typeof import('./components/RomanticCandle.vue')['default']
     SiteFooter: typeof import('./components/site-footer.vue')['default']
   }
