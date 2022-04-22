@@ -1,36 +1,36 @@
 <template>
-<div class="wrapper">
-  <div id="wrapper">
-  <div id="bulb">
-    <div id="bulb-top"></div>
-    <div id="bulb-middle"></div>
-    <div id="bulb-bottom"></div>
-  </div>
-  <div id="bulb-base">
-    <div id="bulb-base-top"></div>
-    <div id="bulb-base-middle">
-      <div class="rivet rivet-short"></div>
-      <div class="rivet rivet-long"></div>
-      <div class="rivet rivet-short"></div>
-      <div class="rivet rivet-long"></div>
-      <div class="rivet rivet-short"></div>
+  <div class="wrapper">
+    <div id="wrapper">
+      <div id="bulb">
+        <div id="bulb-top"></div>
+        <div id="bulb-middle"></div>
+        <div id="bulb-bottom"></div>
+      </div>
+      <div id="bulb-base">
+        <div id="bulb-base-top"></div>
+        <div id="bulb-base-middle">
+          <div class="rivet rivet-short"></div>
+          <div class="rivet rivet-long"></div>
+          <div class="rivet rivet-short"></div>
+          <div class="rivet rivet-long"></div>
+          <div class="rivet rivet-short"></div>
+        </div>
+        <div id="bulb-base-bottom"></div>
+      </div>
     </div>
-    <div id="bulb-base-bottom"></div>
-  </div>
-</div>
 
-</div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-
 $size: 100px;
-$bulb: #ecf186;
-$base: #999;
+$bulb: #f59e0b;
+$base: #999999;
 
-.wrapper { 
+.wrapper {
   position: relative;
 }
+
 #wrapper {
 
   color: $bulb;
@@ -52,7 +52,7 @@ $base: #999;
 
 #bulb-top {
   border-radius: 50%;
-  background: radial-gradient(circle at $size/2 $size/2, #ff0 0%, currentColor 40%, currentColor 80%, transparent 100%);
+  background: radial-gradient(circle at $size/2 $size/2, lighten($bulb, 30%) 0%, currentColor 40%, currentColor 80%, transparent 100%);
   //filter: drop-shadow(0 0 20px currentColor);
   width: $size;
   height: $size;
@@ -124,7 +124,7 @@ $base: #999;
   border-top: $size/8 solid $base;
   border-left: $size/7 solid transparent;
   border-right: $size/7 solid transparent;
-  
+
   position: relative;
   width: $size/8;
   left: calc(50% - #{$size}/7);
