@@ -7,5 +7,5 @@ html {
   background: linear-gradient(to right, #cfdef3, #e0eafc);
   background: linear-gradient(to left, #000, #e9d362);
   background: linear-gradient(to right, #011458, #034c96);
-  background: linear-gradient(to right, #000, #222);
+  /* background: linear-gradient(to right, #000, #222); */
 }
