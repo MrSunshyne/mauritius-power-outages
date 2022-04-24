@@ -5,6 +5,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     Candle: typeof import('./components/Candle.vue')['default']
+    CarbonChartClusterBar: typeof import('~icons/carbon/chart-cluster-bar')['default']
     CarbonDataBase: typeof import('~icons/carbon/data-base')['default']
     CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
     CarbonPaintBrush: typeof import('~icons/carbon/paint-brush')['default']

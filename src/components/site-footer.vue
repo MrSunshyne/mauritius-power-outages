@@ -1,8 +1,11 @@
 <template>
   <div
-    class="text-sm flex gap-4 flex-col md:flex-row justify-center md:justify-between text-center text-white"
+    class="flex flex-col justify-center gap-4 text-center text-sm text-white md:flex-row md:justify-between"
   >
     <a href="https://github.com/MrSunshyne/mauritius-dataset-electricity">
+      <router-link :to="{ name: 'statistics' }">
+        <carbon-chart-cluster-bar />Statistics
+      </router-link>
       <carbon-data-base />Data Source
     </a>
 
@@ -14,7 +17,6 @@
     </a>
   </div>
 </template>
-
 
 <style scoped>
 a {
