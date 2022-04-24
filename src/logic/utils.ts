@@ -32,6 +32,10 @@ export const filterByBeforeToday = (dataset: Record[]) => {
 
 
 export const flat = (dataset: Dataset) => {
-  return flatten(Object.values(dataset))
+  if (dataset) {
+    return flatten(Object.values(dataset))
+  } else {
+    return []
+  }
 }
 

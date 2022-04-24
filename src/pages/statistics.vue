@@ -6,28 +6,35 @@
 
     <h1>Statistics</h1>
 
-    <div class="grid grid-cols-2">
+    <div class="container mx-auto grid grid-cols-2 gap-10">
+      <chart-count-per-date :data="countPerDate" :title="'Count Per Date'" class="col-span-2" />
+      <chart-count-per-day :data="countPerDay" :title="'Count Per Day'" />
+      <chart-count-per-week :data="countPerWeek" :title="'Count Per Week'" />
+      <chart-count-per-hour :data="mostAffectedTimeOfDay" :title="'Count Per Hour'" class="col-span-2" />
+    </div>
+
+    <!-- <div class="grid grid-cols-2">
       <div class="prose">
         <pre>
-      {{ countPerDistrict }}
+          {{ countPerDay }}
       </pre
         >
       </div>
       <div class="prose">
         <pre>
-      {{ countPerWeek }}
+          {{ countPerWeek }}
       </pre
         >
       </div>
       <div class="prose">
         <pre>
-        {{ countPerDay }}
+          {{ countPerDate }}
       </pre
         >
       </div>
       <div class="prose">
         <pre>
-        {{ countPerDate }}
+          {{ countPerDistrict }}
       </pre
         >
       </div>
@@ -43,7 +50,7 @@
       </pre
         >
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -61,9 +68,7 @@ function getWeek(date: Date) {
   return Math.ceil(dayOfYear / 7);
 }
 
-const powerOutageQuery = reactive(
-  useQuery("power-outage-data", () => fetchJson())
-);
+const powerOutageQuery = reactive(useQuery("power-outage-data", () => fetchJson()));
 
 const cFlat: ComputedRef<Record[]> = computed(() => {
   return flat(powerOutageQuery.data);
@@ -75,113 +80,104 @@ const sortByDate: ComputedRef<Record[]> = computed(() => {
   });
 });
 
-const countPerWeek: ComputedRef<{ week: string; count: number }[]> = computed(
-  () => {
-    let occurence = {} as { [key: string]: number };
-    let result = [];
-    for (let outage of sortByDate.value) {
-      let date = new Date(outage.from);
-      let week = getWeek(date);
-      if (occurence[week]) {
-        occurence[week] += 1;
-      } else {
-        occurence[week] = 1;
-      }
+const countPerWeek: ComputedRef<{ week: string; count: number }[]> = computed(() => {
+  let occurence = {} as { [key: string]: number };
+  let result = [];
+  for (let outage of sortByDate.value) {
+    let date = new Date(outage.from);
+    let week = getWeek(date);
+    if (occurence[week]) {
+      occurence[week] += 1;
+    } else {
+      occurence[week] = 1;
     }
-    for (let week in occurence) {
-      result.push({ week, count: occurence[week] });
-    }
-    return result;
   }
-);
-
-const countPerDay: ComputedRef<{ day: string; count: number }[]> = computed(
-  () => {
-    let occurence = {} as { [key: string]: number };
-    let result = [];
-    for (let outage of sortByDate.value) {
-      let date = new Date(outage.from);
-      let day = date.toLocaleDateString("en-US", {
-        weekday: "long",
-      });
-      if (occurence[day]) {
-        occurence[day] += 1;
-      } else {
-        occurence[day] = 1;
-      }
-    }
-    for (let day in occurence) {
-      result.push({ day, count: occurence[day] });
-    }
-    return result;
+  for (let week in occurence) {
+    result.push({ x: week, y: occurence[week], week, count: occurence[week] });
   }
-);
+  return result;
+});
 
-const countPerDate: ComputedRef<{ day: string; count: number }[]> = computed(
-  () => {
-    let occurence = {} as { [key: string]: number };
-    let result = [];
-    for (let outage of sortByDate.value) {
-      let date = new Date(outage.from);
-      let day = date.toLocaleDateString("en-US", {
-        weekday: "long",
-        month: "long",
-        day: "numeric",
-      });
-      if (occurence[day]) {
-        occurence[day] += 1;
-      } else {
-        occurence[day] = 1;
-      }
+const countPerDay: ComputedRef<{ x: string; y: number }[]> = computed(() => {
+  let occurence = {} as { [key: string]: number };
+  let result = [];
+  for (let outage of sortByDate.value) {
+    let date = new Date(outage.from);
+    let day = date.toLocaleDateString("en-US", {
+      weekday: "long",
+    });
+    if (occurence[day]) {
+      occurence[day] += 1;
+    } else {
+      occurence[day] = 1;
     }
-    for (let day in occurence) {
-      result.push({ day, count: occurence[day] });
-    }
-    return result;
   }
-);
-
-const countPerMonth: ComputedRef<{ month: string; count: number }[]> = computed(
-  () => {
-    let occurence = {} as { [key: string]: number };
-    let result = [];
-    for (let outage of sortByDate.value) {
-      let date = new Date(outage.from);
-      let month = date.toLocaleDateString("en-US", {
-        month: "long",
-      });
-      if (occurence[month]) {
-        occurence[month] += 1;
-      } else {
-        occurence[month] = 1;
-      }
-    }
-    for (let month in occurence) {
-      result.push({ month, count: occurence[month] });
-    }
-    return result;
+  for (let day in occurence) {
+    result.push({ day, count: occurence[day], x: day, y: occurence[day] });
   }
-);
+  return result;
+});
 
-const countPerDistrict: ComputedRef<{ district: string; count: number }[]> =
-  computed(() => {
-    let occurence = {} as { [key: string]: number };
-    let result = [];
-    for (let outage of sortByDate.value) {
-      let district = outage.district;
-      if (occurence[district]) {
-        occurence[district] += 1;
-      } else {
-        occurence[district] = 1;
-      }
+const countPerDate: ComputedRef<{ day: string; count: number }[]> = computed(() => {
+  let occurence = {} as { [key: string]: number };
+  let result = [];
+  for (let outage of sortByDate.value) {
+    let date = new Date(outage.from);
+    let day = date.toLocaleDateString("en-US", {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+    });
+    if (occurence[day]) {
+      occurence[day] += 1;
+    } else {
+      occurence[day] = 1;
     }
-    for (let district in occurence) {
-      result.push({ district, count: occurence[district] });
-    }
-    return result;
-  });
+  }
+  for (let day in occurence) {
+    result.push({ x: day, y: occurence[day], day, count: occurence[day] });
+  }
+  return result;
+});
 
-const mostAffectedTimeOfDay = computed(() => {
+const countPerMonth: ComputedRef<{ month: string; count: number }[]> = computed(() => {
+  let occurence = {} as { [key: string]: number };
+  let result = [];
+  for (let outage of sortByDate.value) {
+    let date = new Date(outage.from);
+    let month = date.toLocaleDateString("en-US", {
+      month: "long",
+    });
+    if (occurence[month]) {
+      occurence[month] += 1;
+    } else {
+      occurence[month] = 1;
+    }
+  }
+  for (let month in occurence) {
+    result.push({ month, count: occurence[month] });
+  }
+  return result;
+});
+
+const countPerDistrict: ComputedRef<{ district: string; count: number }[]> = computed(() => {
+  let occurence = {} as { [key: string]: number };
+  let result = [];
+  for (let outage of sortByDate.value) {
+    let district = outage.district;
+    if (occurence[district]) {
+      occurence[district] += 1;
+    } else {
+      occurence[district] = 1;
+    }
+  }
+  for (let district in occurence) {
+    result.push({ district, count: occurence[district] });
+  }
+  return result;
+});
+
+const mostAffectedTimeOfDay: ComputedRef<{ hour: string; count: number }[]> = computed(() => {
   let occurence = {} as { [key: string]: number };
   let result = [];
   for (let outage of sortByDate.value) {
@@ -194,7 +190,7 @@ const mostAffectedTimeOfDay = computed(() => {
     }
   }
   for (let hour in occurence) {
-    result.push({ hour, count: occurence[hour] });
+    result.push({ hour, count: occurence[hour], x: hour, y: occurence[hour] });
   }
   return result;
 });
