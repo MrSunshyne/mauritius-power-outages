@@ -29,15 +29,15 @@
             class="absolute right-[-25px] top-[-40px] md:top-[-60px] scale-[0.2]"
             v-if="state === 'ongoing'"
           />
-            <RomanticBulb class="scale-[0.2] relative right-[-8px] top-[0px] md:top-[-4px]" v-else />
             
-          <!-- <div
+          <div
             v-else
             class="w-2 h-2 relative left-[4px] top-[4px] shine rounded-full bg-green-500"
-          >&nbsp;</div> -->
+          >&nbsp;</div>
+            <!-- <RomanticBulb class="scale-[0.2] relative right-[-8px] top-[0px] md:top-[-4px]" v-else /> -->
         </div>
       </div>
-    </div>
+    </div> 
   </div>
 </template>  
 
@@ -46,7 +46,7 @@ import { Record } from "@/types";
 import { PropType } from "vue";
 import { useTimeAgo } from '@vueuse/core'
 import VueCountdown from '@chenfengyuan/vue-countdown';
-import RomanticBulb from "./RomanticBulb.vue";
+// import RomanticBulb from "./RomanticBulb.vue";
 
 const props = defineProps({
   data: {
