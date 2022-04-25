@@ -10,6 +10,7 @@
       <chart-count-per-date :data="countPerDate" :title="'Count Per Date'" class="col-span-2" />
       <chart-count-per-day :data="countPerDay" :title="'Count Per Day'" />
       <chart-count-per-week :data="countPerWeek" :title="'Count Per Week'" />
+      <chart-count-per-district :data="countPerDistrict" :title="'Outages Per District'" />
       <chart-count-per-hour :data="mostAffectedTimeOfDay" :title="'Count Per Hour'" class="col-span-2" />
     </div>
 
@@ -172,7 +173,7 @@ const countPerDistrict: ComputedRef<{ district: string; count: number }[]> = com
     }
   }
   for (let district in occurence) {
-    result.push({ district, count: occurence[district] });
+    result.push({ x: district, y: occurence[district], district, count: occurence[district] });
   }
   return result;
 });
