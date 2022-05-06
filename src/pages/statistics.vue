@@ -1,57 +1,33 @@
 <template>
-  <div class="text-white">
+  <div class="text-white px-4 py-10 stats-bg ">
+
     <Head>
       <title>Power Outages - Mauritius</title>
     </Head>
 
     <h1>Statistics</h1>
 
-    <div class="container mx-auto grid grid-cols-2 gap-10">
-      <chart-count-per-date :data="countPerDate" :title="'Count Per Date'" class="col-span-2" />
-      <chart-count-per-day :data="countPerDay" :title="'Count Per Day'" />
-      <chart-count-per-week :data="countPerWeek" :title="'Count Per Week'" />
-      <chart-count-per-district :data="countPerDistrict" :title="'Outages Per District'" />
-      <chart-count-per-hour :data="mostAffectedTimeOfDay" :title="'Count Per Hour'" class="col-span-2" />
-    </div>
+    <div class="container mx-auto grid grid-cols-2 gap-24 py-10 text-left">
 
-    <!-- <div class="grid grid-cols-2">
-      <div class="prose">
-        <pre>
-          {{ countPerDay }}
-      </pre
-        >
-      </div>
-      <div class="prose">
-        <pre>
-          {{ countPerWeek }}
-      </pre
-        >
-      </div>
-      <div class="prose">
-        <pre>
-          {{ countPerDate }}
-      </pre
-        >
-      </div>
-      <div class="prose">
-        <pre>
-          {{ countPerDistrict }}
-      </pre
-        >
-      </div>
-      <div class="prose">
-        <pre>
-        {{ countPerMonth }}
-      </pre
-        >
-      </div>
-      <div class="prose">
-        <pre>
-        {{ mostAffectedTimeOfDay }}
-      </pre
-        >
-      </div>
-    </div> -->
+      <chart-count-per-date class="col-span-2"
+        :data="countPerDate"
+        :title="'Count Per Date'" />
+      <chart-count-per-day :data="countPerDay"
+        :title="'Count Per Day'" />
+      <chart-count-per-month :data="countPerMonth"
+        :title="'Count Per Month'" />
+      <chart-count-per-week :data="countPerWeek"
+        :title="'Count Per Week'"
+        class="col-span-2" />
+
+      <chart-count-per-hour :data="countPerHour"
+        :title="'Count Per Hour'"
+        class="col-span-2" />
+      <chart-count-per-district class="col-span-2"
+        :data="countPerDistrict"
+        :title="'Outages Per District'" />
+
+    </div>
   </div>
 </template>
 
@@ -156,7 +132,12 @@ const countPerMonth: ComputedRef<{ month: string; count: number }[]> = computed(
     }
   }
   for (let month in occurence) {
-    result.push({ month, count: occurence[month] });
+    result.push({
+      x: month,
+      y: occurence[month],
+      month,
+      count: occurence[month],
+    });
   }
   return result;
 });
@@ -178,7 +159,7 @@ const countPerDistrict: ComputedRef<{ district: string; count: number }[]> = com
   return result;
 });
 
-const mostAffectedTimeOfDay: ComputedRef<{ hour: string; count: number }[]> = computed(() => {
+const countPerHour: ComputedRef<{ hour: string; count: number }[]> = computed(() => {
   let occurence = {} as { [key: string]: number };
   let result = [];
   for (let outage of sortByDate.value) {
@@ -200,5 +181,13 @@ const mostAffectedTimeOfDay: ComputedRef<{ hour: string; count: number }[]> = co
 <style lang="postcss" scoped>
 h1 {
   @apply text-2xl font-bold;
+}
+
+.stats-bg {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgb(0, 44, 125) 100%);
+  background-size: cover;
+  background-attachment: fixed;
+  ;
 }
 </style>

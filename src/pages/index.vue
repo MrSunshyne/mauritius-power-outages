@@ -38,7 +38,7 @@ const cFuture: ComputedRef<Record[]> = computed(() => {
 </script>
 
 <template>
-  <div class="grid grid-cols-1 text-left gap-10 max-w-4xl mx-auto">
+  <div class="px-4 py-10 grid grid-cols-1 text-left gap-10 max-w-4xl mx-auto">
 
     <Head>
       <title>Power Outages - Mauritius</title>

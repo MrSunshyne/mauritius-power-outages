@@ -12,8 +12,9 @@ useQueryProvider({
 
 
 <template>
-  <router-view v-slot="{ Component, route }">
-    <transition name="slide" mode="out-in">
+  <router-view v-slot="{ Component }">
+    <transition name="slide"
+      mode="out-in">
       <component :is="Component" />
     </transition>
   </router-view>

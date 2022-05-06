@@ -1,30 +1,28 @@
 <template>
-  <div>
-    <Card>
-      <template #title>
-        <h2>
-          {{ props.title }}
-        </h2>
-      </template>
-      <div class="container mx-auto">
-        <div v-if="!loading"
-          class="chart-container flex flex-col text-blue-500">
-          <VueApexCharts width="100%"
-            class="h-full w-full"
-            type="area"
-            :options="chartOptions"
-            :series="series"></VueApexCharts>
-        </div>
-        <div v-else>Loading data...</div>
+  <Card>
+    <template #title>
+      <h2>
+        {{ props.title }}
+      </h2>
+    </template>
+    <div class="container mx-auto">
+      <div v-if="!loading"
+        class="chart-container flex flex-col text-blue-500">
+        <VueApexCharts width="100%"
+          class="h-full w-full"
+          type="bar"
+          :options="chartOptions"
+          :series="series"></VueApexCharts>
       </div>
-    </Card>
-  </div>
-</template>
+      <div v-else>Loading data...</div>
+    </div>
+  </Card>
+</template> 
 
 <script setup lang="ts">
 import VueApexCharts from "vue3-apexcharts";
 import { ApexOptions } from "apexcharts";
-import { labelColor, axisColor, genericConfigs } from "@/logic";
+import { labelColor, genericConfigs, lineColor } from "@/logic";
 
 const props = defineProps({
   data: {
@@ -45,28 +43,18 @@ let series = computed(() => {
 
 let chartOptions: ApexOptions = reactive({
   ...genericConfigs,
-  fill: {
-    gradient: {
-      enabled: true,
-      opacityFrom: 0.55,
-      opacityTo: 0
-    }
-  },
+
   xaxis: {
-    type: "datetime",
     title: {
       text: "Day of the Week",
       style: {
         color: labelColor,
       },
     },
-    axisBorder: {
-      color: axisColor
-    },
     labels: {
       style: {
-        colors: labelColor
-      }
+        colors: labelColor,
+      },
     }
   },
   yaxis: {
@@ -80,8 +68,16 @@ let chartOptions: ApexOptions = reactive({
       style: {
         colors: labelColor,
       },
-    },
+    }
   },
+  plotOptions: {
+    bar: {
+      colors: {
+        backgroundBarColors: [lineColor],
+        backgroundBarOpacity: 0.2,
+      },
+    }
+  }
 
 });
 </script>

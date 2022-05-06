@@ -1,9 +1,12 @@
 {
   "recommendations": [
     "antfu.vite",
-    "johnsoncodehk.volar",
     "antfu.iconify",
     "dbaeumer.vscode-eslint",
-    "csstools.postcss"
+    "csstools.postcss",
+    "Vue.volar"
+  ],
+  "unwantedRecommendations": [
+    "octref.vetur"
   ]
 }

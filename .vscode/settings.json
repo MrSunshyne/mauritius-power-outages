@@ -35,5 +35,6 @@
     "titleBar.inactiveForeground": "#15202b99"
   },
   "editor.tabSize": 2,
-  "prettier.printWidth": 120
+  "prettier.printWidth": 120,
+  "vue3snippets.enable-compile-vue-file-on-did-save-code": true
 }
