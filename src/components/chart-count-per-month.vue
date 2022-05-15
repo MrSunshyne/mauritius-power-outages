@@ -1,22 +1,28 @@
 <template>
-  <Card>
-    <template #title>
-      <h2>
-        {{ props.title }}
-      </h2>
-    </template>
-    <div class="container mx-auto">
-      <div v-if="!loading"
-        class="chart-container flex flex-col text-blue-500">
-        <VueApexCharts width="100%"
-          class="h-full w-full"
-          type="bar"
-          :options="chartOptions"
-          :series="series"></VueApexCharts>
+  <div class="container mx-auto">
+    <div class="grid grid-cols-2 gap-24">
+      <div class="flex flex-col justify-center items-end gap-10 text-right ">
+        <h2>
+          {{ props.title }}
+        </h2>
+        <p>
+          The total amount of outages each month
+        </p>
       </div>
-      <div v-else>Loading data...</div>
+      <div class="container mx-auto">
+        <div v-if="!loading"
+          class="chart-container flex flex-col text-blue-500">
+          <VueApexCharts width="100%"
+            class="h-full w-full"
+            type="bar"
+            :options="chartOptions"
+            :series="series"></VueApexCharts>
+        </div>
+        <div v-else>Loading data...</div>
+      </div>
     </div>
-  </Card>
+  </div>
+
 </template> 
 
 <script setup lang="ts">

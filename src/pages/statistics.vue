@@ -1,31 +1,41 @@
 <template>
-  <div class="text-white px-4 py-10 stats-bg ">
+  <div class="text-white px-4 stats-bg ">
 
     <Head>
       <title>Power Outages - Mauritius</title>
     </Head>
 
-    <h1>Statistics</h1>
+    <!-- <h1>Statistics</h1> -->
 
-    <div class="container mx-auto grid grid-cols-2 gap-24 py-10 text-left">
+    <div class=" grid grid-cols-2 gap-48   text-left">
+
+      <hero-section class="col-span-2"
+        :outagesToday="outagesToday"
+        :hoursWasted="hoursWasted" />
 
       <chart-count-per-date class="col-span-2"
         :data="countPerDate"
-        :title="'Count Per Date'" />
-      <chart-count-per-day :data="countPerDay"
-        :title="'Count Per Day'" />
+        :title="'Detailed timeline'" />
+
+      <chart-count-per-day class="col-span-2"
+        :data="countPerDay"
+        :title="'Distribution by day'" />
+
       <chart-count-per-month :data="countPerMonth"
-        :title="'Count Per Month'" />
+        class="col-span-2"
+        :title="'Monthly quota of darkness'" />
+
       <chart-count-per-week :data="countPerWeek"
-        :title="'Count Per Week'"
+        :title="'Week of the year'"
         class="col-span-2" />
 
       <chart-count-per-hour :data="countPerHour"
-        :title="'Count Per Hour'"
-        class="col-span-2" />
+        class="col-span-2"
+        :title="'Segments of the day'" />
+
       <chart-count-per-district class="col-span-2"
         :data="countPerDistrict"
-        :title="'Outages Per District'" />
+        :title="'District statistics'" />
 
     </div>
   </div>
@@ -176,16 +186,43 @@ const countPerHour: ComputedRef<{ hour: string; count: number }[]> = computed(()
   }
   return result;
 });
+
+const outagesToday = computed(() => {
+  let date = new Date();
+  let result = [];
+  for (let outage of sortByDate.value) {
+    let outageDate = new Date(outage.from);
+    if (outageDate.toDateString() === date.toDateString()) {
+      result.push(outage);
+    }
+  }
+  return result;
+});
+
+// the sum of hours between the outage From and To 
+const hoursWasted = computed(() => {
+  let result = 0;
+  for (let outage of sortByDate.value) {
+    let from = new Date(outage.from);
+    let to = new Date(outage.to);
+    result += to.getHours() - from.getHours();
+  }
+  return result;
+});
+
+
 </script>
 
-<style lang="postcss" scoped>
+
+
+<style scoped>
 h1 {
   @apply text-2xl font-bold;
 }
 
 .stats-bg {
   background: rgb(2, 0, 36);
-  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgb(0, 44, 125) 100%);
+  background: linear-gradient(90deg, rgb(2, 1, 21) 0%, rgba(2, 0, 36, 1) 35%, rgb(3, 1, 43) 55%);
   background-size: cover;
   background-attachment: fixed;
   ;

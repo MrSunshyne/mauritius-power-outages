@@ -18,6 +18,7 @@ declare module 'vue' {
     ChartCountPerHour: typeof import('./components/chart-count-per-hour.vue')['default']
     ChartCountPerMonth: typeof import('./components/chart-count-per-month.vue')['default']
     ChartCountPerWeek: typeof import('./components/chart-count-per-week.vue')['default']
+    HeroSection: typeof import('./components/hero-section.vue')['default']
     List: typeof import('./components/List.vue')['default']
     RomanticBulb: typeof import('./components/RomanticBulb.vue')['default']
     RomanticCandle: typeof import('./components/RomanticCandle.vue')['default']

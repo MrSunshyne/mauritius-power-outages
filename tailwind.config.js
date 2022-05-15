@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   mode: 'jit',
@@ -13,6 +14,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      fontFamily: {
+        'poppins': ['Poppins', ...defaultTheme.fontFamily.sans]
+      },
       colors: {
         ...colors,
       },

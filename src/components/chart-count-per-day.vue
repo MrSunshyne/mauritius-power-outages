@@ -1,22 +1,30 @@
 <template>
-  <Card>
-    <template #title>
-      <h2>
-        {{ props.title }}
-      </h2>
-    </template>
-    <div class="container mx-auto">
-      <div v-if="!loading"
-        class="chart-container flex flex-col text-blue-500">
-        <VueApexCharts width="100%"
-          class="h-full w-full"
-          type="treemap"
-          :options="chartOptions"
-          :series="series"></VueApexCharts>
+  <div class="container mx-auto">
+    <div class="grid grid-cols-2 gap-24">
+      <div class="container mx-auto">
+        <div v-if="!loading"
+          class="chart-container flex flex-col text-blue-500">
+          <VueApexCharts width="100%"
+            class="h-full w-full"
+            type="treemap"
+            :options="chartOptions"
+            :series="series"></VueApexCharts>
+        </div>
+        <div v-else>Loading data...</div>
       </div>
-      <div v-else>Loading data...</div>
+
+
+      <div class="flex flex-col justify-center gap-10 ">
+        <h2>
+          {{ props.title }}
+        </h2>
+        <p>
+          Which day of the week has the most power outages compared to the others?
+        </p>
+        <blockquote>Sunday is the worst day of the week. You should probably go to the seaside</blockquote>
+      </div>
     </div>
-  </Card>
+  </div>
 
 </template>
 

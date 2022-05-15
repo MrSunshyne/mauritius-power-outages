@@ -1,17 +1,22 @@
 <template>
   <div>
-    <Card>
-      <template #title>
+    <Card :enabledClasses="''">
+      <!-- <template #title>
         <h2>
           {{ props.title }}
         </h2>
-      </template>
+      </template> -->
+
+      <div class="text-center space-y-10">
+        <h2 class="">
+          {{ props.title }}
+        </h2>
+        <p>A detailed day-by-day timeline of when powercuts occurred on the island</p>
+      </div>
       <div class="container mx-auto">
         <div v-if="!loading"
           class="chart-container flex flex-col text-blue-500">
-          <VueApexCharts width="100%"
-            class="h-full w-full"
-            type="area"
+          <VueApexCharts type="area"
             :options="chartOptions"
             :series="series"></VueApexCharts>
         </div>

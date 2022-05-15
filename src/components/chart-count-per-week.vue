@@ -1,25 +1,33 @@
 <template>
+  <div>
+    <Card :enabledClasses="''">
+      <!-- <template #title>
+        <h2>
+          {{ props.title }}
+        </h2>
+      </template> -->
 
-  <Card>
-    <template #title>
-      <h2>
-        {{ props.title }}
-      </h2>
-    </template>
-    <div class="container mx-auto">
-      <div v-if="!loading"
-        class="chart-container flex flex-col text-blue-500">
-        <VueApexCharts width="100%"
-          class="h-full w-full"
-          type="bar"
-          :options="chartOptions"
-          :series="series"></VueApexCharts>
+      <div class="text-center space-y-10">
+        <h2 class="">
+          {{ props.title }}
+        </h2>
+        <p>Number of outages per week.</p>
       </div>
-      <div v-else>Loading data...</div>
-    </div>
-  </Card>
-
+      <div class="container mx-auto">
+        <div v-if="!loading"
+          class="chart-container flex flex-col text-blue-500">
+          <VueApexCharts width="100%"
+            class="h-full w-full"
+            type="bar"
+            :options="chartOptions"
+            :series="series"></VueApexCharts>
+        </div>
+        <div v-else>Loading data...</div>
+      </div>
+    </Card>
+  </div>
 </template>
+
 
 <script setup lang="ts">
 import VueApexCharts from "vue3-apexcharts";
@@ -47,7 +55,7 @@ let chartOptions: ApexOptions = reactive({
   ...genericConfigs,
   xaxis: {
     title: {
-      text: "Day of the Week",
+      text: "Week # (1-52) of the year",
       style: {
         color: labelColor,
       },
@@ -75,7 +83,8 @@ let chartOptions: ApexOptions = reactive({
     bar: {
       colors: {
         backgroundBarColors: [lineColor],
-      }
+        backgroundBarOpacity: 0.2,
+      },
     }
   }
 });

@@ -1,30 +1,35 @@
 <template>
-
-  <Card>
-    <template #title>
-      <h2>
-        {{ props.title }}
-      </h2>
-    </template>
-    <div class="container mx-auto p-24">
-      <div v-if="!loading"
-        class="chart-container flex flex-col text-blue-500">
-        <VueApexCharts width="100%"
-          class="h-full w-full"
-          type="radar"
-          :options="chartOptions"
-          :series="series"></VueApexCharts>
+  <div class="">
+    <div class="max-w-[90vw] mx-auto grid grid-cols-2 items-center gap-24 h-[50vh]">
+      <div class="">
+        <div v-if="!loading"
+          class=" flex flex-col text-blue-500">
+          <VueApexCharts type="radar"
+            :options="chartOptions"
+            :series="series"></VueApexCharts>
+        </div>
+        <div v-else>Loading data...</div>
       </div>
-      <div v-else>Loading data...</div>
+
+
+      <div class="flex flex-col justify-center gap-10 ">
+        <h2>
+          {{ props.title }}
+        </h2>
+        <p>
+          The worst hour of the day
+        </p>
+        <blockquote>You might want to postpone standups if they're between 8-9 in the morning !</blockquote>
+      </div>
     </div>
-  </Card>
+  </div>
 
 </template>
 
 <script setup lang="ts">
 import VueApexCharts from "vue3-apexcharts";
 import { ApexOptions } from "apexcharts";
-import { labelColor } from "@/logic";
+import { labelColor, lineColor } from "@/logic";
 
 const props = defineProps({
   data: {
@@ -43,7 +48,7 @@ function xyToLabelSeries(data: any[]) {
   return {
     series: data.map((item) => item.y),
     labels: data.map((item) => {
-      return (parseInt(item.x) + 1).toString() + "h";
+      return (parseInt(item.x)).toString() + "h";
     }),
   };
 }
@@ -61,19 +66,26 @@ let labels = computed(() => {
 let chartOptions: ApexOptions = reactive({
   chart: {
     type: "polarArea",
-    // logarithmic: true,
   },
-  labels: labels,
+  labels: labels.value,
   dataLabels: {
     enabled: true,
+    distributed: true,
+    formatter: function (val: any) {
+      return val.toString() + " hours";
+    },
+    style: {
+      fontSize: "16px",
+      colors: [lineColor],
+    }
   },
   tooltip: {
+    theme: 'dark',
     style: {
-      fontSize: "22px",
+      fontSize: "18px",
     },
   },
   legend: {
-
     labels: {
       colors: labelColor,
     },
