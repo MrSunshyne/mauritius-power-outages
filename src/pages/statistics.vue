@@ -7,11 +7,12 @@
 
     <!-- <h1>Statistics</h1> -->
 
-    <div class=" grid grid-cols-2 gap-48   text-left">
+    <div class=" grid grid-cols-2 gap-48 text-left">
 
       <hero-section class="col-span-2"
         :outagesToday="outagesToday"
-        :hoursWasted="hoursWasted" />
+        :hoursWasted="hoursWasted"
+        :countPerDate="countPerDate" />
 
       <chart-count-per-date class="col-span-2"
         :data="countPerDate"
