@@ -7,7 +7,7 @@
     <div class="flex flex-col gap-24 items-center relative z-10">
       <div class="space-y-10">
         <h1 class="font-bold text-center  ">
-          Statistic of power outages in Mauritius
+          Statistics of power outages in Mauritius
         </h1>
         <p class="text-center ">A detailed day-by-day timeline of when powercuts occurred on the island <span
             class="font-bold underline">
