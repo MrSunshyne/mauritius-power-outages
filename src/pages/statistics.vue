@@ -207,7 +207,7 @@ const hoursWasted = computed(() => {
     let to = new Date(outage.to);
     result += to.getHours() - from.getHours();
   }
-  return result;
+  return result.toString();
 });
 
 
@@ -224,7 +224,5 @@ h1 {
   background: rgb(2, 0, 36);
   background: linear-gradient(90deg, rgb(2, 1, 21) 0%, rgba(2, 0, 36, 1) 35%, rgb(3, 1, 43) 55%);
   background-size: cover;
-  background-attachment: fixed;
-  ;
 }
 </style>

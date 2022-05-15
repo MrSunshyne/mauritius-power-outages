@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="max-w-[90vw] mx-auto grid grid-cols-2 items-center gap-24 h-[50vh]">
+    <div class="max-w-[90vw] mx-auto md:grid grid-cols-2 items-center gap-24 h-[50vh]">
       <div class="">
         <div v-if="!loading"
           class=" flex flex-col text-blue-500">
@@ -64,9 +64,6 @@ let labels = computed(() => {
 });
 
 let chartOptions: ApexOptions = reactive({
-  chart: {
-    type: "polarArea",
-  },
   labels: labels.value,
   dataLabels: {
     enabled: true,
@@ -79,6 +76,7 @@ let chartOptions: ApexOptions = reactive({
       colors: [lineColor],
     }
   },
+
   tooltip: {
     theme: 'dark',
     style: {

@@ -13,8 +13,8 @@ main {
 }
 
 
-h2 {
-  @apply font-poppins text-6xl font-black;
+h2, h1 {
+  @apply font-poppins text-3xl md:text-6xl font-black;
 }
 
 p { @apply text-xl ;}

@@ -13,7 +13,7 @@
         </h2>
         <p>Number of outages per week.</p>
       </div>
-      <div class="container mx-auto">
+      <div class="md:container md:mx-auto">
         <div v-if="!loading"
           class="chart-container flex flex-col text-blue-500">
           <VueApexCharts width="100%"

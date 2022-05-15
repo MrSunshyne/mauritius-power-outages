@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card p-10 rounded-xl flex flex-col gap-4 text-white"
+    <div class="card md:p-10 rounded-xl flex flex-col gap-4 text-white"
       :class="[props.enabledClasses]">
       <h2>
         <slot name="title" />

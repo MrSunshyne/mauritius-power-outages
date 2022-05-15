@@ -1,7 +1,7 @@
 <template>
-  <div class="container mx-auto">
-    <div class="grid grid-cols-2 gap-24">
-      <div class="container mx-auto">
+  <div class="md:container md:mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-24 gap-12">
+      <div class="md:container md:mx-auto">
         <div v-if="!loading"
           class="chart-container flex flex-col text-blue-500">
           <VueApexCharts width="100%"
@@ -55,21 +55,24 @@ let chartOptions: ApexOptions = reactive({
   ...genericConfigs,
   dataLabels: {
     enabled: true,
+    // distributed: true,
 
-    style: {
-      colors: [labelColor],
-
-    }
   },
   plotOptions: {
     treemap: {
       enableShades: true,
+      useFillColorAsStroke: true,
       colorScale: {
+        inverse: false,
         ranges: [{
           from: 0,
-          to: 100,
-          name: "Low",
+          to: 50,
           color: lineColor,
+        },
+        {
+          from: 50,
+          to: 100,
+          color: '#ff0000',
         }]
       }
     }
@@ -81,11 +84,7 @@ let chartOptions: ApexOptions = reactive({
         color: labelColor,
       },
     },
-    labels: {
-      style: {
-        colors: labelColor,
-      },
-    }
+
   },
   yaxis: {
     title: {

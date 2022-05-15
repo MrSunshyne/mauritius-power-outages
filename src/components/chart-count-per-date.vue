@@ -13,10 +13,10 @@
         </h2>
         <p>A detailed day-by-day timeline of when powercuts occurred on the island</p>
       </div>
-      <div class="container mx-auto">
+      <div class="md:container md:mx-auto">
         <div v-if="!loading"
           class="chart-container flex flex-col text-blue-500">
-          <VueApexCharts type="area"
+          <VueApexCharts type="line"
             :options="chartOptions"
             :series="series"></VueApexCharts>
         </div>
@@ -29,7 +29,7 @@
 <script setup lang="ts">
 import VueApexCharts from "vue3-apexcharts";
 import { ApexOptions } from "apexcharts";
-import { labelColor, axisColor, genericConfigs } from "@/logic";
+import { labelColor, lineColor, axisColor, genericConfigs } from "@/logic";
 
 const props = defineProps({
   data: {
@@ -51,11 +51,38 @@ let series = computed(() => {
 let chartOptions: ApexOptions = reactive({
   ...genericConfigs,
   fill: {
+    type: "gradient",
     gradient: {
-      enabled: true,
-      opacityFrom: 0.55,
-      opacityTo: 0
+      shadeIntensity: 1,
+      type: "vertical",
+      colorStops: [
+        {
+          offset: 0,
+          color: "red",
+          opacity: 1
+        },
+
+        {
+          offset: 10,
+          color: lineColor,
+          opacity: 1
+        },
+        {
+          offset: 80,
+          color: lineColor,
+          opacity: 0.8
+        },
+        {
+          offset: 100,
+          color: lineColor,
+          opacity: 0.2
+        }
+      ]
     }
+  },
+  stroke: {
+    width: 5,
+    curve: "smooth",
   },
   xaxis: {
     type: "datetime",

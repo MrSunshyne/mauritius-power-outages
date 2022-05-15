@@ -1,7 +1,7 @@
 <template>
-  <div class="container mx-auto">
-    <div class="grid grid-cols-2 gap-24">
-      <div class="flex flex-col justify-center items-end gap-10 text-right ">
+  <div class="md:container md:mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-24 gap-12">
+      <div class="flex flex-col justify-center items-end gap-10 text-center md:text-right ">
         <h2>
           {{ props.title }}
         </h2>
@@ -9,7 +9,7 @@
           The total amount of outages each month
         </p>
       </div>
-      <div class="container mx-auto">
+      <div class="md:container md:mx-auto">
         <div v-if="!loading"
           class="chart-container flex flex-col text-blue-500">
           <VueApexCharts width="100%"
