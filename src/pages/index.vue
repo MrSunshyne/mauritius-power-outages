@@ -44,7 +44,7 @@ const cFuture: ComputedRef<Record[]> = computed(() => {
       <title>Power Outages - Mauritius</title>
     </Head>
 
-    <h1>Power Outages in Mauritius - hello from devcon</h1>
+    <h1>Power Outages in Mauritius</h1>
 
     <div v-if="powerOutageQuery.isFetching">loading...</div>
     <div v-else>
