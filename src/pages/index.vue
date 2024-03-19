@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { Head } from '@vueuse/head'
-import { fetchJson } from '@/services/api';
-import { useQuery } from 'vue-query';
+import { useQuery } from 'vue-query'
+import { ComputedRef } from 'vue'
+import { fetchJson } from '@/services/api'
 import { filterByToday, filterByAfterToday, flat } from '@/logic'
-import { ComputedRef } from 'vue';
 import { Record } from '@/types'
 
 const powerOutageQuery = reactive(useQuery(
@@ -16,7 +16,7 @@ const cFlat: ComputedRef<Record[]> = computed(() => {
 })
 
 const cToday: ComputedRef<Record[]> = computed(() => {
-  let real = filterByToday(cFlat.value)
+  const real = filterByToday(cFlat.value)
   // One line of Data to test the Power Off Animations
   // let fake = {
   //   "date": "Le samedi 2 avril 2022 de  08:30:00 à  15:00:00",
@@ -61,7 +61,7 @@ const cFuture: ComputedRef<Record[]> = computed(() => {
     </div>
     <site-footer />
   </div>
-</template> 
+</template>
 
 <style scoped>
 h1 {

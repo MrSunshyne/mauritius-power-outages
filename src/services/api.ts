@@ -4,8 +4,8 @@ export async function fetchJson(url = API_ENDPOINT) {
   try {
     const response = await fetch(url)
     return response.json()
-  } catch (error) {
-    console.log(error)
-    throw error
+  }
+  catch (error) {
+    throw new Error(`Error fetching JSON: ${error}`)
   }
 }

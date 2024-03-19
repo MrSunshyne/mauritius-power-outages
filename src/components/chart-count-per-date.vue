@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Card :enabledClasses="''">
+    <Card :enabled-classes="''">
       <!-- <template #title>
         <h2>
           {{ props.title }}
@@ -14,11 +14,15 @@
         <p>A detailed day-by-day timeline of when powercuts occurred on the island</p>
       </div>
       <div class="md:container md:mx-auto">
-        <div v-if="!loading"
-          class="chart-container flex flex-col text-blue-500">
-          <VueApexCharts type="line"
+        <div
+          v-if="!loading"
+          class="chart-container flex flex-col text-blue-500"
+        >
+          <VueApexCharts
+            type="line"
             :options="chartOptions"
-            :series="series"></VueApexCharts>
+            :series="series"
+          ></VueApexCharts>
         </div>
         <div v-else>Loading data...</div>
       </div>
@@ -27,9 +31,9 @@
 </template>
 
 <script setup lang="ts">
-import VueApexCharts from "vue3-apexcharts";
-import { ApexOptions } from "apexcharts";
-import { labelColor, lineColor, axisColor, genericConfigs } from "@/logic";
+import VueApexCharts from 'vue3-apexcharts'
+import { ApexOptions } from 'apexcharts'
+import { labelColor, lineColor, axisColor, genericConfigs } from '@/logic'
 
 const props = defineProps({
   data: {
@@ -40,70 +44,70 @@ const props = defineProps({
     type: String,
     required: true,
   },
-});
+})
 
-let loading = ref(false);
+const loading = ref(false)
 
-let series = computed(() => {
-  return [{ data: props.data, name: "Number of outages" }];
-});
+const series = computed(() => {
+  return [{ data: props.data, name: 'Number of outages' }]
+})
 
-let chartOptions: ApexOptions = reactive({
+const chartOptions: ApexOptions = reactive({
   ...genericConfigs,
   fill: {
-    type: "gradient",
+    type: 'gradient',
     gradient: {
       shadeIntensity: 1,
-      type: "vertical",
+      type: 'vertical',
       colorStops: [
         {
           offset: 0,
-          color: "red",
-          opacity: 1
+          color: 'red',
+          opacity: 1,
         },
 
         {
           offset: 10,
           color: lineColor,
-          opacity: 1
+          opacity: 1,
         },
         {
           offset: 80,
           color: lineColor,
-          opacity: 0.8
+          opacity: 0.8,
         },
         {
           offset: 100,
           color: lineColor,
-          opacity: 0.2
-        }
-      ]
-    }
+          opacity: 0.2,
+        },
+      ],
+    },
   },
   stroke: {
     width: 5,
-    curve: "smooth",
+    curve: 'smooth',
   },
   xaxis: {
-    type: "datetime",
+    type: 'datetime',
     title: {
-      text: "Day of the Week",
+      text: 'Day of the Week',
       style: {
         color: labelColor,
       },
     },
     axisBorder: {
-      color: axisColor
+      color: axisColor,
     },
     labels: {
       style: {
-        colors: labelColor
-      }
-    }
+        colors: labelColor,
+      },
+    },
   },
   yaxis: {
     title: {
-      text: "Count",
+      text: 'Count',
       style: {
         color: labelColor,
       },
@@ -115,5 +119,5 @@ let chartOptions: ApexOptions = reactive({
     },
   },
 
-});
+})
 </script>

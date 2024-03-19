@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div class="card md:p-10 rounded-xl flex flex-col gap-4 text-white"
-      :class="[props.enabledClasses]">
+    <div
+      class="card md:p-10 rounded-xl flex flex-col gap-4 text-white"
+      :class="[props.enabledClasses]"
+    >
       <h2>
         <slot name="title" />
       </h2>
@@ -15,12 +17,11 @@
 const props = defineProps({
   enabledClasses: {
     type: String,
-    default: "glass",
+    default: 'glass',
   },
-});
+})
 
 </script>
-
 
 <style scoped>
 .shine {
@@ -31,9 +32,7 @@ const props = defineProps({
   transition: all 0.3s linear;
 }
 
-
 /* h2 {
   @apply text-xl font-medium;
 } */
 </style>
-   
