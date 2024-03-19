@@ -11,7 +11,7 @@ const routes = setupLayouts(generatedRoutes)
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(to) {
     if (to.hash) {
       return {
         el: to.hash,
@@ -31,5 +31,5 @@ const app = createApp(App)
 
 app.use(router)
 app.use(pinia)
-app.use(head);
+app.use(head)
 app.mount('#app')

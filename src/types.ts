@@ -1,14 +1,4 @@
 
-export interface Record {
-  date: string,
-  locality: string,
-  streets: string,
-  district: District,
-  from: Date,
-  to: Date,
-  id: string
-}
-
 export enum District {
   blackriver,
   flacq,
@@ -20,6 +10,16 @@ export enum District {
   rivieredurempart,
   savanne,
   rodrigues,
+}
+
+export interface Record {
+  date: string
+  locality: string
+  streets: string
+  district: District
+  from: Date
+  to: Date
+  id: string
 }
 
 export interface Dataset {

@@ -1,21 +1,25 @@
 <template>
   <div>
-    <div v-if="!loading"
-      class="chart-container flex flex-col text-blue-500">
-      <VueApexCharts type="line"
+    <div
+      v-if="!loading"
+      class="chart-container flex flex-col text-blue-500"
+    >
+      <VueApexCharts
         ref="chart"
+        type="line"
         height="800px"
         :options="chartOptions"
-        :series="series"></VueApexCharts>
+        :series="series"
+      ></VueApexCharts>
     </div>
     <div v-else>Loading data...</div>
   </div>
 </template>
 
 <script setup lang="ts">
-import VueApexCharts from "vue3-apexcharts";
-import { ApexOptions } from "apexcharts";
-import { labelColor, lineColor, axisColor, genericConfigs } from "@/logic";
+import VueApexCharts from 'vue3-apexcharts'
+import { ApexOptions } from 'apexcharts'
+import { labelColor, lineColor, axisColor, genericConfigs } from '@/logic'
 
 const props = defineProps({
   data: {
@@ -26,20 +30,20 @@ const props = defineProps({
     type: String,
     required: true,
   },
-});
+})
 
-let loading = ref(false);
+const loading = ref(false)
 
-let series = computed(() => {
-  return [{ data: props.data, name: "Number of outages" }];
-});
+const series = computed(() => {
+  return [{ data: props.data, name: 'Number of outages' }]
+})
 
-let chartOptions: ApexOptions = reactive({
+const chartOptions: ApexOptions = reactive({
   ...genericConfigs,
   chart: {
     toolbar: {
       show: false,
-    }
+    },
 
   },
   tooltip: {
@@ -49,35 +53,35 @@ let chartOptions: ApexOptions = reactive({
     enabled: true,
     easing: 'linear',
     dynamicAnimation: {
-      speed: 1000
-    }
+      speed: 1000,
+    },
   },
   fill: {
-    type: "gradient",
+    type: 'gradient',
     gradient: {
       shadeIntensity: 0.5,
-      type: "vertical",
+      type: 'vertical',
       colorStops: [
         {
           offset: 0,
           color: lineColor,
-          opacity: 1
+          opacity: 1,
         },
 
         {
           offset: 100,
-          color: "transparent",
-          opacity: 0
-        }
-      ]
-    }
+          color: 'transparent',
+          opacity: 0,
+        },
+      ],
+    },
   },
   stroke: {
     width: 5,
-    curve: "smooth",
+    curve: 'smooth',
   },
   xaxis: {
-    type: "datetime",
+    type: 'datetime',
 
     axisTicks: {
       show: false,
@@ -91,8 +95,8 @@ let chartOptions: ApexOptions = reactive({
     labels: {
       show: false,
       style: {
-        colors: labelColor
-      }
+        colors: labelColor,
+      },
     },
     show: false,
   },
@@ -100,7 +104,7 @@ let chartOptions: ApexOptions = reactive({
     show: false,
 
     title: {
-      text: "Count",
+      text: 'Count',
       style: {
         color: labelColor,
       },
@@ -112,6 +116,6 @@ let chartOptions: ApexOptions = reactive({
     },
   },
 
-});
+})
 
 </script>

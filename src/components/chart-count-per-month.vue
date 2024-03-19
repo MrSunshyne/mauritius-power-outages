@@ -10,25 +10,29 @@
         </p>
       </div>
       <div class="md:container md:mx-auto">
-        <div v-if="!loading"
-          class="chart-container flex flex-col text-blue-500">
-          <VueApexCharts width="100%"
+        <div
+          v-if="!loading"
+          class="chart-container flex flex-col text-blue-500"
+        >
+          <VueApexCharts
+            width="100%"
             class="h-full w-full"
             type="bar"
             :options="chartOptions"
-            :series="series"></VueApexCharts>
+            :series="series"
+          ></VueApexCharts>
         </div>
         <div v-else>Loading data...</div>
       </div>
     </div>
   </div>
 
-</template> 
+</template>
 
 <script setup lang="ts">
-import VueApexCharts from "vue3-apexcharts";
-import { ApexOptions } from "apexcharts";
-import { labelColor, genericConfigs, lineColor } from "@/logic";
+import VueApexCharts from 'vue3-apexcharts'
+import { ApexOptions } from 'apexcharts'
+import { labelColor, genericConfigs, lineColor } from '@/logic'
 
 const props = defineProps({
   data: {
@@ -39,20 +43,20 @@ const props = defineProps({
     type: String,
     required: true,
   },
-});
+})
 
-let loading = ref(false);
+const loading = ref(false)
 
-let series = computed(() => {
-  return [{ data: props.data, name: "Number of outages" }];
-});
+const series = computed(() => {
+  return [{ data: props.data, name: 'Number of outages' }]
+})
 
-let chartOptions: ApexOptions = reactive({
+const chartOptions: ApexOptions = reactive({
   ...genericConfigs,
 
   xaxis: {
     title: {
-      text: "Day of the Week",
+      text: 'Day of the Week',
       style: {
         color: labelColor,
       },
@@ -61,11 +65,11 @@ let chartOptions: ApexOptions = reactive({
       style: {
         colors: labelColor,
       },
-    }
+    },
   },
   yaxis: {
     title: {
-      text: "Count",
+      text: 'Count',
       style: {
         color: labelColor,
       },
@@ -74,7 +78,7 @@ let chartOptions: ApexOptions = reactive({
       style: {
         colors: labelColor,
       },
-    }
+    },
   },
   plotOptions: {
     bar: {
@@ -82,8 +86,8 @@ let chartOptions: ApexOptions = reactive({
         backgroundBarColors: [lineColor],
         backgroundBarOpacity: 0.2,
       },
-    }
-  }
+    },
+  },
 
-});
+})
 </script>

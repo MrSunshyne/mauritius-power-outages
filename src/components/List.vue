@@ -40,11 +40,11 @@
 </template>
 
 <script lang="ts" setup>
-import { PropType } from 'vue';
+import { PropType } from 'vue'
 
 const props = defineProps({
   data: {
     type: Object as PropType<any>,
-  }
+  },
 })
 </script>

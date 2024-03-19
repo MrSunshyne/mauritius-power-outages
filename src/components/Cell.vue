@@ -19,52 +19,51 @@
           >Power {{ state === 'ongoing' ? 'will resume in' : state === 'upcoming' ? 'will cut in' : 'has resumed since' }}</div>
           <div class="inline md:block">
             <vue-countdown
-              :time="timeDifference"
               v-slot="{ days, hours, minutes, seconds }"
+              :time="timeDifference"
             >{{ days ? days + 'd,' : '' }} {{ hours ? hours + 'h' : '' }} {{ minutes }}m {{ seconds }}s</vue-countdown>
           </div>
         </div>
         <div class="absolute top-0 right-0 md:relative w-16 h-16 grid place-items-center">
           <RomanticCandle
-            class="absolute right-[-25px] top-[-40px] md:top-[-60px] scale-[0.2]"
             v-if="state === 'ongoing'"
+            class="absolute right-[-25px] top-[-40px] md:top-[-60px] scale-[0.2]"
           />
-            
+
           <div
             v-else
             class="w-2 h-2 relative left-[4px] top-[4px] shine rounded-full bg-green-500"
           >&nbsp;</div>
-            <!-- <RomanticBulb class="scale-[0.2] relative right-[-8px] top-[0px] md:top-[-4px]" v-else /> -->
+          <!-- <RomanticBulb class="scale-[0.2] relative right-[-8px] top-[0px] md:top-[-4px]" v-else /> -->
         </div>
       </div>
-    </div> 
+    </div>
   </div>
-</template>  
+</template>
 
 <script setup lang="ts">
-import { Record } from "@/types";
-import { PropType } from "vue";
+import { PropType } from 'vue'
 import { useTimeAgo } from '@vueuse/core'
-import VueCountdown from '@chenfengyuan/vue-countdown';
+import VueCountdown from '@chenfengyuan/vue-countdown'
+import { Record } from '@/types'
 // import RomanticBulb from "./RomanticBulb.vue";
 
 const props = defineProps({
   data: {
     type: Object as PropType<Record>,
-    default: {
-      date: "string",
-      locality: "string",
-      streets: "string",
-      district: "District",
-      from: "Date",
-      to: "Date",
-      id: "string"
-    },
+    default: () => ({
+      date: 'string',
+      locality: 'string',
+      streets: 'string',
+      district: 'District',
+      from: 'Date',
+      to: 'Date',
+      id: 'string',
+    }),
   },
 })
 
 const timeUntil = useTimeAgo(new Date(props.data.from))
-
 
 const state = computed(() => {
   let on = 'upcoming'
@@ -72,34 +71,32 @@ const state = computed(() => {
   const to = new Date(props.data.to)
   const now = new Date()
 
-  if (now.getTime() > from.getTime()) {
+  if (now.getTime() > from.getTime())
     on = 'ongoing'
-  }
 
-  if (now.getTime() > to.getTime()) {
+  if (now.getTime() > to.getTime())
     on = 'past'
-  }
 
   return on
 })
 
 const timeDifference = computed(() => {
-  let target;
+  let target
 
-  if (state.value === 'ongoing') {
+  if (state.value === 'ongoing')
     target = new Date(props.data.to)
-  } else if (state.value === 'upcoming') {
+
+  else if (state.value === 'upcoming')
     target = new Date(props.data.from)
-  } else {
+
+  else
     target = new Date(props.data.to)
-  }
 
   const now = new Date()
   return Math.abs(target.getTime() - now.getTime())
 })
 
-
-</script> 
+</script>
 
 <style scoped>
 .shine {
@@ -122,4 +119,3 @@ const timeDifference = computed(() => {
   --theme-bg-color: rgba(16 18 27 / 80%);
 }
 </style>
-   
