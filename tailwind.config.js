@@ -2,16 +2,9 @@ const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   safelist: ['prose', 'prose-sm', 'm-auto', 'text-left', 'container'],
   darkMode: 'class',
-  variants: {
-    extend: {
-      backgroundColor: ['odd'],
-      textAlign: ['last'],
-    },
-  },
   theme: {
     extend: {
       fontFamily: {
@@ -38,7 +31,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/line-clamp'),
     require('@tailwindcss/typography'),
   ],
 }
