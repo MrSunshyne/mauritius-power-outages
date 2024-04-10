@@ -1,18 +1,18 @@
 <template>
   <div
-    class="p-4 rounded-xl glass flex flex-col gap-4 text-white"
+    class="p-4 rounded-xl glass flex flex-col gap-4 text-white relative"
     :class="{ 'bg-black dark': state === 'ongoing' }"
   >
     <div class="md:flex justify-between">
       <div class="relative">
         <div>
+          <div class="text-xs uppercase">{{ timeUntil }}</div>
           <div class="font-bold">{{ props.data.locality }}</div>
-          <div>{{ timeUntil }}</div>
         </div>
-        <div class="text-xs max-w-xl text-gray-400">{{ props.data.streets }}</div>
+        <div class="text-sm max-w-xl text-blue-300 pr-10 py-2 md:py-0 capitalize">{{ props.data.streets }}</div>
       </div>
       <!-- <div>Currently during powercut {{ state }}</div> -->
-      <div class="md:flex items-center justify-end">
+      <div class="md:flex text-sm items-center justify-end">
         <div class="md:flex flex-col items-end">
           <div
             class="inline md:block"
