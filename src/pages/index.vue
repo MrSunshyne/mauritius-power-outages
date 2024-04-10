@@ -46,7 +46,7 @@ const cFuture: ComputedRef<Record[]> = computed(() => {
 
     <h1>Power Outages in Mauritius</h1>
 
-    <div v-if="powerOutageQuery.isFetching">loading...</div>
+    <div v-if="powerOutageQuery.isFetching" class="py-16 text-white text-center text-2xl">loading outage data...</div>
     <div v-else>
       <div class="grid gap-10">
         <h2>Today</h2>
@@ -63,7 +63,7 @@ const cFuture: ComputedRef<Record[]> = computed(() => {
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="postcss">
 h1 {
   @apply text-4xl font-black text-white;
 }
@@ -71,6 +71,7 @@ h1 {
 h2 {
   @apply text-3xl font-black text-white;
 }
+
 </style>
 
 <route lang="yaml">

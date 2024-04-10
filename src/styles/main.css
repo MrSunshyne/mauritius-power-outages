@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body, #app, main {
+  min-height: 100dvh
+}
+
 main {
   background: linear-gradient(to right, #4b1248, #f0c27b);
   background: linear-gradient(to right, #cfdef3, #e0eafc);
