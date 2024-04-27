@@ -6,7 +6,7 @@
     <div class="md:flex justify-between">
       <div class="relative">
         <div>
-          <div class="text-xs uppercase">{{ timeUntil }}</div>
+          <div class="text-xs uppercase">{{ timeUntil }} <span class="text-gray-400"> from {{ formatDate(props.data.from) }} to {{ formatDate(props.data.to) }}</span></div>
           <div class="font-bold">{{ props.data.locality }}</div>
         </div>
         <div class="text-sm max-w-xl text-blue-300 pr-10 py-2 md:py-0 capitalize">{{ props.data.streets }}</div>
@@ -43,7 +43,7 @@
 
 <script setup lang="ts">
 import { PropType } from 'vue'
-import { useTimeAgo } from '@vueuse/core'
+import { useTimeAgo, useDateFormat } from '@vueuse/core'
 import VueCountdown from '@chenfengyuan/vue-countdown'
 import { Record } from '@/types'
 // import RomanticBulb from "./RomanticBulb.vue";
@@ -95,6 +95,11 @@ const timeDifference = computed(() => {
   const now = new Date()
   return Math.abs(target.getTime() - now.getTime())
 })
+
+function formatDate (date: Date) {
+  let formatted =  useDateFormat(date, 'HH:mm')
+  return formatted.value.replaceAll('""', '')
+}
 
 </script>
 
