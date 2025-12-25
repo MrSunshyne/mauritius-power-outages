@@ -1,5 +1,5 @@
 <template>
-  <div class="grid gap-10">
+  <div class="grid gap-4 sm:gap-6">
     <template v-for="(outage) in props.data" :key="outage.id">
       <Cell :data="outage" />
     </template>
