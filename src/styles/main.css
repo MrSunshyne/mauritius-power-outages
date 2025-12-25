@@ -1,31 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-body, #app, main {
-  min-height: 100dvh
-}
-
+body,
+#app,
 main {
-  background: linear-gradient(to right, #4b1248, #f0c27b);
-  background: linear-gradient(to right, #cfdef3, #e0eafc);
-  background: linear-gradient(to left, #000, #e9d362);
-  background: linear-gradient(to right, #011458, #034c96);
-  /* background: linear-gradient(to right, #000, #222); */
+    min-height: 100dvh;
 }
 
-
-h2, h1 {
-  @apply font-poppins text-3xl md:text-6xl font-black;
+#app > main {
+    background: linear-gradient(to right, #4b1248, #f0c27b);
+    background: linear-gradient(to right, #cfdef3, #e0eafc);
+    background: linear-gradient(to left, #000, #e9d362);
+    background: linear-gradient(to right, #011458, #034c96);
+    /* background: linear-gradient(to right, #000, #222); */
 }
 
-p { @apply text-xl ;}
+h2,
+h1 {
+    @apply font-poppins text-3xl md:text-6xl font-black;
+}
+
+p {
+    @apply text-xl;
+}
 
 blockquote {
-  @apply italic border-l-2 border-white/70 pl-5 text-xl max-w-sm leading-relaxed text-white/50;
+    @apply italic border-l-2 border-white/70 pl-5 text-xl max-w-sm leading-relaxed text-white/50;
 }
 
 .text-right blockquote {
@@ -33,11 +36,15 @@ blockquote {
 }
 
 .glass {
-  --theme-bg-color: rgba(16 18 27 / 80%);
+    --theme-bg-color: rgba(16 18 27 / 80%);
 
-  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(1, 1, 50) 35%, rgb(0, 13, 37) 50%);
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgb(1, 1, 50) 35%,
+        rgb(0, 13, 37) 50%
+    );
 
-
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(20px);
 }
