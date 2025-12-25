@@ -93,21 +93,22 @@ const goToNext = () => {
 
     <h1>Power Outages in Mauritius</h1>
 
-    <div v-if="isLoading" class="py-16 text-white text-center text-2xl">loading outage data...</div>
-    <div v-else>
-      <div class="grid gap-10">
-        <div class="flex items-center justify-between gap-4">
-          <h2>{{ dateLabel }}</h2>
-          <div class="flex gap-2">
-            <button @click="goToPrev" class="btn">Prev</button>
-            <button @click="goToToday" class="btn" :disabled="isToday">Today</button>
-            <button @click="goToNext" class="btn" :disabled="isTomorrow">Next</button>
-          </div>
+    <div class="grid gap-10">
+      <div class="flex items-center justify-between gap-4">
+        <h2>{{ dateLabel }}</h2>
+        <div class="flex gap-2">
+          <button @click="goToPrev" class="btn" :disabled="isLoading">Prev</button>
+          <button @click="goToToday" class="btn" :disabled="isToday || isLoading">Today</button>
+          <button @click="goToNext" class="btn" :disabled="isTomorrow || isLoading">Next</button>
         </div>
-        <CellGroup v-if="cSelected.length > 0" :data="cSelected"></CellGroup>
-        <div v-else class="py-16 text-white/60 text-center text-xl">
-          No power outages scheduled for this day
-        </div>
+      </div>
+
+      <div v-if="isLoading" class="py-16 text-white/60 text-center text-xl">
+        Loading outage data...
+      </div>
+      <CellGroup v-else-if="cSelected.length > 0" :data="cSelected"></CellGroup>
+      <div v-else class="py-16 text-white/60 text-center text-xl">
+        No power outages scheduled for this day
       </div>
     </div>
     <site-footer />
