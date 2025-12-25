@@ -5,8 +5,7 @@
 @tailwind utilities;
 
 body,
-#app,
-main {
+#app {
     min-height: 100dvh;
 }
 

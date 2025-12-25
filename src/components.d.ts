@@ -29,5 +29,6 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SiteFooter: typeof import('./components/site-footer.vue')['default']
+    ViewCounter: typeof import('./components/ViewCounter.vue')['default']
   }
 }
