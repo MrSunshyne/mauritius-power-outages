@@ -6,6 +6,7 @@ import { addDays, startOfDay, format } from 'date-fns'
 import { fetchLatestJson, fetchFullJson } from '@/services/api'
 import { filterByDate, flat } from '@/logic'
 import { Record } from '@/types'
+import { ANALYTICS_EVENTS } from '@/constants/analytics'
 
 const latestQuery = reactive(useQuery(
   'power-outage-latest',
@@ -115,9 +116,9 @@ const goToNext = () => {
         <h2 v-if="!isToday" class="text-xl sm:text-2xl md:text-3xl font-bold text-white">{{ dateLabel }}</h2>
         <h2 v-else class="text-xl sm:text-2xl md:text-3xl font-bold text-white">Today</h2>
         <div class="flex gap-2">
-          <button @click="goToPrev" class="btn" :disabled="isLoading">Prev</button>
-          <button v-if="!isToday" @click="goToToday" class="btn" :disabled="isLoading">Today</button>
-          <button v-if="!isToday" @click="goToNext" class="btn" :disabled="isLoading">Next</button>
+          <button @click="goToPrev" class="btn" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_PREV">Prev</button>
+          <button v-if="!isToday" @click="goToToday" class="btn" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_TODAY">Today</button>
+          <button v-if="!isToday" @click="goToNext" class="btn" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_NEXT">Next</button>
         </div>
       </div>
 
@@ -168,15 +169,15 @@ const goToNext = () => {
     <!-- Mobile sticky nav -->
     <nav class="fixed bottom-0 left-0 right-0 sm:hidden mobile-nav">
       <div class="max-w-4xl mx-auto px-4 py-3 flex gap-2">
-        <button @click="goToPrev" class="btn-mobile" :disabled="isLoading">
+        <button @click="goToPrev" class="btn-mobile" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_PREV">
           <span class="text-lg">←</span>
           <span>Prev</span>
         </button>
-        <button @click="goToToday" class="btn-mobile" :disabled="isToday || isLoading">
+        <button @click="goToToday" class="btn-mobile" :disabled="isToday || isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_TODAY">
           <span class="text-lg">•</span>
           <span>Today</span>
         </button>
-        <button @click="goToNext" class="btn-mobile" :disabled="isToday || isLoading">
+        <button @click="goToNext" class="btn-mobile" :disabled="isToday || isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_NEXT">
           <span>Next</span>
           <span class="text-lg">→</span>
         </button>
