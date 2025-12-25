@@ -2,38 +2,85 @@
 import { Head } from '@vueuse/head'
 import { useQuery } from 'vue-query'
 import { ComputedRef } from 'vue'
-import { fetchJson } from '@/services/api'
-import { filterByToday, filterByAfterToday, flat } from '@/logic'
+import { addDays, startOfDay, format } from 'date-fns'
+import { fetchLatestJson, fetchFullJson } from '@/services/api'
+import { filterByDate, flat } from '@/logic'
 import { Record } from '@/types'
 
-const powerOutageQuery = reactive(useQuery(
-  'power-outage-data',
-  () => fetchJson(),
+const latestQuery = reactive(useQuery(
+  'power-outage-latest',
+  () => fetchLatestJson(),
 ))
 
+const fullQuery = reactive(useQuery(
+  'power-outage-full',
+  () => fetchFullJson(),
+  { enabled: false },
+))
+
+const selectedDate = ref(new Date())
+const isLoadingHistory = ref(false)
+
+const isToday = computed(() => {
+  return startOfDay(selectedDate.value).getTime() === startOfDay(new Date()).getTime()
+})
+
+const isTomorrow = computed(() => {
+  const tomorrow = startOfDay(addDays(new Date(), 1)).getTime()
+  return startOfDay(selectedDate.value).getTime() === tomorrow
+})
+
+const isCurrentOrFuture = computed(() => {
+  return isToday.value || isTomorrow.value
+})
+
 const cFlat: ComputedRef<Record[]> = computed(() => {
-  return flat(powerOutageQuery.data)
+  if (isCurrentOrFuture.value) {
+    return flat(latestQuery.data)
+  }
+  return flat(fullQuery.data)
 })
 
-const cToday: ComputedRef<Record[]> = computed(() => {
-  const real = filterByToday(cFlat.value)
-  // One line of Data to test the Power Off Animations
-  // let fake = {
-  //   "date": "Le samedi 2 avril 2022 de  08:30:00 à  15:00:00",
-  //   "locality": "Roche Bois (Sample)",
-  //   "streets": "Abbatoir Road",
-  //   "district": "portlouis",
-  //   "from": "2022-04-02T04:30:00.000Z",
-  //   "to": "2022-04-16T20:00:00.000Z",
-  //   "id": "c33ebe9c075be561b0ea85cae0bbaabf"
-  // }
-  // return { fake, ...real }
-  return real
+const cSelected: ComputedRef<Record[]> = computed(() => {
+  return filterByDate(cFlat.value, selectedDate.value)
 })
 
-const cFuture: ComputedRef<Record[]> = computed(() => {
-  return filterByAfterToday(cFlat.value)
+const dateLabel = computed(() => {
+  if (isToday.value) return 'Today'
+  if (isTomorrow.value) return 'Tomorrow'
+  return format(selectedDate.value, 'EEEE, MMM d, yyyy')
 })
+
+const isLoading = computed(() => {
+  if (isLoadingHistory.value) {
+    return true
+  }
+  if (isCurrentOrFuture.value) {
+    return latestQuery.isFetching
+  }
+  return fullQuery.isFetching
+})
+
+const goToPrev = async () => {
+  const newDate = addDays(selectedDate.value, -1)
+  const willBeHistory = startOfDay(newDate).getTime() < startOfDay(new Date()).getTime()
+
+  if (willBeHistory && !fullQuery.data) {
+    isLoadingHistory.value = true
+    await fullQuery.refetch()
+    isLoadingHistory.value = false
+  }
+
+  selectedDate.value = newDate
+}
+
+const goToToday = () => {
+  selectedDate.value = new Date()
+}
+
+const goToNext = () => {
+  selectedDate.value = addDays(selectedDate.value, 1)
+}
 
 </script>
 
@@ -46,18 +93,22 @@ const cFuture: ComputedRef<Record[]> = computed(() => {
 
     <h1>Power Outages in Mauritius</h1>
 
-    <div v-if="powerOutageQuery.isFetching" class="py-16 text-white text-center text-2xl">loading outage data...</div>
+    <div v-if="isLoading" class="py-16 text-white text-center text-2xl">loading outage data...</div>
     <div v-else>
       <div class="grid gap-10">
-        <h2>Today</h2>
-        <CellGroup :data="cToday"></CellGroup>
-
-        <template v-if="cFuture.length > 0">
-          <h2>Tomorrow</h2>
-          <CellGroup :data="cFuture"></CellGroup>
-        </template>
+        <div class="flex items-center justify-between gap-4">
+          <h2>{{ dateLabel }}</h2>
+          <div class="flex gap-2">
+            <button @click="goToPrev" class="btn">Prev</button>
+            <button @click="goToToday" class="btn" :disabled="isToday">Today</button>
+            <button @click="goToNext" class="btn" :disabled="isTomorrow">Next</button>
+          </div>
+        </div>
+        <CellGroup v-if="cSelected.length > 0" :data="cSelected"></CellGroup>
+        <div v-else class="py-16 text-white/60 text-center text-xl">
+          No power outages scheduled for this day
+        </div>
       </div>
-      <!-- <List :data="powerOutageQuery.data"></List> -->
     </div>
     <site-footer />
   </div>
@@ -70,6 +121,14 @@ h1 {
 
 h2 {
   @apply text-3xl font-black text-white;
+}
+
+.btn {
+  @apply px-4 py-2 bg-white/10 text-white rounded hover:bg-white/20 transition-colors;
+}
+
+.btn:disabled {
+  @apply opacity-50 cursor-not-allowed hover:bg-white/10;
 }
 
 </style>
