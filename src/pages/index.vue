@@ -96,17 +96,20 @@ const goToNext = () => {
 </script>
 
 <template>
-  <div class="w-full max-w-4xl mx-auto px-4 py-6 pb-28 sm:px-6 sm:py-8 sm:pb-8 min-h-screen flex flex-col">
+  <div class="w-full max-w-4xl mx-auto px-4 py-6 sm:px-6 sm:py-8 flex-1 flex flex-col">
 
     <Head>
       <title>Power Outages - Mauritius</title>
     </Head>
 
-    <header class="mb-6 sm:mb-8">
+    <header class="mb-6 sm:mb-8 flex items-baseline justify-between gap-3">
       <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight">Power Outages in Mauritius</h1>
+      <div class="flex-shrink-0">
+        <ViewCounter />
+      </div>
     </header>
 
-    <main class="flex-1 flex flex-col gap-6 sm:gap-8">
+    <main class="flex flex-col gap-6 sm:gap-8">
       <!-- Desktop nav -->
       <div class="hidden sm:flex sm:items-center sm:justify-between">
         <h2 v-if="!isToday" class="text-xl sm:text-2xl md:text-3xl font-bold text-white">{{ dateLabel }}</h2>
@@ -121,7 +124,7 @@ const goToNext = () => {
       <!-- Mobile date label (hidden when viewing today) -->
       <h2 v-if="!isToday" class="text-xl font-bold text-white sm:hidden">{{ dateLabel }}</h2>
 
-      <div class="flex-1">
+      <div>
         <div v-if="isLoading" class="py-12 sm:py-16 text-white/50 text-center text-base sm:text-lg">
           Loading outage data...
         </div>
@@ -158,7 +161,9 @@ const goToNext = () => {
       </div>
     </main>
 
-    <site-footer class="hidden sm:block" />
+    <footer class="mt-auto pt-8 pb-24 sm:pb-0">
+      <site-footer />
+    </footer>
 
     <!-- Mobile sticky nav -->
     <nav class="fixed bottom-0 left-0 right-0 sm:hidden mobile-nav">
