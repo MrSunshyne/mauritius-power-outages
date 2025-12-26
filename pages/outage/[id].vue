@@ -13,53 +13,6 @@ definePageMeta({
   layout: 'default',
 })
 
-// Dynamic SEO based on outage data
-const title = computed(() => {
-  if (selectedOutage.value) {
-    const location = selectedOutage.value.locality
-    const date = format(new Date(selectedOutage.value.from), 'MMM d, yyyy')
-    const time = selectedOutage.value.from.slice(11, 16) + ' - ' + selectedOutage.value.to.slice(11, 16)
-    return `Power Outage: ${location} - ${date} ${time} | Mauritius`
-  }
-  return 'Power Outage Details - Mauritius'
-})
-
-const description = computed(() => {
-  if (selectedOutage.value) {
-    const location = selectedOutage.value.locality
-    const streets = selectedOutage.value.streets
-    const date = format(new Date(selectedOutage.value.from), 'EEEE, MMMM d, yyyy')
-    const time = selectedOutage.value.from.slice(11, 16) + ' to ' + selectedOutage.value.to.slice(11, 16)
-    return `Power outage scheduled for ${location} (${streets}) on ${date} from ${time}. Check current power outage information for Mauritius.`
-  }
-  return 'View specific power outage information for Mauritius'
-})
-
-// Update head when data loads (only in production for OG tags)
-if (process.dev) {
-  // In dev mode, just set a basic title
-  useHead({
-    title: 'Power Outage Details - Mauritius',
-  })
-} else {
-  // In production, set dynamic OG tags
-  watch([selectedOutage, description], () => {
-    useHead({
-      title: title.value,
-      meta: [
-        { name: 'description', content: description.value },
-        { property: 'og:title', content: title.value },
-        { property: 'og:description', content: description.value },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: `https://power-outages-mauritius.netlify.app/outage/${outageId}` },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: title.value },
-        { name: 'twitter:description', content: description.value },
-      ],
-    })
-  }, { immediate: true })
-}
-
 // Data fetching
 const latestData = ref<{ today: Record[], future: Record[] } | null>(null)
 const fullData = ref<any>(null)
@@ -113,6 +66,53 @@ const allOutages = computed(() => {
 const selectedOutage = computed(() => {
   return allOutages.value.find(o => o.id === outageId)
 })
+
+// Dynamic SEO based on outage data
+const title = computed(() => {
+  if (selectedOutage.value) {
+    const location = selectedOutage.value.locality
+    const date = format(new Date(selectedOutage.value.from), 'MMM d, yyyy')
+    const time = selectedOutage.value.from.slice(11, 16) + ' - ' + selectedOutage.value.to.slice(11, 16)
+    return `Power Outage: ${location} - ${date} ${time} | Mauritius`
+  }
+  return 'Power Outage Details - Mauritius'
+})
+
+const description = computed(() => {
+  if (selectedOutage.value) {
+    const location = selectedOutage.value.locality
+    const streets = selectedOutage.value.streets
+    const date = format(new Date(selectedOutage.value.from), 'EEEE, MMMM d, yyyy')
+    const time = selectedOutage.value.from.slice(11, 16) + ' to ' + selectedOutage.value.to.slice(11, 16)
+    return `Power outage scheduled for ${location} (${streets}) on ${date} from ${time}. Check current power outage information for Mauritius.`
+  }
+  return 'View specific power outage information for Mauritius'
+})
+
+// Update head when data loads (only in production for OG tags)
+if (process.dev) {
+  // In dev mode, just set a basic title
+  useHead({
+    title: 'Power Outage Details - Mauritius',
+  })
+} else {
+  // In production, set dynamic OG tags
+  watch([selectedOutage, description], () => {
+    useHead({
+      title: title.value,
+      meta: [
+        { name: 'description', content: description.value },
+        { property: 'og:title', content: title.value },
+        { property: 'og:description', content: description.value },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: `https://power-outages-mauritius.netlify.app/outage/${outageId}` },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: title.value },
+        { name: 'twitter:description', content: description.value },
+      ],
+    })
+  }, { immediate: true })
+}
 
 const currentOutages = computed(() => {
   return latestData.value ? flat(latestData.value) : []
