@@ -32,25 +32,6 @@ onMounted(async () => {
     console.error('Failed to fetch power outage data:', e)
     latestStatus.value = 'error'
   }
-
-  // Check for outage ID in URL on page load after data is loaded
-  const route = useRoute()
-  if (route.query.outage) {
-    await handleOutageSelection(route.query.outage as string)
-  }
-})
-
-// Watch for route changes
-watch(() => useRoute().query, async (newQuery, oldQuery) => {
-  // If outage ID is added/removed in query
-  if (newQuery.outage !== oldQuery.outage) {
-    if (newQuery.outage) {
-      await handleOutageSelection(newQuery.outage as string)
-    } else {
-      // Outage ID was removed (user navigated to another day)
-      // Do nothing, let normal navigation handle it
-    }
-  }
 })
 
 // Full history - lazy, fetched on demand
@@ -58,7 +39,6 @@ const fullData = ref<any>(null)
 const isLoadingHistory = ref(false)
 
 const selectedDate = ref(new Date())
-const selectedOutageId = ref<string | null>(null)
 
 const isToday = computed(() => {
   return startOfDay(selectedDate.value).getTime() === startOfDay(new Date()).getTime()
@@ -106,107 +86,7 @@ const isLoading = computed(() => {
   return false
 })
 
-// Handle outage selection from URL query parameter
-const handleOutageSelection = async (outageId: string) => {
-  if (!outageId) {
-    // Clear selected outage if no ID provided
-    if (selectedOutageId.value !== null) {
-      selectedOutageId.value = null
-    }
-    return
-  }
-
-  // Wait for data to be loaded if it's not ready yet
-  if (latestStatus.value === 'pending') {
-    // Wait for latest data to load
-    await new Promise(resolve => {
-      const unwatch = watch(latestStatus, (status) => {
-        if (status !== 'pending') {
-          unwatch()
-          resolve(void 0)
-        }
-      })
-    })
-  }
-
-  // First try to find in current/latest data
-  let allOutages = [...cFlat.value]
-  let selectedOutage = allOutages.find(o => o.id === outageId)
-
-  // If not found in current data, it might be historical - fetch full data
-  if (!selectedOutage && !fullData.value) {
-    console.log('Outage not found in current data, fetching full history...')
-    isLoadingHistory.value = true
-    try {
-      const response = await $fetch<string>(API_URLS.full)
-      fullData.value = typeof response === 'string' ? JSON.parse(response) : response
-
-      // Now search in full data
-      allOutages = [...flat(fullData.value)]
-      selectedOutage = allOutages.find(o => o.id === outageId)
-    } catch (e) {
-      console.error('Failed to fetch full history:', e)
-    } finally {
-      isLoadingHistory.value = false
-    }
-  }
-
-  if (selectedOutage) {
-    // Update selected date to match the outage's date
-    selectedOutageId.value = outageId
-    selectedDate.value = new Date(selectedOutage.from)
-
-    // Scroll to the selected outage after a short delay
-    nextTick(() => {
-      const outageElement = document.querySelector(`[data-outage-id="${outageId}"]`)
-      if (outageElement) {
-        outageElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
-      }
-    })
-
-    console.log('Outage selected:', selectedOutage.locality, 'on', selectedOutage.from)
-  } else {
-    console.warn('Outage not found:', outageId)
-    // Clear the invalid outage ID from URL
-    const route = useRoute()
-    const router = useRouter()
-    await router.replace({
-      query: {
-        ...Object.fromEntries(
-          Object.entries(route.query).filter(([key]) => key !== 'outage')
-        )
-      }
-    })
-  }
-}
-
-// Computed: Check if specific outage is selected
-const isOutageSelected = computed(() => selectedOutageId.value !== null)
-
-// Get the selected outage object
-const selectedOutage = computed(() => {
-  if (!selectedOutageId.value) return null
-  const allOutages = [...cFlat.value]
-  return allOutages.find(o => o.id === selectedOutageId.value)
-})
-
 const goToPrev = async () => {
-  // Clear selected outage when navigating
-  selectedOutageId.value = null
-
-  // Clear outage from URL
-  const route = useRoute()
-  const router = useRouter()
-  if (route.query.outage) {
-    await router.push({
-      query: {
-        ...Object.fromEntries(
-          Object.entries(route.query).filter(([key]) => key !== 'outage')
-        )
-      }
-    })
-  }
-
   const newDate = addDays(selectedDate.value, -1)
   const willBeHistory = startOfDay(newDate).getTime() < startOfDay(new Date()).getTime()
 
@@ -227,43 +107,11 @@ const goToPrev = async () => {
 }
 
 const goToToday = () => {
-  // Clear selected outage when navigating
-  selectedOutageId.value = null
-
-  // Clear outage from URL
-  const route = useRoute()
-  const router = useRouter()
-  if (route.query.outage) {
-    router.push({
-      query: {
-        ...Object.fromEntries(
-          Object.entries(route.query).filter(([key]) => key !== 'outage')
-        )
-      }
-    })
-  }
-
   selectedDate.value = new Date()
 }
 
 const goToNext = () => {
-  // Clear selected outage when navigating
-  selectedOutageId.value = null
-
-  // Clear outage from URL
-  const route = useRoute()
-  const router = useRouter()
-  if (route.query.outage) {
-    router.push({
-      query: {
-        ...Object.fromEntries(
-          Object.entries(route.query).filter(([key]) => key !== 'outage')
-        )
-      }
-    })
-  }
-
-  // Skip tomorrow if we're on: today since it's already shown
+  // Skip tomorrow if we're on today since it's already shown
   if (isToday.value) {
     selectedDate.value = addDays(new Date(), 2)
   }
@@ -310,7 +158,7 @@ const goToNext = () => {
             <section>
               <!-- Mobile only heading for Today -->
               <h2 class="text-xl font-bold text-white mb-4 sm:hidden">Today</h2>
-              <CellGroup v-if="cToday.length > 0" :data="cToday" :selected-outage-id="selectedOutageId" />
+              <CellGroup v-if="cToday.length > 0" :data="cToday" />
               <div v-else class="py-8 text-white/50 text-center text-base">
                 No power outages scheduled for today
               </div>
@@ -318,7 +166,7 @@ const goToNext = () => {
 
             <section>
               <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6">Tomorrow</h2>
-              <CellGroup v-if="cTomorrow.length > 0" :data="cTomorrow" :selected-outage-id="selectedOutageId" />
+              <CellGroup v-if="cTomorrow.length > 0" :data="cTomorrow" />
               <div v-else class="py-8 text-white/50 text-center text-base">
                 No power outages scheduled for tomorrow
               </div>
@@ -328,7 +176,7 @@ const goToNext = () => {
 
         <!-- Other dates: show single day -->
         <template v-else>
-          <CellGroup v-if="cSelected.length > 0" :data="cSelected" :selected-outage-id="selectedOutageId" />
+          <CellGroup v-if="cSelected.length > 0" :data="cSelected" />
           <div v-else class="py-12 sm:py-16 text-white/50 text-center text-base sm:text-lg">
             No power outages scheduled for this day
           </div>

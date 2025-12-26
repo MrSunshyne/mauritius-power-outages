@@ -9,11 +9,20 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
 
-  // Static site generation (SPA mode to avoid SSR issues with vue-countdown and apexcharts)
-  ssr: false,
+  // Hybrid mode: SPA in dev, SSR in production for outage pages
+  ssr: process.env.NODE_ENV === 'production',
   nitro: {
-    preset: 'static',
+    preset: process.env.NODE_ENV === 'production' ? 'netlify' : 'static',
   },
+
+  // Route-specific rules for production optimization
+  routeRules: process.env.NODE_ENV === 'production' ? {
+    // Pre-render main pages for best performance
+    '/': { prerender: true },
+    '/statistics': { prerender: true },
+    // Outage pages use SSR for dynamic OG tags
+    '/outage/**': { ssr: true },
+  } : {},
 
   // App configuration
   app: {

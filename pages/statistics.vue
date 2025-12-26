@@ -180,17 +180,24 @@ const hoursWasted = computed(() => {
             <HeroSection class="col-span-2" :outages-today="outagesToday" :hours-wasted="hoursWasted"
                 :count-per-date="countPerDate" />
 
-            <ChartsChartCountPerDate class="col-span-2" :data="countPerDate" :title="'Detailed timeline'" />
+            <ClientOnly>
+                <ChartsChartCountPerDate class="col-span-2" :data="countPerDate" :title="'Detailed timeline'" />
 
-            <ChartsChartCountPerDay class="col-span-2" :data="countPerDay" :title="'Distribution by day'" />
+                <ChartsChartCountPerDay class="col-span-2" :data="countPerDay" :title="'Distribution by day'" />
 
-            <ChartsChartCountPerMonth :data="countPerMonth" class="col-span-2" :title="'Monthly quota of darkness'" />
+                <ChartsChartCountPerMonth :data="countPerMonth" class="col-span-2" :title="'Monthly quota of darkness'" />
 
-            <ChartsChartCountPerWeek :data="countPerWeek" :title="'Week of the year'" class="col-span-2" />
+                <ChartsChartCountPerWeek :data="countPerWeek" :title="'Week of the year'" class="col-span-2" />
 
-            <ChartsChartCountPerHour :data="countPerHour" class="col-span-2" :title="'Segments of the day'" />
+                <ChartsChartCountPerHour :data="countPerHour" class="col-span-2" :title="'Segments of the day'" />
 
-            <ChartsChartCountPerDistrict class="col-span-2" :data="countPerDistrict" :title="'District statistics'" />
+                <ChartsChartCountPerDistrict class="col-span-2" :data="countPerDistrict" :title="'District statistics'" />
+                <template #fallback>
+                    <div class="col-span-2 text-center py-8 text-white/50">
+                        Loading charts...
+                    </div>
+                </template>
+            </ClientOnly>
         </div>
     </div>
 </template>

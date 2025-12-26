@@ -1,11 +1,7 @@
 <template>
   <div
     class="p-4 sm:p-5 rounded-xl glass flex flex-col gap-3 text-white relative cursor-pointer hover:brightness-110 transition-all duration-200"
-    :class="[
-      { 'bg-black dark': state === 'ongoing' },
-      { 'ring-4 ring-white/30': isSelected }
-    ]"
-    :data-outage-id="props.data.id"
+    :class="{ 'bg-black dark': state === 'ongoing' }"
     @click="handleCellClick"
   >
     <div class="md:flex md:justify-between md:items-center">
@@ -31,25 +27,15 @@
             </ClientOnly>
           </div>
         </div>
-        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 md:relative md:top-0 md:right-0 flex gap-2">
-          <button
-            v-if="isSelected"
-            @click="copyPermalink"
-            class="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors"
-            title="Copy permalink"
-          >
-            <Icon name="carbon:share" class="w-4 h-4 text-white" />
-          </button>
-          <div class="w-12 h-12 sm:w-16 sm:h-16 grid place-items-center">
-            <RomanticCandle
-              v-if="state === 'ongoing'"
-              class="absolute right-[-25px] top-[-40px] md:top-[-60px] scale-[0.2]"
-            />
-            <div
-              v-else
-              class="w-2.5 h-2.5 shine rounded-full bg-green-500"
-            >&nbsp;</div>
-          </div>
+        <div class="absolute top-3 right-3 sm:top-4 sm:right-4 md:relative md:top-0 md:right-0 w-12 h-12 sm:w-16 sm:h-16 grid place-items-center">
+          <RomanticCandle
+            v-if="state === 'ongoing'"
+            class="absolute right-[-25px] top-[-40px] md:top-[-60px] scale-[0.2]"
+          />
+          <div
+            v-else
+            class="w-2.5 h-2.5 shine rounded-full bg-green-500"
+          ></div>
         </div>
       </div>
     </div>
@@ -63,40 +49,15 @@ import type { Record } from '~/types'
 
 const props = defineProps<{
   data: Record
-  selectedOutageId?: string | null
 }>()
-
-const route = useRoute()
-
-const isSelected = computed(() => {
-  return props.selectedOutageId === props.data.id
-})
 
 const timeUntil = useTimeAgo(new Date(props.data.from))
 
 const handleCellClick = () => {
-  const route = useRoute()
+  // Redirect directly to clean URL page for consistent experience
+  const cleanUrl = `/outage/${props.data.id}`
   const router = useRouter()
-  router.push({
-    query: {
-      ...route.query,
-      outage: props.data.id
-    }
-  })
-}
-
-const copyPermalink = async () => {
-  const route = useRoute()
-  const permalinkUrl = `${window.location.origin}${route.fullPath}?outage=${props.data.id}`
-
-  try {
-    await navigator.clipboard.writeText(permalinkUrl)
-    // Could add a toast notification here in the future
-    console.log('Permalink copied:', permalinkUrl)
-  } catch (err) {
-    console.error('Failed to copy permalink:', err)
-    // Fallback: could open a share dialog or show the URL
-  }
+  router.push(cleanUrl)
 }
 
 const state = computed(() => {
