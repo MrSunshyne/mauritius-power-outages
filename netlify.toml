@@ -1,17 +1,28 @@
 [build]
-  command = "pnpm generate"
+  command = "pnpm build"
   publish = ".output/public"
+  functions = ".netlify/functions-internal"
 
-[[headers]]
-  for = "/*"
-    [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
-
+# Cache static assets aggressively
 [[headers]]
   for = "/_nuxt/*"
     [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# HTML pages - shorter cache for dynamic content
+[[headers]]
+  for = "/*.html"
+    [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Default for other routes
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+
+# SPA fallback for client-side routing
+# Netlify automatically handles function routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
