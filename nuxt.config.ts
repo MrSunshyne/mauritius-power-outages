@@ -15,13 +15,11 @@ export default defineNuxtConfig({
     preset: process.env.NODE_ENV === 'production' ? 'netlify' : 'static',
   },
 
-  // Route-specific rules for production optimization
+  // Route-specific rules for SSR
   routeRules: process.env.NODE_ENV === 'production' ? {
-    // Pre-render main pages for best performance
-    '/': { prerender: true },
-    '/statistics': { prerender: true },
     // Outage pages use SSR for dynamic OG tags
     '/outage/**': { ssr: true },
+    // Main pages use SPA (no prerendering due to dynamic data and client-only components)
   } : {},
 
   // App configuration
