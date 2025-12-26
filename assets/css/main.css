@@ -3,74 +3,69 @@
 
 /* Custom theme configuration via CSS */
 @theme {
-  --font-family-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
-  --width-8xl: 100rem;
+    --font-family-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
+    --width-8xl: 100rem;
 }
 
 /* Base styles */
 body,
 #__nuxt {
-  min-height: 100dvh;
+    min-height: 100dvh;
 }
 
 #__nuxt > main {
-  background: linear-gradient(to right, #011458, #034c96);
+    background: linear-gradient(to right, #011458, #034c96);
 }
 
-h2,
+/*h2,
 h1 {
   font-family: var(--font-family-poppins);
-  font-size: clamp(1.875rem, 5vw, 3.75rem);
-  font-weight: 900;
+  @apply text-3xl md:text-6xl font-black;
 }
-
-p {
-  font-size: 1.25rem;
-}
+*/
 
 blockquote {
-  font-style: italic;
-  border-left-width: 2px;
-  border-color: rgb(255 255 255 / 0.7);
-  padding-left: 1.25rem;
-  font-size: 1.25rem;
-  max-width: 24rem;
-  line-height: 1.625;
-  color: rgb(255 255 255 / 0.5);
+    font-style: italic;
+    border-left-width: 2px;
+    border-color: rgb(255 255 255 / 0.7);
+    padding-left: 1.25rem;
+    max-width: 24rem;
+    line-height: 1.625;
+    color: rgb(255 255 255 / 0.5);
 }
 
 .text-right blockquote {
-  border-left: 0;
-  border-right-width: 2px;
-  border-color: rgb(255 255 255 / 0.7);
-  padding-left: 0;
-  padding-right: 1.25rem;
+    border-left: 0;
+    border-right-width: 2px;
+    border-color: rgb(255 255 255 / 0.7);
+    padding-left: 0;
+    padding-right: 1.25rem;
 }
 
 .glass {
-  --theme-bg-color: rgba(16 18 27 / 80%);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgb(1, 1, 50) 35%,
-    rgb(0, 13, 37) 50%
-  );
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(20px);
+    --theme-bg-color: rgba(16 18 27 / 80%);
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgb(1, 1, 50) 35%,
+        rgb(0, 13, 37) 50%
+    );
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 /* Page transitions */
 .slide-enter-active,
 .slide-leave-active {
-  transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 .slide-enter-from {
-  opacity: 0;
-  transform: translateX(20px);
+    opacity: 0;
+    transform: translateX(20px);
 }
 
 .slide-leave-to {
-  opacity: 0;
-  transform: translateX(-20px);
+    opacity: 0;
+    transform: translateX(-20px);
 }
