@@ -1,6 +1,6 @@
 [build]
   command = "pnpm build"
-  publish = ".output/public"
+  publish = "dist"
   functions = ".netlify/functions-internal"
 
 # Cache static assets aggressively
