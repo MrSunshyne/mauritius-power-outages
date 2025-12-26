@@ -33,19 +33,19 @@ onMounted(async () => {
     latestStatus.value = 'error'
   }
 
-  // Check for outage ID in URL on page load after data is loaded
+  // Check for outage ID in URL on page load
   const route = useRoute()
   if (route.query.outage) {
-    await handleOutageSelection(route.query.outage as string)
+    handleOutageSelection(route.query.outage as string)
   }
 })
 
 // Watch for route changes
-watch(() => useRoute().query, async (newQuery, oldQuery) => {
+watch(() => useRoute().query, (newQuery, oldQuery) => {
   // If outage ID is added/removed in query
   if (newQuery.outage !== oldQuery.outage) {
     if (newQuery.outage) {
-      await handleOutageSelection(newQuery.outage as string)
+      handleOutageSelection(newQuery.outage as string)
     } else {
       // Outage ID was removed (user navigated to another day)
       // Do nothing, let normal navigation handle it
@@ -80,15 +80,54 @@ const cFlat = computed<Record[]>(() => {
   return flat(fullData.value)
 })
 
-const cToday = computed<Record[]>(() => {
+// Handle outage selection from URL query parameter
+const handleOutageSelection = (outageId: string) => {
+  if (!outageId) {
+    // Clear selected outage if no ID provided
+    if (selectedOutageId.value !== null) {
+      selectedOutageId.value = null
+    }
+    return
+  }
+
+  // Find the outage in current data
+  const allOutages = [...cFlat.value]
+  const selectedOutage = allOutages.find(o => o.id === outageId)
+
+  if (selectedOutage) {
+    // Update selected date to match the outage's date
+    selectedOutageId.value = outageId
+    selectedDate.value = new Date(selectedOutage.from)
+
+    // Scroll to the selected outage after a short delay
+    nextTick(() => {
+      const outageElement = document.querySelector(`[data-outage-id="${outageId}"]`)
+      if (outageElement) {
+        outageElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }
+    })
+  }
+}
+
+// Computed: Check if specific outage is selected
+const isOutageSelected = computed(() => selectedOutageId.value !== null)
+
+// Get the selected outage object
+const selectedOutage = computed(() => {
+  if (!selectedOutageId.value) return null
+  const allOutages = [...cFlat.value]
+  return allOutages.find(o => o.id === selectedOutageId.value)
+})
+
+const cToday: ComputedRef<Record[]> = computed(() => {
   return filterByDate(cFlat.value, new Date())
 })
 
-const cTomorrow = computed<Record[]>(() => {
+const cTomorrow: ComputedRef<Record[]> = computed(() => {
   return filterByDate(cFlat.value, addDays(new Date(), 1))
 })
 
-const cSelected = computed<Record[]>(() => {
+const cSelected: ComputedRef<Record[]> = computed(() => {
   return filterByDate(cFlat.value, selectedDate.value)
 })
 
@@ -106,106 +145,9 @@ const isLoading = computed(() => {
   return false
 })
 
-// Handle outage selection from URL query parameter
-const handleOutageSelection = async (outageId: string) => {
-  if (!outageId) {
-    // Clear selected outage if no ID provided
-    if (selectedOutageId.value !== null) {
-      selectedOutageId.value = null
-    }
-    return
-  }
-
-  // Wait for data to be loaded if it's not ready yet
-  if (latestStatus.value === 'pending') {
-    // Wait for latest data to load
-    await new Promise(resolve => {
-      const unwatch = watch(latestStatus, (status) => {
-        if (status !== 'pending') {
-          unwatch()
-          resolve(void 0)
-        }
-      })
-    })
-  }
-
-  // First try to find in current/latest data
-  let allOutages = [...cFlat.value]
-  let selectedOutage = allOutages.find(o => o.id === outageId)
-
-  // If not found in current data, it might be historical - fetch full data
-  if (!selectedOutage && !fullData.value) {
-    console.log('Outage not found in current data, fetching full history...')
-    isLoadingHistory.value = true
-    try {
-      const response = await $fetch<string>(API_URLS.full)
-      fullData.value = typeof response === 'string' ? JSON.parse(response) : response
-
-      // Now search in full data
-      allOutages = [...flat(fullData.value)]
-      selectedOutage = allOutages.find(o => o.id === outageId)
-    } catch (e) {
-      console.error('Failed to fetch full history:', e)
-    } finally {
-      isLoadingHistory.value = false
-    }
-  }
-
-  if (selectedOutage) {
-    // Update selected date to match the outage's date
-    selectedOutageId.value = outageId
-    selectedDate.value = new Date(selectedOutage.from)
-
-    // Scroll to the selected outage after a short delay
-    nextTick(() => {
-      const outageElement = document.querySelector(`[data-outage-id="${outageId}"]`)
-      if (outageElement) {
-        outageElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
-      }
-    })
-
-    console.log('Outage selected:', selectedOutage.locality, 'on', selectedOutage.from)
-  } else {
-    console.warn('Outage not found:', outageId)
-    // Clear the invalid outage ID from URL
-    const route = useRoute()
-    const router = useRouter()
-    await router.replace({
-      query: {
-        ...Object.fromEntries(
-          Object.entries(route.query).filter(([key]) => key !== 'outage')
-        )
-      }
-    })
-  }
-}
-
-// Computed: Check if specific outage is selected
-const isOutageSelected = computed(() => selectedOutageId.value !== null)
-
-// Get the selected outage object
-const selectedOutage = computed(() => {
-  if (!selectedOutageId.value) return null
-  const allOutages = [...cFlat.value]
-  return allOutages.find(o => o.id === selectedOutageId.value)
-})
-
 const goToPrev = async () => {
   // Clear selected outage when navigating
   selectedOutageId.value = null
-
-  // Clear outage from URL
-  const route = useRoute()
-  const router = useRouter()
-  if (route.query.outage) {
-    await router.push({
-      query: {
-        ...Object.fromEntries(
-          Object.entries(route.query).filter(([key]) => key !== 'outage')
-        )
-      }
-    })
-  }
 
   const newDate = addDays(selectedDate.value, -1)
   const willBeHistory = startOfDay(newDate).getTime() < startOfDay(new Date()).getTime()
@@ -229,20 +171,6 @@ const goToPrev = async () => {
 const goToToday = () => {
   // Clear selected outage when navigating
   selectedOutageId.value = null
-
-  // Clear outage from URL
-  const route = useRoute()
-  const router = useRouter()
-  if (route.query.outage) {
-    router.push({
-      query: {
-        ...Object.fromEntries(
-          Object.entries(route.query).filter(([key]) => key !== 'outage')
-        )
-      }
-    })
-  }
-
   selectedDate.value = new Date()
 }
 
@@ -250,20 +178,7 @@ const goToNext = () => {
   // Clear selected outage when navigating
   selectedOutageId.value = null
 
-  // Clear outage from URL
-  const route = useRoute()
-  const router = useRouter()
-  if (route.query.outage) {
-    router.push({
-      query: {
-        ...Object.fromEntries(
-          Object.entries(route.query).filter(([key]) => key !== 'outage')
-        )
-      }
-    })
-  }
-
-  // Skip tomorrow if we're on: today since it's already shown
+  // Skip tomorrow if we're on today since it's already shown
   if (isToday.value) {
     selectedDate.value = addDays(new Date(), 2)
   }
@@ -271,16 +186,18 @@ const goToNext = () => {
     selectedDate.value = addDays(selectedDate.value, 1)
   }
 }
+
 </script>
 
 <template>
   <div class="w-full max-w-4xl mx-auto px-4 py-6 sm:px-6 sm:py-8 flex-1 flex flex-col">
+
+
+
     <header class="mb-6 sm:mb-8 flex items-baseline justify-between gap-3">
       <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight">Power Outages in Mauritius</h1>
       <div class="flex-shrink-0">
-        <ClientOnly>
-          <ViewCounter />
-        </ClientOnly>
+        <ViewCounter />
       </div>
     </header>
 
@@ -290,9 +207,9 @@ const goToNext = () => {
         <h2 v-if="!isToday" class="text-xl sm:text-2xl md:text-3xl font-bold text-white">{{ dateLabel }}</h2>
         <h2 v-else class="text-xl sm:text-2xl md:text-3xl font-bold text-white">Today</h2>
         <div class="flex gap-2">
-          <button class="btn" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_PREV" @click="goToPrev">Prev</button>
-          <button v-if="!isToday" class="btn" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_TODAY" @click="goToToday">Today</button>
-          <button v-if="!isToday" class="btn" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_NEXT" @click="goToNext">Next</button>
+          <button @click="goToPrev" class="btn" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_PREV">Prev</button>
+          <button v-if="!isToday" @click="goToToday" class="btn" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_TODAY">Today</button>
+          <button v-if="!isToday" @click="goToNext" class="btn" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_NEXT">Next</button>
         </div>
       </div>
 
@@ -337,93 +254,55 @@ const goToNext = () => {
     </main>
 
     <footer class="mt-auto pt-8 pb-24 sm:pb-0">
-      <SiteFooter />
+      <site-footer />
     </footer>
 
     <!-- Mobile sticky nav -->
     <nav class="fixed bottom-0 left-0 right-0 sm:hidden mobile-nav">
       <div class="max-w-4xl mx-auto px-4 py-3 flex gap-2">
         <button @click="goToPrev" class="btn-mobile" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_PREV">
-          <span class="text-lg">&larr;</span>
+          <span class="text-lg">←</span>
           <span>Prev</span>
         </button>
         <button @click="goToToday" class="btn-mobile" :disabled="isToday || isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_TODAY">
-          <span class="text-lg">&bull;</span>
+          <span class="text-lg">•</span>
           <span>Today</span>
         </button>
         <button @click="goToNext" class="btn-mobile" :disabled="isToday || isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_NEXT">
           <span>Next</span>
-          <span class="text-lg">&rarr;</span>
+          <span class="text-lg">→</span>
         </button>
       </div>
     </nav>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="postcss">
 .btn {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  background-color: rgb(255 255 255 / 0.1);
-  color: white;
-  border-radius: 0.5rem;
-  transition-property: color, background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.btn:hover {
-  background-color: rgb(255 255 255 / 0.2);
-}
-
-.btn:active {
-  background-color: rgb(255 255 255 / 0.25);
+  @apply px-4 py-2 text-sm font-medium bg-white/10 text-white rounded-lg;
+  @apply hover:bg-white/20 active:bg-white/25 transition-colors;
 }
 
 .btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.btn:disabled:hover,
-.btn:disabled:active {
-  background-color: rgb(255 255 255 / 0.1);
+  @apply opacity-40 cursor-not-allowed hover:bg-white/10 active:bg-white/10;
 }
 
 .mobile-nav {
-  background-color: rgb(0 0 0 / 0.8);
-  backdrop-filter: blur(24px);
-  border-top: 1px solid rgb(255 255 255 / 0.1);
+  @apply bg-black/80 backdrop-blur-xl border-t border-white/10;
   padding-bottom: env(safe-area-inset-bottom);
 }
 
 .btn-mobile {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.875rem 0;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: white;
-  border-radius: 0.75rem;
-  background-color: rgb(255 255 255 / 0.1);
-  transition-property: color, background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.btn-mobile:active {
-  background-color: rgb(255 255 255 / 0.2);
+  @apply flex-1 flex items-center justify-center gap-2 py-3.5 text-sm font-medium text-white rounded-xl;
+  @apply bg-white/10 active:bg-white/20 transition-colors;
 }
 
 .btn-mobile:disabled {
-  opacity: 0.4;
-}
-
-.btn-mobile:disabled:active {
-  background-color: rgb(255 255 255 / 0.1);
+  @apply opacity-40 active:bg-white/10;
 }
 </style>
+
+<route lang="yaml">
+meta:
+  layout: default
+</route>
