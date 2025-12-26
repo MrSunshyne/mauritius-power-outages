@@ -9,18 +9,13 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
 
-  // Hybrid mode: SPA in dev, SSR in production for outage pages
-  ssr: process.env.NODE_ENV === 'production',
+  // Temporarily disable SSR to test if SPA works on Netlify
+  ssr: false,
   nitro: {
-    preset: process.env.NODE_ENV === 'production' ? 'netlify' : 'static',
+    preset: 'static',
   },
 
-  // Route-specific rules for SSR
-  routeRules: process.env.NODE_ENV === 'production' ? {
-    // Outage pages use SSR for dynamic OG tags
-    '/outage/**': { ssr: true },
-    // Main pages use SPA (no prerendering due to dynamic data and client-only components)
-  } : {},
+  // No route rules for now
 
   // App configuration
   app: {
