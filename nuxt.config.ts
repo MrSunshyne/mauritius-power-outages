@@ -26,7 +26,7 @@ export default defineNuxtConfig({
 
   // Site config for OG Image module
   site: {
-    url: 'https://power-outages-mauritius.netlify.app',
+    // URL will be detected automatically from runtime
     name: 'Power Outages Mauritius',
   },
 
@@ -51,10 +51,7 @@ export default defineNuxtConfig({
         { property: 'og:site_name', content: 'Power Outages Mauritius' },
         { property: 'og:type', content: 'website' },
         { property: 'og:locale', content: 'en_MU' },
-        { property: 'og:image', content: 'https://power-outages-mauritius.netlify.app/og/default.png' },
-        { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
-        { property: 'og:image:alt', content: 'Power Outages Mauritius - Live power cut schedules' },
+        // og:image will be set automatically by nuxt-og-image
         // Twitter defaults
         { name: 'twitter:card', content: 'summary_large_image' },
       ],

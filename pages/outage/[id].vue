@@ -93,7 +93,7 @@ useSeoMeta({
   ogTitle: () => title.value,
   ogDescription: () => description.value,
   ogType: 'article',
-  ogUrl: `https://power-outages-mauritius.netlify.app/outage/${outageId}`,
+  // ogUrl will be set automatically by nuxt-og-image
   ogSiteName: 'Power Outages Mauritius',
   ogLocale: 'en_MU',
   twitterCard: 'summary_large_image',
