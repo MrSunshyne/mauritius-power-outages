@@ -1,0 +1,104 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  compatibilityDate: '2024-12-26',
+  devtools: { enabled: true },
+
+  modules: [
+    '@vueuse/nuxt',
+    '@nuxt/icon',
+     'nuxt-og-image',
+  ],
+
+  // Enable SSR for dynamic OG meta tags
+  ssr: true,
+  nitro: {
+    preset: 'netlify',
+  },
+
+  // Hybrid rendering: static pages except dynamic outage pages
+  routeRules: {
+    // Homepage and statistics are static (ISR with 1 hour revalidation)
+    '/': { isr: 3600 },
+    '/statistics': { isr: 3600 },
+    // Outage pages: ISR with 15-minute cache (outage data changes infrequently)
+    '/outage/**': { isr: 900 },
+  },
+
+  // Site config for OG Image module
+  site: {
+    // URL will be detected automatically from runtime
+    name: 'Power Outages Mauritius',
+  },
+
+  // App configuration
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      ],
+      meta: [
+        // Basic meta
+        { name: 'msapplication-TileColor', content: '#020024' },
+        { name: 'theme-color', content: '#020024' },
+        { name: 'robots', content: 'index, follow' },
+        { name: 'author', content: 'Power Outages Mauritius' },
+        // Default OG tags (overridden by pages)
+        { property: 'og:site_name', content: 'Power Outages Mauritius' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:locale', content: 'en_MU' },
+        // og:image will be set automatically by nuxt-og-image
+        // Twitter defaults
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
+      script: [
+        // Dark mode initialization (prevents flash)
+        {
+          innerHTML: `(function(){const prefersDark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;const setting=localStorage.getItem("nuxt-color-mode")||"system";if(setting==="dark"||(prefersDark&&setting!=="light"))document.documentElement.classList.add("dark")})()`,
+        },
+        // GoatCounter
+        {
+          src: '//gc.zgo.at/count.js',
+          async: true,
+          'data-goatcounter': 'https://power-outages-mauritius.goatcounter.com/count',
+        },
+        // Umami Analytics
+        {
+          src: 'https://cloud.umami.is/script.js',
+          defer: true,
+          'data-website-id': '18b48648-e7d1-40f2-88e5-322e805d6536',
+        },
+      ],
+    },
+    pageTransition: { name: 'slide', mode: 'out-in' },
+  },
+
+  // CSS
+  css: ['~/assets/css/main.css'],
+
+  // PostCSS with Tailwind v4
+  postcss: {
+    plugins: {
+      '@tailwindcss/postcss': {},
+    },
+  },
+
+  // TypeScript
+  typescript: {
+    strict: true,
+  },
+
+  // Auto-imports for custom composables
+  imports: {
+    dirs: ['composables', 'utils'],
+  },
+
+  // Icon configuration (Carbon icons)
+  icon: {
+    serverBundle: 'remote',
+  },
+})

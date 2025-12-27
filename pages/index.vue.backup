@@ -1,0 +1,308 @@
+<script setup lang="ts">
+import { addDays, startOfDay, format } from 'date-fns'
+import { filterByDate, flat } from '~/utils/filters'
+import { API_URLS } from '~/utils/api'
+import type { Record } from '~/types'
+import { ANALYTICS_EVENTS } from '~/constants/analytics'
+
+// Page meta
+definePageMeta({
+  layout: 'default',
+})
+
+// SEO
+useHead({
+  title: 'Power Outages - Mauritius',
+})
+
+// Data fetching - latest data
+const latestData = ref<{ today: Record[], future: Record[] } | null>(null)
+const latestStatus = ref<'idle' | 'pending' | 'success' | 'error'>('pending')
+
+// Fetch data on mount (client-side only since ssr: false)
+onMounted(async () => {
+  latestStatus.value = 'pending'
+  try {
+    const response = await $fetch<string>(API_URLS.latest)
+    // GitHub raw URLs return text, need to parse JSON manually
+    const data = typeof response === 'string' ? JSON.parse(response) : response
+    latestData.value = data
+    latestStatus.value = 'success'
+  } catch (e) {
+    console.error('Failed to fetch power outage data:', e)
+    latestStatus.value = 'error'
+  }
+
+  // Check for outage ID in URL on page load
+  const route = useRoute()
+  if (route.query.outage) {
+    handleOutageSelection(route.query.outage as string)
+  }
+})
+
+// Watch for route changes
+watch(() => useRoute().query, (newQuery, oldQuery) => {
+  // If outage ID is added/removed in query
+  if (newQuery.outage !== oldQuery.outage) {
+    if (newQuery.outage) {
+      handleOutageSelection(newQuery.outage as string)
+    } else {
+      // Outage ID was removed (user navigated to another day)
+      // Do nothing, let normal navigation handle it
+    }
+  }
+})
+
+// Full history - lazy, fetched on demand
+const fullData = ref<any>(null)
+const isLoadingHistory = ref(false)
+
+const selectedDate = ref(new Date())
+const selectedOutageId = ref<string | null>(null)
+
+const isToday = computed(() => {
+  return startOfDay(selectedDate.value).getTime() === startOfDay(new Date()).getTime()
+})
+
+const isTomorrow = computed(() => {
+  const tomorrow = startOfDay(addDays(new Date(), 1)).getTime()
+  return startOfDay(selectedDate.value).getTime() === tomorrow
+})
+
+const isCurrentOrFuture = computed(() => {
+  return isToday.value || isTomorrow.value
+})
+
+const cFlat = computed<Record[]>(() => {
+  if (isCurrentOrFuture.value) {
+    return flat(latestData.value)
+  }
+  return flat(fullData.value)
+})
+
+// Handle outage selection from URL query parameter
+const handleOutageSelection = (outageId: string) => {
+  if (!outageId) {
+    // Clear selected outage if no ID provided
+    if (selectedOutageId.value !== null) {
+      selectedOutageId.value = null
+    }
+    return
+  }
+
+  // Find the outage in current data
+  const allOutages = [...cFlat.value]
+  const selectedOutage = allOutages.find(o => o.id === outageId)
+
+  if (selectedOutage) {
+    // Update selected date to match the outage's date
+    selectedOutageId.value = outageId
+    selectedDate.value = new Date(selectedOutage.from)
+
+    // Scroll to the selected outage after a short delay
+    nextTick(() => {
+      const outageElement = document.querySelector(`[data-outage-id="${outageId}"]`)
+      if (outageElement) {
+        outageElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }
+    })
+  }
+}
+
+// Computed: Check if specific outage is selected
+const isOutageSelected = computed(() => selectedOutageId.value !== null)
+
+// Get the selected outage object
+const selectedOutage = computed(() => {
+  if (!selectedOutageId.value) return null
+  const allOutages = [...cFlat.value]
+  return allOutages.find(o => o.id === selectedOutageId.value)
+})
+
+const cToday: ComputedRef<Record[]> = computed(() => {
+  return filterByDate(cFlat.value, new Date())
+})
+
+const cTomorrow: ComputedRef<Record[]> = computed(() => {
+  return filterByDate(cFlat.value, addDays(new Date(), 1))
+})
+
+const cSelected: ComputedRef<Record[]> = computed(() => {
+  return filterByDate(cFlat.value, selectedDate.value)
+})
+
+const dateLabel = computed(() => {
+  return format(selectedDate.value, 'EEEE, MMM d, yyyy')
+})
+
+const isLoading = computed(() => {
+  if (isLoadingHistory.value) {
+    return true
+  }
+  if (isCurrentOrFuture.value) {
+    return latestStatus.value === 'pending' || latestStatus.value === 'idle'
+  }
+  return false
+})
+
+const goToPrev = async () => {
+  // Clear selected outage when navigating
+  selectedOutageId.value = null
+
+  const newDate = addDays(selectedDate.value, -1)
+  const willBeHistory = startOfDay(newDate).getTime() < startOfDay(new Date()).getTime()
+
+  if (willBeHistory && !fullData.value) {
+    isLoadingHistory.value = true
+    try {
+      const response = await $fetch<string>(API_URLS.full)
+      // GitHub raw URLs return text, need to parse JSON manually
+      fullData.value = typeof response === 'string' ? JSON.parse(response) : response
+    }
+    catch (e) {
+      console.error('Failed to fetch full history:', e)
+    }
+    isLoadingHistory.value = false
+  }
+
+  selectedDate.value = newDate
+}
+
+const goToToday = () => {
+  // Clear selected outage when navigating
+  selectedOutageId.value = null
+  selectedDate.value = new Date()
+}
+
+const goToNext = () => {
+  // Clear selected outage when navigating
+  selectedOutageId.value = null
+
+  // Skip tomorrow if we're on today since it's already shown
+  if (isToday.value) {
+    selectedDate.value = addDays(new Date(), 2)
+  }
+  else {
+    selectedDate.value = addDays(selectedDate.value, 1)
+  }
+}
+
+</script>
+
+<template>
+  <div class="w-full max-w-4xl mx-auto px-4 py-6 sm:px-6 sm:py-8 flex-1 flex flex-col">
+
+
+
+    <header class="mb-6 sm:mb-8 flex items-baseline justify-between gap-3">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight">Power Outages in Mauritius</h1>
+      <div class="flex-shrink-0">
+        <ViewCounter />
+      </div>
+    </header>
+
+    <main class="flex flex-col gap-6 sm:gap-8">
+      <!-- Desktop nav -->
+      <div class="hidden sm:flex sm:items-center sm:justify-between">
+        <h2 v-if="!isToday" class="text-xl sm:text-2xl md:text-3xl font-bold text-white">{{ dateLabel }}</h2>
+        <h2 v-else class="text-xl sm:text-2xl md:text-3xl font-bold text-white">Today</h2>
+        <div class="flex gap-2">
+          <button @click="goToPrev" class="btn" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_PREV">Prev</button>
+          <button v-if="!isToday" @click="goToToday" class="btn" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_TODAY">Today</button>
+          <button v-if="!isToday" @click="goToNext" class="btn" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_NEXT">Next</button>
+        </div>
+      </div>
+
+      <!-- Mobile date label (hidden when viewing today) -->
+      <h2 v-if="!isToday" class="text-xl font-bold text-white sm:hidden">{{ dateLabel }}</h2>
+
+      <div>
+        <div v-if="isLoading" class="py-12 sm:py-16 text-white/50 text-center text-base sm:text-lg">
+          Loading outage data...
+        </div>
+
+        <!-- Today view: show both today and tomorrow -->
+        <template v-else-if="isToday">
+          <div class="space-y-10">
+            <section>
+              <!-- Mobile only heading for Today -->
+              <h2 class="text-xl font-bold text-white mb-4 sm:hidden">Today</h2>
+              <CellGroup v-if="cToday.length > 0" :data="cToday" :selected-outage-id="selectedOutageId" />
+              <div v-else class="py-8 text-white/50 text-center text-base">
+                No power outages scheduled for today
+              </div>
+            </section>
+
+            <section>
+              <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6">Tomorrow</h2>
+              <CellGroup v-if="cTomorrow.length > 0" :data="cTomorrow" :selected-outage-id="selectedOutageId" />
+              <div v-else class="py-8 text-white/50 text-center text-base">
+                No power outages scheduled for tomorrow
+              </div>
+            </section>
+          </div>
+        </template>
+
+        <!-- Other dates: show single day -->
+        <template v-else>
+          <CellGroup v-if="cSelected.length > 0" :data="cSelected" :selected-outage-id="selectedOutageId" />
+          <div v-else class="py-12 sm:py-16 text-white/50 text-center text-base sm:text-lg">
+            No power outages scheduled for this day
+          </div>
+        </template>
+      </div>
+    </main>
+
+    <footer class="mt-auto pt-8 pb-24 sm:pb-0">
+      <site-footer />
+    </footer>
+
+    <!-- Mobile sticky nav -->
+    <nav class="fixed bottom-0 left-0 right-0 sm:hidden mobile-nav">
+      <div class="max-w-4xl mx-auto px-4 py-3 flex gap-2">
+        <button @click="goToPrev" class="btn-mobile" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_PREV">
+          <span class="text-lg">←</span>
+          <span>Prev</span>
+        </button>
+        <button @click="goToToday" class="btn-mobile" :disabled="isToday || isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_TODAY">
+          <span class="text-lg">•</span>
+          <span>Today</span>
+        </button>
+        <button @click="goToNext" class="btn-mobile" :disabled="isToday || isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_NEXT">
+          <span>Next</span>
+          <span class="text-lg">→</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</template>
+
+<style scoped lang="postcss">
+.btn {
+  @apply px-4 py-2 text-sm font-medium bg-white/10 text-white rounded-lg;
+  @apply hover:bg-white/20 active:bg-white/25 transition-colors;
+}
+
+.btn:disabled {
+  @apply opacity-40 cursor-not-allowed hover:bg-white/10 active:bg-white/10;
+}
+
+.mobile-nav {
+  @apply bg-black/80 backdrop-blur-xl border-t border-white/10;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.btn-mobile {
+  @apply flex-1 flex items-center justify-center gap-2 py-3.5 text-sm font-medium text-white rounded-xl;
+  @apply bg-white/10 active:bg-white/20 transition-colors;
+}
+
+.btn-mobile:disabled {
+  @apply opacity-40 active:bg-white/10;
+}
+</style>
+
+<route lang="yaml">
+meta:
+  layout: default
+</route>

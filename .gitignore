@@ -1,9 +1,24 @@
-.DS_Store
-.vite-ssg-dist
-.vite-ssg-temp
-*.local
+# Nuxt dev/build outputs
+.output
+.nuxt
+.nitro
+.cache
 dist
-dist-ssr
+.netlify
+
+# Node dependencies
 node_modules
-.idea/
+
+# Logs
 *.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
+*.local

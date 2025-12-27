@@ -1,4 +1,21 @@
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
+[build]
+  command = "pnpm build"
+  publish = "dist"
+
+# Cache static assets aggressively
+[[headers]]
+  for = "/_nuxt/*"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Static assets
+[[headers]]
+  for = "/assets/*"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Default cache for other static files
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
