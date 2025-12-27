@@ -89,11 +89,23 @@ useSeoMeta({
   description: () => description.value,
   ogTitle: () => title.value,
   ogDescription: () => description.value,
-  ogType: 'website',
+  ogType: 'article',
   ogUrl: `https://power-outages-mauritius.netlify.app/outage/${outageId}`,
-  twitterCard: 'summary',
+  ogImage: 'https://power-outages-mauritius.netlify.app/og/outage.png',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageAlt: () => selectedOutage.value 
+    ? `Power outage details for ${selectedOutage.value.locality}, Mauritius`
+    : 'Power outage details for Mauritius',
+  ogSiteName: 'Power Outages Mauritius',
+  ogLocale: 'en_MU',
+  twitterCard: 'summary_large_image',
   twitterTitle: () => title.value,
   twitterDescription: () => description.value,
+  twitterImage: 'https://power-outages-mauritius.netlify.app/og/outage.png',
+  twitterImageAlt: () => selectedOutage.value 
+    ? `Power outage details for ${selectedOutage.value.locality}, Mauritius`
+    : 'Power outage details for Mauritius',
 })
 
 const currentOutages = computed(() => {

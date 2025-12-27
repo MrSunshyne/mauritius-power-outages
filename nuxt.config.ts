@@ -26,19 +26,30 @@ export default defineNuxtConfig({
   // App configuration
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
       ],
       meta: [
-        { name: 'msapplication-TileColor', content: '#00aba9' },
-        { name: 'theme-color', content: '#ffffff' },
+        // Basic meta
+        { name: 'msapplication-TileColor', content: '#020024' },
+        { name: 'theme-color', content: '#020024' },
+        { name: 'robots', content: 'index, follow' },
+        { name: 'author', content: 'Power Outages Mauritius' },
         // Default OG tags (overridden by pages)
         { property: 'og:site_name', content: 'Power Outages Mauritius' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:image', content: 'https://power-outages-mauritius.netlify.app/logo.png' },
-        { name: 'twitter:card', content: 'summary' },
+        { property: 'og:locale', content: 'en_MU' },
+        { property: 'og:image', content: 'https://power-outages-mauritius.netlify.app/og/default.png' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:image:alt', content: 'Power Outages Mauritius - Live power cut schedules' },
+        // Twitter defaults
+        { name: 'twitter:card', content: 'summary_large_image' },
       ],
       script: [
         // Dark mode initialization (prevents flash)
