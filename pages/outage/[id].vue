@@ -289,7 +289,7 @@ function formatDate(date: Date) {
 
                 <div class="bg-white/5 rounded-xl p-6 sm:p-8 border border-white/10">
                     <!-- Status Header -->
-                    <div class="flex items-center justify-between mb-6">
+                    <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-6">
                         <div class="flex items-center gap-3">
                             <div :class="{
                                 'w-4 h-4 rounded-full': true,
@@ -299,7 +299,7 @@ function formatDate(date: Date) {
                             }"></div>
                             <div>
                                 <h2 class="text-xl sm:text-2xl font-bold text-white">{{ selectedOutage.locality }}</h2>
-                                <p class="text-sm text-white/70">{{ statusInfo.text }}</p>
+                                <p class="text-sm text-white/70 hidden md:block">{{ statusInfo.text }}</p>
                             </div>
                         </div>
 
@@ -359,9 +359,11 @@ function formatDate(date: Date) {
 
                 <!-- Share Section -->
                 <div class="mt-6 text-center">
-                    <button @click="handleShare" class="inline-flex items-center gap-3 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
+                    <button @click="handleShare"
+                        class="inline-flex items-center gap-3 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
                         </svg>
                         Share This Outage Alert
                     </button>
