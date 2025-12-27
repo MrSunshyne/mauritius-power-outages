@@ -1,10 +1,6 @@
 [build]
   command = "pnpm build"
-  publish = ".output/public"
-
-# Netlify Functions directory for SSR
-[functions]
-  directory = ".output/server"
+  publish = "dist"
 
 # Cache static assets aggressively
 [[headers]]
