@@ -5,7 +5,6 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/icon',
-    '@pinia/nuxt',
   ],
 
   // Enable SSR for dynamic OG meta tags
