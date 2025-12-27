@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { startOfDay, format } from 'date-fns'
+import { format } from 'date-fns'
 import { filterByDate, flat } from '~/utils/filters'
 import { API_URLS } from '~/utils/api'
 import type { Record } from '~/types'
@@ -13,47 +13,41 @@ definePageMeta({
   layout: 'default',
 })
 
-// Data fetching
-const latestData = ref<{ today: Record[], future: Record[] } | null>(null)
-const fullData = ref<any>(null)
-const latestStatus = ref<'idle' | 'pending' | 'success' | 'error'>('pending')
-const isLoadingHistory = ref(false)
-
-// Fetch data on mount
-onMounted(async () => {
-  // Always fetch latest data
-  latestStatus.value = 'pending'
-  try {
+// SSR-compatible data fetching using useAsyncData
+// This runs on both server and client, enabling dynamic OG tags
+const { data: latestData, status: latestStatus } = await useAsyncData<{ today: Record[], future: Record[] }>(
+  'latest-outages',
+  async () => {
     const response = await $fetch<string>(API_URLS.latest)
-    const data = typeof response === 'string' ? JSON.parse(response) : response
-    latestData.value = data
-    latestStatus.value = 'success'
-  } catch (e) {
-    console.error('Failed to fetch latest data:', e)
-    latestStatus.value = 'error'
-  }
+    return typeof response === 'string' ? JSON.parse(response) : response
+  },
+  { server: true }
+)
 
-  // If outage not found in latest data, fetch historical data
-  const allCurrentOutages = flat(latestData.value)
-  const foundOutage = allCurrentOutages.find(o => o.id === outageId)
-
-  if (!foundOutage) {
-    console.log('Outage not found in current data, fetching historical...')
-    isLoadingHistory.value = true
-    try {
-      const response = await $fetch<string>(API_URLS.full)
-      fullData.value = typeof response === 'string' ? JSON.parse(response) : response
-    } catch (e) {
-      console.error('Failed to fetch historical data:', e)
-    } finally {
-      isLoadingHistory.value = false
-    }
-  }
+// Check if outage exists in latest data
+const outageInLatest = computed(() => {
+  if (!latestData.value) return null
+  return flat(latestData.value).find(o => o.id === outageId)
 })
+
+// Fetch historical data only if outage not found in latest (lazy load on client)
+const { data: fullData, status: fullStatus } = await useAsyncData<any>(
+  `full-outages-${outageId}`,
+  async () => {
+    // Only fetch if outage not in latest data
+    if (outageInLatest.value) return null
+    const response = await $fetch<string>(API_URLS.full)
+    return typeof response === 'string' ? JSON.parse(response) : response
+  },
+  { 
+    server: true,
+    immediate: true,
+  }
+)
 
 // Computed properties
 const allOutages = computed(() => {
-  const outages = []
+  const outages: Record[] = []
   if (latestData.value) {
     outages.push(...flat(latestData.value))
   }
@@ -67,7 +61,7 @@ const selectedOutage = computed(() => {
   return allOutages.value.find(o => o.id === outageId)
 })
 
-// Dynamic SEO based on outage data
+// Dynamic SEO based on outage data - computed values available during SSR
 const title = computed(() => {
   if (selectedOutage.value) {
     const location = selectedOutage.value.locality
@@ -89,30 +83,18 @@ const description = computed(() => {
   return 'View specific power outage information for Mauritius'
 })
 
-// Update head when data loads (only in production for OG tags)
-if (process.dev) {
-  // In dev mode, just set a basic title
-  useHead({
-    title: 'Power Outage Details - Mauritius',
-  })
-} else {
-  // In production, set dynamic OG tags
-  watch([selectedOutage, description], () => {
-    useHead({
-      title: title.value,
-      meta: [
-        { name: 'description', content: description.value },
-        { property: 'og:title', content: title.value },
-        { property: 'og:description', content: description.value },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: `https://power-outages-mauritius.netlify.app/outage/${outageId}` },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: title.value },
-        { name: 'twitter:description', content: description.value },
-      ],
-    })
-  }, { immediate: true })
-}
+// Set dynamic OG tags - works on both server and client
+useSeoMeta({
+  title: () => title.value,
+  description: () => description.value,
+  ogTitle: () => title.value,
+  ogDescription: () => description.value,
+  ogType: 'website',
+  ogUrl: `https://power-outages-mauritius.netlify.app/outage/${outageId}`,
+  twitterCard: 'summary',
+  twitterTitle: () => title.value,
+  twitterDescription: () => description.value,
+})
 
 const currentOutages = computed(() => {
   return latestData.value ? flat(latestData.value) : []
@@ -123,7 +105,7 @@ const todayOutages = computed(() => {
 })
 
 const isLoading = computed(() => {
-  return latestStatus.value === 'pending' || isLoadingHistory.value
+  return latestStatus.value === 'pending' || fullStatus.value === 'pending'
 })
 
 // Helper function

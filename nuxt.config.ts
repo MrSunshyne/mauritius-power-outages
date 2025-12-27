@@ -9,13 +9,20 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
 
-  // Temporarily disable SSR to test if SPA works on Netlify
-  ssr: false,
+  // Enable SSR for dynamic OG meta tags
+  ssr: true,
   nitro: {
-    preset: 'static',
+    preset: 'netlify',
   },
 
-  // No route rules for now
+  // Hybrid rendering: static pages except dynamic outage pages
+  routeRules: {
+    // Homepage and statistics are static (ISR with 1 hour revalidation)
+    '/': { isr: 3600 },
+    '/statistics': { isr: 3600 },
+    // Dynamic outage pages are server-rendered for OG tags
+    '/outage/**': { ssr: true },
+  },
 
   // App configuration
   app: {
@@ -28,6 +35,11 @@ export default defineNuxtConfig({
       meta: [
         { name: 'msapplication-TileColor', content: '#00aba9' },
         { name: 'theme-color', content: '#ffffff' },
+        // Default OG tags (overridden by pages)
+        { property: 'og:site_name', content: 'Power Outages Mauritius' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:image', content: 'https://power-outages-mauritius.netlify.app/logo.png' },
+        { name: 'twitter:card', content: 'summary' },
       ],
       script: [
         // Dark mode initialization (prevents flash)
