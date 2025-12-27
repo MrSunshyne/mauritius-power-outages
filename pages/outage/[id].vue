@@ -91,21 +91,20 @@ useSeoMeta({
   ogDescription: () => description.value,
   ogType: 'article',
   ogUrl: `https://power-outages-mauritius.netlify.app/outage/${outageId}`,
-  ogImage: 'https://power-outages-mauritius.netlify.app/og/outage.png',
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
-  ogImageAlt: () => selectedOutage.value 
-    ? `Power outage details for ${selectedOutage.value.locality}, Mauritius`
-    : 'Power outage details for Mauritius',
   ogSiteName: 'Power Outages Mauritius',
   ogLocale: 'en_MU',
   twitterCard: 'summary_large_image',
   twitterTitle: () => title.value,
   twitterDescription: () => description.value,
-  twitterImage: 'https://power-outages-mauritius.netlify.app/og/outage.png',
-  twitterImageAlt: () => selectedOutage.value 
-    ? `Power outage details for ${selectedOutage.value.locality}, Mauritius`
-    : 'Power outage details for Mauritius',
+})
+
+// Dynamic OG Image based on outage data
+defineOgImageComponent('Outage', {
+  locality: selectedOutage.value?.locality || 'Power Outage',
+  district: selectedOutage.value?.district || 'Mauritius',
+  date: selectedOutage.value ? format(new Date(selectedOutage.value.from), 'EEEE, MMM d, yyyy') : '',
+  time: selectedOutage.value ? `${selectedOutage.value.from.slice(11, 16)} - ${selectedOutage.value.to.slice(11, 16)}` : '',
+  streets: selectedOutage.value?.streets || 'View outage details',
 })
 
 const currentOutages = computed(() => {

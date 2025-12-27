@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
     '@nuxt/icon',
+     'nuxt-og-image',
   ],
 
   // Enable SSR for dynamic OG meta tags
@@ -19,8 +20,14 @@ export default defineNuxtConfig({
     // Homepage and statistics are static (ISR with 1 hour revalidation)
     '/': { isr: 3600 },
     '/statistics': { isr: 3600 },
-    // Dynamic outage pages are server-rendered for OG tags
-    '/outage/**': { ssr: true },
+    // Dynamic outage pages are server-rendered
+    '/outage/**': { prerender: false },
+  },
+
+  // Site config for OG Image module
+  site: {
+    url: 'https://power-outages-mauritius.netlify.app',
+    name: 'Power Outages Mauritius',
   },
 
   // App configuration

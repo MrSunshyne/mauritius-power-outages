@@ -17,9 +17,13 @@ useSeoMeta({
   ogTitle: 'Power Outages in Mauritius - Live Schedule & Updates',
   ogDescription: 'Check today\'s and tomorrow\'s scheduled power cuts in Mauritius. Real-time CEB outage information with countdown timers and affected areas.',
   ogUrl: 'https://power-outages-mauritius.netlify.app/',
-  ogImage: 'https://power-outages-mauritius.netlify.app/og/home.png',
-  ogImageAlt: 'Power Outages Mauritius - Live schedule showing today\'s power cuts',
   twitterCard: 'summary_large_image',
+})
+
+// OG Image
+defineOgImageComponent('Home', {
+  title: 'Power Outages Mauritius',
+  subtitle: 'Live Schedule & Updates',
 })
 
 // Data fetching - latest data
