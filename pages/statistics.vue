@@ -4,8 +4,19 @@ import { API_URLS } from '~/utils/api'
 import type { Record } from '~/types'
 
 // SEO
-useHead({
-    title: 'Statistics - Power Outages Mauritius',
+useSeoMeta({
+  title: 'Power Outage Statistics Mauritius - Trends & Analysis',
+  description: 'Explore power outage patterns in Mauritius. View statistics by district, day, hour, and month. Data-driven insights on CEB electricity cuts.',
+  ogTitle: 'Power Outage Statistics Mauritius - Trends & Analysis',
+  ogDescription: 'Explore power outage patterns in Mauritius. View statistics by district, day, hour, and month. Data-driven insights on CEB electricity cuts.',
+  ogUrl: 'https://power-outages-mauritius.netlify.app/statistics',
+  twitterCard: 'summary_large_image',
+})
+
+// OG Image
+defineOgImageComponent('Statistics', {
+  title: 'Power Outage Statistics',
+  subtitle: 'Mauritius Trends & Analysis',
 })
 
 function getWeek(date: Date) {
