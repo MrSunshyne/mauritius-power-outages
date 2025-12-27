@@ -4,6 +4,7 @@ import { filterByDate, flat } from '~/utils/filters'
 import { API_URLS } from '~/utils/api'
 import type { Record } from '~/types'
 import VueCountdown from '@chenfengyuan/vue-countdown'
+import { ANALYTICS_EVENTS } from '~/constants/analytics'
 
 // Get outage ID from route
 const route = useRoute()
@@ -359,11 +360,9 @@ function formatDate(date: Date) {
 
                 <!-- Share Section -->
                 <div class="mt-6 text-center">
-                    <button @click="handleShare"
-                        class="inline-flex items-center gap-3 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
+                    <button @click="handleShare" :data-umami-event="ANALYTICS_EVENTS.OUTAGE_SHARE" class="inline-flex items-center gap-3 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
                         </svg>
                         Share This Outage Alert
                     </button>
@@ -382,7 +381,7 @@ function formatDate(date: Date) {
                     <p class="text-white/70 text-lg mb-6">
                         The requested outage information could not be found.
                     </p>
-                    <NuxtLink to="/"
+                    <NuxtLink to="/" :data-umami-event="ANALYTICS_EVENTS.OUTAGE_VIEW_CURRENT"
                         class="inline-block bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-colors">
                         View Current Outages
                     </NuxtLink>
@@ -409,7 +408,7 @@ function formatDate(date: Date) {
                 </div>
                 <!-- Link to main page -->
                 <div class="text-center pt-8">
-                    <NuxtLink to="/"
+                    <NuxtLink to="/" :data-umami-event="ANALYTICS_EVENTS.NAV_HOME_FROM_OUTAGE"
                         class="inline-block bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-colors">
                         View Latest Outages
                     </NuxtLink>
