@@ -26,8 +26,18 @@ export default defineNuxtConfig({
 
   // Site config for OG Image module
   site: {
-    // URL will be detected automatically from runtime
+    url: 'https://power-outages-mauritius.netlify.app',
     name: 'Power Outages Mauritius',
+  },
+
+  // OG Image configuration
+  ogImage: {
+    defaults: {
+      width: 1200,
+      height: 630,
+      // Cache for 24 hours
+      cacheMaxAgeSeconds: 60 * 60 * 24,
+    },
   },
 
   // App configuration

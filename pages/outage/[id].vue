@@ -420,5 +420,16 @@ function formatDate(date: Date) {
         <footer class="mt-auto pt-8 pb-24 sm:pb-0">
             <SiteFooter />
         </footer>
+
+        <!-- Hidden OG image preload - warms cache for social sharing -->
+        <img
+            v-if="selectedOutage"
+            :src="`/__og-image__/image/outage/${outageId}/og.png`"
+            alt=""
+            width="1"
+            height="1"
+            class="absolute opacity-0 pointer-events-none"
+            aria-hidden="true"
+        />
     </div>
 </template>

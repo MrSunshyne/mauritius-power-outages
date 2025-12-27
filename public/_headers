@@ -1,3 +1,8 @@
 /assets/*
   cache-control: max-age=31536000
   cache-control: immutable
+
+# OG Images - cache aggressively for social media crawlers
+/__og-image__/*
+  cache-control: public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800
+  content-type: image/png
