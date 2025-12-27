@@ -304,69 +304,71 @@ function formatDate(date: Date) {
                     </div>
                 </div>
 
-                <div class="bg-white/5 rounded-xl p-6 sm:p-8 border border-white/10">
-                    <!-- Status Header -->
-                    <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-6">
-                        <div class="flex items-center gap-3">
-                            <div :class="{
-                                'w-2.5 h-2.5 rounded-full': true,
-                                'bg-orange-400': statusInfo.color === 'orange',
-                                'bg-red-400': statusInfo.color === 'red',
-                                'bg-green-400': statusInfo.color === 'green'
-                            }"></div>
-                            <h2 class="text-xl sm:text-2xl font-bold text-white">{{ selectedOutage.locality }}</h2>
-                        </div>
-
-                        <!-- Status -->
-                        <div :class="{
-                            'text-sm font-medium': true,
-                            'text-orange-300/80': statusInfo.color === 'orange',
-                            'text-red-300/80': statusInfo.color === 'red',
-                            'text-green-300/80': statusInfo.color === 'green'
-                        }">
-                            {{ statusInfo.action }}
+                <div class="bg-white/[0.03] rounded-2xl border border-white/[0.06] overflow-hidden">
+                    <!-- Header -->
+                    <div class="px-6 py-5 sm:px-8 sm:py-6 border-b border-white/[0.06]">
+                        <div class="flex flex-col md:flex-row items-start justify-between gap-4">
+                            <div>
+                                <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">{{
+                                    selectedOutage.locality }}</h2>
+                                <p class="text-white/50 text-sm mt-1 capitalize">{{ selectedOutage.district }} District
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-2 shrink-0">
+                                <span :class="{
+                                    'w-2 h-2 rounded-full': true,
+                                    'bg-orange-400': statusInfo.color === 'orange',
+                                    'bg-red-400': statusInfo.color === 'red',
+                                    'bg-green-400': statusInfo.color === 'green'
+                                }"></span>
+                                <span :class="{
+                                    'text-sm': true,
+                                    'text-orange-300/90': statusInfo.color === 'orange',
+                                    'text-red-300/90': statusInfo.color === 'red',
+                                    'text-green-300/90': statusInfo.color === 'green'
+                                }">{{ statusInfo.action }}</span>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Countdown/Timer Section -->
-                    <div v-if="outageState !== 'past'" class="mb-6 p-4 rounded-lg border bg-black/20" :class="{
-                        'border-orange-500/30': statusInfo.color === 'orange',
-                        'border-red-500/30': statusInfo.color === 'red'
-                    }">
+                    <!-- Countdown -->
+                    <div v-if="outageState !== 'past'"
+                        class="px-6 py-4 sm:px-8 bg-white/[0.02] border-b border-white/[0.06]">
                         <div class="flex items-center justify-between">
-                            <div class="text-white/90 font-medium">
-                                {{ outageState === 'upcoming' ? 'Starts in:' : 'Ends in:' }}
-                            </div>
+                            <span class="text-white/60 text-sm">{{ outageState === 'upcoming' ? 'Starts in' : 'Ends in'
+                                }}</span>
                             <ClientOnly>
                                 <vue-countdown v-slot="{ days, hours, minutes, seconds }" :time="timeDifference"
-                                    class="text-white font-mono text-lg">
+                                    class="text-white font-mono text-base sm:text-lg tracking-wide">
                                     <span v-if="days > 0">{{ days }}d </span>{{ hours }}h {{ minutes }}m {{ seconds }}s
                                 </vue-countdown>
                                 <template #fallback>
-                                    <span class="text-white/60">Loading...</span>
+                                    <span class="text-white/40">--:--:--</span>
                                 </template>
                             </ClientOnly>
                         </div>
                     </div>
 
-                    <div class="grid sm:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <div class="text-white/70 mb-1">Date & Time</div>
-                            <div class="text-white font-bold">
-                                {{ formatDate(new Date(selectedOutage.from)) }}
+                    <!-- Details -->
+                    <div class="px-6 py-5 sm:px-8 sm:py-6">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="text-xs uppercase tracking-wider text-white/40 mb-1.5">Date</div>
+                                    <div class="text-white text-lg">{{ formatDate(new Date(selectedOutage.from)) }}
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="text-xs uppercase tracking-wider text-white/40 mb-1.5">Time</div>
+                                    <div class="text-white text-lg font-medium">
+                                        {{ selectedOutage.from.slice(11, 16) }} – {{ selectedOutage.to.slice(11, 16) }}
+                                    </div>
+                                </div>
                             </div>
-                            <div class="text-white text-lg mt-1 font-bold">
-                                {{ selectedOutage.from.slice(11, 16) }} - {{ selectedOutage.to.slice(11, 16) }}
+                            <div>
+                                <div class="text-xs uppercase tracking-wider text-white/40 mb-1.5">Affected Areas</div>
+                                <div class="text-white/80 leading-relaxed">{{ selectedOutage.streets }}</div>
                             </div>
-                            <div class="text-white/70 mt-4 mb-1">District</div>
-                            <div class="text-white font-bold capitalize">
-                                {{ selectedOutage.district }}
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="text-white/70 mb-1">Areas Affected</div>
-                            <div class="text-white font-medium">{{ selectedOutage.streets }}</div>
                         </div>
                     </div>
                 </div>
