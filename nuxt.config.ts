@@ -20,8 +20,8 @@ export default defineNuxtConfig({
     // Homepage and statistics are static (ISR with 1 hour revalidation)
     '/': { isr: 3600 },
     '/statistics': { isr: 3600 },
-    // Dynamic outage pages are server-rendered
-    '/outage/**': { prerender: false },
+    // Outage pages: ISR with 15-minute cache (outage data changes infrequently)
+    '/outage/**': { isr: 900 },
   },
 
   // Site config for OG Image module

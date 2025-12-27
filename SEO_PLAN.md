@@ -49,13 +49,13 @@
 ## 2. Homepage (/)
 
 ### Page Description
-The homepage displays current and upcoming power outages in Mauritius, showing today's and tomorrow's scheduled outages with countdown timers.
+The homepage displays current and upcoming power outages in Mauritius, showing today's and tomorrow's scheduled outages.
 
 ### SEO Specifications
 
 | Tag | Value | Characters |
 |-----|-------|------------|
-| **og:title** | `Power Outages in Mauritius - Live Schedule & Alerts` | 52 |
+| **og:title** | `Power Outages in Mauritius - Live Schedule & Updates` | 52 |
 | **og:description** | `Check today's and tomorrow's scheduled power cuts in Mauritius. Real-time CEB outage information with countdown timers and affected areas.` | 138 |
 | **og:url** | `https://power-outages-mauritius.netlify.app/` | - |
 | **og:type** | `website` | - |
@@ -67,11 +67,11 @@ The homepage displays current and upcoming power outages in Mauritius, showing t
 
 ```html
 <!-- Homepage Meta Tags -->
-<title>Power Outages in Mauritius - Live Schedule & Alerts</title>
+<title>Power Outages in Mauritius - Live Schedule & Updates</title>
 <meta name="description" content="Check today's and tomorrow's scheduled power cuts in Mauritius. Real-time CEB outage information with countdown timers and affected areas.">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Power Outages in Mauritius - Live Schedule & Alerts">
+<meta property="og:title" content="Power Outages in Mauritius - Live Schedule & Updates">
 <meta property="og:description" content="Check today's and tomorrow's scheduled power cuts in Mauritius. Real-time CEB outage information with countdown timers and affected areas.">
 <meta property="og:url" content="https://power-outages-mauritius.netlify.app/">
 <meta property="og:type" content="website">
@@ -84,7 +84,7 @@ The homepage displays current and upcoming power outages in Mauritius, showing t
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Power Outages in Mauritius - Live Schedule & Alerts">
+<meta name="twitter:title" content="Power Outages in Mauritius - Live Schedule & Updates">
 <meta name="twitter:description" content="Check today's and tomorrow's scheduled power cuts in Mauritius. Real-time CEB outage information with countdown timers and affected areas.">
 <meta name="twitter:image" content="https://power-outages-mauritius.netlify.app/og/home.png">
 <meta name="twitter:image:alt" content="Power Outages Mauritius - Live schedule showing today's power cuts">
@@ -96,10 +96,10 @@ The homepage displays current and upcoming power outages in Mauritius, showing t
 
 ### Rationale
 
-**Title Choice:** "Power Outages in Mauritius - Live Schedule & Alerts"
+**Title Choice:** "Power Outages in Mauritius - Live Schedule & Updates"
 - Includes primary keyword "Power Outages" at the start for SEO weight
 - "Live" creates urgency and indicates real-time data
-- "Schedule & Alerts" communicates the value proposition
+- "Schedule & Updates" communicates the value proposition
 - Under 60 characters (52) for full display in SERPs
 
 **Description Choice:**
@@ -198,7 +198,7 @@ Analytics and visualizations showing historical power outage data, including tre
 ## 4. Dynamic Outage Page (/outage/[id])
 
 ### Page Description
-Individual outage detail page showing specific power cut information including location, time, affected streets, and district. These pages are shareable for alerting others.
+Individual outage detail page showing specific power cut information including location, time, affected streets, and district. These pages are shareable to inform others about specific outages.
 
 ### SEO Specifications (Dynamic)
 
@@ -261,10 +261,10 @@ useSeoMeta({
 
 **Generic Design (Current Phase):**
 - Dark background matching site theme
-- Large location pin or alert icon
-- Text: "Power Outage Alert"
-- Subtext: "Mauritius - Tap for Details"
-- Warning/alert styling (orange/yellow accents)
+- Large location pin or power icon
+- Text: "Power Outage Details"
+- Subtext: "Mauritius - View Schedule"
+- Information styling (orange/yellow accents)
 - Dimensions: 1200x630px
 
 **Future Dynamic Design:**
@@ -302,7 +302,7 @@ useSeoMeta({
 **Color Palette:**
 - Primary Background: `#020024` (dark blue-black)
 - Gradient End: `#03012b`
-- Accent: `#f97316` (orange - for alerts)
+- Accent: `#f97316` (orange - for information)
 - Text: `#ffffff` (white)
 - Secondary Text: `rgba(255, 255, 255, 0.7)`
 
@@ -364,9 +364,9 @@ app: {
 ```typescript
 // Replace current useHead with useSeoMeta
 useSeoMeta({
-  title: 'Power Outages in Mauritius - Live Schedule & Alerts',
+  title: 'Power Outages in Mauritius - Live Schedule & Updates',
   description: 'Check today\'s and tomorrow\'s scheduled power cuts in Mauritius. Real-time CEB outage information with countdown timers and affected areas.',
-  ogTitle: 'Power Outages in Mauritius - Live Schedule & Alerts',
+  ogTitle: 'Power Outages in Mauritius - Live Schedule & Updates',
   ogDescription: 'Check today\'s and tomorrow\'s scheduled power cuts in Mauritius. Real-time CEB outage information with countdown timers and affected areas.',
   ogUrl: 'https://power-outages-mauritius.netlify.app/',
   ogImage: 'https://power-outages-mauritius.netlify.app/og/home.png',
@@ -418,8 +418,8 @@ Example dynamic image content:
 +------------------------------------------+
 |  [Lightning Icon]                        |
 |                                          |
-|  POWER OUTAGE ALERT                      |
-|  ─────────────────                       |
+|  SCHEDULED POWER OUTAGE                  |
+|  ──────────────────────                  |
 |  Curepipe                                |
 |  Friday, December 27, 2024               |
 |  09:00 - 15:00                           |

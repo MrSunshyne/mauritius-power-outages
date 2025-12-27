@@ -13,16 +13,17 @@ definePageMeta({
   layout: 'default',
 })
 
-// SSR-compatible data fetching using useAsyncData
-// This runs on both server and client, enabling dynamic OG tags
-const { data: latestData, status: latestStatus } = await useAsyncData<{ today: Record[], future: Record[] }>(
-  'latest-outages',
-  async () => {
-    const response = await $fetch<string>(API_URLS.latest)
-    return typeof response === 'string' ? JSON.parse(response) : response
-  },
-  { server: true }
-)
+  // SSR-compatible data fetching using useAsyncData
+  // This runs on both server and client, enabling dynamic OG tags
+  // Data is cached for 15 minutes (ISR) so we don't fetch on every request
+  const { data: latestData, status: latestStatus } = await useAsyncData<{ today: Record[], future: Record[] }>(
+    'latest-outages',
+    async () => {
+      const response = await $fetch<string>(API_URLS.latest)
+      return typeof response === 'string' ? JSON.parse(response) : response
+    },
+    { server: true, default: () => [] }
+  )
 
 // Check if outage exists in latest data
 const outageInLatest = computed(() => {
@@ -30,20 +31,22 @@ const outageInLatest = computed(() => {
   return flat(latestData.value).find(o => o.id === outageId)
 })
 
-// Fetch historical data only if outage not found in latest (lazy load on client)
-const { data: fullData, status: fullStatus } = await useAsyncData<any>(
-  `full-outages-${outageId}`,
-  async () => {
-    // Only fetch if outage not in latest data
-    if (outageInLatest.value) return null
-    const response = await $fetch<string>(API_URLS.full)
-    return typeof response === 'string' ? JSON.parse(response) : response
-  },
-  { 
-    server: true,
-    immediate: true,
-  }
-)
+  // Fetch historical data only if outage not found in latest (lazy load on client)
+  // Also cached for 15 minutes via ISR
+  const { data: fullData, status: fullStatus } = await useAsyncData<any>(
+    `full-outages-${outageId}`,
+    async () => {
+      // Only fetch if outage not in latest data
+      if (outageInLatest.value) return null
+      const response = await $fetch<string>(API_URLS.full)
+      return typeof response === 'string' ? JSON.parse(response) : response
+    },
+    {
+      server: true,
+      immediate: true,
+      default: () => null
+    }
+  )
 
 // Computed properties
 const allOutages = computed(() => {
