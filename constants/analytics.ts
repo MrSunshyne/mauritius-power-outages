@@ -11,6 +11,10 @@ export const ANALYTICS_EVENTS = {
   NAV_TODAY: 'nav-today',
   NAV_NEXT: 'nav-next',
 
+  // Outage page
+  OUTAGE_SHARE: 'outage-share',
+  OUTAGE_VIEW_CURRENT: 'outage-view-current',
+
   // Footer links
   FOOTER_STATISTICS: 'footer-statistics',
   FOOTER_DATA_SOURCE: 'footer-data-source',
