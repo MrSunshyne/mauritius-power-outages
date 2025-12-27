@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
     '@nuxt/icon',
-    'nuxt-og-image',
+     'nuxt-og-image',
   ],
 
   // Enable SSR for dynamic OG meta tags
