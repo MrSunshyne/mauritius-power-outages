@@ -15,56 +15,40 @@ definePageMeta({
     layout: 'default',
 })
 
-// SSR-compatible data fetching using useAsyncData
-// This runs on both server and client, enabling dynamic OG tags
-// Data is cached for 15 minutes (ISR) so we don't fetch on every request
-const { data: latestData, status: latestStatus } = await useAsyncData<{ today: Record[], future: Record[] }>(
-    'latest-outages',
+// Fetch only the specific outage we need - extracts single record server-side
+const { data: selectedOutage, status: outageStatus } = await useAsyncData<Record | null>(
+    `outage-${outageId}`,
     async () => {
-        const response = await $fetch<string>(API_URLS.latest)
-        return typeof response === 'string' ? JSON.parse(response) : response
+        // First, check latest data (small payload)
+        const latestResponse = await $fetch<string>(API_URLS.latest)
+        const latestData = typeof latestResponse === 'string' ? JSON.parse(latestResponse) : latestResponse
+        const latestOutages = flat(latestData)
+        const foundInLatest = latestOutages.find((o: Record) => o.id === outageId)
+
+        if (foundInLatest) {
+            return foundInLatest
+        }
+
+        // Not in latest, fetch full history and extract just the one we need
+        const fullResponse = await $fetch<string>(API_URLS.full)
+        const fullData = typeof fullResponse === 'string' ? JSON.parse(fullResponse) : fullResponse
+        const allOutages = flat(fullData)
+        return allOutages.find((o: Record) => o.id === outageId) || null
     },
-    { server: true, default: () => [] }
+    { server: true }
 )
 
-// Check if outage exists in latest data
-const outageInLatest = computed(() => {
-    if (!latestData.value) return null
-    return flat(latestData.value).find(o => o.id === outageId)
-})
-
-// Fetch historical data only if outage not found in latest (lazy load on client)
-// Also cached for 15 minutes via ISR
-const { data: fullData, status: fullStatus } = await useAsyncData<any>(
-    `full-outages-${outageId}`,
+// Fetch latest data separately for "today's outages" section (small payload)
+const { data: latestData, status: latestStatus } = await useAsyncData<{ today: Record[], future: Record[] }>(
+    'latest-outages',
     async () => {
         // Only fetch if outage not in latest data
         if (outageInLatest.value) return null
         const response = await $fetch<string>(API_URLS.full)
         return typeof response === 'string' ? JSON.parse(response) : response
     },
-    {
-        server: true,
-        immediate: true,
-        default: () => null
-    }
+    { server: true, default: () => ({ today: [], future: [] }) }
 )
-
-// Computed properties
-const allOutages = computed(() => {
-    const outages: Record[] = []
-    if (latestData.value) {
-        outages.push(...flat(latestData.value))
-    }
-    if (fullData.value) {
-        outages.push(...flat(fullData.value))
-    }
-    return outages
-})
-
-const selectedOutage = computed(() => {
-    return allOutages.value.find(o => o.id === outageId)
-})
 
 // Calculate outage status and timing information
 const outageState = computed(() => {
@@ -254,7 +238,7 @@ const todayOutages = computed(() => {
 })
 
 const isLoading = computed(() => {
-    return latestStatus.value === 'pending' || fullStatus.value === 'pending'
+    return outageStatus.value === 'pending' || latestStatus.value === 'pending'
 })
 
 // Helper function
@@ -360,9 +344,11 @@ function formatDate(date: Date) {
 
                 <!-- Share Section -->
                 <div class="mt-6 text-center">
-                    <button @click="handleShare" :data-umami-event="ANALYTICS_EVENTS.OUTAGE_SHARE" class="inline-flex items-center gap-3 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
+                    <button @click="handleShare" :data-umami-event="ANALYTICS_EVENTS.OUTAGE_SHARE"
+                        class="inline-flex items-center gap-3 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
                         </svg>
                         Share This Outage Alert
                     </button>
@@ -422,14 +408,7 @@ function formatDate(date: Date) {
         </footer>
 
         <!-- Hidden OG image preload - warms cache for social sharing -->
-        <img
-            v-if="selectedOutage"
-            :src="`/__og-image__/image/outage/${outageId}/og.png`"
-            alt=""
-            width="1"
-            height="1"
-            class="absolute opacity-0 pointer-events-none"
-            aria-hidden="true"
-        />
+        <img v-if="selectedOutage" :src="`/__og-image__/image/outage/${outageId}/og.png`" alt="" width="1" height="1"
+            class="absolute opacity-0 pointer-events-none" aria-hidden="true" />
     </div>
 </template>
