@@ -3,6 +3,7 @@
     class="p-4 sm:p-5 rounded-xl glass flex flex-col gap-3 text-white relative cursor-pointer hover:brightness-110 transition-all duration-200"
     :class="{ 'bg-black dark': state === 'ongoing' }"
     @click="handleCellClick"
+    :data-umami-event="ANALYTICS_EVENTS.OUTAGE_VIEW_DETAIL"
   >
     <div class="md:flex md:justify-between md:items-center">
       <div class="relative pr-14 sm:pr-16 md:pr-0">
@@ -46,6 +47,7 @@
 import VueCountdown from '@chenfengyuan/vue-countdown'
 import { useTimeAgo, useDateFormat } from '@vueuse/core'
 import type { Record } from '~/types'
+import { ANALYTICS_EVENTS } from '~/constants/analytics'
 
 const props = defineProps<{
   data: Record

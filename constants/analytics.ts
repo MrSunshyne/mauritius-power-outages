@@ -10,8 +10,10 @@ export const ANALYTICS_EVENTS = {
   NAV_PREV: 'nav-prev',
   NAV_TODAY: 'nav-today',
   NAV_NEXT: 'nav-next',
+  NAV_HOME_FROM_OUTAGE: 'nav-home-from-outage',
 
-  // Outage page
+  // Outage interactions
+  OUTAGE_VIEW_DETAIL: 'outage-view-detail',
   OUTAGE_SHARE: 'outage-share',
   OUTAGE_VIEW_CURRENT: 'outage-view-current',
 

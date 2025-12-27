@@ -408,7 +408,7 @@ function formatDate(date: Date) {
                 </div>
                 <!-- Link to main page -->
                 <div class="text-center pt-8">
-                    <NuxtLink to="/"
+                    <NuxtLink to="/" :data-umami-event="ANALYTICS_EVENTS.NAV_HOME_FROM_OUTAGE"
                         class="inline-block bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-colors">
                         View Latest Outages
                     </NuxtLink>
