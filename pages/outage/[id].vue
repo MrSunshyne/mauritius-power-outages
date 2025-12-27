@@ -3,6 +3,7 @@ import { format } from 'date-fns'
 import { filterByDate, flat } from '~/utils/filters'
 import { API_URLS } from '~/utils/api'
 import type { Record } from '~/types'
+import VueCountdown from '@chenfengyuan/vue-countdown'
 
 // Get outage ID from route
 const route = useRoute()
@@ -62,6 +63,85 @@ const allOutages = computed(() => {
 
 const selectedOutage = computed(() => {
     return allOutages.value.find(o => o.id === outageId)
+})
+
+// Calculate outage status and timing information
+const outageState = computed(() => {
+    if (!selectedOutage.value) return null
+
+    let state = 'upcoming'
+    const from = new Date(selectedOutage.value.from)
+    const to = new Date(selectedOutage.value.to)
+    const now = new Date()
+
+    if (now.getTime() > from.getTime()) {
+        state = 'ongoing'
+    }
+
+    if (now.getTime() > to.getTime()) {
+        state = 'past'
+    }
+
+    return state
+})
+
+const timeDifference = computed(() => {
+    if (!selectedOutage.value || !outageState.value) return 0
+
+    let target
+    if (outageState.value === 'ongoing') {
+        target = new Date(selectedOutage.value.to)
+    } else if (outageState.value === 'upcoming') {
+        target = new Date(selectedOutage.value.from)
+    } else {
+        target = new Date(selectedOutage.value.to)
+    }
+
+    const now = new Date()
+    return Math.abs(target.getTime() - now.getTime())
+})
+
+// Status display information
+const statusInfo = computed(() => {
+    if (!outageState.value) return { text: '', action: '', color: '' }
+
+    switch (outageState.value) {
+        case 'upcoming':
+            return {
+                text: 'Scheduled Power Outage',
+                action: 'Power will be cut',
+                color: 'orange'
+            }
+        case 'ongoing':
+            return {
+                text: 'Power Currently Out',
+                action: 'Power will resume',
+                color: 'red'
+            }
+        case 'past':
+            return {
+                text: 'Power Restored',
+                action: 'Power was restored',
+                color: 'green'
+            }
+        default:
+            return {
+                text: 'Unknown Status',
+                action: '',
+                color: 'gray'
+            }
+    }
+})
+
+// Check if outage is from a previous day (historical)
+const isHistoricalOutage = computed(() => {
+    if (!selectedOutage.value) return false
+
+    const outageDate = new Date(selectedOutage.value.from)
+    const today = new Date()
+    today.setHours(0, 0, 0, 0) // Set to start of today
+
+    return outageDate < today
 })
 
 // Dynamic SEO based on outage data - computed values available during SSR
@@ -148,42 +228,84 @@ function formatDate(date: Date) {
             <section v-if="selectedOutage" class="mb-12">
                 <div class="text-center mb-8">
                     <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight mb-4">
-                        Power Outage Details
+                        <span v-if="isHistoricalOutage">Oudated </span>Power Outage Details
                     </h1>
-                    <p class="text-white/70 text-lg">
-                        Information for the shared outage
-                    </p>
+                    <!-- Historical outage hint - near heading -->
+                    <div v-if="isHistoricalOutage" class="mb-4 text-center">
+                        <div class="text-white/50 text-sm">
+                            This is an old outage which occurred on {{
+                                format(new Date(selectedOutage.from), 'MMM d, yyyy')
+                            }}
+                        </div>
+                    </div>
                 </div>
 
                 <div class="bg-white/5 rounded-xl p-6 sm:p-8 border border-white/10">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-3 h-3 rounded-full bg-orange-500"></div>
-                        <h2 class="text-xl sm:text-2xl font-bold text-white">{{ selectedOutage.locality }}</h2>
+                    <!-- Status Header -->
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-3">
+                            <div :class="{
+                                'w-4 h-4 rounded-full': true,
+                                'bg-orange-500': statusInfo.color === 'orange',
+                                'bg-red-500': statusInfo.color === 'red',
+                                'bg-green-500': statusInfo.color === 'green'
+                            }"></div>
+                            <div>
+                                <h2 class="text-xl sm:text-2xl font-bold text-white">{{ selectedOutage.locality }}</h2>
+                                <p class="text-sm text-white/70">{{ statusInfo.text }}</p>
+                            </div>
+                        </div>
+
+                        <!-- Status Badge -->
+                        <div :class="{
+                            'px-4 py-2 rounded-full text-sm font-semibold': true,
+                            'bg-orange-500/20 text-orange-300': statusInfo.color === 'orange',
+                            'bg-red-500/20 text-red-300': statusInfo.color === 'red',
+                            'bg-green-500/20 text-green-300': statusInfo.color === 'green'
+                        }">
+                            {{ statusInfo.action }}
+                        </div>
+                    </div>
+
+                    <!-- Countdown/Timer Section -->
+                    <div v-if="outageState !== 'past'" class="mb-6 p-4 rounded-lg border bg-black/20" :class="{
+                        'border-orange-500/30': statusInfo.color === 'orange',
+                        'border-red-500/30': statusInfo.color === 'red'
+                    }">
+                        <div class="flex items-center justify-between">
+                            <div class="text-white/90 font-medium">
+                                {{ outageState === 'upcoming' ? 'Starts in:' : 'Ends in:' }}
+                            </div>
+                            <ClientOnly>
+                                <vue-countdown v-slot="{ days, hours, minutes, seconds }" :time="timeDifference"
+                                    class="text-white font-mono text-lg">
+                                    <span v-if="days > 0">{{ days }}d </span>{{ hours }}h {{ minutes }}m {{ seconds }}s
+                                </vue-countdown>
+                                <template #fallback>
+                                    <span class="text-white/60">Loading...</span>
+                                </template>
+                            </ClientOnly>
+                        </div>
                     </div>
 
                     <div class="grid sm:grid-cols-2 gap-6 mb-6">
                         <div>
                             <div class="text-white/70 mb-1">Date & Time</div>
-                            <div class="text-white font-medium">
+                            <div class="text-white font-bold">
                                 {{ formatDate(new Date(selectedOutage.from)) }}
                             </div>
-                            <div class="text-white/70 text-sm mt-1">
+                            <div class="text-white text-lg mt-1 font-bold">
                                 {{ selectedOutage.from.slice(11, 16) }} - {{ selectedOutage.to.slice(11, 16) }}
+                            </div>
+                            <div class="text-white/70 mt-4 mb-1">District</div>
+                            <div class="text-white font-bold capitalize">
+                                {{ selectedOutage.district }}
                             </div>
                         </div>
 
                         <div>
                             <div class="text-white/70 mb-1">Areas Affected</div>
                             <div class="text-white font-medium">{{ selectedOutage.streets }}</div>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between pt-4 border-t border-white/10">
-                        <div class="text-white/70 text-sm">
-                            District: {{ selectedOutage.district }}
-                        </div>
-                        <div class="text-white/70 text-sm">
-                            ID: {{ selectedOutage.id.slice(0, 8) }}...
                         </div>
                     </div>
                 </div>
@@ -206,14 +328,11 @@ function formatDate(date: Date) {
             </section>
 
             <!-- Current outages section -->
-            <section class="space-y-8">
-                <div class="text-center">
+            <section class="space-y-8  border-t border-white/10 pt-8">
+                <div class="" v-if="todayOutages.length > 0">
                     <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4">
                         Current Power Outages
                     </h2>
-                    <p class="text-white/70">
-                        Latest information for today and tomorrow
-                    </p>
                 </div>
 
                 <!-- Today -->
@@ -226,16 +345,11 @@ function formatDate(date: Date) {
                         <CellGroup :data="todayOutages" />
                     </div>
                 </div>
-
-                <div v-else class="text-center py-8 text-white/50">
-                    No power outages scheduled for today
-                </div>
-
                 <!-- Link to main page -->
                 <div class="text-center pt-8">
                     <NuxtLink to="/"
                         class="inline-block bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg transition-colors">
-                        View All Outages
+                        View Latest Outages
                     </NuxtLink>
                 </div>
             </section>
