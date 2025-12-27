@@ -221,12 +221,17 @@ useSeoMeta({
     ogTitle: () => title.value,
     ogDescription: () => description.value,
     ogType: 'article',
+    ogImage: () => `https://power-outages-mauritius.netlify.app/__og-image__/image/Outage?locality=${selectedOutage.value?.locality || 'Location'}&district=${selectedOutage.value?.district || 'District'}&date=${selectedOutage.value ? format(new Date(selectedOutage.value.from), 'MMM d, yyyy') : 'Date'}&time=${selectedOutage.value ? `${selectedOutage.value.from.slice(11, 16)} - ${selectedOutage.value.to.slice(11, 16)}` : '00:00 - 00:00'}&streets=${selectedOutage.value?.streets || 'Affected areas'}`,
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
+    ogImageAlt: () => `Power outage details for ${selectedOutage.value?.locality || 'Mauritius'}, Mauritius`,
     // ogUrl will be set automatically by nuxt-og-image
     ogSiteName: 'Power Outages Mauritius',
     ogLocale: 'en_MU',
     twitterCard: 'summary_large_image',
     twitterTitle: () => title.value,
     twitterDescription: () => description.value,
+    twitterImage: () => `https://power-outages-mauritius.netlify.app/__og-image__/image/Outage?locality=${selectedOutage.value?.locality || 'Location'}&district=${selectedOutage.value?.district || 'District'}&date=${selectedOutage.value ? format(new Date(selectedOutage.value.from), 'MMM d, yyyy') : 'Date'}&time=${selectedOutage.value ? `${selectedOutage.value.from.slice(11, 16)} - ${selectedOutage.value.to.slice(11, 16)}` : '00:00 - 00:00'}&streets=${selectedOutage.value?.streets || 'Affected areas'}`,
 })
 
 // Dynamic OG Image based on outage data

@@ -16,21 +16,20 @@ useSeoMeta({
     description: 'Check today\'s and tomorrow\'s scheduled power cuts in Mauritius. Real-time CEB outage information with countdown timers and affected areas.',
     ogTitle: 'Power Outages in Mauritius - Live Schedule & Updates',
     ogDescription: 'Check today\'s and tomorrow\'s scheduled power cuts in Mauritius. Real-time CEB outage information with countdown timers and affected areas.',
+    ogImage: 'https://power-outages-mauritius.netlify.app/__og-image__/image/NuxtSeo?title=Power%20Outages%20in%20Mauritius%20-%20Live%20Schedule%20%26%20Updates&description=Check%20today%27s%20and%20tomorrow%27s%20scheduled%20power%20cuts%20in%20Mauritius.%20Real-time%20CEB%20outage%20information%20with%20countdown%20timers%20and%20affected%20areas.&theme=dark',
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
+    ogImageAlt: 'Power Outages Mauritius - Live schedule showing today\'s power cuts',
     // ogUrl will be set automatically by nuxt-og-image
     twitterCard: 'summary_large_image',
+    twitterImage: 'https://power-outages-mauritius.netlify.app/__og-image__/image/NuxtSeo?title=Power%20Outages%20in%20Mauritius%20-%20Live%20Schedule%20%26%20Updates&description=Check%20today%27s%20and%20tomorrow%27s%20scheduled%20power%20cuts%20in%20Mauritius.%20Real-time%20CEB%20outage%20information%20with%20countdown%20timers%20and%20affected%20areas.&theme=dark',
 })
 
 // OG Image - Using community template
-defineOgImageComponent('Outage', {
-    heading: 'Live status updates',
-    title: 'Power Outages in Mauritius',
-    columnPercentClass: 'max-w-[65%]',
-    description: 'Stay informed about the latest power outages in Mauritius and share with your family and friends',
-    icon: 'solar:lightbulb-bolt-broken',
-    theme: '#FFD500',
-    colorMode: 'dark',
-    tagline: 'View more details',
-    taglineRight: 'A project by Sandeep Ramgolam'
+defineOgImageComponent('NuxtSeo', {
+    title: 'Power Outages in Mauritius - Live Schedule & Updates',
+    description: 'Check today\'s and tomorrow\'s scheduled power cuts in Mauritius. Real-time CEB outage information with countdown timers and affected areas.',
+    theme: 'dark',
 })
 
 // Data fetching - latest data
