@@ -309,23 +309,20 @@ function formatDate(date: Date) {
                     <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-6">
                         <div class="flex items-center gap-3">
                             <div :class="{
-                                'w-4 h-4 rounded-full': true,
-                                'bg-orange-500': statusInfo.color === 'orange',
-                                'bg-red-500': statusInfo.color === 'red',
-                                'bg-green-500': statusInfo.color === 'green'
+                                'w-2.5 h-2.5 rounded-full': true,
+                                'bg-orange-400': statusInfo.color === 'orange',
+                                'bg-red-400': statusInfo.color === 'red',
+                                'bg-green-400': statusInfo.color === 'green'
                             }"></div>
-                            <div>
-                                <h2 class="text-xl sm:text-2xl font-bold text-white">{{ selectedOutage.locality }}</h2>
-                                <p class="text-sm text-white/70 hidden md:block">{{ statusInfo.text }}</p>
-                            </div>
+                            <h2 class="text-xl sm:text-2xl font-bold text-white">{{ selectedOutage.locality }}</h2>
                         </div>
 
-                        <!-- Status Badge -->
+                        <!-- Status -->
                         <div :class="{
-                            'px-4 py-2 rounded-full text-sm font-semibold': true,
-                            'bg-orange-500/20 text-orange-300': statusInfo.color === 'orange',
-                            'bg-red-500/20 text-red-300': statusInfo.color === 'red',
-                            'bg-green-500/20 text-green-300': statusInfo.color === 'green'
+                            'text-sm font-medium': true,
+                            'text-orange-300/80': statusInfo.color === 'orange',
+                            'text-red-300/80': statusInfo.color === 'red',
+                            'text-green-300/80': statusInfo.color === 'green'
                         }">
                             {{ statusInfo.action }}
                         </div>
