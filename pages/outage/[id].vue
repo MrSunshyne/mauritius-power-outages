@@ -2,6 +2,7 @@
 import { format } from 'date-fns'
 import { filterByDate, flat } from '~/utils/filters'
 import { API_URLS } from '~/utils/api'
+import { downloadICS, generateGoogleCalendarUrl, type CalendarEvent } from '~/utils/calendar'
 import type { Record } from '~/types'
 import VueCountdown from '@chenfengyuan/vue-countdown'
 import { ANALYTICS_EVENTS } from '~/constants/analytics'
@@ -176,6 +177,37 @@ const handleShare = async () => {
     }
 }
 
+// Calendar functionality
+const calendarEvent = computed<CalendarEvent | null>(() => {
+    if (!selectedOutage.value) return null
+
+    const outage = selectedOutage.value
+    const location = outage.locality
+    const district = outage.district
+    const streets = outage.streets
+
+    return {
+        title: `Power Outage: ${location}`,
+        description: `Scheduled power outage in ${location}, ${district}.\n\nAffected areas: ${streets}\n\nMore info: ${shareUrl.value}`,
+        location: `${location}, ${district}, Mauritius`,
+        startTime: new Date(outage.from),
+        endTime: new Date(outage.to),
+        url: shareUrl.value,
+    }
+})
+
+const handleSaveToCalendar = () => {
+    if (!calendarEvent.value || !selectedOutage.value) return
+
+    const filename = `power-outage-${selectedOutage.value.locality.toLowerCase().replace(/\s+/g, '-')}-${format(new Date(selectedOutage.value.from), 'yyyy-MM-dd')}.ics`
+    downloadICS(calendarEvent.value, filename)
+}
+
+const googleCalendarUrl = computed(() => {
+    if (!calendarEvent.value) return ''
+    return generateGoogleCalendarUrl(calendarEvent.value)
+})
+
 // Dynamic SEO based on outage data - computed values available during SSR
 const title = computed(() => {
     if (selectedOutage.value) {
@@ -257,7 +289,7 @@ function formatDate(date: Date) {
 
         <template v-else>
             <!-- Specific outage section -->
-            <section v-if="selectedOutage" class="mb-12">
+            <section v-if="selectedOutage" class="mb-8">
                 <div class="text-center mb-8">
                     <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight mb-4">
                         <span v-if="isHistoricalOutage">Oudated </span>Power Outage Details
@@ -342,24 +374,37 @@ function formatDate(date: Date) {
                     </div>
                 </div>
 
-                <!-- Share Section -->
-                <div class="mt-6 text-center">
+                <!-- Actions -->
+                <div class="mt-6 pt-6 border-t border-white/10 flex items-end justify-between gap-2">
+                    <div class="flex flex-col items-start gap-1.5 sm:gap-2">
+                        <span class="text-[11px] sm:text-xs text-white/40">Add to calendar</span>
+                        <div class="flex gap-1.5">
+                            <a :href="googleCalendarUrl" target="_blank" rel="noopener noreferrer"
+                                :data-umami-event="ANALYTICS_EVENTS.OUTAGE_SAVE_GOOGLE_CALENDAR"
+                                class="px-3 py-2 text-xs font-medium text-white/70 bg-white/8 rounded-md hover:bg-white/15 hover:text-white/90 transition-colors">
+                                Google
+                            </a>
+                            <button @click="handleSaveToCalendar"
+                                :data-umami-event="ANALYTICS_EVENTS.OUTAGE_SAVE_CALENDAR"
+                                class="cursor-pointer px-3 py-2 text-xs font-medium text-white/70 bg-white/8 rounded-md hover:bg-white/15 hover:text-white/90 transition-colors">
+                                .ics
+                            </button>
+                        </div>
+                    </div>
+
                     <button @click="handleShare" :data-umami-event="ANALYTICS_EVENTS.OUTAGE_SHARE"
-                        class="inline-flex items-center gap-3 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        class="cursor-pointer flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-white/70 bg-white/8 rounded-md hover:bg-white/15 hover:text-white/90 transition-colors">
+                        <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
                         </svg>
-                        Share This Outage Alert
+                        <span>Share</span>
                     </button>
-                    <p class="text-white/60 text-sm mt-2">
-                        Inform your family and friends about this power outage
-                    </p>
                 </div>
             </section>
 
             <!-- Error state for invalid outage ID -->
-            <section v-else class="mb-12">
+            <section v-else class="mb-6">
                 <div class="text-center mb-8">
                     <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight mb-4">
                         Outage Not Found

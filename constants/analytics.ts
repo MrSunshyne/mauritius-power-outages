@@ -15,6 +15,8 @@ export const ANALYTICS_EVENTS = {
   // Outage interactions
   OUTAGE_VIEW_DETAIL: 'outage-view-detail',
   OUTAGE_SHARE: 'outage-share',
+  OUTAGE_SAVE_CALENDAR: 'outage-save-calendar',
+  OUTAGE_SAVE_GOOGLE_CALENDAR: 'outage-save-google-calendar',
   OUTAGE_VIEW_CURRENT: 'outage-view-current',
 
   // Footer links
