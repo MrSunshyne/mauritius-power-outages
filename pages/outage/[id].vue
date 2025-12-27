@@ -144,6 +144,53 @@ const isHistoricalOutage = computed(() => {
     return outageDate < today
 })
 
+// Share functionality
+const shareMessage = computed(() => {
+    if (!selectedOutage.value) return ''
+
+    const location = selectedOutage.value.locality
+    const date = format(new Date(selectedOutage.value.from), 'MMM d, yyyy')
+    const time = `${selectedOutage.value.from.slice(11, 16)} - ${selectedOutage.value.to.slice(11, 16)}`
+    const district = selectedOutage.value.district
+
+    return `⚡ Power outage alert: ${location} (${district}) - ${date} from ${time}. Stay safe!`
+})
+
+const shareUrl = computed(() => {
+    if (!selectedOutage.value) return ''
+    return `https://power-outages-mauritius.netlify.app/outage/${selectedOutage.value.id}`
+})
+
+const handleShare = async () => {
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: `Power Outage: ${selectedOutage.value?.locality}`,
+                text: shareMessage.value,
+                url: shareUrl.value,
+            })
+        } catch (error) {
+            // User cancelled or error occurred
+            console.log('Share cancelled or failed:', error)
+        }
+    } else {
+        // Fallback: copy to clipboard
+        try {
+            await navigator.clipboard.writeText(`${shareMessage.value}\n\n${shareUrl.value}`)
+            alert('Link copied to clipboard!')
+        } catch (error) {
+            // Final fallback: select text
+            const textArea = document.createElement('textarea')
+            textArea.value = `${shareMessage.value}\n\n${shareUrl.value}`
+            document.body.appendChild(textArea)
+            textArea.select()
+            document.execCommand('copy')
+            document.body.removeChild(textArea)
+            alert('Link copied to clipboard!')
+        }
+    }
+}
+
 // Dynamic SEO based on outage data - computed values available during SSR
 const title = computed(() => {
     if (selectedOutage.value) {
@@ -308,6 +355,19 @@ function formatDate(date: Date) {
                             <div class="text-white font-medium">{{ selectedOutage.streets }}</div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Share Section -->
+                <div class="mt-6 text-center">
+                    <button @click="handleShare" class="inline-flex items-center gap-3 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                        </svg>
+                        Share This Outage Alert
+                    </button>
+                    <p class="text-white/60 text-sm mt-2">
+                        Inform your family and friends about this power outage
+                    </p>
                 </div>
             </section>
 
