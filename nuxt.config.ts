@@ -4,7 +4,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    '@vueuse/nuxt',
     '@nuxt/icon',
     '@pinia/nuxt',
   ],

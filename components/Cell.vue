@@ -44,14 +44,17 @@
 
 <script setup lang="ts">
 import VueCountdown from '@chenfengyuan/vue-countdown'
-import { useTimeAgo, useDateFormat } from '@vueuse/core'
+import { formatDistanceToNow, format } from 'date-fns'
 import type { Record } from '~/types'
 
 const props = defineProps<{
   data: Record
 }>()
 
-const timeUntil = useTimeAgo(new Date(props.data.from))
+// SSR-safe time ago computation using date-fns
+const timeUntil = computed(() => {
+  return formatDistanceToNow(new Date(props.data.from), { addSuffix: true })
+})
 
 const handleCellClick = () => {
   // Redirect directly to clean URL page for consistent experience
@@ -89,9 +92,9 @@ const timeDifference = computed(() => {
   return Math.abs(target.getTime() - now.getTime())
 })
 
-function formatDate(date: Date) {
-  const formatted = useDateFormat(date, 'HH:mm')
-  return formatted.value.replaceAll('""', '')
+// SSR-safe date formatting using date-fns
+function formatDate(date: Date | string) {
+  return format(new Date(date), 'HH:mm')
 }
 </script>
 
