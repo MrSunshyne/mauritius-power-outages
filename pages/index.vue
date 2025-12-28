@@ -2,6 +2,7 @@
 import { addDays, startOfDay, format } from 'date-fns'
 import { filterByDate, flat } from '~/utils/filters'
 import { API_URLS } from '~/utils/api'
+import { mergeWithMockData } from '~/utils/mock-data'
 import type { Record } from '~/types'
 import { ANALYTICS_EVENTS } from '~/constants/analytics'
 
@@ -49,11 +50,14 @@ onMounted(async () => {
         const response = await $fetch<string>(API_URLS.latest)
         // GitHub raw URLs return text, need to parse JSON manually
         const data = typeof response === 'string' ? JSON.parse(response) : response
-        latestData.value = data
+        // In development, merge with mock data for testing
+        latestData.value = mergeWithMockData(data)
         latestStatus.value = 'success'
     } catch (e) {
         console.error('Failed to fetch power outage data:', e)
-        latestStatus.value = 'error'
+        // In development, still show mock data even if API fails
+        latestData.value = mergeWithMockData(null)
+        latestStatus.value = latestData.value.today.length > 0 || latestData.value.future.length > 0 ? 'success' : 'error'
     }
 })
 

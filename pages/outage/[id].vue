@@ -2,6 +2,7 @@
 import { format } from 'date-fns'
 import { filterByDate, flat } from '~/utils/filters'
 import { API_URLS } from '~/utils/api'
+import { generateMockOutages, isDevelopment } from '~/utils/mock-data'
 import { downloadICS, generateGoogleCalendarUrl, type CalendarEvent } from '~/utils/calendar'
 import type { Record } from '~/types'
 import VueCountdown from '@chenfengyuan/vue-countdown'
@@ -16,10 +17,18 @@ definePageMeta({
     layout: 'default',
 })
 
-// Fetch only the specific outage we need - extracts single record server-side
+// Fetch only the specific outage we need - works on both server and client
 const { data: selectedOutage, status: outageStatus } = await useAsyncData<Record | null>(
     `outage-${outageId}`,
     async () => {
+        // In development, check mock data first for mock IDs
+        if (isDevelopment() && outageId.startsWith('mock-')) {
+            const mockData = generateMockOutages()
+            const allMockOutages = [...mockData.today, ...mockData.future]
+            const foundMock = allMockOutages.find((o: Record) => o.id === outageId)
+            if (foundMock) return foundMock
+        }
+
         // First, check latest data (small payload)
         const latestResponse = await $fetch<string>(API_URLS.latest)
         const latestData = typeof latestResponse === 'string' ? JSON.parse(latestResponse) : latestResponse
@@ -35,20 +44,17 @@ const { data: selectedOutage, status: outageStatus } = await useAsyncData<Record
         const fullData = typeof fullResponse === 'string' ? JSON.parse(fullResponse) : fullResponse
         const allOutages = flat(fullData)
         return allOutages.find((o: Record) => o.id === outageId) || null
-    },
-    { server: true }
+    }
 )
 
 // Fetch latest data separately for "today's outages" section (small payload)
 const { data: latestData, status: latestStatus } = await useAsyncData<{ today: Record[], future: Record[] }>(
     'latest-outages',
     async () => {
-        // Only fetch if outage not in latest data
-        if (outageInLatest.value) return null
-        const response = await $fetch<string>(API_URLS.full)
+        const response = await $fetch<string>(API_URLS.latest)
         return typeof response === 'string' ? JSON.parse(response) : response
     },
-    { server: true, default: () => ({ today: [], future: [] }) }
+    { default: () => ({ today: [], future: [] }) }
 )
 
 // Calculate outage status and timing information
@@ -101,7 +107,7 @@ const statusInfo = computed(() => {
         case 'ongoing':
             return {
                 text: 'Power Currently Out',
-                action: 'Power will resume',
+                action: 'No power currently',
                 color: 'red'
             }
         case 'past':
@@ -314,45 +320,62 @@ function formatDate(date: Date) {
                 <div class="bg-white/[0.03] rounded-2xl border border-white/[0.06] overflow-hidden">
                     <!-- Header -->
                     <div class="px-6 py-5 sm:px-8 sm:py-6 border-b border-white/[0.06]">
-                        <div class="flex flex-col md:flex-row items-start justify-between gap-4">
+                        <div class="flex flex-row items-start justify-between gap-4">
                             <div>
                                 <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">{{
                                     selectedOutage.locality }}</h2>
                                 <p class="text-white/50 text-sm mt-1 capitalize">{{ selectedOutage.district }} District
                                 </p>
                             </div>
-                            <div class="flex items-center gap-2 shrink-0">
-                                <span :class="{
-                                    'w-2 h-2 rounded-full': true,
-                                    'bg-orange-400': statusInfo.color === 'orange',
-                                    'bg-red-400': statusInfo.color === 'red',
-                                    'bg-green-400': statusInfo.color === 'green'
-                                }"></span>
-                                <span :class="{
-                                    'text-sm': true,
-                                    'text-orange-300/90': statusInfo.color === 'orange',
-                                    'text-red-300/90': statusInfo.color === 'red',
-                                    'text-green-300/90': statusInfo.color === 'green'
-                                }">{{ statusInfo.action }}</span>
+                            <div class="flex-shrink-0">
+                                <OutageIndicator v-if="outageState" :state="outageState" size="sm" />
                             </div>
                         </div>
                     </div>
 
-                    <!-- Countdown -->
-                    <div v-if="outageState !== 'past'"
+                    <!-- Countdown / Status -->
+                    <div
                         class="px-6 py-4 sm:px-8 bg-white/[0.02] border-b border-white/[0.06]">
-                        <div class="flex items-center justify-between">
-                            <span class="text-white/60 text-sm">{{ outageState === 'upcoming' ? 'Starts in' : 'Ends in'
-                            }}</span>
-                            <ClientOnly>
-                                <vue-countdown v-slot="{ days, hours, minutes, seconds }" :time="timeDifference"
-                                    class="text-white font-mono text-base sm:text-lg tracking-wide">
-                                    <span v-if="days > 0">{{ days }}d </span>{{ hours }}h {{ minutes }}m {{ seconds }}s
-                                </vue-countdown>
-                                <template #fallback>
-                                    <span class="text-white/40">--:--:--</span>
-                                </template>
-                            </ClientOnly>
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 ">
+                            <div>
+                                <div class="flex items-center gap-2 shrink-0">
+                                    <span :class="{
+                                        'w-2 h-2 rounded-full': true,
+                                        'bg-orange-400': statusInfo.color === 'orange',
+                                        'bg-red-400': statusInfo.color === 'red',
+                                        'bg-green-400': statusInfo.color === 'green'
+                                    }"></span>
+                                    <span :class="{
+                                        'text-sm': true,
+                                        'text-orange-300/90': statusInfo.color === 'orange',
+                                        'text-red-300/90': statusInfo.color === 'red',
+                                        'text-green-300/90': statusInfo.color === 'green'
+                                    }">{{ statusInfo.action }}</span>
+                                </div>
+                            </div>
+                            <!-- For past outages, show the restored time instead of countdown -->
+                            <div v-if="outageState === 'past'" class="flex items-center gap-2">
+                                <span class="text-white/60 text-sm">Restored at</span>
+                                <span class="text-white font-mono text-base sm:text-lg tracking-wide">
+                                    {{ selectedOutage.to.slice(11, 16) }}
+                                </span>
+                            </div>
+                            <!-- For ongoing/upcoming, show countdown -->
+                            <div v-else class="flex items-center gap-2">
+                                <span class="text-white/60 text-sm">
+                                    {{ outageState === 'upcoming' ? 'Starts in' : 'Resumes in' }}
+                                </span>
+                                <ClientOnly>
+                                    <vue-countdown v-slot="{ days, hours, minutes, seconds }" :time="timeDifference"
+                                        class="text-white font-mono text-base sm:text-lg tracking-wide">
+                                        <span v-if="days > 0">{{ days }}d </span>{{ hours }}h {{ minutes }}m {{ seconds
+                                        }}s
+                                    </vue-countdown>
+                                    <template #fallback>
+                                        <span class="text-white/40">--:--:--</span>
+                                    </template>
+                                </ClientOnly>
+                            </div>
                         </div>
                     </div>
 
