@@ -334,8 +334,7 @@ function formatDate(date: Date) {
                     </div>
 
                     <!-- Countdown / Status -->
-                    <div
-                        class="px-6 py-4 sm:px-8 bg-white/[0.02] border-b border-white/[0.06]">
+                    <div class="px-6 py-4 sm:px-8 bg-white/[0.02] border-b border-white/[0.06]">
                         <div class="flex flex-col sm:flex-row items-center justify-between gap-4 ">
                             <div>
                                 <div class="flex items-center gap-2 shrink-0">
@@ -380,7 +379,7 @@ function formatDate(date: Date) {
                     </div>
 
                     <!-- Details -->
-                    <div class="px-6 py-5 sm:px-8 sm:py-6">
+                    <div class="px-6 py-5 sm:px-8 sm:py-6 border-b border-white/[0.06]">
                         <div class="grid sm:grid-cols-2 gap-6">
                             <div class="space-y-4">
                                 <div>
@@ -400,6 +399,12 @@ function formatDate(date: Date) {
                                 <div class="text-white/80 leading-relaxed">{{ selectedOutage.streets }}</div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Day Timeline Visualization -->
+                    <div class="px-6 py-5 sm:px-8 sm:py-6">
+                        <div class="text-xs uppercase tracking-wider text-white/40 mb-3">Outage Timeline</div>
+                        <DayTimeline :outage-start="selectedOutage.from" :outage-end="selectedOutage.to" />
                     </div>
                 </div>
 
