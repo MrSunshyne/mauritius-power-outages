@@ -4,6 +4,7 @@ import { filterByDate, flat } from '~/utils/filters'
 import { API_URLS } from '~/utils/api'
 import { generateMockOutages, isDevelopment } from '~/utils/mock-data'
 import { downloadICS, generateGoogleCalendarUrl, type CalendarEvent } from '~/utils/calendar'
+import { fetchSunTimes, type SunTimes } from '~/composables/useSunTimes'
 import type { Record } from '~/types'
 import VueCountdown from '@chenfengyuan/vue-countdown'
 import { ANALYTICS_EVENTS } from '~/constants/analytics'
@@ -55,6 +56,18 @@ const { data: latestData, status: latestStatus } = await useAsyncData<{ today: R
         return typeof response === 'string' ? JSON.parse(response) : response
     },
     { default: () => ({ today: [], future: [] }) }
+)
+
+// Fetch sun times for the outage date
+const sunTimes = ref<SunTimes | null>(null)
+watch(
+    () => selectedOutage.value,
+    async (outage) => {
+        if (outage) {
+            sunTimes.value = await fetchSunTimes(outage.from)
+        }
+    },
+    { immediate: true }
 )
 
 // Calculate outage status and timing information
@@ -405,7 +418,12 @@ function formatDate(date: Date) {
                     <div class="">
                         <div class="px-6 py-5 sm:px-8 sm:py-6 text-xs uppercase tracking-wider text-white/40 mb-3">
                             Outage Timeline</div>
-                        <DayTimeline :outage-start="selectedOutage.from" :outage-end="selectedOutage.to" />
+                        <DayTimeline 
+                            :outage-start="selectedOutage.from" 
+                            :outage-end="selectedOutage.to"
+                            :sunrise="sunTimes?.sunrise"
+                            :sunset="sunTimes?.sunset"
+                        />
                     </div>
                 </div>
 

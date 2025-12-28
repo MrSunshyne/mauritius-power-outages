@@ -72,8 +72,8 @@
                     font-size="6">{{ formatHour(hour) }}</text>
             </g>
 
-            <!-- Sunrise icon at 6am -->
-            <g :transform="`translate(${getXForHour(6) - 12}, ${axisY - 16})`">
+            <!-- Sunrise icon -->
+            <g :transform="`translate(${getXForHour(props.sunrise) - 12}, ${axisY - 16})`">
                 <defs>
                     <clipPath :id="`sunriseClip-${uniqueId}`">
                         <path d="M24 14.4H14.4l-1.7-1.5a0.9 0.9 0 0 0-1.1 0L10 14.4H0V0h24Z" />
@@ -96,8 +96,8 @@
             </g>
 
 
-            <!-- Sunset icon at 6pm -->
-            <g :transform="`translate(${getXForHour(18) - 12}, ${axisY - 16})`">
+            <!-- Sunset icon -->
+            <g :transform="`translate(${getXForHour(props.sunset) - 12}, ${axisY - 16})`">
                 <defs>
                     <clipPath :id="`sunsetClip-${uniqueId}`">
                         <path d="M24 14.4H14.4l-1.7-1.5a0.9 0.9 0 0 0-1.1 0L10 14.4H0V0h24Z" />
@@ -139,11 +139,16 @@
 <script setup lang="ts">
 import { useNow } from '@vueuse/core'
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
     outageStart: Date | string
     outageEnd: Date | string
     currentTime?: Date
-}>()
+    sunrise?: number  // Hour in decimal (e.g., 6.25 for 6:15 AM)
+    sunset?: number   // Hour in decimal (e.g., 18.5 for 6:30 PM)
+}>(), {
+    sunrise: 6,
+    sunset: 18,
+})
 
 // Generate unique ID for clip paths using useId for SSR compatibility
 const uniqueId = useId()
@@ -193,21 +198,25 @@ const sunCurvePath = computed(() => {
     return points.join(' ')
 })
 
-// Day arc fill path (6am to 6pm, filled to axis)
+// Day arc fill path (sunrise to sunset, filled to axis)
 const dayArcFillPath = computed(() => {
+    const sunrise = props.sunrise
+    const sunset = props.sunset
     const points: string[] = []
-    // Start at 6am on the axis
-    points.push(`M${getXForHour(6)},${axisY}`)
-    // Draw up to 6am on curve
-    points.push(`L${getXForHour(6)},${getYForHour(6)}`)
-    // Draw curve from 6am to 6pm
-    for (let h = 6; h <= 18; h += 0.5) {
+    // Start at sunrise on the axis
+    points.push(`M${getXForHour(sunrise)},${axisY}`)
+    // Draw up to sunrise on curve
+    points.push(`L${getXForHour(sunrise)},${getYForHour(sunrise)}`)
+    // Draw curve from sunrise to sunset (stop before sunset to avoid duplicates)
+    for (let h = sunrise; h < sunset; h += 0.5) {
         const x = getXForHour(h)
         const y = getYForHour(h)
         points.push(`L${x},${y}`)
     }
-    // Draw down to axis at 6pm
-    points.push(`L${getXForHour(18)},${axisY}`)
+    // Always add the exact sunset point on the curve to ensure vertical line down
+    points.push(`L${getXForHour(sunset)},${getYForHour(sunset)}`)
+    // Draw down to axis at sunset (now this will be perfectly vertical)
+    points.push(`L${getXForHour(sunset)},${axisY}`)
     // Close path
     points.push('Z')
     return points.join(' ')
