@@ -1,7 +1,7 @@
 <template>
     <div class="day-timeline relative">
         <!-- Legend - top right -->
-        <div class="absolute top-0 right-8 flex items-center gap-3 text-[12px] text-white/50">
+        <div class="absolute -top-14 right-8 flex items-center gap-3 text-[12px] text-white/50">
             <div class="flex items-center gap-1">
                 <div class="w-2.5 h-2.5 rounded-sm bg-red-500/30 border border-red-500/50"></div>
                 <span>No power</span>
@@ -69,7 +69,7 @@
                     stroke-opacity="0.3" stroke-width="0.5" />
                 <text :x="getXForHour(hour)" :y="axisY + 18"
                     :text-anchor="hour === 0 ? 'start' : hour === 24 ? 'end' : 'middle'" fill="white" fill-opacity="0.5"
-                    font-size="6">{{ formatHour(hour) }}</text>
+                    class="timeline-text">{{ formatHour(hour) }}</text>
             </g>
 
             <!-- Sunrise icon -->
@@ -123,14 +123,15 @@
             <g v-if="showCurrentTime" :transform="`translate(${currentTimeX}, 0)`">
                 <line :y1="curveTop - 10" :y2="axisY + 5" stroke="#ffffff" stroke-width="1" stroke-dasharray="2,2" />
                 <circle :cy="currentTimeY" r="2" fill="#ffffff" />
-                <text :y="curveTop - 15" text-anchor="middle" fill="#ffffff" font-size="6" font-weight="300">NOW</text>
+                <text :y="curveTop - 15" text-anchor="middle" fill="#ffffff" font-weight="300"
+                    class="timeline-text">NOW</text>
             </g>
 
             <!-- Outage start/end labels -->
-            <text :x="outageStartX" :y="curveTop - 12" text-anchor="middle" fill="#ef4444" font-size="6"
-                font-weight="300">{{ formatTime(outageStart) }}</text>
-            <text :x="outageStartX + outageWidth" :y="curveTop - 12" text-anchor="middle" fill="#ef4444" font-size="6"
-                font-weight="300">{{ formatTime(outageEnd) }}</text>
+            <text :x="outageStartLabelX" :y="outageStartLabelY" :text-anchor="outageStartLabelAnchor" fill="#ef4444"
+                font-weight="300" class="timeline-text-emphasis">{{ formatTime(outageStart) }}</text>
+            <text :x="outageEndLabelX" :y="outageEndLabelY" :text-anchor="outageEndLabelAnchor" fill="#ef4444"
+                font-weight="300" class="timeline-text-emphasis">{{ formatTime(outageEnd) }}</text>
         </svg>
 
     </div>
@@ -155,10 +156,10 @@ const uniqueId = useId()
 
 // SVG dimensions
 const width = 400
-const height = 120
+const height = 130
 const padding = 0
 const chartWidth = width - padding * 2
-const curveTop = 25
+const curveTop = 35
 const curveHeight = 50
 const axisY = curveTop + curveHeight + 10
 
@@ -226,8 +227,59 @@ const dayArcFillPath = computed(() => {
 const outageStartHours = computed(() => timeToHours(props.outageStart))
 const outageEndHours = computed(() => timeToHours(props.outageEnd))
 const outageStartX = computed(() => getXForHour(outageStartHours.value))
-const outageWidth = computed(() => getXForHour(outageEndHours.value) - outageStartX.value)
+const outageEndX = computed(() => getXForHour(outageEndHours.value))
+const outageWidth = computed(() => outageEndX.value - outageStartX.value)
 const outageLineCount = computed(() => Math.ceil(outageWidth.value / 8) + 5)
+
+// Detect if outage labels would overlap (threshold ~40px for text width)
+const labelsOverlap = computed(() => outageWidth.value < 45)
+
+// Calculate label positions to avoid overlap
+const outageStartLabelX = computed(() => {
+    if (labelsOverlap.value) {
+        // Move start label slightly left
+        return outageStartX.value - 5
+    }
+    return outageStartX.value
+})
+
+const outageEndLabelX = computed(() => {
+    if (labelsOverlap.value) {
+        // Move end label slightly right
+        return outageEndX.value + 5
+    }
+    return outageEndX.value
+})
+
+const outageStartLabelY = computed(() => {
+    if (labelsOverlap.value) {
+        // Offset start label higher
+        return curveTop - 18
+    }
+    return curveTop - 12
+})
+
+const outageEndLabelY = computed(() => {
+    if (labelsOverlap.value) {
+        // Offset end label lower
+        return curveTop - 6
+    }
+    return curveTop - 12
+})
+
+const outageStartLabelAnchor = computed(() => {
+    if (labelsOverlap.value) {
+        return 'end'
+    }
+    return 'middle'
+})
+
+const outageEndLabelAnchor = computed(() => {
+    if (labelsOverlap.value) {
+        return 'start'
+    }
+    return 'middle'
+})
 
 // Current time
 const now = useNow({ interval: 1000 })
@@ -267,5 +319,25 @@ function formatTime(time: Date | string): string {
 <style scoped>
 .day-timeline {
     width: 100%;
+}
+
+/* Base font sizes for desktop */
+.timeline-text {
+    font-size: 6px;
+}
+
+.timeline-text-emphasis {
+    font-size: 6px;
+}
+
+/* Larger font sizes for mobile (smaller screens = larger relative text) */
+@media (max-width: 640px) {
+    .timeline-text {
+        font-size: 14px;
+    }
+
+    .timeline-text-emphasis {
+        font-size: 14px;
+    }
 }
 </style>
