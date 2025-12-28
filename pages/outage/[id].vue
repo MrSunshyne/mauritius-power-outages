@@ -402,8 +402,9 @@ function formatDate(date: Date) {
                     </div>
 
                     <!-- Day Timeline Visualization -->
-                    <div class="px-6 py-5 sm:px-8 sm:py-6">
-                        <div class="text-xs uppercase tracking-wider text-white/40 mb-3">Outage Timeline</div>
+                    <div class="">
+                        <div class="px-6 py-5 sm:px-8 sm:py-6 text-xs uppercase tracking-wider text-white/40 mb-3">
+                            Outage Timeline</div>
                         <DayTimeline :outage-start="selectedOutage.from" :outage-end="selectedOutage.to" />
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 <template>
     <div class="day-timeline relative">
         <!-- Legend - top right -->
-        <div class="absolute top-0 right-0 flex items-center gap-3 text-[10px] text-white/50">
+        <div class="absolute top-0 right-8 flex items-center gap-3 text-[12px] text-white/50">
             <div class="flex items-center gap-1">
                 <div class="w-2.5 h-2.5 rounded-sm bg-red-500/30 border border-red-500/50"></div>
                 <span>No power</span>
@@ -66,25 +66,57 @@
             <!-- Hour markers and labels -->
             <g v-for="hour in hourMarkers" :key="hour">
                 <line :x1="getXForHour(hour)" :y1="axisY - 4" :x2="getXForHour(hour)" :y2="axisY + 4" stroke="white"
-                    stroke-opacity="0.3" stroke-width="1" />
+                    stroke-opacity="0.3" stroke-width="0.5" />
                 <text :x="getXForHour(hour)" :y="axisY + 18"
                     :text-anchor="hour === 0 ? 'start' : hour === 24 ? 'end' : 'middle'" fill="white" fill-opacity="0.5"
                     font-size="6">{{ formatHour(hour) }}</text>
             </g>
 
             <!-- Sunrise icon at 6am -->
-            <g :transform="`translate(${getXForHour(6)}, ${getYForHour(6) - 12})`">
-                <circle r="6" fill="#fbbf24" fill-opacity="0.8" />
-                <path d="M0,-10 L0,-14 M7,-7 L10,-10 M-7,-7 L-10,-10 M10,0 L14,0 M-10,0 L-14,0" stroke="#fbbf24"
-                    stroke-width="1" stroke-linecap="square" fill="none" transform="translate(0, 0)" />
+            <g :transform="`translate(${getXForHour(6) - 12}, ${axisY - 16})`">
+                <defs>
+                    <clipPath :id="`sunriseClip-${uniqueId}`">
+                        <path d="M24 14.4H14.4l-1.7-1.5a0.9 0.9 0 0 0-1.1 0L10 14.4H0V0h24Z" />
+                    </clipPath>
+                </defs>
+                <g :clip-path="`url(#sunriseClip-${uniqueId})`">
+                    <g transform="translate(3.3 4.9)">
+                        <circle cx="8.8" cy="8.8" r="3.9" fill="none" stroke="#fbbf24" stroke-miterlimit="10"
+                            stroke-width="0.5" />
+                        <path fill="none" stroke="#fbbf24" stroke-linecap="round" stroke-miterlimit="10"
+                            stroke-width="0.5"
+                            d="M8.8 2.7V.4m0 16.9v-2.3m4.3-10.5l1.6-1.6M2.8 14.8l1.7-1.7m0-8.6L2.8 2.8m12 12l-1.7-1.7M2.7 8.8H.4m16.9 0h-2.3">
+                            <animateTransform additive="sum" attributeName="transform" dur="60s"
+                                repeatCount="indefinite" type="rotate" values="0 8.8 8.8; 45 8.8 8.8" />
+                        </path>
+                    </g>
+                </g>
+                <path fill="none" stroke="#fbbf24" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                    d="M6 15.6h4.1l1.9-1.7l1.9 1.7H18" opacity="0.6" />
             </g>
 
 
             <!-- Sunset icon at 6pm -->
-            <g :transform="`translate(${getXForHour(18)}, ${getYForHour(18) - 12})`">
-                <circle r="6" fill="#f97316" fill-opacity="0.8" />
-                <path d="M7,-7 L10,-10 M-7,-7 L-10,-10 M10,0 L14,0 M-10,0 L-14,0" stroke="#f97316" stroke-width="1"
-                    stroke-linecap="round" fill="none" transform="translate(0, -1)" />
+            <g :transform="`translate(${getXForHour(18) - 12}, ${axisY - 16})`">
+                <defs>
+                    <clipPath :id="`sunsetClip-${uniqueId}`">
+                        <path d="M24 14.4H14.4l-1.7-1.5a0.9 0.9 0 0 0-1.1 0L10 14.4H0V0h24Z" />
+                    </clipPath>
+                </defs>
+                <g :clip-path="`url(#sunsetClip-${uniqueId})`">
+                    <g transform="translate(3.3 4.9)">
+                        <circle cx="8.8" cy="8.8" r="3.9" fill="none" stroke="#f97316" stroke-miterlimit="10"
+                            stroke-width="0.5" />
+                        <path fill="none" stroke="#ef4444" stroke-linecap="round" stroke-miterlimit="10"
+                            stroke-width="0.5"
+                            d="M8.8 2.7V.4m0 16.9v-2.3m4.3-10.5l1.6-1.6M2.8 14.8l1.7-1.7m0-8.6L2.8 2.8m12 12l-1.7-1.7M2.7 8.8H.4m16.9 0h-2.3">
+                            <animateTransform additive="sum" attributeName="transform" dur="20s"
+                                repeatCount="indefinite" type="rotate" values="0 8.8 8.8; 45 8.8 8.8" />
+                        </path>
+                    </g>
+                </g>
+                <path fill="none" stroke="#f97316" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                    d="M6 15.6h4.1l1.9-1.7l1.9 1.7H18" opacity="0.6" />
             </g>
 
             <!-- Current time indicator -->
@@ -96,9 +128,9 @@
 
             <!-- Outage start/end labels -->
             <text :x="outageStartX" :y="curveTop - 12" text-anchor="middle" fill="#ef4444" font-size="6"
-                font-weight="500">{{ formatTime(outageStart) }}</text>
+                font-weight="300">{{ formatTime(outageStart) }}</text>
             <text :x="outageStartX + outageWidth" :y="curveTop - 12" text-anchor="middle" fill="#ef4444" font-size="6"
-                font-weight="500">{{ formatTime(outageEnd) }}</text>
+                font-weight="300">{{ formatTime(outageEnd) }}</text>
         </svg>
 
     </div>
@@ -126,7 +158,7 @@ const curveHeight = 50
 const axisY = curveTop + curveHeight + 10
 
 // Hour markers to display
-const hourMarkers = [0, 6, 12, 18, 24]
+const hourMarkers = [6, 12, 18]
 
 // Convert time to hours (0-24)
 function timeToHours(time: Date | string): number {
