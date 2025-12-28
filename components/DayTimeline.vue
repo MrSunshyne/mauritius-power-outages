@@ -1,5 +1,17 @@
 <template>
-    <div class="day-timeline">
+    <div class="day-timeline relative">
+        <!-- Legend - top right -->
+        <div class="absolute top-0 right-0 flex items-center gap-3 text-[10px] text-white/50">
+            <div class="flex items-center gap-1">
+                <div class="w-2.5 h-2.5 rounded-sm bg-red-500/30 border border-red-500/50"></div>
+                <span>No power</span>
+            </div>
+            <div v-if="showCurrentTime" class="flex items-center gap-1">
+                <div class="w-2.5 h-0.5 bg-green-500"></div>
+                <span>Now</span>
+            </div>
+        </div>
+
         <svg :viewBox="`0 0 ${width} ${height}`" class="w-full h-auto" preserveAspectRatio="xMidYMid meet">
             <defs>
                 <!-- Gradient for the sky curve - day portion -->
@@ -29,7 +41,7 @@
             <path :d="dayArcFillPath" fill="url(#dayGradient)" />
 
             <!-- Sun curve path -->
-            <path :d="sunCurvePath" fill="none" stroke="#fbbf24" stroke-width="1" stroke-linecap="round"
+            <path :d="sunCurvePath" fill="none" stroke="#fbbf24" stroke-width="0.5" stroke-linecap="round"
                 class="opacity-60" />
 
             <!-- Outage window overlay -->
@@ -49,14 +61,14 @@
             </g>
 
             <!-- Time axis line -->
-            <line :x1="padding" :y1="axisY" :x2="width - padding" :y2="axisY" stroke="white" stroke-opacity="0.2"
-                stroke-width="1" />
+            <line :x1="0" :y1="axisY" :x2="width" :y2="axisY" stroke="white" stroke-opacity="0.2" stroke-width="0.5" />
 
             <!-- Hour markers and labels -->
             <g v-for="hour in hourMarkers" :key="hour">
                 <line :x1="getXForHour(hour)" :y1="axisY - 4" :x2="getXForHour(hour)" :y2="axisY + 4" stroke="white"
                     stroke-opacity="0.3" stroke-width="1" />
-                <text :x="getXForHour(hour)" :y="axisY + 18" text-anchor="middle" fill="white" fill-opacity="0.5"
+                <text :x="getXForHour(hour)" :y="axisY + 18"
+                    :text-anchor="hour === 0 ? 'start' : hour === 24 ? 'end' : 'middle'" fill="white" fill-opacity="0.5"
                     font-size="6">{{ formatHour(hour) }}</text>
             </g>
 
@@ -66,6 +78,7 @@
                 <path d="M0,-10 L0,-14 M7,-7 L10,-10 M-7,-7 L-10,-10 M10,0 L14,0 M-10,0 L-14,0" stroke="#fbbf24"
                     stroke-width="1" stroke-linecap="square" fill="none" transform="translate(0, 0)" />
             </g>
+
 
             <!-- Sunset icon at 6pm -->
             <g :transform="`translate(${getXForHour(18)}, ${getYForHour(18) - 12})`">
@@ -88,17 +101,6 @@
                 font-weight="500">{{ formatTime(outageEnd) }}</text>
         </svg>
 
-        <!-- Legend -->
-        <div class="flex items-center justify-center gap-4 mt-2 text-xs text-white/50">
-            <div class="flex items-center gap-1.5">
-                <div class="w-3 h-3 rounded-sm bg-red-500/30 border border-red-500/50"></div>
-                <span>No power</span>
-            </div>
-            <div v-if="showCurrentTime" class="flex items-center gap-1.5">
-                <div class="w-3 h-0.5 bg-green-500"></div>
-                <span>Current time</span>
-            </div>
-        </div>
     </div>
 </template>
 
@@ -117,7 +119,7 @@ const uniqueId = useId()
 // SVG dimensions
 const width = 400
 const height = 120
-const padding = 30
+const padding = 0
 const chartWidth = width - padding * 2
 const curveTop = 25
 const curveHeight = 50
