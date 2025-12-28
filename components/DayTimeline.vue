@@ -7,7 +7,7 @@
                 <span>No power</span>
             </div>
             <div v-if="showCurrentTime" class="flex items-center gap-1">
-                <div class="w-2.5 h-0.5 bg-green-500"></div>
+                <div class="w-2.5 h-0.5 bg-white"></div>
                 <span>Now</span>
             </div>
         </div>
@@ -121,9 +121,9 @@
 
             <!-- Current time indicator -->
             <g v-if="showCurrentTime" :transform="`translate(${currentTimeX}, 0)`">
-                <line :y1="curveTop - 10" :y2="axisY + 5" stroke="#22c55e" stroke-width="1" stroke-dasharray="2,2" />
-                <circle :cy="currentTimeY" r="2" fill="#22c55e" />
-                <text :y="curveTop - 15" text-anchor="middle" fill="#22c55e" font-size="6" font-weight="300">NOW</text>
+                <line :y1="curveTop - 10" :y2="axisY + 5" stroke="#ffffff" stroke-width="1" stroke-dasharray="2,2" />
+                <circle :cy="currentTimeY" r="2" fill="#ffffff" />
+                <text :y="curveTop - 15" text-anchor="middle" fill="#ffffff" font-size="6" font-weight="300">NOW</text>
             </g>
 
             <!-- Outage start/end labels -->
