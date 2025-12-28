@@ -418,12 +418,19 @@ function formatDate(date: Date) {
                     <div class="">
                         <div class="px-6 py-5 sm:px-8 sm:py-6 text-xs uppercase tracking-wider text-white/40 mb-3">
                             Outage Timeline</div>
-                        <DayTimeline 
-                            :outage-start="selectedOutage.from" 
-                            :outage-end="selectedOutage.to"
-                            :sunrise="sunTimes?.sunrise"
-                            :sunset="sunTimes?.sunset"
-                        />
+                        <ClientOnly>
+                            <DayTimeline 
+                                :outage-start="selectedOutage.from" 
+                                :outage-end="selectedOutage.to"
+                                :sunrise="sunTimes?.sunrise"
+                                :sunset="sunTimes?.sunset"
+                            />
+                            <template #fallback>
+                                <div class="h-[130px] flex items-center justify-center">
+                                    <div class="text-white/30 text-sm">Loading timeline...</div>
+                                </div>
+                            </template>
+                        </ClientOnly>
                     </div>
                 </div>
 
