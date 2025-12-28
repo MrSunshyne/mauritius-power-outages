@@ -239,7 +239,7 @@ const title = computed(() => {
     if (selectedOutage.value) {
         const location = selectedOutage.value.locality
         const date = format(new Date(selectedOutage.value.from), 'MMM d, yyyy')
-        const time = selectedOutage.value.from.slice(11, 16) + ' - ' + selectedOutage.value.to.slice(11, 16)
+        const time = formatLocalTime(selectedOutage.value.from) + ' - ' + formatLocalTime(selectedOutage.value.to)
         return `Power Outage in ${location} - ${date} ${time} | Mauritius`
     }
     return 'Power Outage Details - Mauritius'
@@ -250,7 +250,7 @@ const description = computed(() => {
         const location = selectedOutage.value.locality
         const streets = selectedOutage.value.streets
         const date = format(new Date(selectedOutage.value.from), 'EEEE, MMMM d, yyyy')
-        const time = selectedOutage.value.from.slice(11, 16) + ' to ' + selectedOutage.value.to.slice(11, 16)
+        const time = formatLocalTime(selectedOutage.value.from) + ' to ' + formatLocalTime(selectedOutage.value.to)
         return `Scheduled for ${location} (${streets}) on ${date} from ${time}. Check current power outage information for Mauritius.`
     }
     return 'View specific power outage information for Mauritius'
@@ -284,7 +284,7 @@ defineOgImageComponent('Outage', {
     headline: 'hi',
     mode: 'svg',
     date: selectedOutage.value ? format(new Date(selectedOutage.value.from), 'EEEE, MMM d, yyyy') : '',
-    time: selectedOutage.value ? `${selectedOutage.value.from.slice(11, 16)} - ${selectedOutage.value.to.slice(11, 16)}` : '',
+    time: selectedOutage.value ? `${formatLocalTime(selectedOutage.value.from)} - ${formatLocalTime(selectedOutage.value.to)}` : '',
 })
 
 const currentOutages = computed(() => {
@@ -302,6 +302,14 @@ const isLoading = computed(() => {
 // Helper function
 function formatDate(date: Date) {
     return format(date, 'EEEE, MMM d, yyyy')
+}
+
+// Format time in Mauritius local time (UTC+4)
+function formatLocalTime(utcTimeStr: string): string {
+    const utcDate = new Date(utcTimeStr)
+    // Mauritius is UTC+4
+    const mauritiusTime = new Date(utcDate.getTime() + (4 * 60 * 60 * 1000))
+    return mauritiusTime.toISOString().slice(11, 16)
 }
 </script>
 
@@ -369,7 +377,7 @@ function formatDate(date: Date) {
                             <div v-if="outageState === 'past'" class="flex items-center gap-2">
                                 <span class="text-white/60 text-sm">Restored at</span>
                                 <span class="text-white font-mono text-base sm:text-lg tracking-wide">
-                                    {{ selectedOutage.to.slice(11, 16) }}
+                                    {{ formatLocalTime(selectedOutage.to) }}
                                 </span>
                             </div>
                             <!-- For ongoing/upcoming, show countdown -->
@@ -400,12 +408,12 @@ function formatDate(date: Date) {
                                     <div class="text-white text-lg">{{ formatDate(new Date(selectedOutage.from)) }}
                                     </div>
                                 </div>
-                                <div>
-                                    <div class="text-xs uppercase tracking-wider text-white/40 mb-1.5">Time</div>
-                                    <div class="text-white text-lg font-medium">
-                                        {{ selectedOutage.from.slice(11, 16) }} – {{ selectedOutage.to.slice(11, 16) }}
-                                    </div>
-                                </div>
+                                 <div>
+                                     <div class="text-xs uppercase tracking-wider text-white/40 mb-1.5">Time</div>
+                                     <div class="text-white text-lg font-medium">
+                                         {{ formatLocalTime(selectedOutage.from) }} – {{ formatLocalTime(selectedOutage.to) }}
+                                     </div>
+                                 </div>
                             </div>
                             <div>
                                 <div class="text-xs uppercase tracking-wider text-white/40 mb-1.5">Affected Areas</div>
