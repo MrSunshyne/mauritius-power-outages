@@ -206,8 +206,8 @@ const calendarEvent = computed<CalendarEvent | null>(() => {
     const streets = outage.streets
 
     return {
-        title: `Power Outage: ${location}`,
-        description: `Scheduled power outage in ${location}, ${district}.\n\nAffected areas: ${streets}\n\nMore info: ${shareUrl.value}`,
+        title: `${location} - Power Outage`,
+        description: `${district}.\n\nAffected areas: ${streets}\n\nMore info: ${shareUrl.value}`,
         location: `${location}, ${district}, Mauritius`,
         startTime: new Date(outage.from),
         endTime: new Date(outage.to),
@@ -240,7 +240,7 @@ const title = computed(() => {
         const location = selectedOutage.value.locality
         const date = format(new Date(selectedOutage.value.from), 'MMM d, yyyy')
         const time = selectedOutage.value.from.slice(11, 16) + ' - ' + selectedOutage.value.to.slice(11, 16)
-        return `Power Outage: ${location} - ${date} ${time} | Mauritius`
+        return `Power Outage in ${location} - ${date} ${time} | Mauritius`
     }
     return 'Power Outage Details - Mauritius'
 })
@@ -251,7 +251,7 @@ const description = computed(() => {
         const streets = selectedOutage.value.streets
         const date = format(new Date(selectedOutage.value.from), 'EEEE, MMMM d, yyyy')
         const time = selectedOutage.value.from.slice(11, 16) + ' to ' + selectedOutage.value.to.slice(11, 16)
-        return `Power outage scheduled for ${location} (${streets}) on ${date} from ${time}. Check current power outage information for Mauritius.`
+        return `Scheduled for ${location} (${streets}) on ${date} from ${time}. Check current power outage information for Mauritius.`
     }
     return 'View specific power outage information for Mauritius'
 })
@@ -419,12 +419,8 @@ function formatDate(date: Date) {
                         <div class="px-6 py-5 sm:px-8 sm:py-6 text-xs uppercase tracking-wider text-white/40 mb-3">
                             Outage Timeline</div>
                         <ClientOnly>
-                            <DayTimeline 
-                                :outage-start="selectedOutage.from" 
-                                :outage-end="selectedOutage.to"
-                                :sunrise="sunTimes?.sunrise"
-                                :sunset="sunTimes?.sunset"
-                            />
+                            <DayTimeline :outage-start="selectedOutage.from" :outage-end="selectedOutage.to"
+                                :sunrise="sunTimes?.sunrise" :sunset="sunTimes?.sunset" />
                             <template #fallback>
                                 <div class="h-[130px] flex items-center justify-center">
                                     <div class="text-white/30 text-sm">Loading timeline...</div>
