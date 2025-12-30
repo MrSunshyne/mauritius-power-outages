@@ -9,7 +9,9 @@
       <div class="relative pr-14 sm:pr-16 md:pr-0">
         <div class="mb-1">
           <div class="text-xs uppercase text-white/70">{{ timeUntil }} <span class="text-white/40">{{ formatDate(props.data.from) }} - {{ formatDate(props.data.to) }}</span></div>
-          <div class="font-bold text-base sm:text-lg">{{ props.data.locality }}</div>
+          <NuxtLink :to="`/locality/${getLocalitySlug(props.data)}`" @click.stop class="font-bold text-base sm:text-lg hover:underline" @click="handleLocalityClick">
+            {{ props.data.locality }}
+          </NuxtLink>
         </div>
         <div class="text-sm max-w-xl text-blue-300 md:py-0 capitalize leading-relaxed">{{ props.data.streets }}</div>
       </div>
@@ -44,6 +46,7 @@ import VueCountdown from '@chenfengyuan/vue-countdown'
 import { useTimeAgo, useDateFormat } from '@vueuse/core'
 import type { Record } from '~/types'
 import { ANALYTICS_EVENTS } from '~/constants/analytics'
+import { getLocalitySlug } from '~/utils/slug'
 
 const props = defineProps<{
   data: Record
@@ -53,10 +56,17 @@ const props = defineProps<{
 const timeUntil = useTimeAgo(new Date(props.data.from))
 
 const handleCellClick = () => {
-  // Redirect directly to clean URL page for consistent experience
   const cleanUrl = `/outage/${props.data.id}`
   const router = useRouter()
   router.push(cleanUrl)
+}
+
+const handleLocalityClick = () => {
+  if (window.umami) {
+    window.umami.track(ANALYTICS_EVENTS.LOCALITY_VIEW, {
+      locality: props.data.locality,
+    })
+  }
 }
 
 const state = computed(() => {

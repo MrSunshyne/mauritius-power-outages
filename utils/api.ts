@@ -3,5 +3,7 @@ const API_BASE = 'https://raw.githubusercontent.com/MrSunshyne/mauritius-dataset
 export const API_URLS = {
   full: `${API_BASE}power-outages.json`,
   latest: `${API_BASE}power-outages.latest.json`,
-  daily: (date: string) => `${API_BASE}daily/${date}.json`, // YYYY-MM-DD format
+  daily: (date: string) => `${API_BASE}daily/${date}.json`,
+  localitiesIndex: `${API_BASE}localities/index.json`,
+  locality: (slug: string) => `${API_BASE}localities/${slug}.json`,
 }

@@ -21,6 +21,7 @@ export default defineNuxtConfig({
     '/statistics': { isr: 3600 },
     '/outage/**': { isr: 900 },
     '/day/**': { isr: 86400 },
+    '/locality/**': { isr: 86400 },
   },
 
   // Site config for OG Image module

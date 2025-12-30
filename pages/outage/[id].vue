@@ -5,6 +5,7 @@ import { API_URLS } from '~/utils/api'
 import { generateMockOutages, isDevelopment } from '~/utils/mock-data'
 import { downloadICS, generateGoogleCalendarUrl, type CalendarEvent } from '~/utils/calendar'
 import { fetchSunTimes, type SunTimes } from '~/composables/useSunTimes'
+import { getLocalitySlug } from '~/utils/slug'
 import type { Record } from '~/types'
 import VueCountdown from '@chenfengyuan/vue-countdown'
 import { ANALYTICS_EVENTS } from '~/constants/analytics'
@@ -303,7 +304,6 @@ const isLoading = computed(() => {
     return outageStatus.value === 'pending' || latestStatus.value === 'pending'
 })
 
-// Helper function
 function formatDate(date: Date) {
     return format(date, 'EEEE, MMM d, yyyy')
 }
@@ -315,6 +315,8 @@ function formatLocalTime(utcTimeStr: string): string {
     const mauritiusTime = new Date(utcDate.getTime() + (4 * 60 * 60 * 1000))
     return mauritiusTime.toISOString().slice(11, 16)
 }
+
+
 </script>
 
 <template>
@@ -427,9 +429,18 @@ function formatLocalTime(utcTimeStr: string): string {
                             </div>
                             <div class="space-y-4">
                                 <div>
-                                    <div class="text-xs uppercase tracking-wider text-white/40 mb-1.5">District</div>
+                                    <div class="text-xs uppercase tracking-wider text-white/40 mb-1.5">District
+                                    </div>
                                     <div class="text-white/80 leading-relaxed capitalize">{{ selectedOutage.district }}
                                     </div>
+                                </div>
+                                <div>
+                                    <div class="text-xs uppercase tracking-wider text-white/40 mb-1.5">Locality
+                                    </div>
+                                    <NuxtLink :to="`/locality/${getLocalitySlug(selectedOutage)}`"
+                                        class="text-white/80 leading-relaxed hover:text-white hover:underline transition-colors">
+                                        {{ selectedOutage.locality }}
+                                    </NuxtLink>
                                 </div>
                                 <div>
                                     <div class="text-xs uppercase tracking-wider text-white/40 mb-1.5">Affected Areas

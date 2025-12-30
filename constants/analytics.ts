@@ -20,6 +20,9 @@ export const ANALYTICS_EVENTS = {
   OUTAGE_SAVE_GOOGLE_CALENDAR: 'outage-save-google-calendar',
   OUTAGE_VIEW_CURRENT: 'outage-view-current',
 
+  // Locality interactions
+  LOCALITY_VIEW: 'locality-view',
+
   // Footer links
   FOOTER_STATISTICS: 'footer-statistics',
   FOOTER_DATA_SOURCE: 'footer-data-source',

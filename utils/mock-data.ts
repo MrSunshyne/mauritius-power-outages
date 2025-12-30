@@ -1,5 +1,6 @@
 import { addDays, format, setHours, setMinutes, startOfDay } from 'date-fns'
 import { District, type Record } from '~/types'
+import { generateSlug } from './slug'
 
 /**
  * Generates mock outage data for development/testing purposes.
@@ -30,6 +31,7 @@ function createOutage(
     date: format(date, 'yyyy-MM-dd'),
     district,
     locality,
+    localitySlug: generateSlug(locality),
     streets,
     from: fromDate.toISOString() as unknown as Date,
     to: toDate.toISOString() as unknown as Date,
