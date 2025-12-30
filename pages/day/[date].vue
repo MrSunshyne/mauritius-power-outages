@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { addDays, format } from 'date-fns'
+import { addDays, format, parseISO } from 'date-fns'
 import { API_URLS } from '~/utils/api'
-import { mergeWithMockData } from '~/utils/mock-data'
 import type { Record } from '~/types'
 import { ANALYTICS_EVENTS } from '~/constants/analytics'
 
@@ -9,72 +8,91 @@ definePageMeta({
     layout: 'default',
 })
 
+const route = useRoute()
+const dateParam = route.params.date as string
+
+const isValidDate = /^\d{4}-\d{2}-\d{2}$/.test(dateParam)
+
+if (!isValidDate) {
+    navigateTo('/')
+}
+
+const currentDate = computed(() => parseISO(dateParam))
+
+const yesterday = computed(() => format(addDays(currentDate.value, -1), 'yyyy-MM-dd'))
+const tomorrow = computed(() => format(addDays(currentDate.value, 1), 'yyyy-MM-dd'))
+
+const dateLabel = computed(() => format(currentDate.value, 'EEEE, MMM d, yyyy'))
+
+const isToday = computed(() => {
+    const today = new Date()
+    return format(today, 'yyyy-MM-dd') === dateParam
+})
+
+const isTomorrow = computed(() => {
+    const tomorrow = addDays(new Date(), 1)
+    return format(tomorrow, 'yyyy-MM-dd') === dateParam
+})
+
+const isFuture = computed(() => {
+    const tomorrow = addDays(new Date(), 1)
+    return currentDate.value > tomorrow
+})
+
+const dailyData = ref<{ outages: Record[] } | null>(null)
+const dailyStatus = ref<'idle' | 'pending' | 'success' | 'error'>('pending')
+
+const fetchDailyData = async () => {
+    dailyStatus.value = 'pending'
+    try {
+        const response = await $fetch<string>(API_URLS.daily(dateParam))
+        const data = typeof response === 'string' ? JSON.parse(response) : response
+        dailyData.value = { outages: data.outages || [] }
+        dailyStatus.value = 'success'
+    } catch (e) {
+        console.error('Failed to fetch daily data:', e)
+        dailyData.value = null
+        dailyStatus.value = 'error'
+    }
+}
+
+await fetchDailyData()
+
+const cFlat = computed<Record[]>(() => dailyData.value?.outages || [])
+const cSelected = computed<Record[]>(() => cFlat.value)
+
+const isLoading = computed(() => dailyStatus.value === 'pending')
+
+const goToPrev = () => {
+    navigateTo(`/day/${yesterday.value}`)
+}
+
+const goToNext = () => {
+    navigateTo(`/day/${tomorrow.value}`)
+}
+
+const goToToday = () => {
+    navigateTo('/')
+}
+
 useSeoMeta({
-    title: 'Power Outages in Mauritius - Live Schedule & Updates',
-    description: 'Check today\'s and tomorrow\'s scheduled power cuts in Mauritius. Real-time CEB outage information with countdown timers and affected areas.',
-    ogTitle: 'Power Outages in Mauritius - Live Schedule & Updates',
-    ogDescription: 'Check today\'s and tomorrow\'s scheduled power cuts in Mauritius. Real-time CEB outage information with countdown timers and affected areas.',
-    ogUrl: 'https://power-outages-mauritius.netlify.app',
-    ogType: 'website',
-    ogSiteName: 'Power Outages Mauritius',
-    twitterCard: 'summary_large_image',
-    twitterTitle: 'Power Outages in Mauritius - Live Schedule & Updates',
-    twitterDescription: 'Check today\'s and tomorrow\'s scheduled power cuts in Mauritius. Real-time CEB outage information.',
+    title: () => `Power Outages - ${dateLabel.value}`,
+    description: () => `Scheduled power outages for ${dateLabel.value} in Mauritius. Find affected areas and timings.`,
+    ogTitle: () => `Power Outages - ${dateLabel.value}`,
+    ogDescription: () => `Scheduled power outages for ${dateLabel.value} in Mauritius.`,
 })
 
 defineOgImageComponent('Outage', {
-    heading: 'Live status updates',
+    heading: dateLabel.value,
     title: 'Power Outages in Mauritius',
     columnPercentClass: 'max-w-[65%]',
-    description: 'Stay informed about the latest power outages in Mauritius and share with your family and friends',
+    description: 'View outage details for this date',
     icon: 'solar:lightbulb-bolt-broken',
     theme: '#FFD500',
     colorMode: 'dark',
     tagline: 'View more details',
     taglineRight: 'A project by Sandeep Ramgolam',
 })
-
-const latestData = ref<{ today: Record[], future: Record[] } | null>(null)
-const latestStatus = ref<'idle' | 'pending' | 'success' | 'error'>('pending')
-
-onMounted(async () => {
-    latestStatus.value = 'pending'
-    try {
-        const response = await $fetch<string>(API_URLS.latest)
-        const data = typeof response === 'string' ? JSON.parse(response) : response
-        latestData.value = mergeWithMockData(data)
-        latestStatus.value = 'success'
-    } catch (e) {
-        console.error('Failed to fetch power outage data:', e)
-        latestData.value = mergeWithMockData(null)
-        latestStatus.value = latestData.value.today.length > 0 || latestData.value.future.length > 0 ? 'success' : 'error'
-    }
-})
-
-const cFlat = computed<Record[]>(() => {
-    if (!latestData.value) return []
-    return [...(latestData.value.today || []), ...(latestData.value.future || [])]
-})
-
-const cToday = computed<Record[]>(() => {
-    return latestData.value?.today || []
-})
-
-const cTomorrow = computed<Record[]>(() => {
-    return latestData.value?.future || []
-})
-
-const isLoading = computed(() => latestStatus.value === 'pending' || latestStatus.value === 'idle')
-
-const goToPrev = () => {
-    const yesterday = format(addDays(new Date(), -1), 'yyyy-MM-dd')
-    navigateTo(`/day/${yesterday}`)
-}
-
-const goToNext = () => {
-    const dayAfterTomorrow = format(addDays(new Date(), 2), 'yyyy-MM-dd')
-    navigateTo(`/day/${dayAfterTomorrow}`)
-}
 </script>
 
 <template>
@@ -91,37 +109,35 @@ const goToNext = () => {
 
         <main class="flex flex-col gap-6 sm:gap-8">
             <div class="hidden sm:flex sm:items-center sm:justify-between">
-                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-white">Today</h2>
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-white">{{ dateLabel }}</h2>
                 <div class="flex gap-2">
                     <button class="btn" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_PREV"
                         @click="goToPrev">Prev</button>
                     <button class="btn" :disabled="isLoading" :data-umami-event="ANALYTICS_EVENTS.NAV_NEXT"
                         @click="goToNext">Next</button>
+                    <button v-if="!isToday" class="btn" :disabled="isLoading"
+                        :data-umami-event="ANALYTICS_EVENTS.NAV_TODAY" @click="goToToday">Today</button>
                 </div>
             </div>
+
+            <h2 class="text-xl font-bold text-white sm:hidden">{{ dateLabel }}</h2>
 
             <div>
                 <div v-if="isLoading" class="py-12 sm:py-16 text-white/50 text-center text-base sm:text-lg">
                     Loading outage data...
                 </div>
 
-                <template v-else>
-                    <div class="space-y-10">
-                        <section>
-                            <h2 class="text-xl font-bold text-white mb-4 sm:hidden">Today</h2>
-                            <CellGroup v-if="cToday.length > 0" :data="cToday" />
-                            <div v-else class="py-8 text-white/50 text-center text-base">
-                                No power outages scheduled for today
-                            </div>
-                        </section>
+                <template v-else-if="dailyStatus === 'error'">
+                    <div class="py-12 sm:py-16 text-white/50 text-center text-base sm:text-lg">
+                        <p v-if="isFuture">Data not yet available for this future date.</p>
+                        <p v-else>No power outages scheduled for this day or data not available.</p>
+                    </div>
+                </template>
 
-                        <section>
-                            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6">Tomorrow</h2>
-                            <CellGroup v-if="cTomorrow.length > 0" :data="cTomorrow" />
-                            <div v-else class="py-8 text-white/50 text-center text-base">
-                                No power outages scheduled for tomorrow
-                            </div>
-                        </section>
+                <template v-else>
+                    <CellGroup v-if="cSelected.length > 0" :data="cSelected" />
+                    <div v-else class="py-12 sm:py-16 text-white/50 text-center text-base sm:text-lg">
+                        No power outages scheduled for this day
                     </div>
                 </template>
             </div>
@@ -137,6 +153,11 @@ const goToNext = () => {
                     :data-umami-event="ANALYTICS_EVENTS.NAV_PREV">
                     <span class="text-lg">&larr;</span>
                     <span>Prev</span>
+                </button>
+                <button @click="goToToday" class="btn-mobile" :disabled="isToday || isLoading"
+                    :data-umami-event="ANALYTICS_EVENTS.NAV_TODAY">
+                    <span class="text-lg">&bull;</span>
+                    <span>Today</span>
                 </button>
                 <button @click="goToNext" class="btn-mobile" :disabled="isLoading"
                     :data-umami-event="ANALYTICS_EVENTS.NAV_NEXT">
