@@ -173,15 +173,31 @@ export function isDevelopment(): boolean {
 }
 
 /**
+ * Checks if mock data is enabled via runtime config
+ */
+export function isMockDataEnabled(): boolean {
+  const config = useRuntimeConfig()
+  const isEnabled = config.public.enableMockData
+  return isEnabled
+}
+
+/**
  * Merges mock data with real data, adding mock entries only in development
  */
 export function mergeWithMockData(
   realData: { today: Record[]; future: Record[] } | null
 ): { today: Record[]; future: Record[] } {
-  if (!isDevelopment()) {
+  const devMode = isDevelopment()
+  const mockEnabled = isMockDataEnabled()
+  
+  console.log('[mergeWithMockData] isDevelopment:', devMode, 'isMockDataEnabled:', mockEnabled)
+  
+  if (!devMode || !mockEnabled) {
+    console.log('[mergeWithMockData] Returning real data only')
     return realData || { today: [], future: [] }
   }
 
+  console.log('[mergeWithMockData] Merging mock data with real data')
   const mockData = generateMockOutages()
 
   if (!realData) {

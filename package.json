@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "nuxt dev --port 3001",
+    "dev:mock": "nuxt dev --port 3001 --dotenv .env.mock",
     "dev:clean": "rm -rf .nuxt node_modules/.cache && npm install && nuxt dev --port 3001",
     "build": "nuxt build",
     "generate": "nuxt generate",
@@ -25,6 +26,8 @@
     "postcss": "^8.5.6",
     "sass": "^1.83.1",
     "tailwindcss": "^4.0.6",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "@vueuse/core": "^12.4.0",
+    "@vueuse/nuxt": "^12.4.0"
   }
 }

@@ -183,11 +183,19 @@ const hoursWasted = computed(() => {
     }
     return result.toString()
 })
+
+// Breadcrumb
+const breadcrumbItems = [
+    { label: 'Statistics' }
+]
 </script>
 
 <template>
-    <div class="text-white px-4 stats-bg">
-        <div class="grid grid-cols-2 gap-48 text-left">
+    <PageContainer>
+        <Breadcrumb :items="breadcrumbItems" />
+        
+        <div class="text-white stats-bg py-6">
+            <div class="grid grid-cols-2 gap-48 text-left">
             <HeroSection class="col-span-2" :outages-today="outagesToday" :hours-wasted="hoursWasted"
                 :count-per-date="countPerDate" />
 
@@ -210,7 +218,8 @@ const hoursWasted = computed(() => {
                 </template>
             </ClientOnly>
         </div>
-    </div>
+        </div>
+    </PageContainer>
 </template>
 
 <style scoped>

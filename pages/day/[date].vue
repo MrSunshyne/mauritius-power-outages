@@ -75,6 +75,12 @@ const goToToday = () => {
     navigateTo('/')
 }
 
+// Breadcrumb
+const breadcrumbItems = computed(() => [
+    { label: 'Browse' },
+    { label: dateLabel.value }
+])
+
 useSeoMeta({
     title: () => `Power Outages - ${dateLabel.value}`,
     description: () => `Scheduled power outages for ${dateLabel.value} in Mauritius. Find affected areas and timings.`,
@@ -96,18 +102,10 @@ defineOgImageComponent('Outage', {
 </script>
 
 <template>
-    <div class="w-full max-w-4xl mx-auto px-4 py-6 sm:px-6 sm:py-8 flex-1 flex flex-col">
-        <header class="mb-6 sm:mb-8 flex items-baseline justify-between gap-3">
-            <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight">Power Outages in Mauritius
-            </h1>
-            <div class="flex-shrink-0">
-                <ClientOnly>
-                    <ViewCounter />
-                </ClientOnly>
-            </div>
-        </header>
-
-        <main class="flex flex-col gap-6 sm:gap-8">
+    <PageContainer>
+        <Breadcrumb :items="breadcrumbItems" />
+        
+        <div class="flex flex-col gap-6 sm:gap-8">
             <DateNavigation 
                 :date-label="dateLabel" 
                 :show-today="!isToday" 
@@ -136,14 +134,12 @@ defineOgImageComponent('Outage', {
                     </div>
                 </template>
             </div>
-        </main>
+        </div>
 
         <footer class="mt-auto pt-8 pb-24 sm:pb-0">
             <SiteFooter />
         </footer>
-
-
-    </div>
+    </PageContainer>
 </template>
 
 

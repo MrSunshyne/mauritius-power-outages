@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+console.log('[nuxt.config] NUXT_PUBLIC_ENABLE_MOCK_DATA env var:', process.env.NUXT_PUBLIC_ENABLE_MOCK_DATA)
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-12-26',
   devtools: { enabled: true },
@@ -84,7 +86,8 @@ export default defineNuxtConfig({
         },
       ],
     },
-    pageTransition: { name: 'slide', mode: 'out-in' },
+    // Disable global page transition - we'll handle transitions at component level
+    pageTransition: false,
   },
 
   // CSS
@@ -100,6 +103,14 @@ export default defineNuxtConfig({
   // TypeScript
   typescript: {
     strict: true,
+  },
+
+  // Runtime config for environment variables
+  // Nuxt automatically maps NUXT_PUBLIC_* env vars to runtimeConfig.public.*
+  runtimeConfig: {
+    public: {
+      enableMockData: false, // default value, can be overridden by NUXT_PUBLIC_ENABLE_MOCK_DATA
+    },
   },
 
   // Auto-imports for custom composables

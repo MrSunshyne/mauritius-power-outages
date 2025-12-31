@@ -75,28 +75,25 @@ const goToNext = () => {
     const dayAfterTomorrow = format(addDays(new Date(), 2), 'yyyy-MM-dd')
     navigateTo(`/day/${dayAfterTomorrow}`)
 }
+
+const breadcrumbItems = computed(() => {
+    return [
+        {
+            label: 'Today',
+            to: '/',
+        },
+
+    ]
+})
 </script>
 
 <template>
-    <div class="w-full max-w-4xl mx-auto px-4 py-6 sm:px-6 sm:py-8 flex-1 flex flex-col">
-        <header class="mb-6 sm:mb-8 flex items-baseline justify-between gap-3">
-            <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight">Power Outages in Mauritius
-            </h1>
-            <div class="flex-shrink-0">
-                <ClientOnly>
-                    <ViewCounter />
-                </ClientOnly>
-            </div>
-        </header>
+    <PageContainer>
+        <Breadcrumb :items="breadcrumbItems" />
 
-        <main class="flex flex-col gap-6 sm:gap-8">
-            <DateNavigation 
-                date-label="Today" 
-                :show-today="false" 
-                :disabled="isLoading"
-                @prev="goToPrev"
-                @next="goToNext"
-            />
+        <div class="flex flex-col gap-6 sm:gap-8">
+            <DateNavigation date-label="Today" :show-today="false" :disabled="isLoading" @prev="goToPrev"
+                @next="goToNext" />
 
             <div>
                 <div v-if="isLoading" class="py-12 sm:py-16 text-white/50 text-center text-base sm:text-lg">
@@ -122,12 +119,10 @@ const goToNext = () => {
                     </div>
                 </template>
             </div>
-        </main>
+        </div>
 
         <footer class="mt-auto pt-8 pb-24 sm:pb-0">
             <SiteFooter />
         </footer>
-    </div>
+    </PageContainer>
 </template>
-
-
