@@ -1,4 +1,5 @@
 import { format } from 'date-fns'
+import { MAURITIUS_TIMEZONE_OFFSET_MS } from '~/utils/datetime'
 
 interface SunTimesResult {
   sunrise: string

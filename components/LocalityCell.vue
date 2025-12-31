@@ -36,18 +36,11 @@ import {
 } from "date-fns";
 import type { Record } from "~/types";
 import { ANALYTICS_EVENTS } from "~/constants/analytics";
+import { formatLocalTime } from "~/utils/datetime";
 
 const props = defineProps<{
     data: Record;
 }>();
-
-// Format time in Mauritius local time (UTC+4)
-function formatLocalTime(utcTimeStr: string): string {
-    const utcDate = new Date(utcTimeStr);
-    // Mauritius is UTC+4
-    const mauritiusTime = new Date(utcDate.getTime() + 4 * 60 * 60 * 1000);
-    return mauritiusTime.toISOString().slice(11, 16);
-}
 
 const formattedDate = computed(() => {
     const date = new Date(props.data.from);
@@ -74,12 +67,6 @@ const outrageDuration = computed(() => {
         return `${hours}h ${minutes}min`;
     }
 });
-
-function formatDate(date: Date | string) {
-    return formatLocalTime(
-        typeof date === "string" ? date : date.toISOString(),
-    );
-}
 
 const handleCellClick = () => {
     const cleanUrl = `/outage/${props.data.id}`;

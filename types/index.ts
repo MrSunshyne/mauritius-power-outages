@@ -17,8 +17,8 @@ export interface Record {
   localitySlug?: string
   streets: string
   district: District
-  from: Date
-  to: Date
+  from: string
+  to: string
   id: string
 }
 

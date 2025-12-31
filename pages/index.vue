@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { addDays, format } from 'date-fns'
-import { API_URLS } from '~/utils/api'
+import { API_URLS, fetchJson } from '~/utils/api'
 import { mergeWithMockData } from '~/utils/mock-data'
 import type { Record } from '~/types'
-import { ANALYTICS_EVENTS } from '~/constants/analytics'
+import { useAnalytics } from '~/composables/useAnalytics'
+
+const { track } = useAnalytics()
 
 definePageMeta({
     layout: 'default',
@@ -34,14 +36,18 @@ defineOgImageComponent('Outage', {
     taglineRight: 'A project by Sandeep Ramgolam',
 })
 
-const latestData = ref<{ today: Record[], future: Record[] } | null>(null)
+interface LatestResponse {
+    today: Record[]
+    future: Record[]
+}
+
+const latestData = ref<LatestResponse | null>(null)
 const latestStatus = ref<'idle' | 'pending' | 'success' | 'error'>('pending')
 
 onMounted(async () => {
     latestStatus.value = 'pending'
     try {
-        const response = await $fetch<string>(API_URLS.latest)
-        const data = typeof response === 'string' ? JSON.parse(response) : response
+        const data = await fetchJson<LatestResponse>(API_URLS.latest)
         latestData.value = mergeWithMockData(data)
         latestStatus.value = 'success'
     } catch (e) {

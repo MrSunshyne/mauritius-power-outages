@@ -1,6 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-console.log('[nuxt.config] NUXT_PUBLIC_ENABLE_MOCK_DATA env var:', process.env.NUXT_PUBLIC_ENABLE_MOCK_DATA)
-
 export default defineNuxtConfig({
   compatibilityDate: '2024-12-26',
   devtools: { enabled: true },

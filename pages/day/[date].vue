@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { addDays, format, parseISO } from 'date-fns'
-import { API_URLS } from '~/utils/api'
+import { API_URLS, fetchJson } from '~/utils/api'
 import type { Record } from '~/types'
-import { ANALYTICS_EVENTS } from '~/constants/analytics'
 
 definePageMeta({
     layout: 'default',
@@ -39,15 +38,18 @@ const isFuture = computed(() => {
     return currentDate.value > tomorrow
 })
 
-const dailyData = ref<{ outages: Record[] } | null>(null)
+interface DailyResponse {
+    outages: Record[]
+}
+
+const dailyData = ref<DailyResponse | null>(null)
 const dailyStatus = ref<'idle' | 'pending' | 'success' | 'error'>('pending')
 
 const fetchDailyData = async () => {
     dailyStatus.value = 'pending'
     try {
-        const response = await $fetch<string>(API_URLS.daily(dateParam))
-        const data = typeof response === 'string' ? JSON.parse(response) : response
-        dailyData.value = { outages: data.outages || [] }
+        const data = await fetchJson<DailyResponse>(API_URLS.daily(dateParam))
+        dailyData.value = data
         dailyStatus.value = 'success'
     } catch (e) {
         console.error('Failed to fetch daily data:', e)

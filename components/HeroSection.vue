@@ -1,6 +1,6 @@
 <template>
     <div class="grid place-items-center h-[100vh] relative">
-        <ChartsChartDeco class="absolute z-0 bottom-[0] left-0 right-0" :data="countPerDate"
+        <ChartsChartDeco class="absolute z-0 bottom-[0] left-0 right-0" :data="countPerDateValue"
             :title="'Detailed timeline'" />
 
         <div class="flex flex-col gap-24 items-center relative z-10">
@@ -27,8 +27,8 @@
                 </div>
 
                 <div class="bg-gray-500/10 rounded-lg px-10 py-5 text-right">
-                    <div v-if="props.outagesToday" class="text-5xl font-black">
-                        {{ props.outagesToday.length }}
+                    <div v-if="outagesTodayValue.length > 0" class="text-5xl font-black">
+                        {{ outagesTodayValue.length }}
                     </div>
                     <div class="uppercase font-medium text-white/50">
                         cuts today
@@ -50,4 +50,7 @@ const props = defineProps<{
     hoursWasted?: string
     countPerDate?: any[]
 }>()
+
+const outagesTodayValue = computed(() => props.outagesToday || [])
+const countPerDateValue = computed(() => props.countPerDate || [])
 </script>

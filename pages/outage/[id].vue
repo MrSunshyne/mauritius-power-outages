@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { format } from "date-fns";
 import { filterByDate, flat } from "~/utils/filters";
-import { API_URLS } from "~/utils/api";
+import { API_URLS, fetchJson } from "~/utils/api";
 import { generateMockOutages, isDevelopment } from "~/utils/mock-data";
 import {
     downloadICS,
@@ -10,6 +10,7 @@ import {
 } from "~/utils/calendar";
 import { fetchSunTimes, type SunTimes } from "~/composables/useSunTimes";
 import { getLocalitySlug } from "~/utils/slug";
+import { formatLocalTime, formatMauritiusDate } from "~/utils/datetime";
 import type { Record } from "~/types";
 import VueCountdown from "@chenfengyuan/vue-countdown";
 import { ANALYTICS_EVENTS } from "~/constants/analytics";
@@ -37,11 +38,7 @@ const { data: selectedOutage, status: outageStatus } =
         }
 
         // First, check latest data (small payload)
-        const latestResponse = await $fetch<string>(API_URLS.latest);
-        const latestData =
-            typeof latestResponse === "string"
-                ? JSON.parse(latestResponse)
-                : latestResponse;
+        const latestData = await fetchJson<{ today: Record[], future: Record[] }>(API_URLS.latest);
         const latestOutages = flat(latestData);
         const foundInLatest = latestOutages.find(
             (o: Record) => o.id === outageId,
@@ -52,11 +49,7 @@ const { data: selectedOutage, status: outageStatus } =
         }
 
         // Not in latest, fetch full history and extract just the one we need
-        const fullResponse = await $fetch<string>(API_URLS.full);
-        const fullData =
-            typeof fullResponse === "string"
-                ? JSON.parse(fullResponse)
-                : fullResponse;
+        const fullData = await fetchJson<{ [key: string]: Record[] }>(API_URLS.full);
         const allOutages = flat(fullData);
         return allOutages.find((o: Record) => o.id === outageId) || null;
     });
@@ -68,8 +61,7 @@ const { data: latestData, status: latestStatus } = await useAsyncData<{
 }>(
     "latest-outages",
     async () => {
-        const response = await $fetch<string>(API_URLS.latest);
-        return typeof response === "string" ? JSON.parse(response) : response;
+        return await fetchJson<{ today: Record[], future: Record[] }>(API_URLS.latest);
     },
     { default: () => ({ today: [], future: [] }) },
 );
@@ -340,14 +332,6 @@ const isLoading = computed(() => {
 
 function formatDate(date: Date) {
     return format(date, "EEEE, MMM d, yyyy");
-}
-
-// Format time in Mauritius local time (UTC+4)
-function formatLocalTime(utcTimeStr: string): string {
-    const utcDate = new Date(utcTimeStr);
-    // Mauritius is UTC+4
-    const mauritiusTime = new Date(utcDate.getTime() + 4 * 60 * 60 * 1000);
-    return mauritiusTime.toISOString().slice(11, 16);
 }
 
 // Breadcrumb

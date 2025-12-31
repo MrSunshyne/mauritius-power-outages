@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { format } from "date-fns";
-import { API_URLS } from "~/utils/api";
-import type { Record } from "~/types";
+import { API_URLS, fetchJson } from "~/utils/api";
+import type { Record, District } from "~/types";
 import LocalityCell from "~/components/LocalityCell.vue";
 import { generateSlug } from "~/utils/slug";
 import { formatDate } from "~/utils/helpers";
 import { transformToHeatmapData } from "~/utils/calendar";
+import { useAnalytics } from "~/composables/useAnalytics";
 
-definePageMeta({
-    layout: "default",
-});
+const { track } = useAnalytics()
 
 const route = useRoute();
 const slug = route.params.slug as string;
@@ -19,31 +18,42 @@ interface LocalityResponse {
     slug: string;
     district: string;
     outageCount: number;
+    outages: Array<{
+        from: string;
+        to: string;
+        streets: string;
+        id: string;
+    }>;
+    firstOutage: string;
+}
+
+interface LocalityData {
+    name: string;
+    slug: string;
+    district: string;
+    outageCount: number;
     outages: Record[];
     firstOutage: string;
 }
 
-const localityData = ref<LocalityResponse | null>(null);
+const localityData = ref<LocalityData | null>(null);
 const isLoading = ref(true);
 
 const fetchLocality = async () => {
     try {
-        const response = await $fetch<string>(API_URLS.locality(slug));
-        const data =
-            typeof response === "string" ? JSON.parse(response) : response;
+        const data = await fetchJson<LocalityResponse>(API_URLS.locality(slug));
 
         // Transform outages to add locality fields that Cell component expects
         const transformedOutages: Record[] = data.outages.map(
-            (outage: any) => ({
-                date: format(new Date(outage.from), 'yyyy-MM-dd'), // Extract yyyy-MM-dd from ISO date
+            (outage) => ({
+                date: format(new Date(outage.from), 'yyyy-MM-dd'),
                 locality: data.name,
                 localitySlug: data.slug,
                 streets: outage.streets,
-                district: data.district,
-                from: new Date(outage.from),
-                to: new Date(outage.to),
+                district: data.district as District,
+                from: outage.from,
+                to: outage.to,
                 id: outage.id,
-                firstOutage: data.firstOutage,
             }),
         );
 
@@ -64,11 +74,7 @@ const fetchLocality = async () => {
 
 onMounted(() => {
     fetchLocality();
-    
-    // Track locality page view
-    if (typeof window !== 'undefined' && (window as any).umami) {
-        (window as any).umami.track('locality-page-view', { locality: slug });
-    }
+    track('locality-page-view', { locality: slug });
 });
 
 const districtLabel = computed(() => {

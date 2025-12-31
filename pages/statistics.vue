@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { flat } from '~/utils/filters'
-import { API_URLS } from '~/utils/api'
+import { API_URLS, fetchJson } from '~/utils/api'
 import type { Record } from '~/types'
+import { useAnalytics } from '~/composables/useAnalytics'
+
+const { track } = useAnalytics()
 
 // SEO
 useSeoMeta({
@@ -29,15 +32,11 @@ function getWeek(date: Date) {
 const powerOutageData = ref<{ [key: string]: Record[] } | null>(null)
 
 onMounted(async () => {
-    // Track statistics page view
-    if (typeof window !== 'undefined' && (window as any).umami) {
-        (window as any).umami.track('stats-page-view');
-    }
+    track('stats-page-view')
     
     try {
-        const response = await $fetch<string>(API_URLS.full)
-        // GitHub raw URLs return text, need to parse JSON manually
-        powerOutageData.value = typeof response === 'string' ? JSON.parse(response) : response
+        const response = await fetchJson<{ [key: string]: Record[] }>(API_URLS.full)
+        powerOutageData.value = response
     } catch (e) {
         console.error('Failed to fetch power outage data:', e)
     }

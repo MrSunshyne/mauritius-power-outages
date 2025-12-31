@@ -1,6 +1,7 @@
 import { addDays, format, setHours, setMinutes, startOfDay } from 'date-fns'
 import { District, type Record } from '~/types'
 import { generateSlug } from './slug'
+import { formatLocalTime } from './datetime'
 
 /**
  * Generates mock outage data for development/testing purposes.
@@ -25,7 +26,6 @@ function createOutage(
   const fromDate = setMinutes(setHours(baseDate, startHour), 0)
   const toDate = setMinutes(setHours(baseDate, endHour), 0)
 
-  // Format as ISO strings to match the API format (code uses .slice() on these)
   return {
     id: generateId(date, index),
     date: format(date, 'yyyy-MM-dd'),
@@ -33,8 +33,8 @@ function createOutage(
     locality,
     localitySlug: generateSlug(locality),
     streets,
-    from: fromDate.toISOString() as unknown as Date,
-    to: toDate.toISOString() as unknown as Date,
+    from: fromDate.toISOString(),
+    to: toDate.toISOString(),
   }
 }
 

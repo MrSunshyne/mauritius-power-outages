@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { startOfWeek, endOfWeek, eachDayOfInterval, eachWeekOfInterval, format, startOfMonth, parseISO, subMonths, isToday } from 'date-fns'
-import type { Record } from '~/types'
+import type { Record as OutageRecord } from '~/types'
+import { useAnalytics } from '~/composables/useAnalytics'
+
+const { track } = useAnalytics()
 
 export interface HeatmapDataPoint {
   date: string
   count: number
-  records?: Record[]
+  records?: OutageRecord[]
 }
 
 interface Props {
@@ -32,8 +35,8 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const emit = defineEmits<{
-  cellClick: [payload: { date: string; count: number; records?: Record[] }]
-  cellHover: [payload: { date: string; count: number; records?: Record[] }]
+  cellClick: [payload: { date: string; count: number; records?: OutageRecord[] }]
+  cellHover: [payload: { date: string; count: number; records?: OutageRecord[] }]
 }>()
 
 // Parse dates
@@ -130,8 +133,11 @@ const getColorClass = (count: number): string => {
     if (props.emptyColor === 'white/5') return 'bg-white/5'
     return `bg-${props.emptyColor}`
   }
-  
-  const colorMap: Record<number, Record<string, string>> = {
+
+  type ColorLevel = Record<string, string>
+  type ColorMap = Record<number, ColorLevel>
+
+  const colorMap: ColorMap = {
     1: {
       emerald: 'bg-emerald-800/60 border-emerald-700/50',
       blue: 'bg-blue-800/60 border-blue-700/50',
@@ -165,7 +171,7 @@ const getColorClass = (count: number): string => {
       pink: 'bg-pink-400/90 border-pink-300/80',
     },
   }
-  
+
   return colorMap[level][props.color] || colorMap[level].emerald
 }
 
@@ -178,15 +184,12 @@ const getDataForDate = (date: Date): HeatmapDataPoint => {
 // Handle cell click
 const handleCellClick = (date: Date) => {
   const data = getDataForDate(date)
-  
-  // Track analytics
-  if (typeof window !== 'undefined' && (window as any).umami) {
-    (window as any).umami.track('heatmap-cell-click', { 
-      date: format(date, 'yyyy-MM-dd'), 
-      count: data.count 
-    })
-  }
-  
+
+  track('heatmap-cell-click', {
+    date: format(date, 'yyyy-MM-dd'),
+    count: data.count
+  })
+
   emit('cellClick', data)
 }
 
@@ -197,7 +200,7 @@ const handleCellHover = (date: Date) => {
 }
 
 // Tooltip state
-const hoveredCell = ref<{ date: string; count: number; records?: Record[] } | null>(null)
+const hoveredCell = ref<{ date: string; count: number; records?: OutageRecord[] } | null>(null)
 const tooltipPosition = ref({ x: 0, y: 0 })
 
 const showTooltip = (event: MouseEvent, date: Date) => {
@@ -276,7 +279,7 @@ onMounted(() => {
               }"
               :aria-label="`${format(day, 'MMM d, yyyy')}: ${getDataForDate(day).count} outages`"
               @click="handleCellClick(day)"
-              @mouseenter="event => { handleCellHover(day); showTooltip(event, day) }"
+              @mouseenter="(event: MouseEvent) => { handleCellHover(day); showTooltip(event, day) }"
               @mouseleave="hideTooltip"
             />
           </div>

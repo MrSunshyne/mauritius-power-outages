@@ -7,3 +7,8 @@ export const API_URLS = {
   localitiesIndex: `${API_BASE}localities/index.json`,
   locality: (slug: string) => `${API_BASE}localities/${slug}.json`,
 }
+
+export async function fetchJson<T>(url: string): Promise<T> {
+  const response = await $fetch<string>(url)
+  return typeof response === 'string' ? JSON.parse(response) : response
+}

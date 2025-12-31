@@ -10,7 +10,7 @@ const handleError = () => clearError({ redirect: '/' })
 </script>
 
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-[#011458] to-[#034c96]">
+  <div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-900 to-blue-700">
     <div class="text-center text-white">
       <h1 class="text-6xl font-bold mb-4">{{ error.statusCode }}</h1>
       <p class="text-xl mb-8">{{ error.message || 'Page not found' }}</p>

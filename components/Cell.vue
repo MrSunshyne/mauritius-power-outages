@@ -94,6 +94,10 @@ import { useTimeAgo, useDateFormat } from "@vueuse/core";
 import type { Record } from "~/types";
 import { ANALYTICS_EVENTS } from "~/constants/analytics";
 import { getLocalitySlug } from "~/utils/slug";
+import { useAnalytics } from "~/composables/useAnalytics";
+import { formatLocalTime } from "~/utils/datetime";
+
+const { track } = useAnalytics()
 
 const props = defineProps<{
     data: Record;
@@ -109,24 +113,25 @@ const handleCellClick = () => {
 };
 
 const handleLocalityClick = () => {
-    if (window.umami) {
-        window.umami.track(ANALYTICS_EVENTS.LOCALITY_VIEW, {
-            locality: props.data.locality,
-        });
-    }
+    track('locality-view', { locality: props.data.locality });
 };
 
-const state = computed(() => {
-    let on = "upcoming";
+type OutageState = 'upcoming' | 'ongoing' | 'past'
+
+const state = computed<OutageState>(() => {
     const from = new Date(props.data.from);
     const to = new Date(props.data.to);
     const now = new Date();
 
-    if (now.getTime() > from.getTime()) on = "ongoing";
+    if (now.getTime() > to.getTime()) {
+        return 'past';
+    }
 
-    if (now.getTime() > to.getTime()) on = "past";
+    if (now.getTime() > from.getTime()) {
+        return 'ongoing';
+    }
 
-    return on;
+    return 'upcoming';
 });
 
 const timeDifference = computed(() => {
