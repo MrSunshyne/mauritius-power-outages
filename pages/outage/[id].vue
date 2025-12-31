@@ -570,7 +570,7 @@ const breadcrumbItems = computed(() => {
                             Outage Timeline
                         </div>
                         <ClientOnly>
-                            <DayTimeline
+                            <DayTimelineToggle
                                 :outage-start="selectedOutage.from"
                                 :outage-end="selectedOutage.to"
                                 :sunrise="sunTimes?.sunrise"
