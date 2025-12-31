@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/icon',
      'nuxt-og-image',
+     '@vite-pwa/nuxt',
   ],
 
   // Enable SSR for dynamic OG meta tags
@@ -30,6 +31,106 @@ export default defineNuxtConfig({
     name: 'Power Outages Mauritius',
   },
 
+  // PWA configuration
+  pwa: {
+    registerType: 'prompt',
+    
+    manifest: {
+      name: 'Power Outages Mauritius',
+      short_name: 'Power Outages',
+      description: 'Track scheduled power outages across Mauritius',
+      theme_color: '#020024',
+      background_color: '#020024',
+      display: 'standalone',
+      orientation: 'portrait-primary',
+      scope: '/',
+      start_url: '/?source=pwa',
+      id: '/',
+      lang: 'en',
+      icons: [
+        // Android icons (multiple sizes for different screen densities)
+        {
+          src: '/AppImages/android/android-launchericon-48-48.png',
+          sizes: '48x48',
+          type: 'image/png',
+        },
+        {
+          src: '/AppImages/android/android-launchericon-72-72.png',
+          sizes: '72x72',
+          type: 'image/png',
+        },
+        {
+          src: '/AppImages/android/android-launchericon-96-96.png',
+          sizes: '96x96',
+          type: 'image/png',
+        },
+        {
+          src: '/AppImages/android/android-launchericon-144-144.png',
+          sizes: '144x144',
+          type: 'image/png',
+        },
+        {
+          src: '/AppImages/android/android-launchericon-192-192.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          src: '/AppImages/android/android-launchericon-512-512.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+        // Maskable icon for Android adaptive icons
+        {
+          src: '/maskable-icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'maskable',
+        },
+      ],
+    },
+    
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
+      navigateFallbackDenylist: [/^\/api/, /^\/_/],
+      runtimeCaching: [
+        {
+          urlPattern: /\.(?:png|jpg|jpeg|svg|gif|webp|ico)$/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'images-cache',
+            expiration: {
+              maxEntries: 100,
+              maxAgeSeconds: 60 * 60 * 24 * 30,
+            },
+          },
+        },
+        {
+          urlPattern: /\.(?:woff|woff2|ttf|eot)$/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'fonts-cache',
+            expiration: {
+              maxEntries: 20,
+              maxAgeSeconds: 60 * 60 * 24 * 365,
+            },
+          },
+        },
+        {
+          urlPattern: /^https:\/\/raw\.githubusercontent\.com\/.*/i,
+          handler: 'NetworkOnly',
+        },
+      ],
+    },
+    
+    client: {
+      installPrompt: true,
+      periodicSyncForUpdates: 3600, // Check for updates every hour
+    },
+    
+    // Required for Netlify deployment
+    registerWebManifestInRouteRules: true,
+  },
+
   // OG Image configuration
   ogImage: {
     defaults: {
@@ -50,6 +151,11 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        // iOS icons (multiple sizes for different devices)
+        { rel: 'apple-touch-icon', href: '/AppImages/ios/180.png' },
+        { rel: 'apple-touch-icon', sizes: '152x152', href: '/AppImages/ios/152.png' },
+        { rel: 'apple-touch-icon', sizes: '167x167', href: '/AppImages/ios/167.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/AppImages/ios/180.png' },
       ],
       meta: [
         // Basic meta
@@ -57,6 +163,10 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#020024' },
         { name: 'robots', content: 'index, follow' },
         { name: 'author', content: 'Power Outages Mauritius' },
+        // Apple PWA meta tags
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+        { name: 'apple-mobile-web-app-title', content: 'Power Outages' },
         // Default OG tags (overridden by pages)
         { property: 'og:site_name', content: 'Power Outages Mauritius' },
         { property: 'og:type', content: 'website' },
