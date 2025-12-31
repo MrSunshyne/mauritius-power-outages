@@ -1,26 +1,24 @@
 <template>
     <div
-        class="group p-5 sm:p-6 rounded-xl glass text-white relative cursor-pointer hover:brightness-110 transition-all duration-200"
+        class="group p-4 sm:p-5 rounded-xl glass text-white relative cursor-pointer hover:brightness-110 transition-all duration-200"
         @click="handleCellClick"
         :data-umami-event="ANALYTICS_EVENTS.OUTAGE_VIEW_DETAIL"
     >
-        <!-- Main content -->
-        <div class="space-y-3 grid grid-cols-1 sm:grid-cols-4 gap-4">
-            <!-- Location details -->
-            <div class="text-lg leading-relaxed col-span-3">
-                {{ props.data.streets }}
-            </div>
-
-            <!-- Time - most important -->
-            <div class="text-right flex flex-col gap-2">
-                <div class="text-xs font-mono font-medium">
-                    lasted for {{ outrageDuration }}
+        <div class="flex flex-col gap-3">
+            <div class="flex flex-row justify-between items-start gap-2">
+                <div class="text-base sm:text-lg leading-relaxed flex-1 min-w-0 pr-4">
+                    {{ props.data.streets }}
                 </div>
-                <div class="text-xl font-bold tracking-tight text-right">
-                    {{ formattedTime }}
-                </div>
-                <div class="text-xs tracking-wide text-white/50 uppercase">
-                    {{ formattedDate }}
+                <div class="flex flex-col items-end gap-1 flex-shrink-0">
+                    <div class="text-[10px] sm:text-xs font-mono font-medium text-white/60">
+                        {{ outrageDuration }}
+                    </div>
+                    <div class="text-lg sm:text-xl font-bold tracking-tight">
+                        {{ formattedTime }}
+                    </div>
+                    <div class="text-[10px] sm:text-xs tracking-wide text-white/50 uppercase">
+                        {{ formattedDate }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -30,7 +28,6 @@
 <script setup lang="ts">
 import {
     format,
-    formatDistanceToNow,
     differenceInMinutes,
     differenceInHours,
 } from "date-fns";
@@ -60,11 +57,11 @@ const outrageDuration = computed(() => {
     const minutes = differenceInMinutes(to, from) % 60;
 
     if (hours === 0) {
-        return `${minutes}min`;
+        return `${minutes} min`;
     } else if (minutes === 0) {
-        return `${hours}h`;
+        return `${hours} hr`;
     } else {
-        return `${hours}h ${minutes}min`;
+        return `${hours} hr ${minutes} min`;
     }
 });
 
