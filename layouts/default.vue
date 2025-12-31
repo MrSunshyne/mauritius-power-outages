@@ -1,5 +1,8 @@
 <template>
     <div class="text-gray-700 min-h-screen flex flex-col">
+        <!-- Offline Banner -->
+        <OfflineBanner />
+        
         <!-- Static Header - Full Width - Never animates -->
         <div class="w-full px-4 sm:px-6 py-5 sm:py-6">
             <SiteHeader />

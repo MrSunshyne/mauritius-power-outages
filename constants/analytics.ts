@@ -44,6 +44,16 @@ export const ANALYTICS_EVENTS = {
   FOOTER_DATA_SOURCE: 'footer-data-source',
   FOOTER_AUTHOR: 'footer-author',
   FOOTER_SOURCE_CODE: 'footer-source-code',
+
+  // PWA Events
+  PWA_INSTALL_PROMPT_SHOWN: 'pwa-install-prompt-shown',
+  PWA_INSTALL_CLICK: 'pwa-install-click',
+  PWA_INSTALLED: 'pwa-installed',
+  PWA_INSTALL_DISMISSED: 'pwa-install-dismissed',
+  PWA_UPDATE_AVAILABLE: 'pwa-update-available',
+  PWA_UPDATE_ACCEPTED: 'pwa-update-accepted',
+  PWA_UPDATE_DISMISSED: 'pwa-update-dismissed',
+  PWA_FORCE_UPDATE_TRIGGERED: 'pwa-force-update-triggered',
 } as const
 
 export type AnalyticsEvent = typeof ANALYTICS_EVENTS[keyof typeof ANALYTICS_EVENTS]
