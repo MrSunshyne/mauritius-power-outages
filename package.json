@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nuxt dev --port 3001",
     "dev:mock": "nuxt dev --port 3001 --dotenv .env.mock",
-    "dev:clean": "rm -rf .nuxt node_modules/.cache && npm install && nuxt dev --port 3001",
+    "dev:clean": "rm -rf .nuxt node_modules/.cache && pnpm install && pnpm run dev --port 3001",
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",

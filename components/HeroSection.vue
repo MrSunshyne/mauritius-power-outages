@@ -36,7 +36,8 @@
                 </div>
             </div>
             <NuxtLink to="/"
-                class="bg-white/90 text-blue-700 font-bold hover:bg-white/80 px-10 py-4 rounded-md uppercase cursor-pointer text-lg">
+                class="bg-white/90 text-blue-700 font-bold hover:bg-white/80 px-10 py-4 rounded-md uppercase cursor-pointer text-lg"
+                data-umami-event="hero-cta-click">
                 View today's power cuts
             </NuxtLink>
         </div>

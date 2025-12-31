@@ -29,6 +29,11 @@ function getWeek(date: Date) {
 const powerOutageData = ref<{ [key: string]: Record[] } | null>(null)
 
 onMounted(async () => {
+    // Track statistics page view
+    if (typeof window !== 'undefined' && (window as any).umami) {
+        (window as any).umami.track('stats-page-view');
+    }
+    
     try {
         const response = await $fetch<string>(API_URLS.full)
         // GitHub raw URLs return text, need to parse JSON manually

@@ -4,7 +4,7 @@
             <!-- Top Row: Logo and Stats -->
             <div class="flex items-start justify-between gap-4">
                 <!-- Left: Logo/Title Area -->
-                <NuxtLink to="/" class="group flex-1 min-w-0">
+                <NuxtLink to="/" class="group flex-1 min-w-0" data-umami-event="header-home-click">
                     <div class="flex items-center gap-3">
                         <!-- Icon -->
                         <div class="relative flex-shrink-0">

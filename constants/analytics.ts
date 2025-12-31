@@ -22,6 +22,22 @@ export const ANALYTICS_EVENTS = {
 
   // Locality interactions
   LOCALITY_VIEW: 'locality-view',
+  LOCALITY_PAGE_VIEW: 'locality-page-view',
+
+  // Heatmap
+  HEATMAP_CELL_CLICK: 'heatmap-cell-click',
+
+  // Page views
+  STATS_PAGE_VIEW: 'stats-page-view',
+
+  // Header
+  HEADER_HOME_CLICK: 'header-home-click',
+
+  // Hero
+  HERO_CTA_CLICK: 'hero-cta-click',
+
+  // Error
+  ERROR_GO_HOME: 'error-go-home',
 
   // Footer links
   FOOTER_STATISTICS: 'footer-statistics',

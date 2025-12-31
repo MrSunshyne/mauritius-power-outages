@@ -16,6 +16,7 @@ const handleError = () => clearError({ redirect: '/' })
       <p class="text-xl mb-8">{{ error.message || 'Page not found' }}</p>
       <button
         class="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+        data-umami-event="error-go-home"
         @click="handleError"
       >
         Go Home

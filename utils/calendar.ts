@@ -2,6 +2,8 @@
  * Calendar utilities for generating ICS files and calendar links
  */
 
+import type { Record } from '~/types'
+
 export interface CalendarEvent {
   title: string
   description: string
@@ -9,6 +11,12 @@ export interface CalendarEvent {
   startTime: Date
   endTime: Date
   url?: string
+}
+
+export interface HeatmapDataPoint {
+  date: string
+  count: number
+  records?: Record[]
 }
 
 /**
@@ -91,4 +99,23 @@ export function generateGoogleCalendarUrl(event: CalendarEvent): string {
   }
 
   return `https://calendar.google.com/calendar/render?${params.toString()}`
+}
+
+/**
+ * Transform an array of outage records into heatmap data points
+ * Groups records by date and counts occurrences
+ */
+export function transformToHeatmapData(records: Record[]): HeatmapDataPoint[] {
+  const grouped: { [key: string]: HeatmapDataPoint } = {}
+  
+  records.forEach(record => {
+    const date = record.date
+    if (!grouped[date]) {
+      grouped[date] = { date, count: 0, records: [] }
+    }
+    grouped[date].count++
+    grouped[date].records!.push(record)
+  })
+
+  return Object.values(grouped).sort((a, b) => a.date.localeCompare(b.date))
 }

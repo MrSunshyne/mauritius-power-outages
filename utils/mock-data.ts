@@ -190,14 +190,10 @@ export function mergeWithMockData(
   const devMode = isDevelopment()
   const mockEnabled = isMockDataEnabled()
   
-  console.log('[mergeWithMockData] isDevelopment:', devMode, 'isMockDataEnabled:', mockEnabled)
-  
   if (!devMode || !mockEnabled) {
-    console.log('[mergeWithMockData] Returning real data only')
     return realData || { today: [], future: [] }
   }
 
-  console.log('[mergeWithMockData] Merging mock data with real data')
   const mockData = generateMockOutages()
 
   if (!realData) {

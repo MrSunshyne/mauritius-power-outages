@@ -11,6 +11,7 @@
                 <button
                     class="flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white rounded-xl transition-all duration-200 ease-out bg-gradient-to-br from-white/12 to-white/6 border border-white/12 hover:from-white/15 hover:to-white/10 hover:border-white/20 hover:shadow-[0_4px_12px_rgb(0_0_0/0.15)] active:from-white/18 active:to-white/12 active:border-white/25 active:scale-[0.97] active:shadow-[0_2px_4px_rgb(0_0_0/0.1)] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:from-white/12 disabled:hover:to-white/6 disabled:hover:border-white/12 disabled:hover:shadow-none disabled:active:scale-100"
                     :disabled="disabled"
+                    data-umami-event="nav-prev"
                     @click="$emit('prev')"
                 >
                     <svg
@@ -32,6 +33,7 @@
                     v-if="showToday"
                     class="flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white rounded-xl transition-all duration-200 ease-out bg-gradient-to-br from-blue-500/25 to-blue-600/15 border border-blue-500/30 hover:from-blue-500/35 hover:to-blue-600/25 hover:border-blue-500/40 hover:shadow-[0_4px_16px_rgb(59_130_246/0.25)] active:from-blue-500/40 active:to-blue-600/30 active:border-blue-500/45 active:scale-[0.97] active:shadow-[0_2px_8px_rgb(59_130_246/0.2)] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:from-blue-500/25 disabled:hover:to-blue-600/15 disabled:hover:border-blue-500/30 disabled:hover:shadow-none disabled:active:scale-100"
                     :disabled="disabled"
+                    data-umami-event="nav-today"
                     @click="$emit('today')"
                 >
                     <svg
@@ -56,6 +58,7 @@
                 <button
                     class="flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white rounded-xl transition-all duration-200 ease-out bg-gradient-to-br from-white/12 to-white/6 border border-white/12 hover:from-white/15 hover:to-white/10 hover:border-white/20 hover:shadow-[0_4px_12px_rgb(0_0_0/0.15)] active:from-white/18 active:to-white/12 active:border-white/25 active:scale-[0.97] active:shadow-[0_2px_4px_rgb(0_0_0/0.1)] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:from-white/12 disabled:hover:to-white/6 disabled:hover:border-white/12 disabled:hover:shadow-none disabled:active:scale-100"
                     :disabled="disabled"
+                    data-umami-event="nav-next"
                     @click="$emit('next')"
                 >
                     <span>Next</span>
@@ -91,6 +94,7 @@
                 <button
                     class="flex-1 flex items-center justify-center gap-2 px-3 py-4 text-sm text-white rounded-[14px] bg-gradient-to-br from-white/12 to-white/6 border border-white/15 transition-all duration-200 ease-out touch-manipulation [-webkit-tap-highlight-color:transparent] active:from-white/18 active:to-white/12 active:border-white/25 active:scale-[0.97] disabled:opacity-35 disabled:cursor-not-allowed disabled:active:from-white/12 disabled:active:to-white/6 disabled:active:border-white/15 disabled:active:scale-100"
                     :disabled="disabled"
+                    data-umami-event="nav-prev"
                     @click="$emit('prev')"
                 >
                     <svg
@@ -112,6 +116,7 @@
                     v-if="showToday"
                     class="flex-1 flex items-center justify-center gap-2 px-3 py-4 text-sm text-white rounded-[14px] bg-gradient-to-br from-blue-500/30 to-blue-600/20 border border-blue-500/35 shadow-[0_0_20px_rgb(59_130_246/0.15)] transition-all duration-200 ease-out touch-manipulation [-webkit-tap-highlight-color:transparent] active:from-blue-500/40 active:to-blue-600/30 active:border-blue-500/45 active:shadow-[0_0_24px_rgb(59_130_246/0.25)] active:scale-[0.97] disabled:opacity-35 disabled:cursor-not-allowed disabled:active:from-blue-500/30 disabled:active:to-blue-600/20 disabled:active:border-blue-500/35 disabled:active:scale-100"
                     :disabled="disabled"
+                    data-umami-event="nav-today"
                     @click="$emit('today')"
                 >
                     <svg
@@ -136,6 +141,7 @@
                 <button
                     class="flex-1 flex items-center justify-center gap-2 px-3 py-4 text-sm text-white rounded-[14px] bg-gradient-to-br from-white/12 to-white/6 border border-white/15 transition-all duration-200 ease-out touch-manipulation [-webkit-tap-highlight-color:transparent] active:from-white/18 active:to-white/12 active:border-white/25 active:scale-[0.97] disabled:opacity-35 disabled:cursor-not-allowed disabled:active:from-white/12 disabled:active:to-white/6 disabled:active:border-white/15 disabled:active:scale-100"
                     :disabled="disabled"
+                    data-umami-event="nav-next"
                     @click="$emit('next')"
                 >
                     <span class="font-medium">Next</span>
