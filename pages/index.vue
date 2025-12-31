@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { addDays, format } from 'date-fns'
 import { API_URLS, fetchJson } from '~/utils/api'
-import { mergeWithMockData } from '~/utils/mock-data'
+import { mergeWithMockData, isMockDataEnabled } from '~/utils/mock-data'
 import type { Record } from '~/types'
 import { useAnalytics } from '~/composables/useAnalytics'
 
@@ -36,38 +36,74 @@ defineOgImageComponent('Outage', {
     taglineRight: 'A project by Sandeep Ramgolam',
 })
 
-interface LatestResponse {
-    today: Record[]
-    future: Record[]
+interface DailyResponse {
+    outages: Record[]
 }
 
-const latestData = ref<LatestResponse | null>(null)
+const todayData = ref<Record[]>([])
+const tomorrowData = ref<Record[]>([])
 const latestStatus = ref<'idle' | 'pending' | 'success' | 'error'>('pending')
 
 onMounted(async () => {
     latestStatus.value = 'pending'
     try {
-        const data = await fetchJson<LatestResponse>(API_URLS.latest)
-        latestData.value = mergeWithMockData(data)
+        const today = format(new Date(), 'yyyy-MM-dd')
+        const tomorrow = format(addDays(new Date(), 1), 'yyyy-MM-dd')
+
+        // Fetch both today's and tomorrow's data in parallel
+        const [todayResponse, tomorrowResponse] = await Promise.allSettled([
+            fetchJson<DailyResponse>(API_URLS.daily(today)),
+            fetchJson<DailyResponse>(API_URLS.daily(tomorrow))
+        ])
+
+        // Handle today's data
+        if (todayResponse.status === 'fulfilled') {
+            todayData.value = todayResponse.value.outages || []
+        } else {
+            console.error('Failed to fetch today\'s data:', todayResponse.reason)
+        }
+
+        // Handle tomorrow's data
+        if (tomorrowResponse.status === 'fulfilled') {
+            tomorrowData.value = tomorrowResponse.value.outages || []
+        } else {
+            console.error('Failed to fetch tomorrow\'s data:', tomorrowResponse.reason)
+        }
+
+        // Merge with mock data if enabled
+        const mockData = mergeWithMockData({ 
+            today: todayData.value, 
+            future: tomorrowData.value 
+        })
+        todayData.value = mockData.today
+        tomorrowData.value = mockData.future
+
         latestStatus.value = 'success'
     } catch (e) {
         console.error('Failed to fetch power outage data:', e)
-        latestData.value = mergeWithMockData(null)
-        latestStatus.value = latestData.value.today.length > 0 || latestData.value.future.length > 0 ? 'success' : 'error'
+        
+        // Try mock data fallback if enabled
+        if (isMockDataEnabled()) {
+            const mockData = mergeWithMockData(null)
+            todayData.value = mockData.today
+            tomorrowData.value = mockData.future
+            latestStatus.value = 'success'
+        } else {
+            latestStatus.value = 'error'
+        }
     }
 })
 
 const cFlat = computed<Record[]>(() => {
-    if (!latestData.value) return []
-    return [...(latestData.value.today || []), ...(latestData.value.future || [])]
+    return [...todayData.value, ...tomorrowData.value]
 })
 
 const cToday = computed<Record[]>(() => {
-    return latestData.value?.today || []
+    return todayData.value
 })
 
 const cTomorrow = computed<Record[]>(() => {
-    return latestData.value?.future || []
+    return tomorrowData.value
 })
 
 const isLoading = computed(() => latestStatus.value === 'pending' || latestStatus.value === 'idle')
