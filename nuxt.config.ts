@@ -17,11 +17,11 @@ export default defineNuxtConfig({
 
   // Hybrid rendering: static pages except dynamic outage pages
   routeRules: {
-    // Homepage and statistics are static (ISR with 1 hour revalidation)
     '/': { isr: 3600 },
     '/statistics': { isr: 3600 },
-    // Outage pages: ISR with 15-minute cache (outage data changes infrequently)
     '/outage/**': { isr: 900 },
+    '/day/**': { isr: 86400 },
+    '/locality/**': { isr: 86400 },
   },
 
   // Site config for OG Image module
@@ -84,7 +84,8 @@ export default defineNuxtConfig({
         },
       ],
     },
-    pageTransition: { name: 'slide', mode: 'out-in' },
+    // Disable global page transition - we'll handle transitions at component level
+    pageTransition: false,
   },
 
   // CSS
@@ -100,6 +101,14 @@ export default defineNuxtConfig({
   // TypeScript
   typescript: {
     strict: true,
+  },
+
+  // Runtime config for environment variables
+  // Nuxt automatically maps NUXT_PUBLIC_* env vars to runtimeConfig.public.*
+  runtimeConfig: {
+    public: {
+      enableMockData: false, // default value, can be overridden by NUXT_PUBLIC_ENABLE_MOCK_DATA
+    },
   },
 
   // Auto-imports for custom composables

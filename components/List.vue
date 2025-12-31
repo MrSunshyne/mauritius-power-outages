@@ -21,11 +21,21 @@
                   <div class="block">
                     <p class="text-sm text-gray-900">
                       from
-                      <time datetime="2020-01-07">{{ new Date(outage.from).toLocaleString() }}</time>
+                      <ClientOnly>
+                        <time :datetime="outage.from">{{ new Date(outage.from).toLocaleString() }}</time>
+                        <template #fallback>
+                          <time :datetime="outage.from">{{ outage.from }}</time>
+                        </template>
+                      </ClientOnly>
                     </p>
                     <p class="text-sm text-gray-900">
                       to
-                      <time datetime="2020-01-07">{{ new Date(outage.to).toLocaleString() }}</time>
+                      <ClientOnly>
+                        <time :datetime="outage.to">{{ new Date(outage.to).toLocaleString() }}</time>
+                        <template #fallback>
+                          <time :datetime="outage.to">{{ outage.to }}</time>
+                        </template>
+                      </ClientOnly>
                     </p>
                   </div>
                 </div>

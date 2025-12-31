@@ -1,5 +1,7 @@
 import { addDays, format, setHours, setMinutes, startOfDay } from 'date-fns'
 import { District, type Record } from '~/types'
+import { generateSlug } from './slug'
+import { formatLocalTime } from './datetime'
 
 /**
  * Generates mock outage data for development/testing purposes.
@@ -24,15 +26,15 @@ function createOutage(
   const fromDate = setMinutes(setHours(baseDate, startHour), 0)
   const toDate = setMinutes(setHours(baseDate, endHour), 0)
 
-  // Format as ISO strings to match the API format (code uses .slice() on these)
   return {
     id: generateId(date, index),
     date: format(date, 'yyyy-MM-dd'),
     district,
     locality,
+    localitySlug: generateSlug(locality),
     streets,
-    from: fromDate.toISOString() as unknown as Date,
-    to: toDate.toISOString() as unknown as Date,
+    from: fromDate.toISOString(),
+    to: toDate.toISOString(),
   }
 }
 
@@ -171,12 +173,24 @@ export function isDevelopment(): boolean {
 }
 
 /**
+ * Checks if mock data is enabled via runtime config
+ */
+export function isMockDataEnabled(): boolean {
+  const config = useRuntimeConfig()
+  const isEnabled = config.public.enableMockData
+  return isEnabled
+}
+
+/**
  * Merges mock data with real data, adding mock entries only in development
  */
 export function mergeWithMockData(
   realData: { today: Record[]; future: Record[] } | null
 ): { today: Record[]; future: Record[] } {
-  if (!isDevelopment()) {
+  const devMode = isDevelopment()
+  const mockEnabled = isMockDataEnabled()
+  
+  if (!devMode || !mockEnabled) {
     return realData || { today: [], future: [] }
   }
 

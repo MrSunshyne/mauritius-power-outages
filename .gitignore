@@ -18,7 +18,7 @@ node_modules
 .idea
 
 # Local env files
+.env.local
+.env.*.local
 .env
-.env.*
-!.env.example
-*.local
+!.env.mock

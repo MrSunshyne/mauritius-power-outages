@@ -14,10 +14,11 @@ export enum District {
 export interface Record {
   date: string
   locality: string
+  localitySlug?: string
   streets: string
   district: District
-  from: Date
-  to: Date
+  from: string
+  to: string
   id: string
 }
 

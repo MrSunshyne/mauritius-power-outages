@@ -2,6 +2,8 @@
  * Calendar utilities for generating ICS files and calendar links
  */
 
+import type { Record } from '~/types'
+
 export interface CalendarEvent {
   title: string
   description: string
@@ -9,6 +11,36 @@ export interface CalendarEvent {
   startTime: Date
   endTime: Date
   url?: string
+}
+
+export interface HeatmapDataPoint {
+  date: string
+  count: number
+  records?: Record[]
+}
+
+interface ApiOutageRecord {
+  from: string
+  to: string
+  streets: string
+  id: string
+}
+
+export function transformToHeatmapData(records: Record[]): HeatmapDataPoint[]
+export function transformToHeatmapData(records: ApiOutageRecord[]): HeatmapDataPoint[]
+export function transformToHeatmapData(records: Record[] | ApiOutageRecord[]): HeatmapDataPoint[] {
+  const grouped: { [key: string]: HeatmapDataPoint } = {}
+
+  records.forEach(record => {
+    const date = 'date' in record ? (record as Record).date : (record as ApiOutageRecord).from.split('T')[0]
+    if (!grouped[date]) {
+      grouped[date] = { date, count: 0, records: [] }
+    }
+    grouped[date].count++
+    grouped[date].records!.push(record as Record)
+  })
+
+  return Object.values(grouped).sort((a, b) => a.date.localeCompare(b.date))
 }
 
 /**
@@ -92,3 +124,4 @@ export function generateGoogleCalendarUrl(event: CalendarEvent): string {
 
   return `https://calendar.google.com/calendar/render?${params.toString()}`
 }
+

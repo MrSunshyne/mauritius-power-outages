@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "nuxt dev --port 3001",
-    "dev:clean": "rm -rf .nuxt node_modules/.cache && npm install && nuxt dev --port 3001",
+    "dev:mock": "nuxt dev --port 3001 --dotenv .env.mock",
+    "dev:clean": "rm -rf .nuxt node_modules/.cache && pnpm install && pnpm run dev --port 3001",
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -12,6 +13,7 @@
   },
   "dependencies": {
     "@chenfengyuan/vue-countdown": "^2.1.2",
+    "@vueuse/nuxt": "^12.4.0",
     "apexcharts": "^3.47.0",
     "date-fns": "^3.6.0",
     "nuxt-og-image": "^5.1.13",
@@ -20,7 +22,7 @@
   "devDependencies": {
     "@nuxt/icon": "^1.10.3",
     "@tailwindcss/postcss": "^4.1.18",
-    "@vueuse/nuxt": "^12.4.0",
+    "@vueuse/core": "^12.4.0",
     "nuxt": "^3.15.2",
     "postcss": "^8.5.6",
     "sass": "^1.83.1",

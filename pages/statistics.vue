@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { flat } from '~/utils/filters'
-import { API_URLS } from '~/utils/api'
+import { API_URLS, fetchJson } from '~/utils/api'
 import type { Record } from '~/types'
+import { useAnalytics } from '~/composables/useAnalytics'
+
+const { track } = useAnalytics()
 
 // SEO
 useSeoMeta({
@@ -29,10 +32,11 @@ function getWeek(date: Date) {
 const powerOutageData = ref<{ [key: string]: Record[] } | null>(null)
 
 onMounted(async () => {
+    track('stats-page-view')
+    
     try {
-        const response = await $fetch<string>(API_URLS.full)
-        // GitHub raw URLs return text, need to parse JSON manually
-        powerOutageData.value = typeof response === 'string' ? JSON.parse(response) : response
+        const response = await fetchJson<{ [key: string]: Record[] }>(API_URLS.full)
+        powerOutageData.value = response
     } catch (e) {
         console.error('Failed to fetch power outage data:', e)
     }
@@ -183,11 +187,19 @@ const hoursWasted = computed(() => {
     }
     return result.toString()
 })
+
+// Breadcrumb
+const breadcrumbItems = [
+    { label: 'Statistics' }
+]
 </script>
 
 <template>
-    <div class="text-white px-4 stats-bg">
-        <div class="grid grid-cols-2 gap-48 text-left">
+    <PageContainer>
+        <Breadcrumb :items="breadcrumbItems" />
+        
+        <div class="text-white stats-bg py-6">
+            <div class="grid grid-cols-2 gap-48 text-left">
             <HeroSection class="col-span-2" :outages-today="outagesToday" :hours-wasted="hoursWasted"
                 :count-per-date="countPerDate" />
 
@@ -210,7 +222,8 @@ const hoursWasted = computed(() => {
                 </template>
             </ClientOnly>
         </div>
-    </div>
+        </div>
+    </PageContainer>
 </template>
 
 <style scoped>

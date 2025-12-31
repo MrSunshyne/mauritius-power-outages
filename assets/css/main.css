@@ -13,7 +13,7 @@ body,
     min-height: 100dvh;
 }
 
-#__nuxt > main {
+#__nuxt {
     background: linear-gradient(to right, #011458, #034c96);
 }
 
@@ -54,18 +54,12 @@ blockquote {
     -webkit-backdrop-filter: blur(20px);
 }
 
-/* Page transitions */
-.slide-enter-active,
-.slide-leave-active {
-    transition: all 0.2s ease-out;
+/* Page transitions - disabled globally, handled at component level */
+
+button {
+    cursor: pointer;
 }
 
-.slide-enter-from {
-    opacity: 0;
-    transform: translateX(20px);
-}
-
-.slide-leave-to {
-    opacity: 0;
-    transform: translateX(-20px);
+body {
+    overflow-y: scroll;
 }
