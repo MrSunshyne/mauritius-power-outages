@@ -1,5 +1,5 @@
 <template>
-  <div v-if="count !== null" class="text-white/60 text-xs sm:text-sm whitespace-nowrap">
+  <div v-if="count !== null" class="text-white/50 text-[10px] sm:text-xs font-medium tracking-wide uppercase">
     {{ count }} views today
   </div>
 </template>

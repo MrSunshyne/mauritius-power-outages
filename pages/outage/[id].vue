@@ -349,7 +349,10 @@ const breadcrumbItems = computed(() => {
 
 <template>
     <PageContainer>
-        <Breadcrumb :items="breadcrumbItems" />
+        <!-- Breadcrumb - hidden on mobile to reduce clutter -->
+        <div class="hidden sm:block">
+            <Breadcrumb :items="breadcrumbItems" />
+        </div>
 
         <!-- Loading state -->
         <div v-if="isLoading" class="py-12 text-center">
@@ -361,30 +364,102 @@ const breadcrumbItems = computed(() => {
         <template v-else>
             <!-- Specific outage section -->
             <section v-if="selectedOutage" class="mb-8">
-                <div class="mb-8">
-                    <h1
-                        class="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight mb-4"
-                    >
-                        <span v-if="isHistoricalOutage">Outdated </span>Power
-                        outage in {{ selectedOutage.locality }}
-                    </h1>
-                    <!-- Historical outage hint - near heading -->
-                    <div v-if="isHistoricalOutage" class="mb-4">
-                        <div class="text-white/50 text-sm">
-                            This is an old outage which occurred on
-                            {{
-                                format(
-                                    new Date(selectedOutage.from),
-                                    "MMM d, yyyy",
-                                )
-                            }}
-                        </div>
-                    </div>
-                </div>
-
                 <div
                     class="bg-black/[0.6] rounded-2xl border border-white/[0.06] overflow-hidden"
                 >
+                    <!-- Header Section - Mobile -->
+                    <div class="sm:hidden px-6 py-5 border-b border-white/[0.06]">
+                        <!-- Status badge with dot -->
+                        <div v-if="outageState" class="inline-flex items-center gap-2 mb-3">
+                            <div 
+                                class="w-2 h-2 rounded-full"
+                                :class="{
+                                    'bg-gray-500': outageState === 'past',
+                                    'bg-red-500': outageState === 'ongoing',
+                                    'bg-orange-400': outageState === 'upcoming'
+                                }"
+                            ></div>
+                            <span class="text-xs uppercase tracking-wider text-white/60">
+                                <span v-if="outageState === 'past'">Past Power Outage</span>
+                                <span v-else-if="outageState === 'ongoing'">Ongoing Power Outage</span>
+                                <span v-else-if="outageState === 'upcoming'">Scheduled Power Outage</span>
+                            </span>
+                        </div>
+                        
+                        <!-- Locality title -->
+                        <h1 class="text-2xl font-black text-white leading-tight" :class="{ 'mb-3': outageState }">
+                            {{ selectedOutage.locality }}
+                        </h1>
+                        
+                        <!-- Date and Time together -->
+                        <div v-if="isHistoricalOutage" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10">
+                            <Icon name="mdi:clock-outline" class="w-4 h-4 text-white/40" />
+                            <span class="text-sm text-white/50">
+                                Ended {{ format(new Date(selectedOutage.to), "MMM d, yyyy") }}
+                            </span>
+                        </div>
+                        <div v-else class="flex flex-col gap-1.5">
+                            <div class="flex items-center gap-2">
+                                <Icon name="mdi:calendar-outline" class="w-4 h-4 text-white/40" />
+                                <p class="text-white/50 text-sm">
+                                    {{ formatDate(new Date(selectedOutage.from)) }}
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <Icon name="mdi:clock-outline" class="w-4 h-4 text-white/40" />
+                                <p class="text-white text-base font-medium">
+                                    {{ formatLocalTime(selectedOutage.from) }} – {{ formatLocalTime(selectedOutage.to) }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Header Section - Desktop -->
+                    <div class="hidden sm:block px-8 py-6 border-b border-white/[0.06]">
+                        <!-- Status badge with dot -->
+                        <div v-if="outageState" class="inline-flex items-center gap-2 mb-3">
+                            <div 
+                                class="w-2 h-2 rounded-full"
+                                :class="{
+                                    'bg-gray-500': outageState === 'past',
+                                    'bg-red-500': outageState === 'ongoing',
+                                    'bg-orange-400': outageState === 'upcoming'
+                                }"
+                            ></div>
+                            <span class="text-xs uppercase tracking-wider text-white/50">
+                                <span v-if="outageState === 'past'">Past Power Outage</span>
+                                <span v-else-if="outageState === 'ongoing'">Ongoing Power Outage</span>
+                                <span v-else-if="outageState === 'upcoming'">Scheduled Power Outage</span>
+                            </span>
+                        </div>
+                        
+                        <!-- Title -->
+                        <h1 class="text-3xl md:text-4xl font-black text-white leading-tight" :class="{ 'mb-3': outageState }">
+                            <span v-if="isHistoricalOutage">Outdated </span>Power outage in {{ selectedOutage.locality }}
+                        </h1>
+                        
+                        <!-- Date and Time together -->
+                        <div v-if="isHistoricalOutage" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10">
+                            <Icon name="mdi:clock-outline" class="w-4 h-4 text-white/40" />
+                            <span class="text-sm text-white/50">
+                                This outage occurred on {{ format(new Date(selectedOutage.from), "MMM d, yyyy") }} and ended at {{ formatLocalTime(selectedOutage.to) }}
+                            </span>
+                        </div>
+                        <div v-else class="flex flex-col gap-2">
+                            <div class="flex items-center gap-2">
+                                <Icon name="mdi:calendar-outline" class="w-5 h-5 text-white/40" />
+                                <p class="text-white/50 text-base">
+                                    {{ formatDate(new Date(selectedOutage.from)) }}
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <Icon name="mdi:clock-outline" class="w-5 h-5 text-white/40" />
+                                <p class="text-white text-lg font-medium">
+                                    {{ formatLocalTime(selectedOutage.from) }} – {{ formatLocalTime(selectedOutage.to) }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Header -->
                     <!-- <div class="px-6 py-5 sm:px-8 sm:py-6 border-b border-white/[0.06]">
                         <div class="flex flex-row items-start justify-between gap-4">
@@ -401,33 +476,18 @@ const breadcrumbItems = computed(() => {
                         </div>
                     </div> -->
 
-                    <!-- Countdown / Status -->
+                    <!-- Countdown / Status - Only show for ongoing/upcoming outages -->
                     <div
-                        class="px-6 py-4 sm:px-8 bg-white/[0.02] border-b border-white/[0.06]"
+                        v-if="outageState !== 'past'"
+                        class="px-6 py-5 sm:px-8 sm:py-6 bg-white/[0.02] border-b border-white/[0.06]"
                     >
                         <div
-                            class="flex flex-col sm:flex-row items-center justify-between gap-4"
+                            class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4"
                         >
-                            <!-- For past outages, show the restored time instead of countdown -->
-                            <div
-                                v-if="outageState === 'past'"
-                                class="flex items-center gap-2"
-                            >
-                                <span class="text-white/60 text-sm">
-                                    {{ statusInfo.timerPrefix }}
-                                </span>
-                                <span
-                                    class="text-white font-mono text-base sm:text-lg tracking-wide"
-                                >
-                                    {{ formatLocalTime(selectedOutage.to) }}
-                                </span>
-                            </div>
                             <!-- For ongoing/upcoming, show countdown -->
                             <div
-                                v-else
-                                class="flex items-center gap-2 text-base sm:text-md tracking-wide"
+                                class="flex flex-col sm:flex-row sm:items-center gap-2 w-full sm:w-auto"
                                 :class="{
-                                    'text-sm': true,
                                     'text-orange-300/90':
                                         statusInfo.color === 'orange',
                                     'text-red-300/90':
@@ -436,14 +496,12 @@ const breadcrumbItems = computed(() => {
                                         statusInfo.color === 'green',
                                 }"
                             >
-                                <span class="">
-                                    <span>
-                                        {{ statusInfo.timerPrefix }}
-                                    </span>
+                                <span class="text-sm sm:text-base text-white/80">
+                                    {{ statusInfo.timerPrefix }}
                                 </span>
                                 <ClientOnly>
                                     <vue-countdown
-                                        class="font-mono"
+                                        class="font-mono text-lg sm:text-xl font-semibold tracking-wide"
                                         v-slot="{
                                             days,
                                             hours,
@@ -463,26 +521,6 @@ const breadcrumbItems = computed(() => {
                                     </template>
                                 </ClientOnly>
                             </div>
-                            <div>
-                                <a
-                                    :href="whatsappShareUrl"
-                                    :data-umami-event="
-                                        ANALYTICS_EVENTS.OUTAGE_SHARE_WHATSAPP
-                                    "
-                                    class="sm:hidden flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-white/70 bg-white/8 rounded-md hover:bg-white/15 hover:text-white/90 transition-colors"
-                                >
-                                    <svg
-                                        class="w-3.5 h-3.5"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                    >
-                                        <path
-                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-                                        />
-                                    </svg>
-                                    <span>Share on WhatsApp</span>
-                                </a>
-                            </div>
                         </div>
                     </div>
 
@@ -490,84 +528,59 @@ const breadcrumbItems = computed(() => {
                     <div
                         class="px-6 py-5 sm:px-8 sm:py-6 border-b border-white/[0.06]"
                     >
-                        <div class="grid sm:grid-cols-2 gap-6">
-                            <div class="space-y-4">
-                                <div>
-                                    <div
-                                        class="text-xs uppercase tracking-wider text-white/40 mb-1.5"
-                                    >
-                                        Date
-                                    </div>
-                                    <div class="text-white text-lg">
-                                        {{
-                                            formatDate(
-                                                new Date(selectedOutage.from),
-                                            )
-                                        }}
-                                    </div>
+                        <div class="space-y-5">
+                            <div class="hidden sm:block">
+                                <div
+                                    class="text-xs uppercase tracking-wider text-white/40 mb-2"
+                                >
+                                    District
                                 </div>
-                                <div>
-                                    <div
-                                        class="text-xs uppercase tracking-wider text-white/40 mb-1.5"
-                                    >
-                                        Time
-                                    </div>
-                                    <div class="text-white text-lg font-medium">
-                                        {{
-                                            formatLocalTime(selectedOutage.from)
-                                        }}
-                                        –
-                                        {{ formatLocalTime(selectedOutage.to) }}
-                                    </div>
+                                <div
+                                    class="text-white/80 text-base leading-relaxed capitalize"
+                                >
+                                    {{ selectedOutage.district }}
                                 </div>
                             </div>
-                            <div class="space-y-4">
-                                <div>
-                                    <div
-                                        class="text-xs uppercase tracking-wider text-white/40 mb-1.5"
-                                    >
-                                        District
-                                    </div>
-                                    <div
-                                        class="text-white/80 leading-relaxed capitalize"
-                                    >
-                                        {{ selectedOutage.district }}
-                                    </div>
+                            <div>
+                                <div
+                                    class="text-xs uppercase tracking-wider text-white/40 mb-2"
+                                >
+                                    Affected Areas
                                 </div>
-                                <div>
-                                    <div
-                                        class="text-xs uppercase tracking-wider text-white/40 mb-1.5"
-                                    >
-                                        Locality
-                                    </div>
-                                    <NuxtLink
-                                        :to="`/locality/${getLocalitySlug(selectedOutage)}`"
-                                        class="text-white/80 leading-relaxed hover:text-white hover:underline transition-colors"
-                                    >
-                                        {{ selectedOutage.locality }}
-                                        <Icon name="mdi:external-link" />
-                                    </NuxtLink>
-                                </div>
-                                <div>
-                                    <div
-                                        class="text-xs uppercase tracking-wider text-white/40 mb-1.5"
-                                    >
-                                        Affected Areas
-                                    </div>
-                                    <div class="text-white/80 leading-relaxed">
-                                        {{ selectedOutage.streets }}
-                                    </div>
+                                <div class="text-white/80 text-sm sm:text-base leading-relaxed">
+                                    {{ selectedOutage.streets }}
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Day Timeline Visualization -->
-                    <div class="">
-                        <div
-                            class="px-6 py-5 sm:px-8 sm:py-6 text-xs uppercase tracking-wider text-white/40 mb-3"
-                        >
-                            Outage Timeline
+                    <div class="px-6 py-5 sm:px-8 sm:py-6 border-b border-white/[0.06]">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6">
+                            <div
+                                class="text-xs uppercase tracking-wider text-white/40"
+                            >
+                                Outage Timeline
+                            </div>
+                            <!-- Legend -->
+                            <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-[10px] sm:text-xs text-white/50">
+                                <div class="flex items-center gap-1.5">
+                                    <div class="w-2.5 h-2.5 rounded-sm bg-[#034c96]/40 border border-[#0369a1]/50"></div>
+                                    <span>Night</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <div class="w-2.5 h-2.5 rounded-sm bg-[#FFD500]/30 border border-[#FFD500]/60"></div>
+                                    <span>Day</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <div class="w-2.5 h-2.5 rounded-sm bg-[#FF4444]/30 border border-[#FF4444]/60"></div>
+                                    <span>No power</span>
+                                </div>
+                                <div v-if="outageState !== 'past'" class="flex items-center gap-1.5">
+                                    <div class="w-2.5 h-0.5 bg-white"></div>
+                                    <span>Now</span>
+                                </div>
+                            </div>
                         </div>
                         <ClientOnly>
                             <DayTimelineToggle
@@ -587,81 +600,88 @@ const breadcrumbItems = computed(() => {
                             </template>
                         </ClientOnly>
                     </div>
-                </div>
 
-                <!-- Actions -->
-                <div
-                    class="mt-6 pt-6 border-t border-white/10 flex items-end justify-between gap-2"
-                >
-                    <div class="flex flex-col items-start gap-1.5 sm:gap-2">
-                        <span class="text-[11px] sm:text-xs text-white/40"
-                            >Add to calendar</span
-                        >
-                        <div class="flex gap-1.5">
-                            <a
-                                :href="googleCalendarUrl"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                :data-umami-event="
-                                    ANALYTICS_EVENTS.OUTAGE_SAVE_GOOGLE_CALENDAR
-                                "
-                                class="px-3 py-2 text-xs font-medium text-white/70 bg-white/8 rounded-md hover:bg-white/15 hover:text-white/90 transition-colors"
-                            >
-                                Google
-                            </a>
-                            <button
-                                @click="handleSaveToCalendar"
-                                :data-umami-event="
-                                    ANALYTICS_EVENTS.OUTAGE_SAVE_CALENDAR
-                                "
-                                class="cursor-pointer px-3 py-2 text-xs font-medium text-white/70 bg-white/8 rounded-md hover:bg-white/15 hover:text-white/90 transition-colors"
-                            >
-                                .ics
-                            </button>
+                    <!-- Actions Section - Moved inside card -->
+                    <div
+                        class="px-6 py-5 sm:px-8 sm:py-6 border-t border-white/[0.06] bg-white/[0.01]"
+                    >
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-end justify-between gap-4 sm:gap-6">
+                            <div class="flex flex-col items-start gap-2">
+                                <span class="text-xs text-white/40"
+                                    >Add to calendar</span
+                                >
+                                <div class="flex flex-wrap gap-2">
+                                    <a
+                                        :href="googleCalendarUrl"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        :data-umami-event="
+                                            ANALYTICS_EVENTS.OUTAGE_SAVE_GOOGLE_CALENDAR
+                                        "
+                                        class="px-4 py-2.5 text-sm font-medium text-white/70 bg-white/8 rounded-lg hover:bg-white/15 hover:text-white/90 transition-colors"
+                                    >
+                                        Google
+                                    </a>
+                                    <button
+                                        @click="handleSaveToCalendar"
+                                        :data-umami-event="
+                                            ANALYTICS_EVENTS.OUTAGE_SAVE_CALENDAR
+                                        "
+                                        class="cursor-pointer px-4 py-2.5 text-sm font-medium text-white/70 bg-white/8 rounded-lg hover:bg-white/15 hover:text-white/90 transition-colors"
+                                    >
+                                        .ics
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col items-start sm:items-end gap-2">
+                                <span class="text-xs text-white/40"
+                                    >Share this outage</span
+                                >
+                                <div class="flex flex-wrap gap-2">
+                                    <!-- Generic Share -->
+                                    <button
+                                        @click="handleShare"
+                                        :data-umami-event="ANALYTICS_EVENTS.OUTAGE_SHARE"
+                                        class="cursor-pointer flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-white/70 bg-white/8 rounded-lg hover:bg-white/15 hover:text-white/90 transition-colors"
+                                    >
+                                        <svg
+                                            class="w-4 h-4 opacity-60"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"
+                                            />
+                                        </svg>
+                                        <span>Share</span>
+                                    </button>
+                                    <!-- WhatsApp - mobile only -->
+                                    <a
+                                        :href="whatsappShareUrl"
+                                        :data-umami-event="
+                                            ANALYTICS_EVENTS.OUTAGE_SHARE_WHATSAPP
+                                        "
+                                        class="sm:hidden flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-white/70 bg-white/8 rounded-lg hover:bg-white/15 hover:text-white/90 transition-colors"
+                                    >
+                                        <svg
+                                            class="w-4 h-4"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                        >
+                                            <path
+                                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                            />
+                                        </svg>
+                                        <span>WhatsApp</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="flex gap-1.5">
-                        <!-- Generic Share -->
-                        <button
-                            @click="handleShare"
-                            :data-umami-event="ANALYTICS_EVENTS.OUTAGE_SHARE"
-                            class="cursor-pointer flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-white/70 bg-white/8 rounded-md hover:bg-white/15 hover:text-white/90 transition-colors"
-                        >
-                            <svg
-                                class="w-3.5 h-3.5 opacity-60"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"
-                                />
-                            </svg>
-                            <span>Share</span>
-                        </button>
-                        <!-- WhatsApp - mobile only -->
-                        <a
-                            :href="whatsappShareUrl"
-                            :data-umami-event="
-                                ANALYTICS_EVENTS.OUTAGE_SHARE_WHATSAPP
-                            "
-                            class="sm:hidden flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-white/70 bg-white/8 rounded-md hover:bg-white/15 hover:text-white/90 transition-colors"
-                        >
-                            <svg
-                                class="w-3.5 h-3.5"
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                            >
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-                                />
-                            </svg>
-                            <span>WhatsApp</span>
-                        </a>
                     </div>
                 </div>
             </section>

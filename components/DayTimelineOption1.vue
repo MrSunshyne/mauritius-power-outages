@@ -1,24 +1,5 @@
 <template>
     <div class="day-timeline-option1 relative">
-        <!-- Legend - top right -->
-        <div class="absolute -top-14 right-8 flex items-center gap-3 text-[12px] text-white/50">
-            <div class="flex items-center gap-1">
-                <div class="w-2.5 h-2.5 rounded-sm bg-[#034c96]/40 border border-[#0369a1]/50"></div>
-                <span>Night</span>
-            </div>
-            <div class="flex items-center gap-1">
-                <div class="w-2.5 h-2.5 rounded-sm bg-[#FFD500]/30 border border-[#FFD500]/60"></div>
-                <span>Day</span>
-            </div>
-            <div class="flex items-center gap-1">
-                <div class="w-2.5 h-2.5 rounded-sm bg-[#FF4444]/30 border border-[#FF4444]/60"></div>
-                <span>No power</span>
-            </div>
-            <div v-if="showCurrentTime" class="flex items-center gap-1">
-                <div class="w-2.5 h-0.5 bg-white"></div>
-                <span>Now</span>
-            </div>
-        </div>
 
         <svg :viewBox="`0 0 ${width} ${height}`" class="w-full h-auto" preserveAspectRatio="xMidYMid meet">
             <defs>
@@ -121,7 +102,7 @@
             <g v-if="showCurrentTime" :transform="`translate(${currentTimeX}, 0)`">
                 <line :y1="barY - 10" :y2="axisY + 5" stroke="#ffffff" stroke-width="1" stroke-dasharray="2,2" />
                 <circle :cy="barY + barHeight / 2" r="2" fill="#ffffff" />
-                <text :y="barY - 15" text-anchor="middle" fill="#ffffff" font-weight="300"
+                <text :y="barY - 20" text-anchor="middle" fill="#ffffff" font-weight="300"
                     class="timeline-text">NOW</text>
             </g>
 

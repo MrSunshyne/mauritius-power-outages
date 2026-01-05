@@ -1,24 +1,5 @@
 <template>
     <div class="day-timeline-option3 relative">
-        <!-- Legend - top right -->
-        <div class="absolute -top-14 right-8 flex items-center gap-3 text-[12px] text-white/50">
-            <div class="flex items-center gap-1">
-                <div class="w-2.5 h-2.5 rounded-full bg-[#034c96]/40 border border-[#0369a1]/50"></div>
-                <span>Night</span>
-            </div>
-            <div class="flex items-center gap-1">
-                <div class="w-2.5 h-2.5 rounded-full bg-[#FFD500]/30 border border-[#FFD500]/60"></div>
-                <span>Day</span>
-            </div>
-            <div class="flex items-center gap-1">
-                <div class="w-2.5 h-2.5 rounded-sm bg-[#FF4444]/30 border border-[#FF4444]/60"></div>
-                <span>No power</span>
-            </div>
-            <div v-if="showCurrentTime" class="flex items-center gap-1">
-                <div class="w-2.5 h-0.5 bg-white"></div>
-                <span>Now</span>
-            </div>
-        </div>
 
         <svg :viewBox="`0 0 ${width} ${height}`" class="w-full h-auto" preserveAspectRatio="xMidYMid meet">
             <defs>
@@ -86,7 +67,7 @@
                     <line y1="5" y2="-55" stroke="white" stroke-width="1" stroke-linecap="round" />
                     <circle cy="-55" r="2" fill="white" />
                     <!-- Time label -->
-                    <text :transform="`rotate(${-currentTimeAngle})`" y="-62" text-anchor="middle" 
+                    <text :transform="`rotate(${-currentTimeAngle})`" y="-66" text-anchor="middle" 
                         fill="white" font-weight="300" class="timeline-text">NOW</text>
                 </g>
 
