@@ -38,7 +38,10 @@ const { data: selectedOutage, status: outageStatus } =
         }
 
         // First, check latest data (small payload)
-        const latestData = await fetchJson<{ today: Record[], future: Record[] }>(API_URLS.latest);
+        const latestData = await fetchJson<{
+            today: Record[];
+            future: Record[];
+        }>(API_URLS.latest);
         const latestOutages = flat(latestData);
         const foundInLatest = latestOutages.find(
             (o: Record) => o.id === outageId,
@@ -49,7 +52,9 @@ const { data: selectedOutage, status: outageStatus } =
         }
 
         // Not in latest, fetch full history and extract just the one we need
-        const fullData = await fetchJson<{ [key: string]: Record[] }>(API_URLS.full);
+        const fullData = await fetchJson<{ [key: string]: Record[] }>(
+            API_URLS.full,
+        );
         const allOutages = flat(fullData);
         return allOutages.find((o: Record) => o.id === outageId) || null;
     });
@@ -61,7 +66,9 @@ const { data: latestData, status: latestStatus } = await useAsyncData<{
 }>(
     "latest-outages",
     async () => {
-        return await fetchJson<{ today: Record[], future: Record[] }>(API_URLS.latest);
+        return await fetchJson<{ today: Record[]; future: Record[] }>(
+            API_URLS.latest,
+        );
     },
     { default: () => ({ today: [], future: [] }) },
 );
@@ -368,94 +375,174 @@ const breadcrumbItems = computed(() => {
                     class="bg-black/[0.6] rounded-2xl border border-white/[0.06] overflow-hidden"
                 >
                     <!-- Header Section - Mobile -->
-                    <div class="sm:hidden px-6 py-5 border-b border-white/[0.06]">
+                    <div
+                        class="sm:hidden px-6 py-5 border-b border-white/[0.06]"
+                    >
                         <!-- Status badge with dot -->
-                        <div v-if="outageState" class="inline-flex items-center gap-2 mb-3">
-                            <div 
+                        <div
+                            v-if="outageState"
+                            class="inline-flex items-center gap-2 mb-3"
+                        >
+                            <div
                                 class="w-2 h-2 rounded-full"
                                 :class="{
                                     'bg-gray-500': outageState === 'past',
                                     'bg-red-500': outageState === 'ongoing',
-                                    'bg-orange-400': outageState === 'upcoming'
+                                    'bg-orange-400': outageState === 'upcoming',
                                 }"
                             ></div>
-                            <span class="text-xs uppercase tracking-wider text-white/60">
-                                <span v-if="outageState === 'past'">Past Power Outage</span>
-                                <span v-else-if="outageState === 'ongoing'">Ongoing Power Outage</span>
-                                <span v-else-if="outageState === 'upcoming'">Scheduled Power Outage</span>
+                            <span
+                                class="text-xs uppercase tracking-wider text-white/60"
+                            >
+                                <span v-if="outageState === 'past'"
+                                    >Past Power Outage</span
+                                >
+                                <span v-else-if="outageState === 'ongoing'"
+                                    >Ongoing Power Outage</span
+                                >
+                                <span v-else-if="outageState === 'upcoming'"
+                                    >Scheduled Power Outage</span
+                                >
                             </span>
                         </div>
-                        
+
                         <!-- Locality title -->
-                        <h1 class="text-2xl font-black text-white leading-tight" :class="{ 'mb-3': outageState }">
+                        <h1
+                            class="text-2xl font-black text-white leading-tight"
+                            :class="{ 'mb-3': outageState }"
+                        >
                             {{ selectedOutage.locality }}
                         </h1>
-                        
+
                         <!-- Date and Time together -->
-                        <div v-if="isHistoricalOutage" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10">
-                            <Icon name="mdi:clock-outline" class="w-4 h-4 text-white/40" />
+                        <div
+                            v-if="isHistoricalOutage"
+                            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10"
+                        >
+                            <Icon
+                                name="mdi:clock-outline"
+                                class="w-4 h-4 text-white/40"
+                            />
                             <span class="text-sm text-white/50">
-                                Ended {{ format(new Date(selectedOutage.to), "MMM d, yyyy") }}
+                                Ended
+                                {{
+                                    format(
+                                        new Date(selectedOutage.to),
+                                        "MMM d, yyyy",
+                                    )
+                                }}
                             </span>
                         </div>
                         <div v-else class="flex flex-col gap-1.5">
                             <div class="flex items-center gap-2">
-                                <Icon name="mdi:calendar-outline" class="w-4 h-4 text-white/40" />
+                                <Icon
+                                    name="mdi:calendar-outline"
+                                    class="w-4 h-4 text-white/40"
+                                />
                                 <p class="text-white/50 text-sm">
-                                    {{ formatDate(new Date(selectedOutage.from)) }}
+                                    {{
+                                        formatDate(
+                                            new Date(selectedOutage.from),
+                                        )
+                                    }}
                                 </p>
                             </div>
                             <div class="flex items-center gap-2">
-                                <Icon name="mdi:clock-outline" class="w-4 h-4 text-white/40" />
+                                <Icon
+                                    name="mdi:clock-outline"
+                                    class="w-4 h-4 text-white/40"
+                                />
                                 <p class="text-white text-base font-medium">
-                                    {{ formatLocalTime(selectedOutage.from) }} – {{ formatLocalTime(selectedOutage.to) }}
+                                    {{ formatLocalTime(selectedOutage.from) }} –
+                                    {{ formatLocalTime(selectedOutage.to) }}
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Header Section - Desktop -->
-                    <div class="hidden sm:block px-8 py-6 border-b border-white/[0.06]">
+                    <div
+                        class="hidden sm:block px-8 py-6 border-b border-white/[0.06]"
+                    >
                         <!-- Status badge with dot -->
-                        <div v-if="outageState" class="inline-flex items-center gap-2 mb-3">
-                            <div 
+                        <div
+                            v-if="outageState"
+                            class="inline-flex items-center gap-2 mb-3"
+                        >
+                            <div
                                 class="w-2 h-2 rounded-full"
                                 :class="{
                                     'bg-gray-500': outageState === 'past',
                                     'bg-red-500': outageState === 'ongoing',
-                                    'bg-orange-400': outageState === 'upcoming'
+                                    'bg-orange-400': outageState === 'upcoming',
                                 }"
                             ></div>
-                            <span class="text-xs uppercase tracking-wider text-white/50">
-                                <span v-if="outageState === 'past'">Past Power Outage</span>
-                                <span v-else-if="outageState === 'ongoing'">Ongoing Power Outage</span>
-                                <span v-else-if="outageState === 'upcoming'">Scheduled Power Outage</span>
+                            <span
+                                class="text-xs uppercase tracking-wider text-white/50"
+                            >
+                                <span v-if="outageState === 'past'"
+                                    >Past Power Outage</span
+                                >
+                                <span v-else-if="outageState === 'ongoing'"
+                                    >Ongoing Power Outage</span
+                                >
+                                <span v-else-if="outageState === 'upcoming'"
+                                    >Scheduled Power Outage</span
+                                >
                             </span>
                         </div>
-                        
+
                         <!-- Title -->
-                        <h1 class="text-3xl md:text-4xl font-black text-white leading-tight" :class="{ 'mb-3': outageState }">
-                            <span v-if="isHistoricalOutage">Outdated </span>Power outage in {{ selectedOutage.locality }}
+                        <h1
+                            class="text-3xl md:text-4xl font-black text-white leading-tight"
+                            :class="{ 'mb-3': outageState }"
+                        >
+                            Power outage in {{ selectedOutage.locality }}
                         </h1>
-                        
+
                         <!-- Date and Time together -->
-                        <div v-if="isHistoricalOutage" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10">
-                            <Icon name="mdi:clock-outline" class="w-4 h-4 text-white/40" />
+                        <div
+                            v-if="isHistoricalOutage"
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10"
+                        >
+                            <Icon
+                                name="mdi:clock-outline"
+                                class="w-4 h-4 text-white/40"
+                            />
                             <span class="text-sm text-white/50">
-                                This outage occurred on {{ format(new Date(selectedOutage.from), "MMM d, yyyy") }} and ended at {{ formatLocalTime(selectedOutage.to) }}
+                                This outage occurred on
+                                {{
+                                    format(
+                                        new Date(selectedOutage.from),
+                                        "MMM d, yyyy",
+                                    )
+                                }}
+                                and ended at
+                                {{ formatLocalTime(selectedOutage.to) }}
                             </span>
                         </div>
                         <div v-else class="flex flex-col gap-2">
                             <div class="flex items-center gap-2">
-                                <Icon name="mdi:calendar-outline" class="w-5 h-5 text-white/40" />
+                                <Icon
+                                    name="mdi:calendar-outline"
+                                    class="w-5 h-5 text-white/40"
+                                />
                                 <p class="text-white/50 text-base">
-                                    {{ formatDate(new Date(selectedOutage.from)) }}
+                                    {{
+                                        formatDate(
+                                            new Date(selectedOutage.from),
+                                        )
+                                    }}
                                 </p>
                             </div>
                             <div class="flex items-center gap-2">
-                                <Icon name="mdi:clock-outline" class="w-5 h-5 text-white/40" />
+                                <Icon
+                                    name="mdi:clock-outline"
+                                    class="w-5 h-5 text-white/40"
+                                />
                                 <p class="text-white text-lg font-medium">
-                                    {{ formatLocalTime(selectedOutage.from) }} – {{ formatLocalTime(selectedOutage.to) }}
+                                    {{ formatLocalTime(selectedOutage.from) }} –
+                                    {{ formatLocalTime(selectedOutage.to) }}
                                 </p>
                             </div>
                         </div>
@@ -496,7 +583,9 @@ const breadcrumbItems = computed(() => {
                                         statusInfo.color === 'green',
                                 }"
                             >
-                                <span class="text-sm sm:text-base text-white/80">
+                                <span
+                                    class="text-sm sm:text-base text-white/80"
+                                >
                                     {{ statusInfo.timerPrefix }}
                                 </span>
                                 <ClientOnly>
@@ -547,7 +636,9 @@ const breadcrumbItems = computed(() => {
                                 >
                                     Affected Areas
                                 </div>
-                                <div class="text-white/80 text-sm sm:text-base leading-relaxed">
+                                <div
+                                    class="text-white/80 text-sm sm:text-base leading-relaxed"
+                                >
                                     {{ selectedOutage.streets }}
                                 </div>
                             </div>
@@ -555,28 +646,43 @@ const breadcrumbItems = computed(() => {
                     </div>
 
                     <!-- Day Timeline Visualization -->
-                    <div class="px-6 py-5 sm:px-8 sm:py-6 border-b border-white/[0.06]">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6">
+                    <div
+                        class="px-6 py-5 sm:px-8 sm:py-6 border-b border-white/[0.06]"
+                    >
+                        <div
+                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6"
+                        >
                             <div
                                 class="text-xs uppercase tracking-wider text-white/40"
                             >
                                 Outage Timeline
                             </div>
                             <!-- Legend -->
-                            <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-[10px] sm:text-xs text-white/50">
+                            <div
+                                class="flex flex-wrap items-center gap-x-3 gap-y-2 text-[10px] sm:text-xs text-white/50"
+                            >
                                 <div class="flex items-center gap-1.5">
-                                    <div class="w-2.5 h-2.5 rounded-sm bg-[#034c96]/40 border border-[#0369a1]/50"></div>
+                                    <div
+                                        class="w-2.5 h-2.5 rounded-sm bg-[#034c96]/40 border border-[#0369a1]/50"
+                                    ></div>
                                     <span>Night</span>
                                 </div>
                                 <div class="flex items-center gap-1.5">
-                                    <div class="w-2.5 h-2.5 rounded-sm bg-[#FFD500]/30 border border-[#FFD500]/60"></div>
+                                    <div
+                                        class="w-2.5 h-2.5 rounded-sm bg-[#FFD500]/30 border border-[#FFD500]/60"
+                                    ></div>
                                     <span>Day</span>
                                 </div>
                                 <div class="flex items-center gap-1.5">
-                                    <div class="w-2.5 h-2.5 rounded-sm bg-[#FF4444]/30 border border-[#FF4444]/60"></div>
+                                    <div
+                                        class="w-2.5 h-2.5 rounded-sm bg-[#FF4444]/30 border border-[#FF4444]/60"
+                                    ></div>
                                     <span>No power</span>
                                 </div>
-                                <div v-if="outageState !== 'past'" class="flex items-center gap-1.5">
+                                <div
+                                    v-if="outageState !== 'past'"
+                                    class="flex items-center gap-1.5"
+                                >
                                     <div class="w-2.5 h-0.5 bg-white"></div>
                                     <span>Now</span>
                                 </div>
@@ -605,7 +711,9 @@ const breadcrumbItems = computed(() => {
                     <div
                         class="px-6 py-5 sm:px-8 sm:py-6 border-t border-white/[0.06] bg-white/[0.01]"
                     >
-                        <div class="flex flex-col sm:flex-row items-stretch sm:items-end justify-between gap-4 sm:gap-6">
+                        <div
+                            class="flex flex-col sm:flex-row items-stretch sm:items-end justify-between gap-4 sm:gap-6"
+                        >
                             <div class="flex flex-col items-start gap-2">
                                 <span class="text-xs text-white/40"
                                     >Add to calendar</span
@@ -634,7 +742,9 @@ const breadcrumbItems = computed(() => {
                                 </div>
                             </div>
 
-                            <div class="flex flex-col items-start sm:items-end gap-2">
+                            <div
+                                class="flex flex-col items-start sm:items-end gap-2"
+                            >
                                 <span class="text-xs text-white/40"
                                     >Share this outage</span
                                 >
@@ -642,7 +752,9 @@ const breadcrumbItems = computed(() => {
                                     <!-- Generic Share -->
                                     <button
                                         @click="handleShare"
-                                        :data-umami-event="ANALYTICS_EVENTS.OUTAGE_SHARE"
+                                        :data-umami-event="
+                                            ANALYTICS_EVENTS.OUTAGE_SHARE
+                                        "
                                         class="cursor-pointer flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-white/70 bg-white/8 rounded-lg hover:bg-white/15 hover:text-white/90 transition-colors"
                                     >
                                         <svg
