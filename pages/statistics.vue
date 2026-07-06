@@ -2,6 +2,7 @@
 import { getISOWeek } from 'date-fns'
 import { flat } from '~/utils/filters'
 import { API_URLS, fetchJson } from '~/utils/api'
+import { generateSlug } from '~/utils/slug'
 import type { Dataset, Record } from '~/types'
 import { DISTRICT_NAMES } from '~/constants/districts'
 import { useAnalytics } from '~/composables/useAnalytics'
@@ -38,9 +39,15 @@ defineOgImageComponent('Statistics', {
 const MU_OFFSET_MS = 4 * 60 * 60 * 1000
 const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+const MONTHS_SHORT = MONTHS.map(month => month.slice(0, 3))
+const DURATION_LABELS = ['< 1h', '1–2h', '2–3h', '3–4h', '4–5h', '5–6h', '6–8h', '8h +']
 
 function toMauritius(iso: string) {
     return new Date(new Date(iso).getTime() + MU_OFFSET_MS)
+}
+
+function titleCase(name: string) {
+    return name.toLowerCase().replace(/(^|[\s-])\S/g, s => s.toUpperCase())
 }
 
 // Runs on the server (ISR, revalidated hourly): the full ~3.5 MB dataset
@@ -57,6 +64,10 @@ function computeStats(records: Record[]) {
     const perHour = {} as { [key: number]: number }
     const perDistrict = {} as { [key: string]: number }
     const perDistrictMs = {} as { [key: string]: number }
+    const perYearMonth = {} as { [year: string]: number[] }
+    const perLocality = {} as { [name: string]: { count: number, ms: number } }
+    const durationBuckets = DURATION_LABELS.map(() => 0)
+    let durationCount = 0
     let wastedMs = 0
 
     for (const outage of valid) {
@@ -73,12 +84,31 @@ function computeStats(records: Record[]) {
         perHour[d.getUTCHours()] = (perHour[d.getUTCHours()] || 0) + 1
         perDistrict[outage.district] = (perDistrict[outage.district] || 0) + 1
 
+        const year = String(d.getUTCFullYear())
+        if (!perYearMonth[year])
+            perYearMonth[year] = MONTHS.map(() => 0)
+        perYearMonth[year][d.getUTCMonth()] += 1
+
+        const locality = outage.locality?.trim()
+        if (locality) {
+            if (!perLocality[locality])
+                perLocality[locality] = { count: 0, ms: 0 }
+            perLocality[locality].count += 1
+        }
+
         // A few records have to < from (bad source data); skip those
         if (outage.to) {
             const duration = new Date(outage.to).getTime() - new Date(outage.from).getTime()
             if (duration > 0) {
                 wastedMs += duration
+                durationCount += 1
                 perDistrictMs[outage.district] = (perDistrictMs[outage.district] || 0) + duration
+                if (locality)
+                    perLocality[locality].ms += duration
+
+                const hours = duration / 3_600_000
+                const bucket = hours < 1 ? 0 : hours < 2 ? 1 : hours < 3 ? 2 : hours < 4 ? 3 : hours < 5 ? 4 : hours < 6 ? 5 : hours < 8 ? 6 : 7
+                durationBuckets[bucket] += 1
             }
         }
     }
@@ -109,6 +139,18 @@ function computeStats(records: Record[]) {
     const days = Object.keys(perDay)
     const hours = Object.keys(perHour).map(Number)
 
+    // One series per year, Jan-Dec; null outside the dataset's range so
+    // lines start/stop where the data does instead of dropping to zero
+    const firstYm = dateKeys.length ? dateKeys[0].slice(0, 7) : ''
+    const lastYm = dateKeys.length ? dateKeys[dateKeys.length - 1].slice(0, 7) : ''
+    const yearlySeries = Object.keys(perYearMonth).sort().map(year => ({
+        name: year,
+        data: MONTHS_SHORT.map((month, i) => {
+            const ym = `${year}-${String(i + 1).padStart(2, '0')}`
+            return { x: month, y: ym >= firstYm && ym <= lastYm ? perYearMonth[year][i] : null }
+        }),
+    }))
+
     return {
         countPerDate,
         rollingAverage,
@@ -129,6 +171,18 @@ function computeStats(records: Record[]) {
                 x: DISTRICT_NAMES[district as keyof typeof DISTRICT_NAMES] || district,
                 y: perDistrict[district],
                 hours: Math.round((perDistrictMs[district] || 0) / 3_600_000),
+            })),
+        yearlySeries,
+        durationHistogram: DURATION_LABELS.map((label, i) => ({ x: label, y: durationBuckets[i] })),
+        avgDurationHours: durationCount ? Math.round((wastedMs / durationCount / 3_600_000) * 10) / 10 : null,
+        topLocalities: Object.keys(perLocality)
+            .sort((a, b) => perLocality[b].count - perLocality[a].count)
+            .slice(0, 15)
+            .map(name => ({
+                name: titleCase(name),
+                slug: generateSlug(name),
+                count: perLocality[name].count,
+                hours: Math.round(perLocality[name].ms / 3_600_000),
             })),
         outagesTodayCount: perDate[todayKey] || 0,
         hoursWasted: Math.round(wastedMs / 3_600_000),
@@ -163,6 +217,12 @@ const peakHourInsight = computed(() => {
     return `Most outages start between ${stats.value.peakHour}:00 and ${stats.value.peakHour + 1}:00 — plan around it !`
 })
 
+const durationInsight = computed(() => {
+    if (stats.value?.avgDurationHours == null)
+        return undefined
+    return `The average scheduled outage lasts ${stats.value.avgDurationHours} hours`
+})
+
 // Breadcrumb
 const breadcrumbItems = [
     { label: 'Statistics' }
@@ -184,6 +244,9 @@ const breadcrumbItems = [
                 <ChartsChartCountPerDate class="col-span-2" :data="stats?.countPerDate ?? []"
                     :average="stats?.rollingAverage ?? []" :title="'Detailed timeline'" />
 
+                <ChartsChartYearOverYear class="col-span-2" :data="stats?.yearlySeries ?? []"
+                    :title="'Year over year'" />
+
                 <ChartsChartCountPerDay class="col-span-2" :data="stats?.countPerDay ?? []" :title="'Distribution by day'"
                     :insight="worstDayInsight" />
 
@@ -194,7 +257,13 @@ const breadcrumbItems = [
                 <ChartsChartCountPerHour :data="stats?.countPerHour ?? []" class="col-span-2" :title="'Segments of the day'"
                     :insight="peakHourInsight" />
 
+                <ChartsChartDurations class="col-span-2" :data="stats?.durationHistogram ?? []"
+                    :title="'How long do cuts last?'" :insight="durationInsight" />
+
                 <ChartsChartCountPerDistrict class="col-span-2" :data="stats?.countPerDistrict ?? []" :title="'District statistics'" />
+
+                <TopLocalities class="col-span-2" :items="stats?.topLocalities ?? []"
+                    :title="'Most affected localities'" />
                 <template #fallback>
                     <div class="col-span-2 text-center py-8 text-white/50">
                         Loading charts...
