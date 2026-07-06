@@ -27,7 +27,7 @@
 
                 <div class="bg-gray-500/10 rounded-lg px-10 py-5 text-right">
                     <div class="text-5xl font-black">
-                        {{ outagesTodayValue.length }}
+                        {{ props.outagesTodayCount ?? 0 }}
                     </div>
                     <div class="uppercase font-medium text-white/50">
                         cuts today
@@ -45,12 +45,11 @@
 
 <script lang="ts" setup>
 const props = defineProps<{
-    outagesToday?: any[]
+    outagesTodayCount?: number
     hoursWasted?: string
     countPerDate?: any[]
     since?: string
 }>()
 
-const outagesTodayValue = computed(() => props.outagesToday || [])
 const countPerDateValue = computed(() => props.countPerDate || [])
 </script>

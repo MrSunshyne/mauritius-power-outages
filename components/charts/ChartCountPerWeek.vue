@@ -5,7 +5,7 @@
         <h2>
           {{ props.title }}
         </h2>
-        <p>Number of outages per week.</p>
+        <p>Outages per ISO week, across all years</p>
       </div>
       <div class="md:container md:mx-auto">
         <div
@@ -33,7 +33,7 @@
 
 <script setup lang="ts">
 import type { ApexOptions } from 'apexcharts'
-import { genericConfigs, labelColor, lineColor } from '~/composables/useChartConfig'
+import { genericConfigs, labelColor } from '~/composables/useChartConfig'
 
 const props = defineProps<{
   data: any[]
@@ -48,6 +48,11 @@ const series = computed(() => {
 
 const chartOptions: ApexOptions = reactive({
   ...genericConfigs,
+  plotOptions: {
+    bar: {
+      borderRadius: 3,
+    },
+  },
   xaxis: {
     title: {
       text: 'ISO week of the year',
@@ -63,7 +68,7 @@ const chartOptions: ApexOptions = reactive({
   },
   yaxis: {
     title: {
-      text: 'Count',
+      text: 'Outages',
       style: {
         color: labelColor,
       },
@@ -71,14 +76,6 @@ const chartOptions: ApexOptions = reactive({
     labels: {
       style: {
         colors: labelColor,
-      },
-    },
-  },
-  plotOptions: {
-    bar: {
-      colors: {
-        backgroundBarColors: [lineColor],
-        backgroundBarOpacity: 0.2,
       },
     },
   },

@@ -10,7 +10,7 @@
             <VueApexCharts
               width="100%"
               class="h-full w-full"
-              type="treemap"
+              type="bar"
               :options="chartOptions"
               :series="series"
             />
@@ -37,7 +37,7 @@
 
 <script setup lang="ts">
 import type { ApexOptions } from 'apexcharts'
-import { labelColor, lineColor, genericConfigs } from '~/composables/useChartConfig'
+import { labelColor, genericConfigs, highlightColor, barColor } from '~/composables/useChartConfig'
 
 const props = defineProps<{
   data: any[]
@@ -47,51 +47,41 @@ const props = defineProps<{
 
 const loading = ref(false)
 
+// Highlight the worst day so the chart and the insight tell the same story
 const series = computed(() => {
-  return [{ data: props.data, name: 'Number of outages' }]
+  const max = Math.max(...props.data.map(item => item.y))
+  return [{
+    name: 'Number of outages',
+    data: props.data.map(item => ({ ...item, fillColor: item.y === max ? highlightColor : barColor })),
+  }]
 })
 
 const chartOptions: ApexOptions = reactive({
   ...genericConfigs,
+  plotOptions: {
+    bar: {
+      horizontal: true,
+      borderRadius: 4,
+    },
+  },
   dataLabels: {
     enabled: true,
-  },
-  plotOptions: {
-    treemap: {
-      enableShades: true,
-      useFillColorAsStroke: true,
-      colorScale: {
-        inverse: false,
-        ranges: [
-          {
-            from: 0,
-            to: 50,
-            color: lineColor,
-          },
-          {
-            from: 50,
-            to: 100,
-            color: '#ff0000',
-          },
-        ],
-      },
-    },
+    formatter: (val: number) => val.toLocaleString('en-US'),
   },
   xaxis: {
     title: {
-      text: 'Day of the Week',
+      text: 'Outages',
       style: {
         color: labelColor,
+      },
+    },
+    labels: {
+      style: {
+        colors: labelColor,
       },
     },
   },
   yaxis: {
-    title: {
-      text: 'Count',
-      style: {
-        color: labelColor,
-      },
-    },
     labels: {
       style: {
         colors: labelColor,

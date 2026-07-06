@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="max-w-[90vw] mx-auto md:grid grid-cols-2 items-center gap-24 h-[50vh]">
+    <div class="max-w-[90vw] mx-auto md:grid grid-cols-2 items-center gap-24">
       <div>
         <div
           v-if="!loading"
@@ -8,7 +8,7 @@
         >
           <ClientOnly>
             <VueApexCharts
-              type="radar"
+              type="bar"
               :options="chartOptions"
               :series="series"
             />
@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
 import type { ApexOptions } from 'apexcharts'
-import { labelColor, lineColor } from '~/composables/useChartConfig'
+import { labelColor, genericConfigs, highlightColor, barColor } from '~/composables/useChartConfig'
 
 const props = defineProps<{
   data: any[]
@@ -45,45 +45,47 @@ const props = defineProps<{
 
 const loading = ref(false)
 
-function xyToLabelSeries(data: any[]) {
-  return {
-    series: data.map(item => item.y),
-    labels: data.map((item) => {
-      return `${(parseInt(item.x)).toString()}h`
-    }),
-  }
-}
-
+// Highlight the peak hour so the chart and the insight tell the same story
 const series = computed(() => {
-  return [{ data: props.data, name: 'Number of outages' }]
-})
-
-const labels = computed(() => {
-  return xyToLabelSeries(props.data).labels
+  const max = Math.max(...props.data.map(item => item.y))
+  return [{
+    name: 'Number of outages',
+    data: props.data.map(item => ({ ...item, fillColor: item.y === max && max > 0 ? highlightColor : barColor })),
+  }]
 })
 
 const chartOptions: ApexOptions = reactive({
-  labels: labels.value,
-  dataLabels: {
-    enabled: true,
-    distributed: true,
-    formatter(val: any) {
-      return `${val.toString()} hours`
-    },
-    style: {
-      fontSize: '16px',
-      colors: [lineColor],
+  ...genericConfigs,
+  plotOptions: {
+    bar: {
+      borderRadius: 3,
     },
   },
-  tooltip: {
-    theme: 'dark',
-    style: {
-      fontSize: '18px',
+  xaxis: {
+    tickAmount: 12,
+    title: {
+      text: 'Hour of the day (Mauritius time)',
+      style: {
+        color: labelColor,
+      },
     },
-  },
-  legend: {
     labels: {
-      colors: labelColor,
+      style: {
+        colors: labelColor,
+      },
+    },
+  },
+  yaxis: {
+    title: {
+      text: 'Outages',
+      style: {
+        color: labelColor,
+      },
+    },
+    labels: {
+      style: {
+        colors: labelColor,
+      },
     },
   },
 })

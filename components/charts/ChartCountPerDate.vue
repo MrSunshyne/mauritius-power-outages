@@ -5,7 +5,7 @@
         <h2>
           {{ props.title }}
         </h2>
-        <p>A detailed day-by-day timeline of when powercuts occurred on the island</p>
+        <p>Daily outages across the island, with a 30-day average showing the trend. Drag on the chart to zoom in.</p>
       </div>
       <div class="md:container md:mx-auto">
         <div
@@ -15,11 +15,12 @@
           <ClientOnly>
             <VueApexCharts
               type="line"
+              height="420"
               :options="chartOptions"
               :series="series"
             />
             <template #fallback>
-              <div class="h-[350px] flex items-center justify-center">Loading chart...</div>
+              <div class="h-[420px] flex items-center justify-center">Loading chart...</div>
             </template>
           </ClientOnly>
         </div>
@@ -35,19 +36,45 @@ import { labelColor, lineColor, axisColor, genericConfigs } from '~/composables/
 
 const props = defineProps<{
   data: any[]
+  average?: any[]
   title: string
 }>()
 
 const loading = ref(false)
 
 const series = computed(() => {
-  return [{ data: props.data, name: 'Number of outages' }]
+  return [
+    { name: 'Daily outages', type: 'area', data: props.data },
+    { name: '30-day average', type: 'line', data: props.average ?? [] },
+  ]
 })
 
 const chartOptions: ApexOptions = reactive({
   ...genericConfigs,
+  chart: {
+    type: 'line',
+    foreColor: labelColor,
+    toolbar: {
+      show: true,
+      tools: {
+        download: false,
+        selection: false,
+        pan: false,
+        zoom: true,
+        zoomin: true,
+        zoomout: true,
+        reset: true,
+      },
+      autoSelected: 'zoom',
+    },
+    zoom: {
+      enabled: true,
+      autoScaleYaxis: true,
+    },
+  },
+  colors: [lineColor, '#ffffff'],
   fill: {
-    type: 'gradient',
+    type: ['gradient', 'solid'],
     gradient: {
       shadeIntensity: 1,
       type: 'vertical',
@@ -76,8 +103,22 @@ const chartOptions: ApexOptions = reactive({
     },
   },
   stroke: {
-    width: 5,
+    width: [1.5, 3],
     curve: 'smooth',
+  },
+  legend: {
+    position: 'top',
+    horizontalAlign: 'left',
+    labels: {
+      colors: labelColor,
+    },
+  },
+  tooltip: {
+    theme: 'dark',
+    shared: true,
+    x: {
+      format: 'dd MMM yyyy',
+    },
   },
   xaxis: {
     type: 'datetime',
@@ -98,12 +139,13 @@ const chartOptions: ApexOptions = reactive({
   },
   yaxis: {
     title: {
-      text: 'Count',
+      text: 'Outages per day',
       style: {
         color: labelColor,
       },
     },
     labels: {
+      formatter: (val: number) => String(Math.round(val)),
       style: {
         colors: labelColor,
       },

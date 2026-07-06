@@ -33,7 +33,7 @@
 
 <script setup lang="ts">
 import type { ApexOptions } from 'apexcharts'
-import { labelColor, genericConfigs, lineColor } from '~/composables/useChartConfig'
+import { labelColor, genericConfigs } from '~/composables/useChartConfig'
 
 const props = defineProps<{
   data: any[]
@@ -48,8 +48,24 @@ const series = computed(() => {
 
 const chartOptions: ApexOptions = reactive({
   ...genericConfigs,
+  plotOptions: {
+    bar: {
+      borderRadius: 4,
+    },
+  },
   dataLabels: {
     enabled: true,
+    formatter: (val: number) => val.toLocaleString('en-US'),
+  },
+  tooltip: {
+    theme: 'dark',
+    y: {
+      formatter: (val: number, { dataPointIndex }: any) => {
+        const hours = props.data[dataPointIndex]?.hours
+        const outages = val.toLocaleString('en-US')
+        return hours ? `${outages} outages · ${hours.toLocaleString('en-US')} hours lost` : `${outages} outages`
+      },
+    },
   },
   xaxis: {
     title: {
@@ -66,7 +82,7 @@ const chartOptions: ApexOptions = reactive({
   },
   yaxis: {
     title: {
-      text: 'Count',
+      text: 'Outages',
       style: {
         color: labelColor,
       },
@@ -74,14 +90,6 @@ const chartOptions: ApexOptions = reactive({
     labels: {
       style: {
         colors: labelColor,
-      },
-    },
-  },
-  plotOptions: {
-    bar: {
-      colors: {
-        backgroundBarColors: [lineColor],
-        backgroundBarOpacity: 0.2,
       },
     },
   },
