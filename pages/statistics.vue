@@ -41,6 +41,7 @@ const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 const MONTHS_SHORT = MONTHS.map(month => month.slice(0, 3))
 const DURATION_LABELS = ['< 1h', '1–2h', '2–3h', '3–4h', '4–5h', '5–6h', '6–8h', '8h +']
+const HOUR_LABELS = Array.from({ length: 24 }, (_, hour) => `${String(hour).padStart(2, '0')}:00`)
 
 function toMauritius(iso: string) {
     return new Date(new Date(iso).getTime() + MU_OFFSET_MS)
@@ -65,6 +66,7 @@ function computeStats(records: Record[]) {
     const perDistrict = {} as { [key: string]: number }
     const perDistrictMs = {} as { [key: string]: number }
     const perYearMonth = {} as { [year: string]: number[] }
+    const perDayHour = {} as { [day: string]: number[] }
     const perLocality = {} as { [name: string]: { count: number, ms: number } }
     const durationBuckets = DURATION_LABELS.map(() => 0)
     let durationCount = 0
@@ -81,8 +83,13 @@ function computeStats(records: Record[]) {
         perDay[day] = (perDay[day] || 0) + 1
         perMonth[month] = (perMonth[month] || 0) + 1
         perWeek[week] = (perWeek[week] || 0) + 1
-        perHour[d.getUTCHours()] = (perHour[d.getUTCHours()] || 0) + 1
+        const hour = d.getUTCHours()
+        perHour[hour] = (perHour[hour] || 0) + 1
         perDistrict[outage.district] = (perDistrict[outage.district] || 0) + 1
+
+        if (!perDayHour[day])
+            perDayHour[day] = HOUR_LABELS.map(() => 0)
+        perDayHour[day][hour] += 1
 
         const year = String(d.getUTCFullYear())
         if (!perYearMonth[year])
@@ -151,6 +158,21 @@ function computeStats(records: Record[]) {
         }),
     }))
 
+    // Day x hour matrix; Apex heatmaps draw the first series at the bottom,
+    // so reverse to display Monday at the top
+    const weekOrder = [...WEEKDAYS.slice(1), 'Sunday']
+    const heatmapSeries = [...weekOrder].reverse().map(day => ({
+        name: day,
+        data: HOUR_LABELS.map((label, hour) => ({ x: label, y: perDayHour[day]?.[hour] || 0 })),
+    }))
+    let peakDayHour = null as { day: string, hour: number, count: number } | null
+    for (const day of weekOrder) {
+        (perDayHour[day] || []).forEach((count, hour) => {
+            if (!peakDayHour || count > peakDayHour.count)
+                peakDayHour = { day, hour, count }
+        })
+    }
+
     return {
         countPerDate,
         rollingAverage,
@@ -173,6 +195,8 @@ function computeStats(records: Record[]) {
                 hours: Math.round((perDistrictMs[district] || 0) / 3_600_000),
             })),
         yearlySeries,
+        heatmapSeries,
+        peakDayHour,
         durationHistogram: DURATION_LABELS.map((label, i) => ({ x: label, y: durationBuckets[i] })),
         avgDurationHours: durationCount ? Math.round((wastedMs / durationCount / 3_600_000) * 10) / 10 : null,
         topLocalities: Object.keys(perLocality)
@@ -223,6 +247,13 @@ const durationInsight = computed(() => {
     return `The average scheduled outage lasts ${stats.value.avgDurationHours} hours`
 })
 
+const heatmapInsight = computed(() => {
+    const peak = stats.value?.peakDayHour
+    if (!peak)
+        return undefined
+    return `${peak.day}s at ${peak.hour}:00 are the darkest hour of the week — ${peak.count.toLocaleString('en-US')} outages and counting`
+})
+
 // Breadcrumb
 const breadcrumbItems = [
     { label: 'Statistics' }
@@ -235,41 +266,61 @@ const breadcrumbItems = [
             <Breadcrumb :items="breadcrumbItems" />
         </div>
 
-        <div class="pb-12">
-            <div class="grid grid-cols-2 gap-12 text-left">
-            <HeroSection class="col-span-2" :outages-today-count="stats?.outagesTodayCount" :hours-wasted="hoursWasted"
+        <div class="pb-16 text-left">
+            <HeroSection :outages-today-count="stats?.outagesTodayCount" :hours-wasted="hoursWasted"
                 :count-per-date="stats?.countPerDate" :since="stats?.since ?? undefined" />
 
-            <ClientOnly>
-                <ChartsChartCountPerDate class="col-span-2" :data="stats?.countPerDate ?? []"
-                    :average="stats?.rollingAverage ?? []" :title="'Detailed timeline'" />
+            <div class="flex flex-col gap-16">
+                <SectionHeading :kicker="'The trend'" :title="'Is it getting better?'"
+                    :subtitle="'How outages have evolved since March 2022 — and how this year compares to the last four'" />
+                <ClientOnly>
+                    <div class="flex flex-col gap-16">
+                        <ChartsChartYearOverYear :data="stats?.yearlySeries ?? []" :title="'Year over year'" />
 
-                <ChartsChartYearOverYear class="col-span-2" :data="stats?.yearlySeries ?? []"
-                    :title="'Year over year'" />
-
-                <ChartsChartCountPerDay class="col-span-2" :data="stats?.countPerDay ?? []" :title="'Distribution by day'"
-                    :insight="worstDayInsight" />
-
-                <ChartsChartCountPerMonth :data="stats?.countPerMonth ?? []" class="col-span-2" :title="'Monthly quota of darkness'" />
-
-                <ChartsChartCountPerWeek :data="stats?.countPerWeek ?? []" :title="'Week of the year'" class="col-span-2" />
-
-                <ChartsChartCountPerHour :data="stats?.countPerHour ?? []" class="col-span-2" :title="'Segments of the day'"
-                    :insight="peakHourInsight" />
-
-                <ChartsChartDurations class="col-span-2" :data="stats?.durationHistogram ?? []"
-                    :title="'How long do cuts last?'" :insight="durationInsight" />
-
-                <ChartsChartCountPerDistrict class="col-span-2" :data="stats?.countPerDistrict ?? []" :title="'District statistics'" />
-
-                <TopLocalities class="col-span-2" :items="stats?.topLocalities ?? []"
-                    :title="'Most affected localities'" />
-                <template #fallback>
-                    <div class="col-span-2 text-center py-8 text-white/50">
-                        Loading charts...
+                        <ChartsChartCountPerDate :data="stats?.countPerDate ?? []"
+                            :average="stats?.rollingAverage ?? []" :title="'Detailed timeline'" />
                     </div>
-                </template>
-            </ClientOnly>
+                    <template #fallback>
+                        <div class="text-center py-8 text-white/50">Loading charts...</div>
+                    </template>
+                </ClientOnly>
+
+                <SectionHeading :kicker="'The rhythm'" :title="'When do cuts happen?'"
+                    :subtitle="'The hours, days and seasons the island goes dark'" />
+                <ClientOnly>
+                    <div class="flex flex-col gap-16">
+                        <ChartsChartDayHourHeatmap :data="stats?.heatmapSeries ?? []"
+                            :title="'The weekly heatmap'" :insight="heatmapInsight" />
+
+                        <ChartsChartDurations :data="stats?.durationHistogram ?? []"
+                            :title="'How long do cuts last?'" :insight="durationInsight" />
+
+                        <ChartsChartCountPerHour :data="stats?.countPerHour ?? []" :title="'Segments of the day'"
+                            :insight="peakHourInsight" />
+
+                        <ChartsChartCountPerDay :data="stats?.countPerDay ?? []" :title="'Distribution by day'"
+                            :insight="worstDayInsight" />
+
+                        <ChartsChartCountPerMonth :data="stats?.countPerMonth ?? []" :title="'Monthly quota of darkness'" />
+
+                        <ChartsChartCountPerWeek :data="stats?.countPerWeek ?? []" :title="'Week of the year'" />
+                    </div>
+                    <template #fallback>
+                        <div class="text-center py-8 text-white/50">Loading charts...</div>
+                    </template>
+                </ClientOnly>
+
+                <SectionHeading :kicker="'The map'" :title="'Where do cuts happen?'"
+                    :subtitle="'The districts and localities that spend the most time in the dark'" />
+
+                <TopLocalities :items="stats?.topLocalities ?? []" :title="'Most affected localities'" />
+
+                <ClientOnly>
+                    <ChartsChartCountPerDistrict :data="stats?.countPerDistrict ?? []" :title="'District statistics'" />
+                    <template #fallback>
+                        <div class="text-center py-8 text-white/50">Loading charts...</div>
+                    </template>
+                </ClientOnly>
             </div>
         </div>
     </div>
