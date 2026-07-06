@@ -13,7 +13,8 @@ export default defineNuxtConfig({
   // Enable SSR for dynamic OG meta tags
   ssr: true,
   nitro: {
-    preset: 'netlify',
+    // Deployed to both Netlify and Cloudflare Pages (CF_PAGES is set by the CF build env)
+    preset: process.env.CF_PAGES ? 'cloudflare_pages' : 'netlify',
   },
 
   // Hybrid rendering: static pages except dynamic outage pages
