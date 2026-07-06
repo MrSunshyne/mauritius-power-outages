@@ -27,7 +27,7 @@
         <p>
           The worst hour of the day
         </p>
-        <blockquote>You might want to postpone standups if they're between 8-9 in the morning !</blockquote>
+        <blockquote v-if="props.insight">{{ props.insight }}</blockquote>
       </div>
     </div>
   </div>
@@ -40,6 +40,7 @@ import { labelColor, lineColor } from '~/composables/useChartConfig'
 const props = defineProps<{
   data: any[]
   title: string
+  insight?: string
 }>()
 
 const loading = ref(false)

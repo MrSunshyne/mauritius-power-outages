@@ -50,7 +50,7 @@ const chartOptions: ApexOptions = reactive({
   ...genericConfigs,
   xaxis: {
     title: {
-      text: 'Week # (1-52) of the year',
+      text: 'ISO week of the year',
       style: {
         color: labelColor,
       },

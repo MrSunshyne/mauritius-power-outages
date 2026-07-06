@@ -9,10 +9,9 @@
                     Statistics of power outages in Mauritius
                 </h1>
                 <p class="text-center text-3xl">
-                    A detailed day-by-day timeline of when powercuts occurred on the island <span
+                    A detailed day-by-day timeline of when powercuts occurred on the island <span v-if="props.since"
                         class="font-bold underline">
-                        since 10 March
-                        2022
+                        since {{ props.since }}
                     </span>
                 </p>
             </div>
@@ -27,7 +26,7 @@
                 </div>
 
                 <div class="bg-gray-500/10 rounded-lg px-10 py-5 text-right">
-                    <div v-if="outagesTodayValue.length > 0" class="text-5xl font-black">
+                    <div class="text-5xl font-black">
                         {{ outagesTodayValue.length }}
                     </div>
                     <div class="uppercase font-medium text-white/50">
@@ -49,6 +48,7 @@ const props = defineProps<{
     outagesToday?: any[]
     hoursWasted?: string
     countPerDate?: any[]
+    since?: string
 }>()
 
 const outagesTodayValue = computed(() => props.outagesToday || [])

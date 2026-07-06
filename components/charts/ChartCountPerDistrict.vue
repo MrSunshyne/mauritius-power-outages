@@ -53,7 +53,7 @@ const chartOptions: ApexOptions = reactive({
   },
   xaxis: {
     title: {
-      text: 'Day of the Week',
+      text: 'District',
       style: {
         color: labelColor,
       },

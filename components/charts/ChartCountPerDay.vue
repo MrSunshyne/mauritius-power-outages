@@ -29,7 +29,7 @@
         <p>
           Which day of the week has the most power outages compared to the others?
         </p>
-        <blockquote>Sunday is the worst day of the week. You should probably go to the seaside</blockquote>
+        <blockquote v-if="props.insight">{{ props.insight }}</blockquote>
       </div>
     </div>
   </div>
@@ -42,6 +42,7 @@ import { labelColor, lineColor, genericConfigs } from '~/composables/useChartCon
 const props = defineProps<{
   data: any[]
   title: string
+  insight?: string
 }>()
 
 const loading = ref(false)
