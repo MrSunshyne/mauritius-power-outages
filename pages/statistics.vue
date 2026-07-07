@@ -208,6 +208,7 @@ function computeStats(records: Record[]) {
                 count: perLocality[name].count,
                 hours: Math.round(perLocality[name].ms / 3_600_000),
             })),
+        totalOutages: valid.length,
         outagesTodayCount: perDate[todayKey] || 0,
         hoursWasted: Math.round(wastedMs / 3_600_000),
         since: firstDate ? `${firstDate.getUTCDate()} ${MONTHS[firstDate.getUTCMonth()]} ${firstDate.getUTCFullYear()}` : null,
@@ -238,7 +239,7 @@ const worstDayInsight = computed(() => {
 const peakHourInsight = computed(() => {
     if (stats.value?.peakHour == null)
         return undefined
-    return `Most outages start between ${stats.value.peakHour}:00 and ${stats.value.peakHour + 1}:00 — plan around it !`
+    return `Most outages start between ${stats.value.peakHour}:00 and ${stats.value.peakHour + 1}:00`
 })
 
 const durationInsight = computed(() => {
@@ -251,7 +252,7 @@ const heatmapInsight = computed(() => {
     const peak = stats.value?.peakDayHour
     if (!peak)
         return undefined
-    return `${peak.day}s at ${peak.hour}:00 are the darkest hour of the week — ${peak.count.toLocaleString('en-US')} outages and counting`
+    return `${peak.day} at ${peak.hour}:00 is the most common slot, with ${peak.count.toLocaleString('en-US')} outages so far`
 })
 
 // Breadcrumb
@@ -267,12 +268,12 @@ const breadcrumbItems = [
         </div>
 
         <div class="pb-16 text-left">
-            <HeroSection :outages-today-count="stats?.outagesTodayCount" :hours-wasted="hoursWasted"
-                :count-per-date="stats?.countPerDate" :since="stats?.since ?? undefined" />
+            <HeroSection :total-outages="stats?.totalOutages" :outages-today-count="stats?.outagesTodayCount"
+                :hours-wasted="hoursWasted" :avg-duration-hours="stats?.avgDurationHours ?? undefined"
+                :since="stats?.since ?? undefined" />
 
             <div class="flex flex-col gap-16">
-                <SectionHeading :kicker="'The trend'" :title="'Is it getting better?'"
-                    :subtitle="'How outages have evolved since March 2022 — and how this year compares to the last four'" />
+                <SectionHeading :title="'Trends'" />
                 <ClientOnly>
                     <div class="flex flex-col gap-16">
                         <ChartsChartYearOverYear :data="stats?.yearlySeries ?? []" :title="'Year over year'" />
@@ -285,8 +286,7 @@ const breadcrumbItems = [
                     </template>
                 </ClientOnly>
 
-                <SectionHeading :kicker="'The rhythm'" :title="'When do cuts happen?'"
-                    :subtitle="'The hours, days and seasons the island goes dark'" />
+                <SectionHeading :title="'When cuts happen'" />
                 <ClientOnly>
                     <div class="flex flex-col gap-16">
                         <ChartsChartDayHourHeatmap :data="stats?.heatmapSeries ?? []"
@@ -310,8 +310,7 @@ const breadcrumbItems = [
                     </template>
                 </ClientOnly>
 
-                <SectionHeading :kicker="'The map'" :title="'Where do cuts happen?'"
-                    :subtitle="'The districts and localities that spend the most time in the dark'" />
+                <SectionHeading :title="'Where cuts happen'" />
 
                 <TopLocalities :items="stats?.topLocalities ?? []" :title="'Most affected localities'" />
 

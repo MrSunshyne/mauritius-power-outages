@@ -4,7 +4,7 @@
       <h2>
         {{ props.title }}
       </h2>
-      <p>The localities with the most scheduled outages — click one for its full history</p>
+      <p>Click a locality to see its full outage history</p>
     </div>
     <ol class="space-y-1">
       <li v-for="(item, index) in props.items" :key="item.slug">

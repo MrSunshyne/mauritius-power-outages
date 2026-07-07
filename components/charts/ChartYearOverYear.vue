@@ -5,7 +5,7 @@
         <h2>
           {{ props.title }}
         </h2>
-        <p>Monthly outages, one line per year — is the situation improving?</p>
+        <p>Monthly outages, one line per year</p>
       </div>
       <div class="md:container md:mx-auto">
         <div

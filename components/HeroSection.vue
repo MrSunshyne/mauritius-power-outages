@@ -1,39 +1,58 @@
 <template>
-    <div class="grid place-items-center h-[100vh] relative">
-        <ChartsChartDeco class="absolute z-0 bottom-[0] left-0 right-0" :data="countPerDateValue"
-            :title="'Detailed timeline'" />
+    <div class="relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[64rem] h-[32rem] rounded-full bg-blue-700/20 blur-3xl" />
+            <div class="absolute top-48 right-[8%] w-[20rem] h-[20rem] rounded-full bg-indigo-500/10 blur-3xl" />
+        </div>
 
-        <div class="flex flex-col gap-24 items-center relative z-10">
-            <div class="space-y-10">
-                <h1 class="font-bold text-center text-6xl">
+        <div class="relative z-10 flex flex-col items-center gap-12 px-4 py-20 sm:py-28 text-center">
+            <div class="space-y-6 max-w-4xl">
+                <h1 class="font-bold text-4xl sm:text-6xl">
                     Statistics of power outages in Mauritius
                 </h1>
-                <p class="text-center text-3xl">
-                    A detailed day-by-day timeline of when powercuts occurred on the island <span v-if="props.since"
-                        class="font-bold underline">
-                        since {{ props.since }}
-                    </span>
+                <p class="text-xl sm:text-2xl text-white/60">
+                    Every scheduled power cut on the island<span v-if="props.since"> since {{ props.since }}</span>
                 </p>
             </div>
-            <div class="flex flex-col md:flex-row gap-10">
-                <div class="bg-gray-500/10 rounded-lg px-10 py-5 text-right">
-                    <div v-if="props.hoursWasted" class="text-5xl font-black">
-                        {{ props.hoursWasted }}
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 w-full max-w-4xl">
+                <div class="bg-white/5 rounded-xl px-4 py-5">
+                    <div class="text-3xl sm:text-4xl font-black">
+                        {{ (props.totalOutages ?? 0).toLocaleString('en-US') }}
                     </div>
-                    <div class="uppercase font-medium text-white/50">
-                        Dark Hours
+                    <div class="uppercase font-medium text-white/50 text-xs tracking-wider mt-2">
+                        outages recorded
                     </div>
                 </div>
 
-                <div class="bg-gray-500/10 rounded-lg px-10 py-5 text-right">
-                    <div class="text-5xl font-black">
+                <div class="bg-white/5 rounded-xl px-4 py-5">
+                    <div class="text-3xl sm:text-4xl font-black">
+                        {{ props.hoursWasted ?? 0 }}
+                    </div>
+                    <div class="uppercase font-medium text-white/50 text-xs tracking-wider mt-2">
+                        dark hours
+                    </div>
+                </div>
+
+                <div class="bg-white/5 rounded-xl px-4 py-5">
+                    <div class="text-3xl sm:text-4xl font-black">
+                        {{ props.avgDurationHours ?? 0 }}h
+                    </div>
+                    <div class="uppercase font-medium text-white/50 text-xs tracking-wider mt-2">
+                        average cut
+                    </div>
+                </div>
+
+                <div class="bg-white/5 rounded-xl px-4 py-5">
+                    <div class="text-3xl sm:text-4xl font-black">
                         {{ props.outagesTodayCount ?? 0 }}
                     </div>
-                    <div class="uppercase font-medium text-white/50">
+                    <div class="uppercase font-medium text-white/50 text-xs tracking-wider mt-2">
                         cuts today
                     </div>
                 </div>
             </div>
+
             <NuxtLink to="/"
                 class="bg-white/90 text-blue-700 font-bold hover:bg-white/80 px-10 py-4 rounded-md uppercase cursor-pointer text-lg"
                 data-umami-event="hero-cta-click">
@@ -45,11 +64,10 @@
 
 <script lang="ts" setup>
 const props = defineProps<{
+    totalOutages?: number
     outagesTodayCount?: number
     hoursWasted?: string
-    countPerDate?: any[]
+    avgDurationHours?: number
     since?: string
 }>()
-
-const countPerDateValue = computed(() => props.countPerDate || [])
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="text-center space-y-4 pt-10 px-4">
-    <p class="uppercase tracking-[0.35em] text-xs font-semibold text-[#008FFB]">
+    <p v-if="props.kicker" class="uppercase tracking-[0.35em] text-xs font-semibold text-[#008FFB]">
       {{ props.kicker }}
     </p>
     <h2 class="text-3xl md:text-5xl font-black">
@@ -15,8 +15,8 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  kicker: string
   title: string
+  kicker?: string
   subtitle?: string
 }>()
 </script>

@@ -131,7 +131,15 @@ const breadcrumbItems = computed(() => {
 
 <template>
     <PageContainer>
-        <Breadcrumb :items="breadcrumbItems" />
+        <div class="flex items-center justify-between gap-4">
+            <Breadcrumb :items="breadcrumbItems" />
+            <NuxtLink to="/statistics"
+                class="flex items-center gap-1.5 text-xs uppercase tracking-wide text-white/60 hover:text-white transition-colors mb-4"
+                data-umami-event="home-statistics-link-top">
+                <Icon name="carbon:chart-cluster-bar" class="w-4 h-4" />
+                Statistics
+            </NuxtLink>
+        </div>
 
         <div class="flex flex-col gap-6 sm:gap-8">
             <DateNavigation date-label="Today" :show-today="false" :disabled="isLoading" @prev="goToPrev"
@@ -157,6 +165,22 @@ const breadcrumbItems = computed(() => {
                             <div v-else class="py-8 text-white/50 text-center text-base">
                                 No power outages scheduled for tomorrow
                             </div>
+                        </section>
+
+                        <section>
+                            <NuxtLink to="/statistics"
+                                class="flex items-center justify-between gap-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors px-5 py-4 group"
+                                data-umami-event="home-statistics-link">
+                                <div class="flex items-center gap-4">
+                                    <Icon name="carbon:chart-cluster-bar" class="w-6 h-6 text-[#008FFB] shrink-0" />
+                                    <div>
+                                        <div class="text-white font-semibold">Statistics</div>
+                                        <div class="text-white/50 text-sm">Outage trends and data since 2022</div>
+                                    </div>
+                                </div>
+                                <Icon name="carbon:arrow-right"
+                                    class="w-5 h-5 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all shrink-0" />
+                            </NuxtLink>
                         </section>
                     </div>
                 </template>

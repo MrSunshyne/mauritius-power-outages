@@ -5,7 +5,7 @@
         <h2>
           {{ props.title }}
         </h2>
-        <p>Daily outages across the island, with a 30-day average showing the trend. Drag on the chart to zoom in.</p>
+        <p>Daily outages with a 30-day average. Drag on the chart to zoom in.</p>
       </div>
       <div class="md:container md:mx-auto">
         <div

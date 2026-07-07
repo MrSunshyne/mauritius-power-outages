@@ -5,7 +5,7 @@
         <h2>
           {{ props.title }}
         </h2>
-        <p>Every outage since 2022, mapped by day of the week and hour of the day (Mauritius time)</p>
+        <p>Outages by day of the week and time of day (Mauritius time)</p>
         <blockquote v-if="props.insight" class="mx-auto text-left">{{ props.insight }}</blockquote>
       </div>
       <div class="md:container md:mx-auto">
