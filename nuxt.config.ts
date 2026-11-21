@@ -1,3 +1,6 @@
+import { randomBytes } from 'node:crypto'
+import tailwindcss from '@tailwindcss/vite'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-12-26',
@@ -90,9 +93,11 @@ export default defineNuxtConfig({
       ],
     },
     
-    workbox: {
+    generateSW: {
       globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
-      navigateFallbackDenylist: [/^\/api/, /^\/_/],
+      // Pages are server-rendered, so no HTML is precached for a navigation
+      // fallback; a fallback to '/' throws non-precached-url and kills the SW.
+      navigateFallback: null,
       runtimeCaching: [
         {
           urlPattern: /\.(?:png|jpg|jpeg|svg|gif|webp|ico)$/i,
@@ -202,11 +207,9 @@ export default defineNuxtConfig({
   // CSS
   css: ['~/assets/css/main.css'],
 
-  // PostCSS with Tailwind v4
-  postcss: {
-    plugins: {
-      '@tailwindcss/postcss': {},
-    },
+  // Tailwind v4 via its Vite plugin
+  vite: {
+    plugins: [tailwindcss()],
   },
 
   // TypeScript
@@ -217,6 +220,10 @@ export default defineNuxtConfig({
   // Runtime config for environment variables
   // Nuxt automatically maps NUXT_PUBLIC_* env vars to runtimeConfig.public.*
   runtimeConfig: {
+    // nuxt-og-image signs runtime OG image URLs with a key derived from appSecret.
+    // NUXT_APP_SECRET (>= 32 chars) set in the deploy environment wins at runtime;
+    // without it, each build gets its own random secret (the nuxt-og-image v6 behaviour).
+    appSecret: process.env.NUXT_APP_SECRET || randomBytes(32).toString('base64url'),
     public: {
       enableMockData: false, // default value, can be overridden by NUXT_PUBLIC_ENABLE_MOCK_DATA
     },

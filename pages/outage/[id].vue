@@ -302,7 +302,7 @@ useSeoMeta({
 });
 
 // Dynamic OG Image based on outage data
-defineOgImageComponent("Outage", {
+const ogImagePaths = defineOgImage("Outage", {
     title: selectedOutage.value?.locality || "Mauritius",
     description:
         selectedOutage.value?.locality + ", " + selectedOutage.value?.streets ||
@@ -322,6 +322,13 @@ defineOgImageComponent("Outage", {
         ? `${formatLocalTime(selectedOutage.value.from)} - ${formatLocalTime(selectedOutage.value.to)}`
         : "",
 });
+
+// defineOgImage returns no path while hydrating, so carry the SSR one in state
+// for the cache-warming <img> below (client navigations get the resolver path).
+const ogImagePreloadSrc = useState<string | null>(
+    `og-image-preload-${outageId}`,
+    () => ogImagePaths[0] ?? null,
+);
 
 const currentOutages = computed(() => {
     return latestData.value ? flat(latestData.value) : [];
@@ -855,8 +862,8 @@ const breadcrumbItems = computed(() => {
 
         <!-- Hidden OG image preload - warms cache for social sharing -->
         <img
-            v-if="selectedOutage"
-            :src="`/__og-image__/image/outage/${outageId}/og.png`"
+            v-if="selectedOutage && ogImagePreloadSrc"
+            :src="ogImagePreloadSrc"
             alt=""
             width="1"
             height="1"

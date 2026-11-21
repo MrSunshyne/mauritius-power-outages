@@ -24,7 +24,7 @@ useSeoMeta({
     twitterDescription: 'Check today\'s and tomorrow\'s scheduled power cuts in Mauritius. Real-time CEB outage information.',
 })
 
-defineOgImageComponent('Outage', {
+defineOgImage('Outage', {
     heading: 'Live status updates',
     title: 'Power Outages in Mauritius',
     columnPercentClass: 'max-w-[65%]',

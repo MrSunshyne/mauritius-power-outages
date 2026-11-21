@@ -128,7 +128,7 @@ useSeoMeta({
     ogDescription: description,
 });
 
-defineOgImageComponent("Outage", {
+defineOgImage("Outage", {
     heading: localityName,
     title: "Power Outages in Mauritius",
     columnPercentClass: "max-w-[65%]",

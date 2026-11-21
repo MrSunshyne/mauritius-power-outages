@@ -28,8 +28,8 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 
-// OG Image
-defineOgImageComponent('Statistics', {
+// OG Image (Home template takes the title/subtitle props)
+defineOgImage('Home', {
   title: 'Power Outage Statistics',
   subtitle: 'Mauritius Trends & Analysis',
 })

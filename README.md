@@ -12,7 +12,7 @@ Real-time power outage information for Mauritius residents. View scheduled outag
 
 ## Tech
 
-- **Nuxt 3** with Vue 3 & TypeScript
+- **Nuxt 4** with Vue 3 & TypeScript
 - **Tailwind CSS v4** for styling
 - **ApexCharts** for data visualization
 - **nuxt-og-image** for dynamic social previews

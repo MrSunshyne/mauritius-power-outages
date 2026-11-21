@@ -1,7 +1,7 @@
 <script setup>
 import { useOgImageRuntimeConfig } from "#og-image/app/utils"
 
-import { useSiteConfig } from "#site-config/app/composables"
+import { useSiteConfig } from "#site-config/app"
 
 import { computed, defineComponent, h, resolveComponent } from "vue"
 
@@ -24,12 +24,14 @@ const HexRegex = /^#(?:[0-9a-f]{3}){1,2}$/i
 
 const runtimeConfig = useOgImageRuntimeConfig()
 
-const colorMode = computed(() => {
+// Computed names must not shadow props: nuxt-og-image only forwards props it
+// detects as declared, and a same-named setup binding hides the declaration.
+const mode = computed(() => {
     return props.colorMode || runtimeConfig.colorPreference || "light"
 
 })
 
-const columnPercentClass = computed(() => {
+const columnClass = computed(() => {
     return props.columnPercentClass || 'max-w-[65%]'
 
 })
@@ -65,11 +67,11 @@ const themeRgb = computed(() => {
 
 const siteConfig = useSiteConfig()
 
-const tagline = computed(() => {
+const taglineText = computed(() => {
     return props.tagline || siteConfig.name
 })
 
-const heading = computed(() => {
+const headingText = computed(() => {
     return props.heading || null
 })
 
@@ -95,49 +97,49 @@ if (typeof props.icon === "string" && !runtimeConfig.hasNuxtIcon && process.dev)
 
 <template>
     <div class="w-full h-full flex justify-between relative p-[60px]" :class="[
-        colorMode === 'light' ? ['bg-white', 'text-gray-900'] : ['bg-gray-900', 'text-white']
+        mode === 'light' ? ['bg-white', 'text-gray-900'] : ['bg-gray-900', 'text-white']
     ]">
         <div class="flex absolute top-0 right-[-100%]" :style="{
             width: '200%',
             height: '200%',
-            backgroundImage: `radial-gradient(circle, rgba(${themeRgb}, 0.5) 0%,  ${colorMode === 'dark' ? 'rgba(5, 5, 5,0.3)' : 'rgba(255, 255, 255, 0.7)'} 50%, ${props.colorMode === 'dark' ? 'rgba(5, 5, 5,0)' : 'rgba(255, 255, 255, 0)'} 70%)`
+            backgroundImage: `radial-gradient(circle, rgba(${themeRgb}, 0.5) 0%,  ${mode === 'dark' ? 'rgba(5, 5, 5,0.3)' : 'rgba(255, 255, 255, 0.7)'} 50%, ${props.colorMode === 'dark' ? 'rgba(5, 5, 5,0)' : 'rgba(255, 255, 255, 0)'} 70%)`
         }" />
-        <div class="h-full w-full justify-between relative">
+        <div class="h-full w-full flex flex-col justify-between relative">
             <div class="flex flex-row justify-between items-start">
-                <div class="flex flex-col w-full gap-4" :class=[columnPercentClass]>
-                    <div class="text-[20px] uppercase font-bold" v-if="heading">
-                        {{ heading }}
+                <div class="flex flex-col w-full gap-4" :class=[columnClass]>
+                    <div class="text-[20px] uppercase font-bold" v-if="headingText">
+                        {{ headingText }}
                     </div>
                     <h1 class="m-0 font-bold text-[60px]" style="display: block; text-overflow: ellipsis;"
                         :style="{ lineClamp: description ? 2 : 3 }">
                         {{ title }}
                     </h1>
                     <p v-if="description" class="text-[30px] leading-10" :class="[
-                        colorMode === 'light' ? ['text-gray-700'] : ['text-gray-300']
-                    ]" style="display: inline; line-clamp: 3; text-overflow: ellipsis;">
+                        mode === 'light' ? ['text-gray-700'] : ['text-gray-300']
+                    ]" style="display: flex; flex-direction: column; gap: 0.2em; line-clamp: 3; text-overflow: ellipsis;">
 
                         <span v-if="descriptionHeading">{{ descriptionHeading }}</span><span class="lowercase">{{
                             description }}</span>
                     </p>
 
                     <!-- Date and Time -->
-                    <div class="text-[35px] leading-10 font-bold" style="display: inline; line-clamp: 3; text-overflow:
-                        ellipsis;">
-                        <div>
+                    <div class="text-[35px] leading-10 font-bold" style="display: flex; flex-direction: column;">
+                        <div style="display: block;">
                             {{ date }}
                         </div>
-                        <div>
+                        <div style="display: block;">
                             {{ time }}
                         </div>
                     </div>
                 </div>
                 <div v-if="Boolean(icon)" style="width: 30%;" class="flex justify-end">
-                    <IconComponent :name="icon" mode="svg" class="mt-[100px] w-[250px] h-[250px]" />
+                    <IconComponent :name="icon" mode="svg" class="mt-[100px] w-[250px] h-[250px]"
+                        :style="{ color: mode === 'light' ? '#111827' : '#ffffff' }" />
                 </div>
             </div>
             <div class="flex flex-row justify-between w-full">
-                <p v-if="tagline" style="font-size: 25px;" class="font-bold">
-                    {{ tagline }}
+                <p v-if="taglineText" style="font-size: 25px;" class="font-bold">
+                    {{ taglineText }}
                 </p>
                 <p v-if="taglineRight" style="font-size: 25px;" class="font-bold">
                     {{ taglineRight }}

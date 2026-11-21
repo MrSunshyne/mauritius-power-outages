@@ -90,7 +90,7 @@ useSeoMeta({
     ogDescription: () => `Scheduled power outages for ${dateLabel.value} in Mauritius.`,
 })
 
-defineOgImageComponent('Outage', {
+defineOgImage('Outage', {
     heading: dateLabel.value,
     title: 'Power Outages in Mauritius',
     columnPercentClass: 'max-w-[65%]',

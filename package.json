@@ -12,22 +12,24 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@chenfengyuan/vue-countdown": "^2.1.2",
-    "@vueuse/nuxt": "^12.4.0",
-    "apexcharts": "^3.47.0",
-    "date-fns": "^3.6.0",
-    "nuxt-og-image": "^5.1.13",
-    "vue3-apexcharts": "^1.5.2"
+    "@chenfengyuan/vue-countdown": "^2.1.3",
+    "@vueuse/nuxt": "^15.0.0",
+    "apexcharts": "^8.9.1",
+    "date-fns": "^4.4.0",
+    "nuxt-og-image": "^7.0.7",
+    "vue3-apexcharts": "^1.11.3"
   },
   "devDependencies": {
-    "@nuxt/icon": "^1.10.3",
-    "@tailwindcss/postcss": "^4.1.18",
-    "@vite-pwa/nuxt": "^1.1.0",
-    "@vueuse/core": "^12.4.0",
-    "nuxt": "^3.15.2",
-    "postcss": "^8.5.6",
-    "sass": "^1.83.1",
-    "tailwindcss": "^4.0.6",
-    "typescript": "^5.7.3"
-  }
+    "@nuxt/icon": "^2.6.3",
+    "@tailwindcss/vite": "^4.3.5",
+    "@takumi-rs/core": "^2.21.0",
+    "@takumi-rs/wasm": "^2.21.0",
+    "@vite-pwa/nuxt": "^2.0.2",
+    "@vueuse/core": "^15.0.0",
+    "nuxt": "^4.6.4",
+    "sass": "^1.108.2",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^7.0.2"
+  },
+  "packageManager": "pnpm@12.21.0"
 }
