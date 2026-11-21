@@ -29,9 +29,10 @@ export default defineNuxtConfig({
     '/locality/**': { isr: 86400 },
   },
 
-  // Site config for OG Image module
+  // Site config for OG Image module. OG image URLs are signed per deployment, so
+  // each host must point og:image at itself (Cloudflare Pages serves courant.ramgolam.com).
   site: {
-    url: 'https://power-outages-mauritius.netlify.app',
+    url: process.env.CF_PAGES ? 'https://courant.ramgolam.com' : 'https://power-outages-mauritius.netlify.app',
     name: 'Power Outages Mauritius',
   },
 
