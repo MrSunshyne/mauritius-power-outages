@@ -16,7 +16,11 @@ Real-time power outage information for Mauritius residents. View scheduled outag
 - **Tailwind CSS v4** for styling
 - **ApexCharts** for data visualization
 - **nuxt-og-image** for dynamic social previews
-- Deployed on **Netlify** with ISR caching
+- Deployed on **Cloudflare Pages** at https://courant.ramgolam.com
+
+The first deploy, https://power-outages-mauritius.netlify.app, now only 301-redirects every
+path (query string included) to courant.ramgolam.com. `netlify.toml` publishes `netlify-redirect/`
+instead of building the app; that folder holds a `sw.js` that removes the old PWA service worker.
 
 ## Quick Start
 

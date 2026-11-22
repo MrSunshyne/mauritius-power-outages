@@ -18,13 +18,11 @@ useHead({
 })
 
 // SEO
-const requestUrl = useRequestURL()
 useSeoMeta({
   title: 'Power Outage Statistics Mauritius - Trends & Analysis',
   description: 'Explore power outage patterns in Mauritius. View statistics by district, day, hour, and month. Data-driven insights on CEB electricity cuts.',
   ogTitle: 'Power Outage Statistics Mauritius - Trends & Analysis',
   ogDescription: 'Explore power outage patterns in Mauritius. View statistics by district, day, hour, and month. Data-driven insights on CEB electricity cuts.',
-  ogUrl: `${requestUrl.origin}/statistics`,
   twitterCard: 'summary_large_image',
 })
 

@@ -19,7 +19,7 @@ withDefaults(defineProps<{
                 </svg>
             </div>
             <div class="text-white/60 text-2xl font-medium">
-                power-outages-mauritius.netlify.app
+                courant.ramgolam.com
             </div>
         </div>
 

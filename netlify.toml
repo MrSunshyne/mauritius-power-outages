@@ -1,21 +1,19 @@
+# power-outages-mauritius.netlify.app was the first home of this app. It now only
+# redirects to https://courant.ramgolam.com (built by Cloudflare Pages), so the app
+# is not built here. Netlify serves the few files in netlify-redirect/ and sends
+# every other path to the same path on courant.ramgolam.com with a 301; Netlify
+# passes the query string along.
 [build]
-  command = "pnpm build"
-  publish = "dist"
+  command = "echo 'Redirect-only deploy: everything goes to https://courant.ramgolam.com'"
+  publish = "netlify-redirect"
 
-# Cache static assets aggressively
-[[headers]]
-  for = "/_nuxt/*"
-    [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+[[redirects]]
+  from = "/*"
+  to = "https://courant.ramgolam.com/:splat"
+  status = 301
 
-# Static assets
+# Browsers re-check the service worker script; never let a cache hide the kill switch.
 [[headers]]
-  for = "/assets/*"
+  for = "/sw.js"
     [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# Default cache for other static files
-[[headers]]
-  for = "/*"
-    [headers.values]
-    Cache-Control = "public, max-age=300, must-revalidate"
+    Cache-Control = "no-cache"

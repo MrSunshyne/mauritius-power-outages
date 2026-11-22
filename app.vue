@@ -1,5 +1,13 @@
 <script setup lang="ts">
 const { updateRequired, updateMessage } = useAppVersion()
+
+// Every page names courant.ramgolam.com as its canonical URL (query string dropped),
+// so search engines fold the old Netlify URLs and *.pages.dev into it.
+const route = useRoute()
+const siteConfig = useSiteConfig()
+const canonicalUrl = computed(() => new URL(route.path, siteConfig.url).href)
+useHead({ link: [{ rel: 'canonical', href: canonicalUrl }] })
+useSeoMeta({ ogUrl: canonicalUrl })
 </script>
 
 <template>

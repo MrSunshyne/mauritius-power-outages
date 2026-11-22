@@ -16,8 +16,9 @@ export default defineNuxtConfig({
   // Enable SSR for dynamic OG meta tags
   ssr: true,
   nitro: {
-    // Deployed to both Netlify and Cloudflare Pages (CF_PAGES is set by the CF build env)
-    preset: process.env.CF_PAGES ? 'cloudflare_pages' : 'netlify',
+    // Cloudflare Pages serves courant.ramgolam.com. The old Netlify site only
+    // redirects there (see netlify.toml) and no longer builds the app.
+    preset: 'cloudflare_pages',
   },
 
   // Hybrid rendering: static pages except dynamic outage pages
@@ -29,10 +30,9 @@ export default defineNuxtConfig({
     '/locality/**': { isr: 86400 },
   },
 
-  // Site config for OG Image module. OG image URLs are signed per deployment, so
-  // each host must point og:image at itself (Cloudflare Pages serves courant.ramgolam.com).
+  // The one canonical host: canonical links, og:url, og:image and share links use it.
   site: {
-    url: process.env.CF_PAGES ? 'https://courant.ramgolam.com' : 'https://power-outages-mauritius.netlify.app',
+    url: 'https://courant.ramgolam.com',
     name: 'Power Outages Mauritius',
   },
 
@@ -134,7 +134,6 @@ export default defineNuxtConfig({
       periodicSyncForUpdates: 3600, // Check for updates every hour
     },
     
-    // Required for Netlify deployment
     registerWebManifestInRouteRules: true,
   },
 

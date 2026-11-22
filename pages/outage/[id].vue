@@ -17,6 +17,7 @@ import { ANALYTICS_EVENTS } from "~/constants/analytics";
 
 // Get outage ID from route
 const route = useRoute();
+const siteConfig = useSiteConfig();
 const outageId = route.params.id as string;
 
 // Page meta
@@ -182,7 +183,7 @@ const shareMessage = computed(() => {
 
 const shareUrl = computed(() => {
     if (!selectedOutage.value) return "";
-    return `https://power-outages-mauritius.netlify.app/outage/${selectedOutage.value.id}`;
+    return `${siteConfig.url}/outage/${selectedOutage.value.id}`;
 });
 
 const handleShare = async () => {
