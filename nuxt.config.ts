@@ -170,6 +170,8 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#020024' },
         { name: 'robots', content: 'index, follow' },
         { name: 'author', content: 'Power Outages Mauritius' },
+        // Google Search Console ownership of https://courant.ramgolam.com/ (keep it, or the property unverifies)
+        { name: 'google-site-verification', content: '-3V40Bf3hMROQE_1XUsWxFr5gf5976tNOCnq1WqOIkc' },
         // Apple PWA meta tags
         { name: 'apple-mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
