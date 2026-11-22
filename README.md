@@ -20,7 +20,9 @@ Real-time power outage information for Mauritius residents. View scheduled outag
 
 The first deploy, https://power-outages-mauritius.netlify.app, now only 301-redirects every
 path (query string included) to courant.ramgolam.com. `netlify.toml` publishes `netlify-redirect/`
-instead of building the app; that folder holds a `sw.js` that removes the old PWA service worker.
+instead of building the app; that folder holds a `sw.js` that removes the old PWA service worker
+and the Google Search Console verification file for the netlify.app property (keep it: Search
+Console needs it for the change of address to courant.ramgolam.com).
 
 ## Quick Start
 
