@@ -28,6 +28,7 @@ export default defineNuxtConfig({
     '/outage/**': { isr: 900 },
     '/day/**': { isr: 86400 },
     '/locality/**': { isr: 86400 },
+    '/sitemap.xml': { isr: 3600 },
   },
 
   // The one canonical host: canonical links, og:url, og:image and share links use it.

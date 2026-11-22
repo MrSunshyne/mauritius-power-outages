@@ -4,6 +4,7 @@ export const API_URLS = {
   full: `${API_BASE}power-outages.json`,
   latest: `${API_BASE}power-outages.latest.json`,
   daily: (date: string) => `${API_BASE}daily/${date}.json`,
+  dailyIndex: `${API_BASE}daily/index.json`,
   localitiesIndex: `${API_BASE}localities/index.json`,
   locality: (slug: string) => `${API_BASE}localities/${slug}.json`,
 }
